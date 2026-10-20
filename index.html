@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="canonical" href="https://www.celea.it/">
+<meta property="og:url" content="https://www.celea.it/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Celea · receptionist AI</title>
+<meta name="description" content="Celea è la receptionist AI per studi dentistici, agenzie immobiliari e strutture ricettive in tutta Italia e all'estero: risponde su WhatsApp e al telefono 24 ore su 24, fissa appuntamenti e passa a una persona quando serve. Provi subito la demo e prenoti 30 giorni di prova gratuita.">
+<meta name="keywords" content="receptionist AI, assistente WhatsApp studio dentistico, segreteria virtuale AI, risposta automatica agenzia immobiliare, assistente virtuale hotel e B&B, AI receptionist Italy">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:site_name" content="Celea">
+<meta property="og:title" content="Celea · la receptionist AI che risponde sempre">
+<meta property="og:description" content="Risponde ai Suoi clienti su WhatsApp e al telefono, 24 ore su 24. Studi dentistici, agenzie immobiliari e strutture ricettive, in Italia e all'estero. Provi la demo.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0F4C5C">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Celea","description":"Receptionist AI su WhatsApp e al telefono, 24 ore su 24, per studi dentistici, agenzie immobiliari e strutture ricettive. Siti web come servizio aggiuntivo.","email":"team.celea@gmail.com","founder":{"@type":"Person","name":"William"},"address":{"@type":"PostalAddress","addressRegion":"Sicilia","addressCountry":"IT"},"areaServed":[{"@type":"Country","name":"Italia"},{"@type":"Place","name":"Europa"}],"knowsLanguage":["it","en","de"],"availableLanguage":["it","en","de"],"priceRange":"da 139 €/mese + IVA","slogan":"Risponde sempre, con cura."}
+</script>
+<style>
+/* Layout: mobile-first single column; hero + live chat demo first, then quiet sand sections; one terracotta accent per block. Brand: guida Celea 1.0 «L'abbraccio». */
+:root{
+  --bg:#F4EDE3; --surface:#FFFFFF; --surface-2:#EFE6D8; --ink:#1F2D33; --muted:#5B6B70;
+  --brand:#0F4C5C; --brand-ink:#F4EDE3; --deep:#0A3440; --accent:#C8664A; --accent-text:#A9502F;
+  --line:#E3D8C7; --bubble-me:#D9E6E6; --bubble-bot:#FFFFFF; --chat-bg:#EDE3D4; --focus:#A9502F;
+  --logo-big:#0F4C5C; --logo-small:#C8664A; --logo-text:#0F4C5C;
+  --f-display:"Manrope",Helvetica,Arial,sans-serif; --f-body:"Source Sans 3",Helvetica,Arial,sans-serif;
+  --r:12px; --gutter:24px; --max:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A3440; --surface:#0F4C5C; --surface-2:#0D4251; --ink:#F4EDE3; --muted:#B9C6C6;
+  --brand:#F4EDE3; --brand-ink:#0A3440; --deep:#072833; --accent:#E08A6A; --accent-text:#E08A6A;
+  --line:#22606F; --bubble-me:#1C5E6E; --bubble-bot:#0F4C5C; --chat-bg:#083039; --focus:#E08A6A;
+  --logo-big:#F4EDE3; --logo-small:#E08A6A; --logo-text:#F4EDE3; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A3440; --surface:#0F4C5C; --surface-2:#0D4251; --ink:#F4EDE3; --muted:#B9C6C6;
+  --brand:#F4EDE3; --brand-ink:#0A3440; --deep:#072833; --accent:#E08A6A; --accent-text:#E08A6A;
+  --line:#22606F; --bubble-me:#1C5E6E; --bubble-bot:#0F4C5C; --chat-bg:#083039; --focus:#E08A6A;
+  --logo-big:#F4EDE3; --logo-small:#E08A6A; --logo-text:#F4EDE3; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;margin:0;overflow-x:hidden}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-.02em;line-height:1.12;text-wrap:balance;margin:0;color:var(--brand)}
+h1{font-size:clamp(2.2rem,7.5vw,3.9rem);font-weight:800}
+h2{font-size:clamp(1.7rem,4.6vw,2.45rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+a{color:var(--accent-text)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+@media (min-width:900px){:root{--gutter:64px}}
+.eyebrow{font-family:var(--f-display);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:60ch}
+section{padding-block:72px}
+.sec-head{display:grid;gap:12px;margin-bottom:36px;max-width:720px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--surface);padding:8px 12px;z-index:99}
+.skip:focus{left:16px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:var(--r);font-family:var(--f-display);font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-accent{background:#A9502F;color:#FFFFFF}
+.btn-ghost{background:transparent;color:var(--brand);border-color:var(--brand)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.logo{display:block;width:118px;height:auto}
+.logo text{font-family:var(--f-display)}
+.nav{display:none;gap:28px}
+.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.98rem}
+.nav a:hover{color:var(--accent-text)}
+.top .btn{min-height:42px;padding:8px 16px;font-size:.92rem}
+@media (min-width:900px){.nav{display:flex}}
+
+/* hero */
+.hero{padding-block:56px 40px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-220px;top:-120px;width:620px;height:620px;border-radius:50%;border:64px solid var(--brand);opacity:.07;pointer-events:none}
+.hero .wrap{display:grid;gap:40px;position:relative}
+.hero-text{display:grid;gap:22px;min-width:0}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{font-size:.95rem;color:var(--muted)}
+.clock{display:grid;gap:12px;align-content:center;min-width:0}
+.clock-item{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.clock-item time{font-family:var(--f-display);font-weight:800;font-size:1.15rem;color:var(--brand);font-variant-numeric:tabular-nums}
+.clock-item p{font-size:.98rem}
+.clock-item small{display:block;color:var(--muted);font-size:.86rem;margin-top:2px}
+.clock-cap{font-size:.86rem;color:var(--muted)}
+@media (min-width:900px){.hero{padding-block:88px 64px}.hero .wrap{grid-template-columns:1.25fr .9fr;align-items:center;gap:64px}}
+
+/* demo */
+.demo{--d-bg:#0F4C5C;--d-fg:#F4EDE3;background:var(--d-bg);color:var(--d-fg)}
+.demo h2{color:var(--d-fg)}
+.demo .eyebrow{color:#E08A6A}
+.demo .lead{color:var(--d-fg);opacity:.88}
+.demo-grid{display:grid;gap:32px}
+@media (min-width:960px){.demo-grid{grid-template-columns:.85fr 1.15fr;align-items:start;gap:56px}}
+.demo-side{display:contents}
+.demo-grid>.phone{order:3}.demo-side>.sec-head{order:1}.p-niche{order:2}.p-scen{order:4}.demo-flag{order:5}
+@media (min-width:960px){.demo-side{display:grid;gap:22px;min-width:0;grid-column:1;grid-row:1}.demo-grid>.phone{grid-column:2;grid-row:1}}
+.picker{display:grid;gap:10px}
+.picker-label{font-family:var(--f-display);font-weight:700;font-size:.95rem}
+.niches{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.niche{appearance:none;border:2px solid color-mix(in srgb,var(--d-fg) 35%,transparent);background:transparent;color:var(--d-fg);border-radius:var(--r);padding:12px 8px;font-family:var(--f-display);font-weight:700;font-size:.92rem;cursor:pointer;display:grid;justify-items:center;gap:6px;text-align:center;line-height:1.2}
+.niche svg{width:26px;height:26px}
+.niche[aria-pressed="true"]{background:var(--d-fg);color:var(--d-bg);border-color:var(--d-fg)}
+.scen{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.scen button{appearance:none;text-align:left;border:1px solid color-mix(in srgb,var(--d-fg) 30%,transparent);background:color-mix(in srgb,var(--d-fg) 8%,transparent);color:var(--d-fg);border-radius:var(--r);padding:12px;font:inherit;font-size:.95rem;cursor:pointer;line-height:1.3}
+.scen button strong{display:block;font-family:var(--f-display);font-size:.95rem}
+.scen button span{opacity:.8;font-size:.86rem}
+.scen button:hover,.scen button[aria-current="true"]{background:color-mix(in srgb,var(--d-fg) 18%,transparent);border-color:#E08A6A}
+.scen button:disabled{opacity:.5;cursor:wait}
+.demo-flag{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;background:color-mix(in srgb,var(--d-fg) 10%,transparent);border-radius:var(--r);padding:12px 14px}
+.demo-flag svg{width:20px;height:20px;flex:none;margin-top:2px}
+
+.phone{background:var(--chat-bg);color:var(--ink);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(4,26,33,.35);display:flex;flex-direction:column;height:min(640px,82vh);min-height:480px;border:6px solid var(--deep);min-width:0}
+.chat-head{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--deep);color:#F4EDE3}
+.chat-head svg{width:40px;height:40px;flex:none}
+.chat-head b{font-family:var(--f-display);display:block;font-size:.98rem;line-height:1.2}
+.chat-head small{font-size:.82rem;opacity:.85}
+.chat-head>div{flex:1;min-width:0}.chat-head small{display:block}
+@media (max-width:480px){.chat-head .tag{display:none}}
+.restart{appearance:none;background:transparent;border:0;color:#F4EDE3;font:inherit;font-size:.82rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:4px}
+.chat-head .tag{margin-left:auto;font-family:var(--f-display);font-size:.68rem;font-weight:800;letter-spacing:.1em;border:1px solid rgba(244,237,227,.5);border-radius:6px;padding:3px 7px}
+.chat{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
+.day{align-self:center;font-size:.78rem;background:var(--surface);color:var(--muted);border-radius:8px;padding:3px 10px;margin-block:4px}
+.msg{max-width:84%;padding:8px 12px 6px;border-radius:14px;font-size:.98rem;line-height:1.42;box-shadow:0 1px 1px rgba(0,0,0,.08);animation:pop .22s ease-out;overflow-wrap:anywhere}
+.msg time{display:block;text-align:right;font-size:.72rem;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
+.msg.bot{align-self:flex-start;background:var(--bubble-bot);border-top-left-radius:4px}
+.msg.me{align-self:flex-end;background:var(--bubble-me);border-top-right-radius:4px}
+.sys{align-self:center;display:flex;gap:8px;align-items:center;font-size:.84rem;font-weight:600;color:var(--accent-text);background:var(--surface);border:1px dashed var(--accent-text);border-radius:10px;padding:6px 10px;max-width:92%;animation:pop .22s ease-out}
+.sys svg{width:16px;height:16px;flex:none}
+.typing{align-self:flex-start;background:var(--bubble-bot);border-radius:14px;padding:12px 14px;display:flex;gap:4px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+@keyframes pop{from{transform:translateY(6px);opacity:.4}to{transform:none;opacity:1}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px 0;justify-content:flex-end}
+.chips button{appearance:none;border:1.5px solid var(--accent-text);color:var(--accent-text);background:var(--surface);border-radius:999px;padding:7px 14px;font:inherit;font-size:.92rem;font-weight:600;cursor:pointer}
+.chips button:hover{background:var(--surface-2)}
+.composer{display:flex;gap:8px;padding:10px;background:var(--chat-bg)}
+.composer input{flex:1;min-width:0;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:11px 16px;font:inherit;font-size:1rem}
+.composer button{appearance:none;width:46px;height:46px;flex:none;border-radius:50%;border:0;background:var(--brand);color:var(--brand-ink);cursor:pointer;display:grid;place-items:center}
+:root[data-theme="dark"] .composer button{background:#E08A6A;color:#0A3440}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .composer button{background:#E08A6A;color:#0A3440}}
+.composer button svg{width:20px;height:20px}
+.composer-hint{font-size:.78rem;color:var(--muted);padding:0 14px 10px;background:var(--chat-bg)}
+
+/* steps */
+.steps{display:grid;gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);font-family:var(--f-display);font-weight:800;font-size:2rem;color:var(--accent);line-height:1}
+.steps h3{margin-bottom:6px}
+.steps p{color:var(--muted)}
+.steps .when{display:inline-block;margin-top:8px;font-family:var(--f-display);font-weight:700;font-size:.82rem;color:var(--brand)}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:32px}.steps li{grid-template-columns:1fr}}
+
+/* niches */
+.alt{background:var(--surface-2)}
+.cards{display:grid;gap:16px}
+@media (min-width:860px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;gap:14px;align-content:start;min-width:0}
+.card .ic{width:44px;height:44px;color:var(--brand)}
+.card ul{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--ink)}
+.card .quote{font-size:.95rem;color:var(--muted);border-left:3px solid var(--line);padding-left:12px}
+.card .tryit{justify-self:start;background:none;border:0;padding:0;font:inherit;font-weight:600;color:var(--accent-text);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+/* benefits */
+.ben{display:grid;gap:0;border-top:1px solid var(--line)}
+.ben div{display:grid;gap:6px;padding:20px 0;border-bottom:1px solid var(--line)}
+@media (min-width:860px){.ben{grid-template-columns:1fr 1fr;column-gap:56px}}
+.ben h3{font-size:1.1rem}
+.ben p{color:var(--muted)}
+
+/* pricing */
+.price{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:32px 24px;display:grid;gap:18px}
+@media (min-width:860px){.price{grid-template-columns:1fr 1fr;align-items:start;padding:48px;column-gap:48px}}
+.price ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+
+/* faq */
+.faq{display:grid;border-top:1px solid var(--line);max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-family:var(--f-display);font-weight:700;font-size:1.06rem;color:var(--brand);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--accent-text);border-bottom:2.5px solid var(--accent-text);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq .ans{padding:0 0 22px;color:var(--ink);display:grid;gap:10px;max-width:68ch}
+
+/* about + contact */
+.two{display:grid;gap:32px}
+@media (min-width:900px){.two{grid-template-columns:1fr 1fr;gap:64px}}
+.about p+p{margin-top:14px}
+.contact{background:var(--deep);color:#F4EDE3;border-radius:var(--r);padding:28px 24px;display:grid;gap:18px;align-content:start}
+.contact h3{color:#F4EDE3}
+.contact .row{display:grid;gap:4px;padding-top:14px;border-top:1px solid rgba(244,237,227,.18)}
+.contact .k{font-family:var(--f-display);font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#E08A6A}
+.contact .v{font-size:1.1rem;font-weight:600;overflow-wrap:anywhere;user-select:all}
+.contact .soon{opacity:.75;font-size:.92rem}
+.contact .btn-light{background:#F4EDE3;color:#0A3440}
+.copy{appearance:none;justify-self:start;border:1px solid rgba(244,237,227,.5);background:transparent;color:#F4EDE3;border-radius:8px;padding:6px 12px;font:inherit;font-size:.88rem;cursor:pointer}
+
+/* legal */
+.legal{font-size:.95rem}
+.legal details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 20px;margin-top:12px}
+.legal summary{cursor:pointer;padding:16px 0;font-family:var(--f-display);font-weight:700;color:var(--brand)}
+.legal .body{padding-bottom:18px;display:grid;gap:10px;color:var(--ink);max-width:72ch}
+.legal h4{margin:6px 0 0;font-family:var(--f-display);font-size:.98rem;color:var(--brand)}
+
+footer{background:var(--deep);color:#F4EDE3;padding-block:40px}
+footer .wrap{display:grid;gap:16px}
+footer .logo{width:132px}
+footer small{opacity:.8}
+footer .sign{font-family:var(--f-display);font-weight:700}
+
+/* lingua */
+.right{display:flex;align-items:center;gap:10px}
+.lang{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.lang button{appearance:none;border:0;background:transparent;color:var(--muted);font-family:var(--f-display);font-weight:700;font-size:.82rem;padding:8px 10px;min-height:38px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink)}
+.langbar{background:var(--deep);color:#F4EDE3;font-size:.95rem}
+.langbar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding-block:10px}
+.langbar button{appearance:none;border:1px solid rgba(244,237,227,.6);background:transparent;color:#F4EDE3;border-radius:8px;padding:6px 12px;font:inherit;font-weight:600;cursor:pointer}
+.top .btn{white-space:nowrap}
+@media (max-width:440px){.top .wrap{gap:8px}.top .btn{padding:8px 12px;font-size:.86rem}.top .logo{width:96px}.lang button{padding:8px 8px}}
+@media (max-width:340px){.top .btn{display:none}}
+
+/* prezzi */
+.ptable{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.ptable li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.ptable h3{font-size:1.02rem}
+.ptable .from{font-family:var(--f-display);font-weight:800;color:var(--brand);font-size:1.15rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ptable .from small{font-weight:600;font-size:.8rem;color:var(--muted)}
+.ptable p{grid-column:1/-1;font-size:.92rem;color:var(--muted)}
+.pnote{font-size:.92rem;color:var(--muted)}
+.start{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-left:3px solid var(--accent-text);padding-left:12px}
+/* prezzi completi v1.4 */
+.pwrap{display:grid;gap:22px}
+.pwrap .sec-head{margin-bottom:6px}
+.pwrap h4{font-family:var(--f-display);font-size:1.05rem;font-weight:700;color:var(--brand);margin:0}
+.ph{margin-top:22px}
+.ph small,.pbox h3 small{display:block;font-family:var(--f-body);font-weight:400;font-size:.92rem;color:var(--muted);letter-spacing:0;margin-top:4px}
+.pk,.nt,.cat,.svc,.why{display:grid;gap:14px}
+@media (min-width:860px){.pk,.nt,.why{grid-template-columns:repeat(3,1fr)}.cat{grid-template-columns:repeat(2,1fr)}.svc{grid-template-columns:repeat(2,1fr)}.pcols{grid-template-columns:1fr 1fr}}
+@media (min-width:1080px){.cat{grid-template-columns:repeat(4,1fr)}}
+.pk article,.nt article,.cat article,.svc>div,.pbox{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.pk-n{font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text)}
+.pk ul,.terms{margin:0;padding-left:20px;display:grid;gap:6px}
+.pk p,.cat p{font-size:.97rem}
+.nt dl{margin:0;display:grid;gap:8px}
+.nt dl div{display:grid;grid-template-columns:minmax(84px,auto) 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--line);padding-top:8px}
+.nt dt{font-family:var(--f-display);font-weight:700;font-size:.92rem;color:var(--muted)}
+.nt dd{margin:0;font-variant-numeric:tabular-nums}
+.nt dd b,.cat-p b{font-family:var(--f-display);font-weight:800;font-size:1.15rem;color:var(--brand)}
+.pcols{display:grid;gap:14px}
+.plist{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.plist li{display:flex;justify-content:space-between;align-items:baseline;gap:6px 14px;padding:9px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.plist li span{flex:1 1 14em;font-size:.97rem}
+.plist li b{font-family:var(--f-display);font-weight:700;color:var(--brand);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pbox.meta{background:var(--bg);border-left:4px solid var(--accent-text)}
+.pbox h3{font-size:1.12rem}
+.cat-who{font-size:.86rem!important;color:var(--muted);margin-top:-6px}
+.cat-top{border-color:var(--brand)!important;border-width:2px!important}
+.pfaq{max-width:none;border-top:0}
+.pfaq .ph{margin-bottom:8px}
+.why{border-top:1px solid var(--line);padding-top:18px;margin-top:8px}
+.why p{color:var(--muted);font-size:.97rem;margin-top:6px}
+.pend{background:var(--deep);color:#F4EDE3;border-radius:var(--r);padding:28px 24px;display:grid;gap:12px;margin-top:8px}
+.pend h3{color:#F4EDE3}
+.pend .btn-ghost{color:#F4EDE3;border-color:#F4EDE3}
+.hero-note a{color:var(--accent-text)}
+/* v1.5: prova gratuita e tedesco */
+.pbox.trial{border:2px solid var(--accent-text);background:var(--surface)}
+.pbox.trial h3{font-size:1.3rem}
+.langbar .lb-alt{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+@media (max-width:400px){.top .btn{display:none}}
+.niches,.scen{grid-template-columns:repeat(3,minmax(0,1fr))}.scen{grid-template-columns:repeat(2,minmax(0,1fr))}
+.niche span,.scen button,.chips button,h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto}
+
+</style>
+<style>
+/* Caratteri ospitati sul sito (nessun collegamento a Google Fonts). Se i file non ci sono, il sito usa Helvetica/Arial. */
+@font-face{font-family:"Manrope";src:url("fonts/Manrope-VariableFont_wght.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+</style>
+</head>
+<body>
+<a class="skip" href="#demo" data-i18n="skip">Vai alla demo</a>
+
+<div class="langbar" id="langbar" hidden>
+  <div class="wrap"><span id="lb-text">This page is also available in English.</span><button type="button" id="to-en" data-to="en">Switch to English</button></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 4 2 7s1 6.5 2.5 6.5 1.5-3 2-5 1-2.5 2.5-2.5 2 .5 2.5 2.5.5 5 2 5 2-3.5 2.5-6.5 2-4 2-7C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5.5 9.5V20h13V9.5M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 11.5a1.5 1.5 0 1 0 0-.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2.5-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 120 120"><rect width="120" height="120" rx="26" fill="#0F4C5C"/><g transform="translate(14 12) scale(0.8)"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="#F4EDE3" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="#E08A6A" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="#E08A6A"/></g></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#inizio" aria-label="Celea, torna all'inizio">
+      <svg class="logo" viewBox="0 0 340 120" role="img" aria-label="celea"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="var(--logo-big)" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="var(--logo-small)" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="var(--logo-small)"/><text x="122" y="78" font-size="54" font-weight="800" letter-spacing="-1.5" fill="var(--logo-text)">celea</text></svg>
+    </a>
+    <nav class="nav" aria-label="Sezioni" data-i18n="nav">
+      <a href="#demo">Demo</a><a href="#come-funziona">Come funziona</a><a href="#per-chi">Per chi</a><a href="#prezzi">Prezzi</a><a href="#domande">Domande</a><a href="#contatti">Contatti</a>
+    </nav>
+    <div class="right">
+      <div class="lang" role="group" aria-label="Lingua / Language / Sprache">
+        <button type="button" data-lang="it" aria-pressed="true" lang="it" title="Italiano">IT</button><button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button><button type="button" data-lang="de" aria-pressed="false" lang="de" title="Deutsch">DE</button>
+      </div>
+      <a class="btn btn-primary" href="#demo" data-i18n="topcta">Prova la demo</a>
+    </div>
+  </div>
+</header>
+
+<main id="inizio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="h-eye">Receptionist AI · Italia ed estero</p>
+        <h1 data-i18n="h-h1">Risponde ai Suoi clienti. <em>Sempre.</em></h1>
+        <p class="lead" data-i18n="h-lead">Celea è l'assistente che risponde su WhatsApp e al telefono 24 ore su 24: dà informazioni, fissa appuntamenti e passa la parola a una persona quando serve. Per studi dentistici, agenzie immobiliari e strutture ricettive.</p>
+        <div class="cta-row" data-i18n="h-cta">
+          <a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Prova la demo</a>
+          <a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Prenoti una breve chiamata</a>
+        </div>
+        <p class="hero-note" data-i18n="h-note">Lo configuriamo noi, su misura per la Sua attività, con 30 giorni di prova gratuita (fino a 100 minuti di telefonate). Si presenta sempre come assistente virtuale. Prezzi chiari, <a href="#prezzi">tutti scritti qui</a>.</p>
+      </div>
+      <div class="clock" aria-label="Esempi di messaggi che arrivano quando lo studio è chiuso" data-i18n="h-clock">
+        <div class="clock-item"><time>22:47</time><p>«Domani potete vedermi? Ho perso un'otturazione.»<small>Proposti due orari, appuntamento fissato.</small></p></div>
+        <div class="clock-item"><time>07:12</time><p>«La casa in via del porto ha il box auto?»<small>Risposta data, visita fissata per sabato.</small></p></div>
+        <div class="clock-item"><time>01:30</time><p>«We arrive late tonight, how do we get the keys?»<small>Risposta in inglese con le istruzioni per il check-in.</small></p></div>
+        <p class="clock-cap">Esempi illustrativi delle richieste che arrivano a orari scomodi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo" id="demo" aria-labelledby="demo-t">
+    <div class="wrap demo-grid">
+      <div class="demo-side">
+        <div class="sec-head" style="margin:0" data-i18n="d-head">
+          <p class="eyebrow">Demo interattiva</p>
+          <h2 id="demo-t">Veda come risponde ai Suoi clienti</h2>
+          <p class="lead">Scelga il Suo settore e una situazione. Può anche scrivere una domanda nella chat.</p>
+        </div>
+        <div class="picker p-niche">
+          <span class="picker-label" id="niche-l" data-i18n="d-nl">1. Il Suo settore</span>
+          <div class="niches" role="group" aria-labelledby="niche-l">
+            <button class="niche" type="button" data-niche="dentista" aria-pressed="true"><svg aria-hidden="true"><use href="#i-tooth"/></svg><span data-i18n="n1">Studio dentistico</span></button>
+            <button class="niche" type="button" data-niche="immobiliare" aria-pressed="false"><svg aria-hidden="true"><use href="#i-house"/></svg><span data-i18n="n2">Agenzia immobiliare</span></button>
+            <button class="niche" type="button" data-niche="ricettivo" aria-pressed="false"><svg aria-hidden="true"><use href="#i-bed"/></svg><span data-i18n="n3">B&amp;B e hotel</span></button>
+          </div>
+        </div>
+        <div class="picker p-scen">
+          <span class="picker-label" id="scen-l" data-i18n="d-sl">2. Altre situazioni da provare</span>
+          <div class="scen" role="group" aria-labelledby="scen-l">
+            <button type="button" data-scen="faq" data-i18n="s1"><strong>Domande frequenti</strong><span>orari, servizi, informazioni</span></button>
+            <button type="button" data-scen="prenota" data-i18n="s2"><strong>Appuntamento</strong><span>sceglie l'orario e conferma</span></button>
+            <button type="button" data-scen="notte" data-i18n="s3"><strong>Fuori orario</strong><span>un messaggio di notte</span></button>
+            <button type="button" data-scen="umano" data-i18n="s4"><strong>Passa a una persona</strong><span>quando serve lo staff</span></button>
+          </div>
+        </div>
+        <p class="demo-flag"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="d-flag">Dimostrazione: attività di esempio e risposte preimpostate. Nulla di ciò che scrive viene inviato o salvato. Il vero assistente viene configurato con i dati della Sua attività.</span></p>
+      </div>
+
+      <div class="phone">
+        <div class="chat-head">
+          <svg aria-hidden="true"><use href="#i-logo"/></svg>
+          <div><b id="chat-name">Studio dentistico (esempio)</b><small data-i18n="d-sub">Assistente virtuale · demo</small></div>
+          <span class="tag">DEMO</span>
+          <button type="button" class="restart" id="restart" aria-label="Ricomincia la conversazione" data-i18n="d-restart">Ricomincia</button>
+        </div>
+        <div class="chat" id="chat" role="log" aria-live="polite" aria-label="Conversazione dimostrativa"></div>
+        <div class="chips" id="chips"></div>
+        <form class="composer" id="composer" autocomplete="off">
+          <label for="chat-input" class="skip">Scriva un messaggio</label>
+          <input id="chat-input" type="text" placeholder="Scriva una domanda…" maxlength="200">
+          <button type="submit" aria-label="Invia"><svg aria-hidden="true"><use href="#i-send"/></svg></button>
+        </form>
+        <p class="composer-hint" data-i18n="d-hint">Provi ad esempio: «che orari fate?», «vorrei un appuntamento», «posso parlare con qualcuno?»</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="come-funziona" aria-labelledby="come-t">
+    <div class="wrap">
+      <div class="sec-head" data-i18n="c-head">
+        <p class="eyebrow">Come funziona</p>
+        <h2 id="come-t">Attivo in due settimane, senza lavoro tecnico per Lei</h2>
+      </div>
+      <ol class="steps" data-i18n="c-steps">
+        <li><div><h3>Ci racconta la Sua attività</h3><p>In una chiamata raccogliamo orari, servizi, domande frequenti, il tono che preferisce, cosa l'assistente non deve dire e a chi passare la parola.</p><span class="when">Chiamata di 45 minuti</span></div></li>
+        <li><div><h3>Lo prepariamo e lo proviamo insieme</h3><p>Configuriamo l'assistente su WhatsApp e al telefono. Poi Lei fa tutte le domande difficili che vuole e noi correggiamo.</p><span class="when">Prova insieme di 30 minuti</span></div></li>
+        <li><div><h3>Parte, prima fuori orario</h3><p>I primi 30 giorni sono di prova gratuita (fino a 100 minuti di telefonate). All'inizio risponde solo la sera e nel fine settimana, con un riepilogo quotidiano. Quando è soddisfatto, risponde sempre. Ogni mese riceve un report.</p><span class="when">Attivo in 14 giorni</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="alt" id="per-chi" aria-labelledby="chi-t">
+    <div class="wrap">
+      <div class="sec-head" data-i18n="p-head">
+        <p class="eyebrow">Per chi</p>
+        <h2 id="chi-t">Pensato per tre mestieri in cui il telefono non smette mai di squillare</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <svg class="ic" aria-hidden="true"><use href="#i-tooth"/></svg>
+          <h3 data-i18n="p1h">Studi dentistici</h3>
+          <ul data-i18n="p1l"><li>Prime visite, controlli e igiene</li><li>Spostamenti e disdette su WhatsApp</li><li>Urgenze passate subito allo studio</li><li>Nessun consiglio medico, mai</li></ul>
+          <p class="quote" data-i18n="p1q">La paziente scrive alle 22 per spostare la pulizia: l'assistente propone due orari liberi.</p>
+          <button class="tryit" type="button" data-try="dentista" data-i18n="p1b">Provi la demo per studi dentistici</button>
+        </article>
+        <article class="card">
+          <svg class="ic" aria-hidden="true"><use href="#i-house"/></svg>
+          <h3 data-i18n="p2h">Agenzie immobiliari</h3>
+          <ul data-i18n="p2l"><li>Risposte alle richieste dagli annunci</li><li>Domande per capire budget, zona e tempi</li><li>Visite fissate in agenda</li><li>Valutazioni passate all'agente</li></ul>
+          <p class="quote" data-i18n="p2q">Una richiesta dall'annuncio arriva alle 23: la mattina dopo l'agente trova il contatto già qualificato.</p>
+          <button class="tryit" type="button" data-try="immobiliare" data-i18n="p2b">Provi la demo per agenzie</button>
+        </article>
+        <article class="card">
+          <svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg>
+          <h3 data-i18n="p3h">B&amp;B, case vacanza e hotel</h3>
+          <ul data-i18n="p3l"><li>Disponibilità e link per prenotare</li><li>Check-in, parcheggio, animali</li><li>Risposte in italiano, inglese e tedesco</li><li>Problemi in camera segnalati al personale</li></ul>
+          <p class="quote" data-i18n="p3q">Gli ospiti arrivano all'una di notte: ricevono subito le istruzioni per le chiavi.</p>
+          <button class="tryit" type="button" data-try="ricettivo" data-i18n="p3b">Provi la demo per strutture ricettive</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cambia-t">
+    <div class="wrap">
+      <div class="sec-head" data-i18n="b-head">
+        <p class="eyebrow">Per il titolare</p>
+        <h2 id="cambia-t">Cosa cambia nella Sua giornata</h2>
+      </div>
+      <div class="ben" data-i18n="b-list">
+        <div><h3>Nessuna richiesta resta senza risposta</h3><p>Sera, domenica, pausa pranzo: chi scrive o chiama riceve subito una risposta, invece di cercare qualcun altro.</p></div>
+        <div><h3>Meno interruzioni mentre lavora</h3><p>Le domande ripetitive le gestisce l'assistente. Lei e il Suo staff vi occupate delle persone davanti a voi.</p></div>
+        <div><h3>L'agenda si riempie con ordine</h3><p>Appuntamenti, visite e richieste di prenotazione arrivano nel calendario con i dati che servono.</p></div>
+        <div><h3>Decide Lei cosa dice</h3><p>Orari, servizi, tono e limiti li stabilisce Lei. Ogni giorno vede cosa è stato chiesto e cosa è stato risposto.</p></div>
+        <div><h3>Una persona quando serve</h3><p>Urgenze, reclami, casi delicati o domande senza risposta passano a chi indica Lei, con il riepilogo già pronto.</p></div>
+        <div><h3>Seguito da vicino, ovunque si trovi</h3><p>Un referente unico, assistenza su WhatsApp e in videochiamata, aggiornamenti dei contenuti quando cambia qualcosa. Lavoriamo con attività in tutta Italia e all'estero.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="prezzi" aria-labelledby="prezzi-t">
+    <div class="wrap pwrap" data-i18n="price">
+      <div class="sec-head">
+        <p class="eyebrow">Prezzi</p>
+        <h2 id="prezzi-t">Tutto quello che paga, scritto qui.</h2>
+        <p class="lead">Un canone mensile, un'attivazione una tantum e nessun costo nascosto. Qui trova cosa è incluso, cosa può costare in più e quanto spende davvero ogni mese. Prima di decidere, provi la demo.</p>
+        <p class="start"><span>Prezzi IVA esclusa. Le attivazioni partono da novembre–dicembre 2026; la demo si prova da subito.</span></p>
+      </div>
+
+      <div class="pbox trial">
+        <p class="pk-n">Prova gratuita</p>
+        <h3>Prima di pagare, 30 giorni gratis.</h3>
+        <p>Uguale per tutti: configuriamo l'assistente sulla Sua attività e Lei lo usa per 30 giorni senza pagare, con fino a 100 minuti di telefonate (la prova finisce quando si raggiunge il primo dei due limiti). Si prenota da subito, senza firma né pagamento; parte da novembre–dicembre 2026, con l'avvio dei servizi.</p>
+      </div>
+
+      <h3 class="ph">I tre pacchetti della receptionist</h3>
+      <div class="pk">
+        <article><p class="pk-n">Base</p><h4>Risponde su WhatsApp</h4><p>L'assistente risponde ai Suoi clienti su WhatsApp, 24 ore su 24: informazioni, appuntamenti, passaggio a una persona quando serve.</p><ul><li>Fino a 300 conversazioni al mese</li><li>Italiano, inglese e tedesco inclusi</li></ul></article>
+        <article><p class="pk-n">Pro</p><h4>WhatsApp e telefono</h4><p>Tutto il Base, più le telefonate: l'assistente risponde anche al telefono, con voce standard inclusa.</p><ul><li>400 minuti di telefonate al mese</li><li>Fino a 500 conversazioni WhatsApp</li><li>Italiano, inglese e tedesco inclusi</li></ul></article>
+        <article><p class="pk-n">Pro + sito</p><h4>WhatsApp, telefono e sito</h4><p>Tutto il Pro, più un sito web di 5 pagine per la Sua attività, con l'assistente già integrato.</p><ul><li>Come il Pro</li><li>Sito di 5 pagine incluso</li></ul></article>
+      </div>
+
+      <h3 class="ph">Prezzi per settore <small>canone al mese + attivazione una tantum</small></h3>
+      <div class="nt">
+        <article><h4>Studi dentistici</h4><dl><div><dt>Base</dt><dd><b>169 €</b>/mese · attivazione 390 €</dd></div><div><dt>Pro</dt><dd><b>329 €</b>/mese · attivazione 690 €</dd></div><div><dt>Pro + sito</dt><dd><b>379 €</b>/mese · attivazione 1.390 €</dd></div></dl></article>
+        <article><h4>Agenzie immobiliari</h4><dl><div><dt>Base</dt><dd><b>149 €</b>/mese · attivazione 390 €</dd></div><div><dt>Pro</dt><dd><b>299 €</b>/mese · attivazione 690 €</dd></div><div><dt>Pro + sito</dt><dd><b>349 €</b>/mese · attivazione 1.390 €</dd></div></dl></article>
+        <article><h4>B&amp;B, case vacanza e hotel</h4><dl><div><dt>Base</dt><dd><b>139 €</b>/mese · attivazione 390 €</dd></div><div><dt>Pro</dt><dd><b>269 €</b>/mese · attivazione 690 €</dd></div><div><dt>Pro + sito</dt><dd><b>319 €</b>/mese · attivazione 1.390 €</dd></div></dl></article>
+      </div>
+      <p class="pnote">L'attivazione comprende la configurazione dell'assistente sulle regole della Sua attività e la prova insieme prima della partenza.</p>
+
+      <div class="pcols">
+        <div class="pbox">
+          <h3>Cosa può costare in più <small>solo se lo usa o lo sceglie Lei</small></h3>
+          <ul class="plist">
+            <li><span>Minuti di telefonata oltre i 400 inclusi (Pro e Pro + sito)</span><b>0,45 €/min</b></li>
+            <li><span>Voce premium, ancora più naturale, da scegliere dopo averla ascoltata (la voce standard resta inclusa)</span><b>79 €/mese</b></li>
+            <li><span>Minuti oltre i 400 con la voce premium</span><b>0,65 €/min</b></li>
+            <li><span>Altre lingue oltre a italiano, inglese e tedesco, solo dopo una nostra prova scritta</span><b>19 €/mese a lingua</b></li>
+            <li><span>Seconda sede o secondo numero, con gli stessi minuti e conversazioni inclusi</span><b>49 €/mese</b></li>
+            <li><span>Conversazioni WhatsApp oltre il limite del pacchetto</span><b>15 € ogni 100</b></li>
+          </ul>
+        </div>
+        <div class="pbox meta">
+          <h3>I messaggi WhatsApp li paga a Meta, senza nostri ricarichi.</h3>
+          <p>WhatsApp appartiene a Meta, che fa pagare alcuni messaggi alle aziende. Lei collega la Sua carta al Suo account WhatsApp e paga questi messaggi direttamente a Meta: noi non ci guadagniamo nulla e non aggiungiamo ricarichi. Così vede sempre quanto spende, voce per voce.</p>
+          <ul class="plist"><li><span>Con il Base (stima)</span><b>da 0 a circa 20 €/mese</b></li><li><span>Con il Pro e il Pro + sito, uso medio (stima)</span><b>circa 29–35 €/mese</b></li><li><span>Con il Pro, nei mesi più pieni (stima)</span><b>fino a circa 50–60 €/mese</b></li></ul>
+          <p class="pnote">Stime IVA esclusa: la cifra dipende da quante conversazioni gestisce l'assistente nel mese e da quanti promemoria si mandano. Le risposte a chi Le scrive sono gratis fino a 1.000 al mese; si pagano le risposte oltre quella soglia e i promemoria. Uno studio dentistico che manda il promemoria a tutti gli appuntamenti arriva a circa 62 € nei mesi pieni; una struttura con molti ospiti dall'estero fino a circa 76 €. Per gli studi dentistici, che di solito non recuperano l'IVA, la stima IVA inclusa è da 0 a circa 24 € al mese con il Base e circa 11–75 € al mese con il Pro.</p>
+          <p class="pnote"><strong>Esempio di costo totale al mese:</strong> uno studio dentistico con il Pro paga 329 € di canone più i messaggi Meta, cioè di solito circa 364 € al mese in tutto e al massimo circa 391 € nei mesi più pieni (IVA esclusa). Un B&amp;B con il Base: 139 € più i messaggi Meta, cioè 139–159 € al mese in tutto.</p>
+        </div>
+      </div>
+
+      <div class="pbox">
+        <h3>Le condizioni, chiare</h3>
+        <ul class="terms">
+          <li><b>Prova gratuita:</b> 30 giorni gratis (fino a 100 minuti di telefonate; vale il limite che si raggiunge prima), con l'assistente configurato sulla Sua attività. Si prenota da subito, senza firma né pagamento; parte da novembre–dicembre 2026.</li>
+          <li><b>Attivazione:</b> si paga una volta sola, all'inizio (390 € Base, 690 € Pro, 1.390 € Pro + sito).</li>
+          <li><b>Durata minima:</b> 6 mesi. Dopo, si continua mese per mese e si può smettere con 30 giorni di preavviso.</li>
+          <li><b>Pagamento annuale:</b> 12 mesi al prezzo di 11.</li>
+          <li><b>Pausa stagionale</b> (B&amp;B, case vacanza e hotel): nei mesi di chiusura l'assistente resta acceso solo su WhatsApp (telefono spento) e il canone scende al 20%, con un minimo di 59 € al mese.</li>
+          <li><b>Partenza:</b> le attivazioni partono da novembre–dicembre 2026. La demo si prova subito.</li>
+        </ul>
+      </div>
+
+      <h3 class="ph">Pacchetti completi per settore <small>receptionist Pro più i servizi digitali, durata minima 6 mesi</small></h3>
+      <div class="cat">
+        <article><h4>Studio Sorridente</h4><p class="cat-who">Studi dentistici</p><p class="cat-p"><b>749 €</b>/mese · attivazione 990 €</p><p>Receptionist Pro, Google &amp; Recensioni, campagne WhatsApp di richiamo, social (1 canale).</p></article>
+        <article><h4>Agenzia Sempre Aperta</h4><p class="cat-who">Agenzie immobiliari</p><p class="cat-p"><b>790 €</b>/mese · attivazione 890 €</p><p>Receptionist Pro, ricontatto automatico delle richieste, social (2 canali con video brevi), assistente anche sul sito.</p></article>
+        <article><h4>Ospitalità 24/7</h4><p class="cat-who">B&amp;B, case vacanza e hotel</p><p class="cat-p"><b>649 €</b>/mese · attivazione 810 €</p><p>Receptionist Pro con inglese e tedesco, Google &amp; Recensioni, social (1 canale). In pausa stagionale si sospendono social e recensioni.</p></article>
+        <article class="cat-top"><h4>Celea Concierge</h4><p class="cat-who">Per chi vuole il servizio migliore</p><p class="cat-p"><b>2.490 €</b>/mese · attivazione 3.490 €</p><p>Receptionist con 1.000 minuti, sito multilingua, SEO locale, social su 3 canali, newsletter, campagne WhatsApp, incontro mensile con William, assistenza prioritaria. Durata minima 12 mesi.</p></article>
+      </div>
+      <p class="pnote">Ogni pacchetto include un numero di ore di lavoro su misura al mese (7 ore Studio Sorridente e Agenzia Sempre Aperta, 6 ore Ospitalità 24/7, 22,5 ore Concierge); oltre, 69 € all'ora. A ogni pacchetto si può aggiungere il sito vetrina a 790 € + 49 €/mese. I messaggi Meta restano a parte, senza ricarichi.</p>
+
+      <h3 class="ph">Servizi digitali singoli <small>anche senza receptionist</small></h3>
+      <div class="svc">
+        <div><h4>Social</h4><ul class="plist"><li><span>Social Start · 1 canale, 8 post, 4 storie</span><b>290 €/mese + 190 €</b></li><li><span>Social Plus · 2 canali, 12 post, 2 video brevi</span><b>490 €/mese + 290 €</b></li><li><span>Social Pro · 3 canali, 20 post, 4 video brevi</span><b>790 €/mese + 390 €</b></li></ul></div>
+        <div><h4>Siti web</h4><ul class="plist"><li><span>Landing page · 1 pagina, dominio e hosting</span><b>490 € + 29 €/mese</b></li><li><span>Sito vetrina · 5 pagine, SEO di base</span><b>990 € + 49 €/mese</b></li><li><span>Sito premium · 10 pagine in italiano, inglese e tedesco</span><b>1.990 € + 79 €/mese</b></li></ul></div>
+        <div><h4>Google e recensioni</h4><ul class="plist"><li><span>Google &amp; Recensioni · scheda Google, 4 post al mese, risposte alle recensioni</span><b>149 €/mese + 190 €</b></li><li><span>SEO locale completo</span><b>299 €/mese + 390 €</b></li></ul></div>
+        <div><h4>Clienti già acquisiti</h4><ul class="plist"><li><span>Newsletter mensile</span><b>149 €/mese + 190 €</b></li><li><span>Campagne WhatsApp ai clienti (messaggi Meta a parte)</span><b>99 €/mese + 190 €</b></li><li><span>Ricontatto automatico delle richieste</span><b>79 €/mese + 190 €</b></li><li><span>Assistente sul sito, in aggiunta alla receptionist</span><b>49 €/mese + 90 €</b></li></ul></div>
+      </div>
+      <p class="pnote">Il primo importo è il canone (o il prezzo una tantum per i siti), il secondo l'attivazione o il canone del sito. Su richiesta prepariamo un preventivo su misura per email.</p>
+
+      <div class="faq pfaq">
+        <h3 class="ph">Domande sui costi</h3>
+        <details><summary>Posso provarlo prima di pagare?</summary><div class="ans"><p>Sì. Oltre alla demo che prova qui subito, c'è una prova gratuita di 30 giorni con l'assistente configurato sulla Sua attività e fino a 100 minuti di telefonate. È uguale per tutti, si prenota da subito senza firma né pagamento e parte da novembre–dicembre 2026.</p></div></details>
+        <details><summary>Ci sono costi nascosti?</summary><div class="ans"><p>No. Paga il canone mensile e l'attivazione una tantum. Tutto il resto è scritto in questa pagina e lo paga solo se lo usa o lo sceglie: minuti in più, voce premium, altre lingue, seconda sede. I messaggi WhatsApp li paga direttamente a Meta, senza nostri ricarichi.</p></div></details>
+        <details><summary>Cosa succede se supero i minuti di telefonata?</summary><div class="ans"><p>L'assistente continua a rispondere: non resta mai nessuno senza risposta. I minuti oltre i 400 inclusi costano 0,45 € al minuto (0,65 € con la voce premium) e li trova indicati nel report mensile.</p></div></details>
+        <details><summary>E se supero le conversazioni WhatsApp?</summary><div class="ans"><p>L'assistente continua a rispondere. Le conversazioni oltre il limite del pacchetto costano 15 € ogni 100.</p></div></details>
+        <details><summary>Perché i messaggi WhatsApp li pago a Meta e non a voi?</summary><div class="ans"><p>Perché così paga il prezzo di Meta, senza intermediari e senza ricarichi, e vede la spesa esatta nel Suo account. Per un'attività tipica sono da pochi euro a qualche decina di euro al mese.</p></div></details>
+        <details><summary>Che differenza c'è tra Base e Pro?</summary><div class="ans"><p>Il Base risponde su WhatsApp. Il Pro risponde anche al telefono, con 400 minuti di telefonate al mese inclusi. Se non sa quale scegliere, provi la demo e ne parliamo in una breve chiamata.</p></div></details>
+        <details><summary>Le lingue straniere costano in più?</summary><div class="ans"><p>Italiano, inglese e tedesco sono inclusi in ogni pacchetto. Altre lingue costano 19 € al mese ciascuna, solo dopo una nostra prova che ne garantisca la qualità.</p></div></details>
+        <details><summary>Posso pagare una volta all'anno?</summary><div class="ans"><p>Sì: con il pagamento annuale paga 11 mesi e ne riceve 12.</p></div></details>
+        <details><summary>Quanto devo restare? Posso fermarmi d'estate o d'inverno?</summary><div class="ans"><p>La durata minima è di 6 mesi, poi si continua mese per mese con 30 giorni di preavviso. Le strutture ricettive possono mettere in pausa il servizio nei mesi di chiusura: resta acceso solo WhatsApp e il canone scende al 20%, con un minimo di 59 € al mese.</p></div></details>
+      </div>
+
+      <div class="why">
+        <div><h4>Telefono e WhatsApp insieme</h4><p>Un solo assistente risponde sia ai messaggi sia alle chiamate, con le stesse informazioni e lo stesso tono. Non due strumenti da gestire.</p></div>
+        <div><h4>Lo configuriamo noi</h4><p>Non deve imparare un programma: prepariamo l'assistente sulle regole della Sua attività, lo proviamo con Lei e lo aggiorniamo quando cambia qualcosa.</p></div>
+        <div><h4>Un referente unico</h4><p>Una persona che conosce la Sua attività, raggiungibile su WhatsApp e in videochiamata, per l'assistente e, se vuole, anche per sito, scheda Google e social.</p></div>
+      </div>
+
+      <div class="pend">
+        <h3>Prima dei prezzi, provi come risponde.</h3>
+        <p>La demo qui sopra si prova subito. Poi può prenotare la prova gratuita di 30 giorni sulla Sua attività. Per parlarne, una breve chiamata con William.</p>
+        <div class="cta-row"><a class="btn btn-accent" href="#demo">Prova la demo</a><a class="btn btn-ghost" href="#contatti">Prenoti una breve chiamata</a></div>
+      </div>
+    </div>
+  </section>
+  <template id="tpl-price-en">
+      <div class="sec-head">
+        <p class="eyebrow">Pricing</p>
+        <h2 id="prezzi-t">Everything you pay, written right here.</h2>
+        <p class="lead">One monthly fee, a one-off setup fee and no hidden costs. See what is included, what may cost extra and what you really spend each month. Before you decide, try the demo.</p>
+        <p class="start"><span>Prices exclude VAT. Services go live from November–December 2026; the demo is available right away.</span></p>
+      </div>
+
+      <div class="pbox trial">
+        <p class="pk-n">Free trial</p>
+        <h3>Before you pay: 30 days free.</h3>
+        <p>The same for everyone: we set up the assistant for your business and you use it for 30 days without paying, with up to 100 call minutes (the trial ends when the first of the two limits is reached). You can book it right away, with no signature and no payment; it starts from November–December 2026, when services go live.</p>
+      </div>
+
+      <h3 class="ph">The three receptionist packages</h3>
+      <div class="pk">
+        <article><p class="pk-n">Base</p><h4>Answers on WhatsApp</h4><p>Your assistant answers customers on WhatsApp, 24/7: information, appointments and hand-over to a person when needed.</p><ul><li>Up to 300 conversations a month</li><li>Italian, English and German included</li></ul></article>
+        <article><p class="pk-n">Pro</p><h4>WhatsApp and phone</h4><p>Everything in Base, plus phone calls: the assistant also answers the phone, with a standard voice included.</p><ul><li>400 call minutes a month</li><li>Up to 500 WhatsApp conversations</li><li>Italian, English and German included</li></ul></article>
+        <article><p class="pk-n">Pro + website</p><h4>WhatsApp, phone and website</h4><p>Everything in Pro, plus a 5-page website for your business with the assistant built in.</p><ul><li>Same as Pro</li><li>5-page website included</li></ul></article>
+      </div>
+
+      <h3 class="ph">Prices by sector <small>monthly fee + one-off setup</small></h3>
+      <div class="nt">
+        <article><h4>Dental practices</h4><dl><div><dt>Base</dt><dd><b>€169</b>/month · setup €390</dd></div><div><dt>Pro</dt><dd><b>€329</b>/month · setup €690</dd></div><div><dt>Pro + website</dt><dd><b>€379</b>/month · setup €1,390</dd></div></dl></article>
+        <article><h4>Real estate agencies</h4><dl><div><dt>Base</dt><dd><b>€149</b>/month · setup €390</dd></div><div><dt>Pro</dt><dd><b>€299</b>/month · setup €690</dd></div><div><dt>Pro + website</dt><dd><b>€349</b>/month · setup €1,390</dd></div></dl></article>
+        <article><h4>B&amp;Bs, holiday homes and hotels</h4><dl><div><dt>Base</dt><dd><b>€139</b>/month · setup €390</dd></div><div><dt>Pro</dt><dd><b>€269</b>/month · setup €690</dd></div><div><dt>Pro + website</dt><dd><b>€319</b>/month · setup €1,390</dd></div></dl></article>
+      </div>
+      <p class="pnote">Setup covers configuring the assistant around your business rules and testing it together with you before go-live.</p>
+
+      <div class="pcols">
+        <div class="pbox">
+          <h3>What may cost extra <small>only if you use it or choose it</small></h3>
+          <ul class="plist">
+            <li><span>Call minutes beyond the 400 included (Pro and Pro + website)</span><b>€0.45/min</b></li>
+            <li><span>Premium voice, even more natural, chosen after you have heard it (the standard voice stays included)</span><b>€79/month</b></li>
+            <li><span>Minutes beyond 400 with the premium voice</span><b>€0.65/min</b></li>
+            <li><span>Languages beyond Italian, English and German, only after a written test from us</span><b>€19/month per language</b></li>
+            <li><span>Second location or second number, with the same included minutes and conversations</span><b>€49/month</b></li>
+            <li><span>WhatsApp conversations beyond your package limit</span><b>€15 per 100</b></li>
+          </ul>
+        </div>
+        <div class="pbox meta">
+          <h3>You pay WhatsApp messages to Meta, with no mark-up from us.</h3>
+          <p>WhatsApp belongs to Meta, which charges businesses for some messages. You link your card to your own WhatsApp account and pay these messages directly to Meta: we earn nothing on them and add no mark-up. You always see exactly what you spend.</p>
+          <ul class="plist"><li><span>With Base (estimate)</span><b>from €0 to about €20/month</b></li><li><span>With Pro and Pro + website, average use (estimate)</span><b>about €29–35/month</b></li><li><span>With Pro, in the busiest months (estimate)</span><b>up to about €50–60/month</b></li></ul>
+          <p class="pnote">Estimates excluding VAT: the amount depends on how many conversations the assistant handles in the month and how many reminders are sent. Replies to people who write to you are free up to 1,000 a month; replies beyond that and reminders are charged. A dental practice that sends a reminder for every appointment reaches about €62 in busy months; a property with many guests from abroad up to about €76. For dental practices, which usually cannot reclaim VAT, the estimate including VAT is from €0 to about €24 a month with Base and about €11–75 a month with Pro.</p>
+          <p class="pnote"><strong>Example of total monthly cost:</strong> a dental practice on Pro pays €329 plus Meta messages, usually about €364 a month in total and at most about €391 in the busiest months (excl. VAT). A B&amp;B on Base: €139 plus Meta messages, €139–159 a month in total.</p>
+        </div>
+      </div>
+
+      <div class="pbox">
+        <h3>Clear terms</h3>
+        <ul class="terms">
+          <li><b>Free trial:</b> 30 days free (up to 100 call minutes; whichever limit is reached first), with the assistant set up for your business. Book it right away, with no signature and no payment; it starts from November–December 2026.</li>
+          <li><b>Setup:</b> paid once, at the start (€390 Base, €690 Pro, €1,390 Pro + website).</li>
+          <li><b>Minimum term:</b> 6 months. After that, month to month with 30 days' notice.</li>
+          <li><b>Annual payment:</b> 12 months for the price of 11.</li>
+          <li><b>Seasonal pause</b> (B&amp;Bs, holiday homes and hotels): during closing months the assistant stays on WhatsApp only (phone off) and the fee drops to 20%, with a minimum of €59 a month.</li>
+          <li><b>Start:</b> services go live from November–December 2026. The demo is available right away.</li>
+        </ul>
+      </div>
+
+      <h3 class="ph">Complete packages by sector <small>Pro receptionist plus digital services, 6-month minimum term</small></h3>
+      <div class="cat">
+        <article><h4>Studio Sorridente</h4><p class="cat-who">Dental practices</p><p class="cat-p"><b>€749</b>/month · setup €990</p><p>Pro receptionist, Google &amp; Reviews, WhatsApp recall campaigns, social media (1 channel).</p></article>
+        <article><h4>Agenzia Sempre Aperta</h4><p class="cat-who">Real estate agencies</p><p class="cat-p"><b>€790</b>/month · setup €890</p><p>Pro receptionist, automatic follow-up of enquiries, social media (2 channels with short videos), assistant on your website too.</p></article>
+        <article><h4>Ospitalità 24/7</h4><p class="cat-who">B&amp;Bs, holiday homes and hotels</p><p class="cat-p"><b>€649</b>/month · setup €810</p><p>Pro receptionist with English and German, Google &amp; Reviews, social media (1 channel). During the seasonal pause social media and reviews are suspended.</p></article>
+        <article class="cat-top"><h4>Celea Concierge</h4><p class="cat-who">For those who want the very best</p><p class="cat-p"><b>€2,490</b>/month · setup €3,490</p><p>Receptionist with 1,000 minutes, multilingual website, local SEO, social media on 3 channels, newsletter, WhatsApp campaigns, a monthly meeting with William, priority support. 12-month minimum term.</p></article>
+      </div>
+      <p class="pnote">Each package includes a set number of hours of tailored work per month (7 hours Studio Sorridente and Agenzia Sempre Aperta, 6 hours Ospitalità 24/7, 22.5 hours Concierge); beyond that, €69 per hour. A showcase website can be added to any package for €790 + €49/month. Meta message fees stay separate, with no mark-up.</p>
+
+      <h3 class="ph">Individual digital services <small>also without the receptionist</small></h3>
+      <div class="svc">
+        <div><h4>Social media</h4><ul class="plist"><li><span>Social Start · 1 channel, 8 posts, 4 stories</span><b>€290/month + €190</b></li><li><span>Social Plus · 2 channels, 12 posts, 2 short videos</span><b>€490/month + €290</b></li><li><span>Social Pro · 3 channels, 20 posts, 4 short videos</span><b>€790/month + €390</b></li></ul></div>
+        <div><h4>Websites</h4><ul class="plist"><li><span>Landing page · 1 page, domain and hosting</span><b>€490 + €29/month</b></li><li><span>Showcase website · 5 pages, basic SEO</span><b>€990 + €49/month</b></li><li><span>Premium website · 10 pages in Italian, English and German</span><b>€1,990 + €79/month</b></li></ul></div>
+        <div><h4>Google and reviews</h4><ul class="plist"><li><span>Google &amp; Reviews · Google profile, 4 posts a month, replies to reviews</span><b>€149/month + €190</b></li><li><span>Full local SEO</span><b>€299/month + €390</b></li></ul></div>
+        <div><h4>Existing customers</h4><ul class="plist"><li><span>Monthly newsletter</span><b>€149/month + €190</b></li><li><span>WhatsApp campaigns to your customers (Meta messages extra)</span><b>€99/month + €190</b></li><li><span>Automatic follow-up of enquiries</span><b>€79/month + €190</b></li><li><span>Assistant on your website, added to the receptionist</span><b>€49/month + €90</b></li></ul></div>
+      </div>
+      <p class="pnote">The first amount is the monthly fee (or the one-off price for websites), the second the setup or the website's monthly fee. On request we prepare a tailored quote by email.</p>
+
+      <div class="faq pfaq">
+        <h3 class="ph">Pricing questions</h3>
+        <details><summary>Can I try it before I pay?</summary><div class="ans"><p>Yes. Besides the demo you can try here right away, there is a free 30-day trial with the assistant set up for your business and up to 100 call minutes. It is the same for everyone, can be booked right away with no signature and no payment, and starts from November–December 2026.</p></div></details>
+        <details><summary>Are there any hidden costs?</summary><div class="ans"><p>No. You pay the monthly fee and the one-off setup. Everything else is on this page and you only pay it if you use or choose it: extra minutes, premium voice, extra languages, a second location. WhatsApp messages are paid directly to Meta, with no mark-up from us.</p></div></details>
+        <details><summary>What happens if I go over my call minutes?</summary><div class="ans"><p>The assistant keeps answering: nobody is left without a reply. Minutes beyond the 400 included cost €0.45 per minute (€0.65 with the premium voice) and are shown in your monthly report.</p></div></details>
+        <details><summary>And if I go over my WhatsApp conversations?</summary><div class="ans"><p>The assistant keeps answering. Conversations beyond your package limit cost €15 per 100.</p></div></details>
+        <details><summary>Why do I pay WhatsApp messages to Meta and not to you?</summary><div class="ans"><p>So you pay Meta's own price, with no middleman and no mark-up, and see the exact amount in your account. For a typical business it ranges from a few euros to a few dozen euros a month.</p></div></details>
+        <details><summary>What is the difference between Base and Pro?</summary><div class="ans"><p>Base answers on WhatsApp. Pro also answers the phone, with 400 call minutes a month included. Not sure which one fits? Try the demo and let's talk in a short call.</p></div></details>
+        <details><summary>Do foreign languages cost extra?</summary><div class="ans"><p>Italian, English and German are included in every package. Other languages cost €19 a month each, only after a test from us that confirms the quality.</p></div></details>
+        <details><summary>Can I pay once a year?</summary><div class="ans"><p>Yes: with annual payment you pay for 11 months and get 12.</p></div></details>
+        <details><summary>How long do I have to stay? Can I pause in the off-season?</summary><div class="ans"><p>The minimum term is 6 months, then month to month with 30 days' notice. Hospitality businesses can pause during closing months: only WhatsApp stays on and the fee drops to 20%, with a minimum of €59 a month.</p></div></details>
+      </div>
+
+      <div class="why">
+        <div><h4>Phone and WhatsApp together</h4><p>One assistant answers both messages and calls, with the same information and the same tone. Not two tools to manage.</p></div>
+        <div><h4>We set it up for you</h4><p>No software to learn: we build the assistant around your business rules, test it with you and update it whenever something changes.</p></div>
+        <div><h4>One single contact person</h4><p>Someone who knows your business, reachable on WhatsApp and video call, for the assistant and, if you wish, for your website, Google profile and social media too.</p></div>
+      </div>
+
+      <div class="pend">
+        <h3>Before the prices, see how it answers.</h3>
+        <p>The demo above works right away. Then you can book the free 30-day trial for your business. To talk it through, a short call with William.</p>
+        <div class="cta-row"><a class="btn btn-accent" href="#demo">Try the demo</a><a class="btn btn-ghost" href="#contatti">Book a short call</a></div>
+      </div>
+  </template>
+  <template id="tpl-price-de">
+      <div class="sec-head">
+        <p class="eyebrow">Preise</p>
+        <h2 id="prezzi-t">Alles, was Sie zahlen, steht hier.</h2>
+        <p class="lead">Eine monatliche Gebühr, eine einmalige Einrichtung und keine versteckten Kosten. Hier sehen Sie, was enthalten ist, was zusätzlich kosten kann und was Sie wirklich jeden Monat ausgeben. Bevor Sie sich entscheiden, testen Sie die Demo.</p>
+        <p class="start"><span>Preise zzgl. MwSt. Der Start der Dienste ist ab November–Dezember 2026 möglich; die Demo können Sie sofort testen.</span></p>
+      </div>
+
+      <div class="pbox trial">
+        <p class="pk-n">Kostenlose Testphase</p>
+        <h3>Bevor Sie zahlen: 30 Tage kostenlos.</h3>
+        <p>Für alle gleich: Wir richten den Assistenten für Ihren Betrieb ein, und Sie nutzen ihn 30 Tage, ohne zu zahlen, mit bis zu 100 Telefonminuten (die Testphase endet, sobald eine der beiden Grenzen erreicht ist). Buchbar ab sofort, ohne Unterschrift und ohne Zahlung; Start ab November–Dezember 2026, mit dem Start der Dienste.</p>
+      </div>
+
+      <h3 class="ph">Die drei Pakete der Rezeption</h3>
+      <div class="pk">
+        <article><p class="pk-n">Base</p><h4>Antwortet auf WhatsApp</h4><p>Der Assistent antwortet Ihren Kunden rund um die Uhr auf WhatsApp: Auskünfte, Termine und Übergabe an einen Menschen, wenn es nötig ist.</p><ul><li>Bis zu 300 Gespräche im Monat</li><li>Italienisch, Englisch und Deutsch inklusive</li></ul></article>
+        <article><p class="pk-n">Pro</p><h4>WhatsApp und Telefon</h4><p>Alles aus Base, dazu Anrufe: Der Assistent nimmt auch Telefonate an, mit Standardstimme inklusive.</p><ul><li>400 Telefonminuten im Monat</li><li>Bis zu 500 WhatsApp-Gespräche</li><li>Italienisch, Englisch und Deutsch inklusive</li></ul></article>
+        <article><p class="pk-n">Pro + Website</p><h4>WhatsApp, Telefon und Website</h4><p>Alles aus Pro, dazu eine Website mit 5 Seiten für Ihren Betrieb, mit integriertem Assistenten.</p><ul><li>Wie Pro</li><li>Website mit 5 Seiten inklusive</li></ul></article>
+      </div>
+
+      <h3 class="ph">Preise nach Branche <small>monatliche Gebühr + einmalige Einrichtung</small></h3>
+      <div class="nt">
+        <article><h4>Zahnarztpraxen</h4><dl><div><dt>Base</dt><dd><b>169 €</b>/Monat · Einrichtung 390 €</dd></div><div><dt>Pro</dt><dd><b>329 €</b>/Monat · Einrichtung 690 €</dd></div><div><dt>Pro + Website</dt><dd><b>379 €</b>/Monat · Einrichtung 1.390 €</dd></div></dl></article>
+        <article><h4>Immobilienagenturen</h4><dl><div><dt>Base</dt><dd><b>149 €</b>/Monat · Einrichtung 390 €</dd></div><div><dt>Pro</dt><dd><b>299 €</b>/Monat · Einrichtung 690 €</dd></div><div><dt>Pro + Website</dt><dd><b>349 €</b>/Monat · Einrichtung 1.390 €</dd></div></dl></article>
+        <article><h4>B&amp;Bs, Ferienwohnungen und Hotels</h4><dl><div><dt>Base</dt><dd><b>139 €</b>/Monat · Einrichtung 390 €</dd></div><div><dt>Pro</dt><dd><b>269 €</b>/Monat · Einrichtung 690 €</dd></div><div><dt>Pro + Website</dt><dd><b>319 €</b>/Monat · Einrichtung 1.390 €</dd></div></dl></article>
+      </div>
+      <p class="pnote">Die Einrichtung umfasst die Konfiguration des Assistenten nach den Regeln Ihres Betriebs und den gemeinsamen Test vor dem Start.</p>
+
+      <div class="pcols">
+        <div class="pbox">
+          <h3>Was zusätzlich kosten kann <small>nur wenn Sie es nutzen oder wählen</small></h3>
+          <ul class="plist">
+            <li><span>Telefonminuten über die 400 enthaltenen hinaus (Pro und Pro + Website)</span><b>0,45 €/Min.</b></li>
+            <li><span>Premium-Stimme, noch natürlicher, wählbar nach dem Probehören (die Standardstimme bleibt inklusive)</span><b>79 €/Monat</b></li>
+            <li><span>Minuten über 400 mit der Premium-Stimme</span><b>0,65 €/Min.</b></li>
+            <li><span>Weitere Sprachen neben Italienisch, Englisch und Deutsch, nur nach einem schriftlichen Test von uns</span><b>19 €/Monat je Sprache</b></li>
+            <li><span>Zweiter Standort oder zweite Nummer, mit denselben enthaltenen Minuten und Gesprächen</span><b>49 €/Monat</b></li>
+            <li><span>WhatsApp-Gespräche über das Paketlimit hinaus</span><b>15 € je 100</b></li>
+          </ul>
+        </div>
+        <div class="pbox meta">
+          <h3>WhatsApp-Nachrichten zahlen Sie an Meta, ohne Aufschlag von uns.</h3>
+          <p>WhatsApp gehört zu Meta, das Unternehmen einige Nachrichten in Rechnung stellt. Sie hinterlegen Ihre Karte in Ihrem eigenen WhatsApp-Konto und zahlen diese Nachrichten direkt an Meta: Wir verdienen daran nichts und schlagen nichts auf. So sehen Sie immer genau, was Sie ausgeben.</p>
+          <ul class="plist"><li><span>Mit Base (Schätzung)</span><b>0 bis etwa 20 €/Monat</b></li><li><span>Mit Pro und Pro + Website, durchschnittliche Nutzung (Schätzung)</span><b>etwa 29–35 €/Monat</b></li><li><span>Mit Pro, in den vollsten Monaten (Schätzung)</span><b>bis etwa 50–60 €/Monat</b></li></ul>
+          <p class="pnote">Schätzungen zzgl. MwSt.: Der Betrag hängt davon ab, wie viele Gespräche der Assistent im Monat führt und wie viele Erinnerungen verschickt werden. Antworten an Personen, die Ihnen schreiben, sind bis 1.000 im Monat kostenlos; berechnet werden Antworten über dieser Schwelle und Erinnerungen. Eine Zahnarztpraxis, die zu jedem Termin eine Erinnerung schickt, kommt in vollen Monaten auf etwa 62 €; eine Unterkunft mit vielen Gästen aus dem Ausland auf bis zu etwa 76 €. Für Zahnarztpraxen, die die MwSt. meist nicht zurückerhalten, beträgt die Schätzung inkl. MwSt. 0 bis etwa 24 € im Monat mit Base und etwa 11–75 € im Monat mit Pro.</p>
+          <p class="pnote"><strong>Beispiel der Gesamtkosten pro Monat:</strong> Eine Zahnarztpraxis mit Pro zahlt 329 € Gebühr plus die Meta-Nachrichten, also meist etwa 364 € im Monat insgesamt und höchstens etwa 391 € in den vollsten Monaten (zzgl. MwSt.). Ein B&amp;B mit Base: 139 € plus die Meta-Nachrichten, also 139–159 € im Monat insgesamt.</p>
+        </div>
+      </div>
+
+      <div class="pbox">
+        <h3>Die Bedingungen, klar</h3>
+        <ul class="terms">
+          <li><b>Kostenlose Testphase:</b> 30 Tage kostenlos (bis zu 100 Telefonminuten; es gilt die Grenze, die zuerst erreicht wird), mit dem für Ihren Betrieb eingerichteten Assistenten. Buchbar ab sofort, ohne Unterschrift und ohne Zahlung; Start ab November–Dezember 2026.</li>
+          <li><b>Einrichtung:</b> wird einmal zu Beginn bezahlt (390 € Base, 690 € Pro, 1.390 € Pro + Website).</li>
+          <li><b>Mindestlaufzeit:</b> 6 Monate. Danach monatlich, kündbar mit 30 Tagen Frist.</li>
+          <li><b>Jahreszahlung:</b> 12 Monate zum Preis von 11.</li>
+          <li><b>Saisonpause</b> (B&amp;Bs, Ferienwohnungen und Hotels): In den Schließmonaten bleibt der Assistent nur auf WhatsApp aktiv (Telefon aus) und die Gebühr sinkt auf 20 %, mindestens 59 € im Monat.</li>
+          <li><b>Start:</b> Die Dienste starten ab November–Dezember 2026. Die Demo können Sie sofort testen.</li>
+        </ul>
+      </div>
+
+      <h3 class="ph">Komplettpakete nach Branche <small>Pro-Rezeption plus digitale Dienste, Mindestlaufzeit 6 Monate</small></h3>
+      <div class="cat">
+        <article><h4>Studio Sorridente</h4><p class="cat-who">Zahnarztpraxen</p><p class="cat-p"><b>749 €</b>/Monat · Einrichtung 990 €</p><p>Pro-Rezeption, Google &amp; Bewertungen, WhatsApp-Recall-Kampagnen, Social Media (1 Kanal).</p></article>
+        <article><h4>Agenzia Sempre Aperta</h4><p class="cat-who">Immobilienagenturen</p><p class="cat-p"><b>790 €</b>/Monat · Einrichtung 890 €</p><p>Pro-Rezeption, automatisches Nachfassen von Anfragen, Social Media (2 Kanäle mit kurzen Videos), Assistent auch auf der Website.</p></article>
+        <article><h4>Ospitalità 24/7</h4><p class="cat-who">B&amp;Bs, Ferienwohnungen und Hotels</p><p class="cat-p"><b>649 €</b>/Monat · Einrichtung 810 €</p><p>Pro-Rezeption mit Englisch und Deutsch, Google &amp; Bewertungen, Social Media (1 Kanal). In der Saisonpause ruhen Social Media und Bewertungen.</p></article>
+        <article class="cat-top"><h4>Celea Concierge</h4><p class="cat-who">Für alle, die den besten Service wollen</p><p class="cat-p"><b>2.490 €</b>/Monat · Einrichtung 3.490 €</p><p>Rezeption mit 1.000 Minuten, mehrsprachige Website, lokale SEO, Social Media auf 3 Kanälen, Newsletter, WhatsApp-Kampagnen, monatliches Treffen mit William, bevorzugter Support. Mindestlaufzeit 12 Monate.</p></article>
+      </div>
+      <p class="pnote">Jedes Paket enthält eine feste Zahl an Stunden individueller Arbeit pro Monat (7 Stunden Studio Sorridente und Agenzia Sempre Aperta, 6 Stunden Ospitalità 24/7, 22,5 Stunden Concierge); darüber hinaus 69 € pro Stunde. Zu jedem Paket kann die Präsentations-Website für 790 € + 49 €/Monat hinzugefügt werden. Die Meta-Nachrichten bleiben separat, ohne Aufschlag.</p>
+
+      <h3 class="ph">Einzelne digitale Dienste <small>auch ohne Rezeption</small></h3>
+      <div class="svc">
+        <div><h4>Social Media</h4><ul class="plist"><li><span>Social Start · 1 Kanal, 8 Beiträge, 4 Storys</span><b>290 €/Monat + 190 €</b></li><li><span>Social Plus · 2 Kanäle, 12 Beiträge, 2 kurze Videos</span><b>490 €/Monat + 290 €</b></li><li><span>Social Pro · 3 Kanäle, 20 Beiträge, 4 kurze Videos</span><b>790 €/Monat + 390 €</b></li></ul></div>
+        <div><h4>Websites</h4><ul class="plist"><li><span>Landingpage · 1 Seite, Domain und Hosting</span><b>490 € + 29 €/Monat</b></li><li><span>Präsentations-Website · 5 Seiten, Basis-SEO</span><b>990 € + 49 €/Monat</b></li><li><span>Premium-Website · 10 Seiten auf Italienisch, Englisch und Deutsch</span><b>1.990 € + 79 €/Monat</b></li></ul></div>
+        <div><h4>Google und Bewertungen</h4><ul class="plist"><li><span>Google &amp; Bewertungen · Google-Profil, 4 Beiträge im Monat, Antworten auf Bewertungen</span><b>149 €/Monat + 190 €</b></li><li><span>Lokale SEO komplett</span><b>299 €/Monat + 390 €</b></li></ul></div>
+        <div><h4>Bestehende Kunden</h4><ul class="plist"><li><span>Monatlicher Newsletter</span><b>149 €/Monat + 190 €</b></li><li><span>WhatsApp-Kampagnen an Ihre Kunden (Meta-Nachrichten separat)</span><b>99 €/Monat + 190 €</b></li><li><span>Automatisches Nachfassen von Anfragen</span><b>79 €/Monat + 190 €</b></li><li><span>Assistent auf der Website, zusätzlich zur Rezeption</span><b>49 €/Monat + 90 €</b></li></ul></div>
+      </div>
+      <p class="pnote">Der erste Betrag ist die monatliche Gebühr (bei Websites der einmalige Preis), der zweite die Einrichtung bzw. die monatliche Gebühr der Website. Auf Wunsch erstellen wir ein individuelles Angebot per E-Mail.</p>
+
+      <div class="faq pfaq">
+        <h3 class="ph">Fragen zu den Kosten</h3>
+        <details><summary>Kann ich es testen, bevor ich zahle?</summary><div class="ans"><p>Ja. Neben der Demo, die Sie hier sofort ausprobieren, gibt es eine kostenlose Testphase von 30 Tagen mit dem für Ihren Betrieb eingerichteten Assistenten und bis zu 100 Telefonminuten. Sie gilt für alle gleich, ist ab sofort ohne Unterschrift und ohne Zahlung buchbar und startet ab November–Dezember 2026.</p></div></details>
+        <details><summary>Gibt es versteckte Kosten?</summary><div class="ans"><p>Nein. Sie zahlen die monatliche Gebühr und die einmalige Einrichtung. Alles andere steht auf dieser Seite und Sie zahlen es nur, wenn Sie es nutzen oder wählen: zusätzliche Minuten, Premium-Stimme, weitere Sprachen, ein zweiter Standort. WhatsApp-Nachrichten zahlen Sie direkt an Meta, ohne Aufschlag von uns.</p></div></details>
+        <details><summary>Was passiert, wenn ich meine Telefonminuten überschreite?</summary><div class="ans"><p>Der Assistent antwortet weiter: Niemand bleibt ohne Antwort. Minuten über die 400 enthaltenen hinaus kosten 0,45 € pro Minute (0,65 € mit Premium-Stimme) und stehen in Ihrem Monatsbericht.</p></div></details>
+        <details><summary>Und wenn ich die WhatsApp-Gespräche überschreite?</summary><div class="ans"><p>Der Assistent antwortet weiter. Gespräche über das Paketlimit hinaus kosten 15 € je 100.</p></div></details>
+        <details><summary>Warum zahle ich WhatsApp-Nachrichten an Meta und nicht an Sie?</summary><div class="ans"><p>So zahlen Sie den Preis von Meta selbst, ohne Zwischenhändler und ohne Aufschlag, und sehen den genauen Betrag in Ihrem Konto. Für einen typischen Betrieb sind es wenige Euro bis einige Dutzend Euro im Monat.</p></div></details>
+        <details><summary>Was ist der Unterschied zwischen Base und Pro?</summary><div class="ans"><p>Base antwortet auf WhatsApp. Pro nimmt auch Anrufe an, mit 400 Telefonminuten im Monat inklusive. Nicht sicher, was passt? Testen Sie die Demo und sprechen wir in einem kurzen Gespräch darüber.</p></div></details>
+        <details><summary>Kosten Fremdsprachen extra?</summary><div class="ans"><p>Italienisch, Englisch und Deutsch sind in jedem Paket enthalten. Weitere Sprachen kosten je 19 € im Monat, nur nach einem Test von uns, der die Qualität bestätigt.</p></div></details>
+        <details><summary>Kann ich einmal im Jahr zahlen?</summary><div class="ans"><p>Ja: Bei Jahreszahlung zahlen Sie 11 Monate und erhalten 12.</p></div></details>
+        <details><summary>Wie lange muss ich bleiben? Kann ich in der Nebensaison pausieren?</summary><div class="ans"><p>Die Mindestlaufzeit beträgt 6 Monate, danach monatlich mit 30 Tagen Kündigungsfrist. Beherbergungsbetriebe können in den Schließmonaten pausieren: Nur WhatsApp bleibt aktiv und die Gebühr sinkt auf 20 %, mindestens 59 € im Monat.</p></div></details>
+      </div>
+
+      <div class="why">
+        <div><h4>Telefon und WhatsApp zusammen</h4><p>Ein einziger Assistent beantwortet Nachrichten und Anrufe, mit denselben Informationen und demselben Ton. Nicht zwei Werkzeuge, die Sie verwalten müssen.</p></div>
+        <div><h4>Wir richten ihn für Sie ein</h4><p>Keine Software zu lernen: Wir bauen den Assistenten nach den Regeln Ihres Betriebs auf, testen ihn mit Ihnen und aktualisieren ihn, wenn sich etwas ändert.</p></div>
+        <div><h4>Ein fester Ansprechpartner</h4><p>Jemand, der Ihren Betrieb kennt, erreichbar per WhatsApp und Videocall, für den Assistenten und auf Wunsch auch für Website, Google-Profil und Social Media.</p></div>
+      </div>
+
+      <div class="pend">
+        <h3>Vor den Preisen: Sehen Sie, wie er antwortet.</h3>
+        <p>Die Demo oben können Sie sofort testen. Danach können Sie die kostenlose 30-Tage-Testphase für Ihren Betrieb buchen. Für Fragen: ein kurzes Gespräch mit William.</p>
+        <div class="cta-row"><a class="btn btn-accent" href="#demo">Demo testen</a><a class="btn btn-ghost" href="#contatti">Kurzes Gespräch vereinbaren</a></div>
+      </div>
+  </template>
+
+  <section id="domande" aria-labelledby="faq-t">
+    <div class="wrap">
+      <div class="sec-head" data-i18n="f-head">
+        <p class="eyebrow">Domande frequenti</p>
+        <h2 id="faq-t">Le domande che ci fanno più spesso</h2>
+      </div>
+      <div class="faq" data-i18n="f-list">
+        <details><summary>I miei clienti sanno che parlano con un'intelligenza artificiale?</summary><div class="ans"><p>Sì. L'assistente si presenta sempre come assistente virtuale, come chiedono le regole europee sull'intelligenza artificiale (AI Act). In qualsiasi momento il cliente può chiedere di parlare con una persona.</p></div></details>
+        <details><summary>Cosa succede se l'assistente non sa rispondere?</summary><div class="ans"><p>Non inventa. Dice che verificherà, raccoglie la richiesta e la passa alla persona che Lei ha indicato, con un riepilogo. Lo stesso accade per urgenze, reclami e casi delicati.</p><p>Le domande rimaste senza risposta Le arrivano nel riepilogo: le aggiungiamo, così la volta dopo l'assistente sa rispondere.</p></div></details>
+        <details><summary>Come vengono trattati i dati dei miei clienti? È a norma GDPR?</summary><div class="ans"><p>Celea tratta i dati per Suo conto, come responsabile del trattamento: firmiamo un accordo secondo l'art. 28 del GDPR prima di iniziare. I dati servono solo a rispondere, fissare appuntamenti e passare le richieste allo staff.</p><p>Le forniamo un testo di esempio per aggiornare la Sua informativa privacy, da far verificare al Suo consulente.</p></div></details>
+        <details><summary>Uno studio dentistico può usarlo? E i dati sanitari?</summary><div class="ans"><p>Sì, con regole precise: l'assistente non dà consigli medici e non fa diagnosi. Per dolore o urgenze passa subito allo studio o indica il numero per le urgenze. Gestisce appuntamenti e informazioni pratiche, chiedendo solo i dati necessari.</p></div></details>
+        <details><summary>Devo cambiare numero o programmi?</summary><div class="ans"><p>No. Valutiamo insieme come collegare WhatsApp e il telefono che già usa: ad esempio, le chiamate a cui lo studio non risponde possono passare all'assistente. Gli appuntamenti arrivano sul calendario che usa oggi o tramite il link del Suo gestionale.</p></div></details>
+        <details><summary>Sostituisce la mia segretaria?</summary><div class="ans"><p>No. La alleggerisce dalle domande ripetitive e copre le ore in cui non c'è nessuno. Le persone restano il punto di riferimento per tutto ciò che richiede attenzione.</p></div></details>
+        <details><summary>In quali lingue risponde?</summary><div class="ans"><p>In italiano, inglese e tedesco, inclusi in ogni pacchetto: utile per chi lavora con turisti e clienti stranieri. Altre lingue si aggiungono a 19 € al mese ciascuna, solo dopo una nostra prova scritta. In ogni lingua l'assistente dice di essere un assistente virtuale.</p></div></details>
+        <details><summary>Lavorate solo in Sicilia?</summary><div class="ans"><p>No. Celea ha sede in Sicilia e lavora con attività in tutta Italia e all'estero. Configurazione, prova e assistenza si fanno a distanza, in videochiamata e su WhatsApp.</p></div></details>
+        <details><summary>Ci sono altri costi oltre al canone?</summary><div class="ans"><p>Solo i messaggi WhatsApp, che paga direttamente a Meta senza nostri ricarichi. Nessun costo nascosto: minuti in più 0,45 €/min e voce premium +79 €/mese solo se li usa o li sceglie. Il dettaglio è nella sezione <a href="#prezzi">Prezzi</a>.</p></div></details>
+        <details><summary>Quando può partire il servizio?</summary><div class="ans"><p>La demo è disponibile da subito. Le attivazioni, con i 30 giorni di prova gratuita, partono da novembre–dicembre 2026: dopo la demo Le inviamo una proposta e concordiamo insieme la data.</p></div></details>
+        <details><summary>Fate anche siti web?</summary><div class="ans"><p>Sì: dalla landing page di una pagina (490 € + 29 €/mese) al sito vetrina di 5 pagine (990 € + 49 €/mese) e al sito premium in italiano, inglese e tedesco (1.990 € + 79 €/mese), con l'assistente integrato se lo desidera. Il dominio è sempre intestato a Lei. Tutti i prezzi sono nella sezione <a href="#prezzi">Prezzi</a>.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="contatti" aria-labelledby="chisiamo-t">
+    <div class="wrap two">
+      <div class="about" data-i18n="about">
+        <p class="eyebrow">Chi siamo</p>
+        <h2 id="chisiamo-t" style="margin:12px 0 20px">Nata in Sicilia, al lavoro ovunque</h2>
+        <p>Celea è un progetto fondato da William, con sede in Sicilia. Lavoriamo con studi dentistici, agenzie immobiliari e strutture ricettive in tutta Italia e all'estero, in videochiamata e su WhatsApp.</p>
+        <p>Il nostro simbolo sono due archi, uno che avvolge l'altro, e un punto: la risposta che arriva. È il modo in cui vogliamo trattare i Suoi clienti, con calma e con cura, a qualsiasi ora.</p>
+        <p>Configuriamo e seguiamo noi ogni assistente. Lei ha un unico referente, che conosce la Sua attività.</p>
+      </div>
+      <div class="contact">
+        <h3 data-i18n="k-h">Prenoti una breve chiamata</h3>
+        <p data-i18n="k-p">Ci scriva il nome della Sua attività e quando preferisce essere richiamato. Le mostriamo l'assistente con esempi del Suo settore.</p>
+        <div class="row">
+          <span class="k" data-i18n="k-email">Email</span>
+          <span class="v" id="email">team.celea@gmail.com</span>
+          <button class="copy" type="button" id="copy-email">Copia indirizzo</button>
+        </div>
+        <div class="row">
+          <span class="k">WhatsApp</span>
+          <span class="v" data-i18n="k-wav">Numero in arrivo</span>
+          <span class="soon" data-i18n="k-was">Il numero WhatsApp di Celea sarà attivo a breve. Nel frattempo ci scriva per email: rispondiamo entro un giorno lavorativo.</span>
+        </div>
+        <div class="row">
+          <span class="k" data-i18n="k-dove">Dove</span>
+          <span class="v" data-i18n="k-dovev">Sede in Sicilia · clienti in tutta Italia e all'estero</span>
+          <span class="soon" data-i18n="k-doves">Demo e incontri in videochiamata.</span>
+        </div>
+        <a class="btn btn-light" href="mailto:team.celea@gmail.com?subject=Richiesta%20demo%20Celea" id="mail-btn" data-i18n="k-btn">Ci scriva per email</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal" id="privacy" aria-labelledby="priv-t">
+    <div class="wrap" data-i18n="legal">
+      <p class="eyebrow">Note legali</p>
+      <h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Privacy e cookie</h2>
+      <details>
+        <summary>Informativa privacy (sintesi)</summary>
+        <div class="body">
+          <h4>Titolare del trattamento</h4>
+          <p>Celea, di William. Contatto: team.celea@gmail.com. Ragione sociale, partita IVA e indirizzo completi saranno indicati qui prima della messa online definitiva.</p>
+          <h4>Quali dati trattiamo</h4>
+          <p>Solo i dati che ci invia di sua iniziativa via email o WhatsApp (nome, attività, recapiti, contenuto del messaggio), per rispondere alla richiesta e organizzare la demo. Base giuridica: misure precontrattuali richieste dall'interessato (art. 6.1.b GDPR).</p>
+          <h4>La demo su questa pagina</h4>
+          <p>La chat dimostrativa funziona solo nel Suo browser con risposte preimpostate: ciò che scrive non viene inviato a noi né a terzi e non viene salvato.</p>
+          <h4>Conservazione e diritti</h4>
+          <p>Conserviamo i messaggi per il tempo necessario a gestire la richiesta e l'eventuale rapporto commerciale. Può chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità scrivendo a team.celea@gmail.com, e può presentare reclamo al Garante per la protezione dei dati personali.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Cookie</summary>
+        <div class="body">
+          <p>Questa pagina non usa cookie di profilazione né strumenti di statistica e non mostra pubblicità. I caratteri tipografici sono ospitati su questo sito: nessun collegamento a Google Fonts. Il sito è ospitato da GitHub Pages (GitHub, Inc.), che per sicurezza registra l'indirizzo IP dei visitatori.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 340 120" role="img" aria-label="celea"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="#F4EDE3" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="#E08A6A" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="#E08A6A"/><text x="122" y="78" font-size="54" font-weight="800" letter-spacing="-1.5" fill="#F4EDE3" style="font-family:Manrope,Helvetica,Arial,sans-serif">celea</text></svg>
+    <p class="sign" data-i18n="ft-sign">Celea · risponde sempre, con cura.</p>
+    <small data-i18n="ft-small">Receptionist AI su WhatsApp e al telefono per studi dentistici, agenzie immobiliari e strutture ricettive, in Italia e all'estero. Contatti: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Privacy e cookie</a></small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  // ---- Contenuti della demo (attività di esempio, risposte preimpostate) ----
+  // Passo: {b:"testo"} messaggio dell'assistente · {u:"testo"} messaggio del cliente · {s:"nota", i:"cal|person|moon"} nota di sistema
+  //        {c:[{l:"etichetta", n:[passi...]}]} pulsanti di risposta rapida: la conversazione attende la scelta.
+  var D = {
+    dentista:{
+      name:"Studio dentistico (esempio)",
+      hello:"Buongiorno, sono l'assistente virtuale dello studio. Posso darLe informazioni, fissare o spostare un appuntamento, oppure passarLa a una persona dello staff. Come posso aiutarLa?",
+      faq:[{u:"Buongiorno, che orari fate? E fate la pulizia dei denti?"},
+        {b:"Buongiorno! Lo studio è aperto dal lunedì al venerdì, 9–13 e 15–19. Sì, facciamo l'igiene professionale: dura circa 45 minuti."},
+        {b:"Vuole che Le proponga un orario libero?"},
+        {c:[{l:"Sì, grazie",n:"prenota"},{l:"Accettate convenzioni?",n:[{b:"Lo studio lavora con alcune convenzioni: mi dica quale ha e verifico. Se non è nell'elenco, passo la domanda alla segreteria, che La ricontatta in orario di studio."},{s:"Domanda annotata per la segreteria",i:"person"}]}]}],
+      prenota:[{u:"Vorrei prenotare una prima visita."},
+        {b:"Con piacere. Preferisce la mattina o il pomeriggio?"},
+        {c:[{l:"Mattina",n:[{b:"Ho questi orari liberi: martedì alle 9:30 oppure giovedì alle 11:00."},{c:[{l:"Martedì 9:30",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Fatto, Anna: prima visita martedì alle 9:30. Il giorno prima riceverà un promemoria qui su WhatsApp. Per spostarla basta scrivermi."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]},{l:"Giovedì 11:00",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Fatto, Anna: prima visita giovedì alle 11:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]}]}]},
+          {l:"Pomeriggio",n:[{b:"Ho questi orari liberi: lunedì alle 16:00 oppure mercoledì alle 17:30."},{c:[{l:"Lunedì 16:00",n:[{b:"Fatto: prima visita lunedì alle 16:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]},{l:"Mercoledì 17:30",n:[{b:"Fatto: prima visita mercoledì alle 17:30. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]}]}]}]}],
+      notte:[{s:"Ore 22:47 · studio chiuso",i:"moon"},
+        {u:"Salve, ho perso un'otturazione e mi dà un po' fastidio. Domani potete vedermi?",t:"22:47"},
+        {b:"Mi dispiace per il fastidio. Non posso dare consigli medici: se il dolore diventa forte, chiami il numero per le urgenze indicato dallo studio.",t:"22:47"},
+        {b:"Intanto posso riservarLe un posto domani: alle 9:00 o alle 12:30?",t:"22:47"},
+        {c:[{l:"Alle 9:00",n:[{b:"Riservato domani alle 9:00. Ho segnalato al dottore che si tratta di un'otturazione persa, così è informato prima di vederLa.",t:"22:48"},{s:"Posto riservato e dottore avvisato per domattina",i:"cal"}]},{l:"Alle 12:30",n:[{b:"Riservato domani alle 12:30. Ho segnalato al dottore che si tratta di un'otturazione persa.",t:"22:48"},{s:"Posto riservato e dottore avvisato per domattina",i:"cal"}]}]}],
+      umano:[{u:"Posso parlare con la dottoressa? È per il preventivo che mi ha fatto."},
+        {b:"Certo. Per i preventivi è meglio che La segua direttamente lo studio. Preferisce essere richiamata o ricevere una risposta qui su WhatsApp?"},
+        {c:[{l:"Richiamatemi",n:[{b:"D'accordo. Ho passato la richiesta alla segreteria con il riepilogo: La richiamano entro la mattinata di domani, in orario di studio."},{s:"Conversazione passata alla segreteria dello studio",i:"person"}]},{l:"Rispondete qui",n:[{b:"D'accordo. Ho passato la domanda alla dottoressa con il riepilogo: Le risponderà qui appena possibile."},{s:"Conversazione passata alla dottoressa",i:"person"}]}]}]
+    },
+    immobiliare:{
+      name:"Agenzia immobiliare (esempio)",
+      hello:"Buongiorno, sono l'assistente virtuale dell'agenzia. Posso darLe informazioni sugli immobili, fissare una visita o metterLa in contatto con un agente. Come posso aiutarLa?",
+      faq:[{u:"Il trilocale in centro dell'annuncio è ancora disponibile?"},
+        {b:"Sì, il trilocale in centro è ancora disponibile: 3 vani, secondo piano con ascensore, balcone. Per aiutarLa meglio: cerca per acquisto o per affitto?"},
+        {c:[{l:"Acquisto",n:[{b:"Grazie. Avrà bisogno di un mutuo?"},{c:[{l:"Sì, già approvato",n:[{b:"Ottimo, lo annoto per l'agente. Vuole fissare una visita?"},{s:"Contatto qualificato: acquisto, mutuo approvato",i:"person"},{c:[{l:"Sì, fissiamo",n:"prenota"}]}]},{l:"Devo informarmi",n:[{b:"Nessun problema: l'agenzia può indicarLe a chi rivolgersi. Lo annoto per l'agente. Vuole fissare una visita?"},{s:"Contatto qualificato: acquisto, mutuo da valutare",i:"person"},{c:[{l:"Sì, fissiamo",n:"prenota"}]}]}]}]},
+          {l:"Affitto",n:[{b:"Questo immobile è in vendita, ma l'agenzia ha anche case in affitto. Mi dice zona e budget mensile? Passo la richiesta a un agente che Le invia le proposte."},{s:"Richiesta di affitto passata all'agente",i:"person"}]}]}],
+      prenota:[{u:"Posso vedere la casa questo sabato?"},
+        {b:"Certo. Sabato l'agente è disponibile alle 10:00 o alle 11:30. Quale preferisce?"},
+        {c:[{l:"Alle 10:00",n:[{b:"Confermato: sabato alle 10:00. Venerdì riceverà qui l'indirizzo esatto e il nome dell'agente che La accompagna."},{s:"Visita inserita nell'agenda dell'agente",i:"cal"}]},{l:"Alle 11:30",n:[{b:"Confermato: sabato alle 11:30. Venerdì riceverà qui l'indirizzo esatto e il nome dell'agente che La accompagna."},{s:"Visita inserita nell'agenda dell'agente",i:"cal"}]}]}],
+      notte:[{s:"Ore 23:10 · agenzia chiusa",i:"moon"},
+        {u:"Ho visto l'annuncio della villetta, ha il giardino? Potrei vederla?",t:"23:10"},
+        {b:"Buonasera! Sì, la villetta ha un giardino di circa 200 m² e un posto auto coperto. Posso fissarLe una visita: in quale zona cerca e con che tempi?",t:"23:10"},
+        {c:[{l:"Entro 3 mesi",n:[{b:"Grazie. Domattina un agente La richiama per fissare la visita: preferisce prima delle 10 o dopo le 12?",t:"23:11"},{c:[{l:"Prima delle 10",n:[{b:"Annotato: richiamata domattina prima delle 10. Buona serata!",t:"23:11"},{s:"Richiamata in agenda per domattina",i:"cal"}]},{l:"Dopo le 12",n:[{b:"Annotato: richiamata domani dopo le 12. Buona serata!",t:"23:11"},{s:"Richiamata in agenda per domani",i:"cal"}]}]}]},{l:"Sto solo guardando",n:[{b:"Nessun problema. Vuole che Le invii altre case simili quando escono? Le scrivo solo se me lo conferma.",t:"23:11"}]}]}],
+      umano:[{u:"Vorrei far valutare la mia casa, sto pensando di venderla."},
+        {b:"Con piacere. Per la valutazione serve un agente che veda l'immobile. Mi dice zona e tipo di casa? Passo la richiesta con il riepilogo."},
+        {u:"Un quadrilocale in zona Nord."},
+        {b:"Grazie. Ho passato la richiesta: un agente La contatta entro domani per fissare il sopralluogo."},
+        {s:"Richiesta di valutazione passata a un agente",i:"person"}]
+    },
+    ricettivo:{
+      name:"B&B sul mare (esempio)",
+      hello:"Benvenuto! Sono l'assistente virtuale della struttura. Posso rispondere sulla disponibilità, il check-in e i servizi, anche in inglese e tedesco. Come posso aiutarLa?",
+      faq:[{u:"Hi! What time is check-in? Is there parking?"},
+        {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
+        {u:"Accettate anche cani?"},
+        {b:"Sì, cani di piccola taglia sono i benvenuti, con un supplemento per la pulizia. Lo segnalo alla prenotazione così prepariamo la camera."}],
+      prenota:[{u:"Avete una camera doppia libera dal 20 al 23?"},
+        {b:"Per quelle date c'è una doppia disponibile con vista mare. Preferisce prenotare subito online o ricevere un preventivo dal titolare?"},
+        {c:[{l:"Prenoto online",n:[{b:"Ecco il link al sistema di prenotazione della struttura, con le date già inserite. Se ha richieste particolari, me le scriva qui."},{s:"Link di prenotazione inviato (gestionale della struttura)",i:"cal"}]},{l:"Voglio un preventivo",n:[{b:"D'accordo. Ho passato la richiesta al titolare con date e persone: Le invia il preventivo qui entro oggi."},{s:"Richiesta di preventivo passata al titolare",i:"person"}]}]}],
+      notte:[{s:"Ore 01:15 · reception chiusa",i:"moon"},
+        {u:"Arriviamo tardi, verso l'una e mezza. Come facciamo con le chiavi?",t:"01:15"},
+        {b:"Nessun problema! All'ingresso trova una cassetta delle chiavi: il codice Le arriva qui 30 minuti prima dell'arrivo. La camera è al primo piano, la luce delle scale si accende da sola.",t:"01:15"},
+        {b:"Domattina la colazione è servita fino alle 10:30. Buon viaggio!",t:"01:15"},
+        {s:"Arrivo tardivo segnalato al personale",i:"person"}],
+      umano:[{u:"Scusate, in camera non c'è acqua calda."},
+        {b:"Mi dispiace molto. Ho avvisato subito il personale reperibile, che La contatta tra pochi minuti. Mi conferma il numero della camera?"},
+        {c:[{l:"Camera 3",n:[{b:"Grazie, camera 3 segnalata. Il personale sta arrivando."},{s:"Problema passato al personale reperibile",i:"person"}]},{l:"Camera 5",n:[{b:"Grazie, camera 5 segnalata. Il personale sta arrivando."},{s:"Problema passato al personale reperibile",i:"person"}]}]}]
+    }
+  };
+  // Parole chiave per le domande scritte a mano
+  var KW = [
+    {re:/(umano|persona|operatore|parlar|dottor|titolare|agente|staff|segreteria|qualcuno|reclamo|problema|human|person|someone|speak|talk|dentist|owner|agent|complain|problem|no hot water|mensch|mitarbeiter|sprechen|zahnärzt|inhaber|makler|jemand|beschwerde|warm)/i, k:"umano"},
+    {re:/(urgen|dolore|male|notte|tardi|chiav|stasera|domani|emergenc|pain|night|late|key|tonight|tomorrow|notfall|schmerz|nacht|spät|schlüssel|heute abend|füllung)/i, k:"notte"},
+    {re:/(appuntament|prenot|visita|vedere|disponibil|libero|camera|orario libero|fissare|appointment|book|visit|viewing|see the|availab|free|room|termin|buch|besichtig|verfügbar|frei|zimmer)/i, k:"prenota"},
+    {re:/(orari|aperti|apert|quando|prezz|cost|quanto|parcheg|cani|animali|check|servizi|info|giardino|pulizia|igiene|convenz|hours|open|when|price|how much|parking|dog|pet|service|garden|clean|hygiene|insurance|öffnungszeit|geöffnet|wann|preis|kost|parkpl|hund|tier|leistung|garten|reinigung|versicherung)/i, k:"faq"}
+  ];
+
+  var chat = document.getElementById("chat"), chips = document.getElementById("chips");
+  var nameEl = document.getElementById("chat-name"), form = document.getElementById("composer"), input = document.getElementById("chat-input");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var niche = "dentista", run = 0, busy = false;
+  var icons = {cal:"#i-cal", person:"#i-person", moon:"#i-moon"};
+
+  function nowStr(){ var d=new Date(); return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); }
+  function wait(ms){ return new Promise(function(r){ setTimeout(r, reduce?Math.min(ms,120):ms); }); }
+  function scroll(){ chat.scrollTop = chat.scrollHeight; }
+  function bubble(cls, text, t){
+    var m=document.createElement("div"); m.className="msg "+cls;
+    var p=document.createElement("span"); p.textContent=text; m.appendChild(p);
+    var tm=document.createElement("time"); tm.textContent=t||nowStr(); m.appendChild(tm);
+    chat.appendChild(m); scroll();
+  }
+  function sys(text, ic){
+    var m=document.createElement("div"); m.className="sys";
+    m.innerHTML='<svg aria-hidden="true"><use href="'+(icons[ic]||"#i-info")+'"/></svg>';
+    var s=document.createElement("span"); s.textContent=text; m.appendChild(s); chat.appendChild(m); scroll();
+  }
+  // Saluto secondo l'ora del visitatore: di sera «Buonasera», mai «Buongiorno» a mezzanotte.
+  function greet(t){
+    var h=new Date().getHours(), w;
+    if(lang==="en") w = h>=5&&h<12 ? "Good morning" : (h>=12&&h<18 ? "Good afternoon" : "Good evening");
+    else if(lang==="de") w = h>=5&&h<11 ? "Guten Morgen" : (h>=11&&h<18 ? "Guten Tag" : "Guten Abend");
+    else w = h>=5&&h<18 ? "Buongiorno" : "Buonasera";
+    return t.replace(/^(Buongiorno|Good morning|Guten Morgen)/, w);
+  }
+  function setBusy(v){ busy=v; document.querySelectorAll(".scen button").forEach(function(b){ b.disabled=v; }); }
+
+  async function play(steps, id){
+    if(typeof steps==="string"){ steps = cur()[niche][steps]; if(steps[0] && steps[0].u) steps = steps.slice(1); }
+    for(var i=0;i<steps.length;i++){
+      if(id!==run) return;
+      var s=steps[i];
+      if(s.u){ await wait(350); if(id!==run) return; bubble("me", s.u, s.t); }
+      else if(s.b){
+        var ty=document.createElement("div"); ty.className="typing"; ty.setAttribute("aria-label",UI[lang].typing); ty.innerHTML="<i></i><i></i><i></i>";
+        await wait(300); if(id!==run) return; chat.appendChild(ty); scroll();
+        await wait(Math.min(700+s.b.length*12, 1900)); ty.remove(); if(id!==run) return; bubble("bot", s.b, s.t);
+      }
+      else if(s.s){ await wait(400); if(id!==run) return; sys(s.s, s.i); }
+      else if(s.c){
+        setBusy(false);
+        var choice = await new Promise(function(res){
+          chips.innerHTML="";
+          s.c.forEach(function(o){ var b=document.createElement("button"); b.type="button"; b.textContent=o.l; b.onclick=function(){ chips.innerHTML=""; res(o); }; chips.appendChild(b); });
+        });
+        if(id!==run) return;
+        setBusy(true);
+        bubble("me", choice.l);
+        await play(choice.n, id);
+        return;
+      }
+    }
+    if(id===run){ setBusy(false); offerMore(); }
+  }
+  function offerMore(){
+    chips.innerHTML="";
+    ["faq","prenota","notte","umano"].forEach(function(k,ix){
+      var x=[k, UI[lang].more[ix]];
+      var b=document.createElement("button"); b.type="button"; b.textContent=x[1]; b.onclick=function(){ startScenario(x[0], true); }; chips.appendChild(b);
+    });
+  }
+  function reset(){
+    run++; chips.innerHTML=""; chat.innerHTML="";
+    var d=document.createElement("div"); d.className="day"; d.textContent=UI[lang].day; chat.appendChild(d);
+    nameEl.textContent=cur()[niche].name;
+    bubble("bot", greet(cur()[niche].hello));
+    setBusy(false); offerMore();
+  }
+  function startScenario(k, keep){
+    if(!keep){ reset(); }
+    run++; var id=run; chips.innerHTML=""; setBusy(true);
+    document.querySelectorAll(".scen button").forEach(function(b){ b.setAttribute("aria-current", b.dataset.scen===k?"true":"false"); });
+    play(k, id);
+  }
+  function setNiche(n){
+    niche=n;
+    document.querySelectorAll(".niche").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.niche===n?"true":"false"); });
+    reset();
+  }
+  document.querySelectorAll(".niche").forEach(function(b){ b.addEventListener("click", function(){ setNiche(b.dataset.niche); }); });
+  document.querySelectorAll(".scen button").forEach(function(b){ b.addEventListener("click", function(){ startScenario(b.dataset.scen, false); }); });
+  document.querySelectorAll("[data-try]").forEach(function(b){ b.addEventListener("click", function(){ setNiche(b.dataset.try); document.getElementById("demo").scrollIntoView({behavior: reduce?"auto":"smooth"}); }); });
+
+  form.addEventListener("submit", async function(e){
+    e.preventDefault();
+    var q=input.value.trim(); if(!q || busy) return;
+    input.value=""; run++; var id=run; chips.innerHTML=""; setBusy(true);
+    bubble("me", q);
+    var hit=null; for(var i=0;i<KW.length;i++){ if(KW[i].re.test(q)){ hit=KW[i].k; break; } }
+    if(hit){
+      var steps=cur()[niche][hit].filter(function(s,ix){ return !(ix===0 && s.u) && !(s.s && /^(Ore )?\d\d:\d\d/.test(s.s)) && !(s.u && ix<2); });
+      await play(steps, id);
+    } else {
+      await play([{b:UI[lang].fb1},{s:UI[lang].fb2,i:"person"},{b:UI[lang].fb3}], id);
+    }
+  });
+
+  var cp=document.getElementById("copy-email");
+  cp.addEventListener("click", function(){
+    var txt="team.celea@gmail.com";
+    function sel(){ var r=document.createRange(); r.selectNodeContents(document.getElementById("email")); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); cp.textContent=UI[lang].selected; }
+    try{ navigator.clipboard.writeText(txt).then(function(){ cp.textContent=UI[lang].copied; setTimeout(function(){cp.textContent=UI[lang].copy;},2000); }, sel); }catch(err){ sel(); }
+  });
+
+  // ---- Versione inglese (contatti esteri) ----
+  var D_IT = D;
+  var D_EN = {
+    dentista:{
+      name:"Dental practice (example)",
+      hello:"Good morning, I'm the practice's virtual assistant. I can give you information, book or move an appointment, or put you through to a member of staff. How can I help?",
+      faq:[{u:"Hello, what are your opening hours? Do you do teeth cleaning?"},
+        {b:"Hello! The practice is open Monday to Friday, 9–13 and 15–19. Yes, we offer professional cleaning: it takes about 45 minutes."},
+        {b:"Would you like me to suggest a free slot?"},
+        {c:[{l:"Yes, please",n:"prenota"},{l:"Do you accept insurance?",n:[{b:"The practice works with some insurance plans: tell me which one you have and I'll check. If it's not on the list, I'll pass your question to the front desk, who will get back to you during opening hours."},{s:"Question noted for the front desk",i:"person"}]}]}],
+      prenota:[{u:"I'd like to book a first visit."},
+        {b:"Of course. Do you prefer morning or afternoon?"},
+        {c:[{l:"Morning",n:[{b:"These slots are free: Tuesday at 9:30 or Thursday at 11:00."},{c:[{l:"Tuesday 9:30",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Done, Anna: first visit on Tuesday at 9:30. You'll get a reminder here on WhatsApp the day before. To move it, just write to me."},{s:"Appointment added to the practice calendar",i:"cal"}]},{l:"Thursday 11:00",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Done, Anna: first visit on Thursday at 11:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment added to the practice calendar",i:"cal"}]}]}]},
+          {l:"Afternoon",n:[{b:"These slots are free: Monday at 16:00 or Wednesday at 17:30."},{c:[{l:"Monday 16:00",n:[{b:"Done: first visit on Monday at 16:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment added to the practice calendar",i:"cal"}]},{l:"Wednesday 17:30",n:[{b:"Done: first visit on Wednesday at 17:30. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment added to the practice calendar",i:"cal"}]}]}]}]}],
+      notte:[{s:"22:47 · practice closed",i:"moon"},
+        {u:"Hi, I've lost a filling and it's a bit uncomfortable. Can you see me tomorrow?",t:"22:47"},
+        {b:"I'm sorry about the discomfort. I can't give medical advice: if the pain gets strong, please call the emergency number provided by the practice.",t:"22:47"},
+        {b:"In the meantime I can hold a slot for you tomorrow: 9:00 or 12:30?",t:"22:47"},
+        {c:[{l:"9:00",n:[{b:"Booked for tomorrow at 9:00. I've told the dentist it's a lost filling, so they know before seeing you.",t:"22:48"},{s:"Slot held and dentist informed for tomorrow morning",i:"cal"}]},{l:"12:30",n:[{b:"Booked for tomorrow at 12:30. I've told the dentist it's a lost filling.",t:"22:48"},{s:"Slot held and dentist informed for tomorrow morning",i:"cal"}]}]}],
+      umano:[{u:"Can I speak to the dentist? It's about the quote she gave me."},
+        {b:"Of course. For quotes it's best that the practice follows up directly. Would you like a call back or a reply here on WhatsApp?"},
+        {c:[{l:"Call me back",n:[{b:"All right. I've passed your request to the front desk with a summary: they'll call you back by tomorrow morning, during opening hours."},{s:"Conversation passed to the front desk",i:"person"}]},{l:"Reply here",n:[{b:"All right. I've passed your question to the dentist with a summary: she'll reply here as soon as possible."},{s:"Conversation passed to the dentist",i:"person"}]}]}]
+    },
+    immobiliare:{
+      name:"Real estate agency (example)",
+      hello:"Good morning, I'm the agency's virtual assistant. I can give you information about properties, book a viewing or put you in touch with an agent. How can I help?",
+      faq:[{u:"Is the three-room flat in the centre from the listing still available?"},
+        {b:"Yes, the flat in the centre is still available: three rooms, second floor with lift, balcony. To help you better: are you looking to buy or to rent?"},
+        {c:[{l:"Buy",n:[{b:"Thank you. Will you need a mortgage?"},{c:[{l:"Yes, already approved",n:[{b:"Great, I'll note it for the agent. Would you like to book a viewing?"},{s:"Qualified lead: purchase, mortgage approved",i:"person"},{c:[{l:"Yes, let's book",n:"prenota"}]}]},{l:"Still looking into it",n:[{b:"No problem: the agency can tell you who to contact. I'll note it for the agent. Would you like to book a viewing?"},{s:"Qualified lead: purchase, mortgage to be assessed",i:"person"},{c:[{l:"Yes, let's book",n:"prenota"}]}]}]}]},
+          {l:"Rent",n:[{b:"This property is for sale, but the agency also has homes to rent. Could you tell me the area and your monthly budget? I'll pass your request to an agent who will send you options."},{s:"Rental request passed to an agent",i:"person"}]}]}],
+      prenota:[{u:"Can I see the house this Saturday?"},
+        {b:"Certainly. On Saturday the agent is free at 10:00 or 11:30. Which do you prefer?"},
+        {c:[{l:"10:00",n:[{b:"Confirmed: Saturday at 10:00. On Friday you'll receive the exact address and the name of the agent here."},{s:"Viewing added to the agent's calendar",i:"cal"}]},{l:"11:30",n:[{b:"Confirmed: Saturday at 11:30. On Friday you'll receive the exact address and the name of the agent here."},{s:"Viewing added to the agent's calendar",i:"cal"}]}]}],
+      notte:[{s:"23:10 · agency closed",i:"moon"},
+        {u:"I saw the listing for the detached house, does it have a garden? Could I see it?",t:"23:10"},
+        {b:"Good evening! Yes, the house has a garden of about 200 m² and a covered parking space. I can arrange a viewing: when are you planning to move?",t:"23:10"},
+        {c:[{l:"Within 3 months",n:[{b:"Thank you. Tomorrow morning an agent will call you to set the viewing: before 10 or after 12?",t:"23:11"},{c:[{l:"Before 10",n:[{b:"Noted: call back tomorrow before 10. Have a good evening!",t:"23:11"},{s:"Call back scheduled for tomorrow morning",i:"cal"}]},{l:"After 12",n:[{b:"Noted: call back tomorrow after 12. Have a good evening!",t:"23:11"},{s:"Call back scheduled for tomorrow",i:"cal"}]}]}]},{l:"Just browsing",n:[{b:"No problem. Would you like me to send you similar homes when they come up? I'll only write if you confirm.",t:"23:11"}]}]}],
+      umano:[{u:"I'd like a valuation of my home, I'm thinking of selling."},
+        {b:"With pleasure. A valuation needs an agent to see the property. Could you tell me the area and type of home? I'll pass on your request with a summary."},
+        {u:"A four-room flat in the north of town."},
+        {b:"Thank you. I've passed your request on: an agent will contact you by tomorrow to arrange a visit."},
+        {s:"Valuation request passed to an agent",i:"person"}]
+    },
+    ricettivo:{
+      name:"Seaside B&B (example)",
+      hello:"Welcome! I'm the property's virtual assistant. I can answer questions about availability, check-in and services, in English, German and Italian. How can I help?",
+      faq:[{u:"Hi! What time is check-in? Is there parking?"},
+        {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
+        {u:"Do you accept dogs?"},
+        {b:"Yes, small dogs are welcome, with a cleaning supplement. I'll note it on the booking so we can prepare the room."}],
+      prenota:[{u:"Do you have a double room free from the 20th to the 23rd?"},
+        {b:"For those dates there is a double room with sea view. Would you like to book online now or get a quote from the owner?"},
+        {c:[{l:"Book online",n:[{b:"Here is the link to the property's booking system, with your dates already filled in. If you have special requests, just write them here."},{s:"Booking link sent (property's booking system)",i:"cal"}]},{l:"I'd like a quote",n:[{b:"All right. I've passed your request to the owner with dates and guests: you'll receive the quote here today."},{s:"Quote request passed to the owner",i:"person"}]}]}],
+      notte:[{s:"01:15 · reception closed",i:"moon"},
+        {u:"We're arriving late, around 1:30. How do we get the keys?",t:"01:15"},
+        {b:"No problem! At the entrance there's a key box: the code will arrive here 30 minutes before you arrive. Your room is on the first floor, and the stair lights switch on automatically.",t:"01:15"},
+        {b:"Breakfast is served until 10:30 tomorrow. Safe travels!",t:"01:15"},
+        {s:"Late arrival reported to staff",i:"person"}],
+      umano:[{u:"Sorry, there's no hot water in our room."},
+        {b:"I'm very sorry. I've alerted the staff on call, who will contact you in a few minutes. Could you confirm your room number?"},
+        {c:[{l:"Room 3",n:[{b:"Thank you, room 3 reported. Staff are on their way."},{s:"Issue passed to staff on call",i:"person"}]},{l:"Room 5",n:[{b:"Thank you, room 5 reported. Staff are on their way."},{s:"Issue passed to staff on call",i:"person"}]}]}]
+    }
+  };
+  var UI = {
+    it:{day:"Oggi · conversazione dimostrativa", more:["Domande frequenti","Appuntamento","Fuori orario","Passa a una persona"], copy:"Copia indirizzo", copied:"Copiato", selected:"Indirizzo selezionato", ph:"Scriva una domanda…", typing:"L'assistente sta scrivendo",
+      fb1:"Su questo non ho un'informazione certa e preferisco non inventare. Passo la Sua domanda allo staff con il riepilogo della conversazione: Le rispondono appena possibile.", fb2:"Domanda senza risposta passata a una persona", fb3:"(Nota della demo: qui le risposte sono preimpostate. Provi i pulsanti qui sotto o domande su orari, appuntamenti, urgenze.)", title:"Celea · receptionist AI"},
+    en:{day:"Today · demo conversation", more:["FAQ","Appointment","After hours","Talk to a person"], copy:"Copy address", copied:"Copied", selected:"Address selected", ph:"Type a question…", typing:"The assistant is typing",
+      fb1:"I don't have reliable information on this and I'd rather not make it up. I'm passing your question to the staff with a summary of our conversation: they'll reply as soon as possible.", fb2:"Unanswered question passed to a person", fb3:"(Demo note: replies here are pre-set. Try the buttons below or questions about opening hours, appointments, emergencies.)", title:"Celea · AI receptionist"},
+    de:{day:"Heute · Demo-Gespräch", more:["Häufige Fragen","Termin","Außerhalb der Zeiten","Mit einem Menschen"], copy:"Adresse kopieren", copied:"Kopiert", selected:"Adresse markiert", ph:"Schreiben Sie eine Frage…", typing:"Der Assistent schreibt",
+      fb1:"Dazu habe ich keine gesicherte Information und möchte nichts erfinden. Ich gebe Ihre Frage mit einer Zusammenfassung des Gesprächs an das Team weiter: Sie erhalten so bald wie möglich eine Antwort.", fb2:"Unbeantwortete Frage an einen Menschen übergeben", fb3:"(Hinweis zur Demo: Die Antworten hier sind vorbereitet. Probieren Sie die Schaltflächen unten oder Fragen zu Öffnungszeiten, Terminen, Notfällen.)", title:"Celea · KI-Rezeption"}
+  };
+  var EN = {
+    "skip":"Skip to the demo",
+    "nav":'<a href="#demo">Demo</a><a href="#come-funziona">How it works</a><a href="#per-chi">Who it\'s for</a><a href="#prezzi">Pricing</a><a href="#domande">FAQ</a><a href="#contatti">Contact</a>',
+    "topcta":"Try the demo",
+    "h-eye":"AI receptionist · Italy and abroad",
+    "h-h1":"Your customers get an answer. <em>Always.</em>",
+    "h-lead":"Celea is the assistant that answers on WhatsApp and on the phone, 24 hours a day: it gives information, books appointments and hands over to a person when needed. For dental practices, real estate agencies and hotels, B&amp;Bs and holiday rentals.",
+    "h-cta":'<a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Try the demo</a><a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Book a short call</a>',
+    "h-note":"We set it up for you, tailored to your business, with a free 30-day trial (up to 100 call minutes). It always introduces itself as a virtual assistant. Clear prices, <a href=\"#prezzi\">all written here</a>.",
+    "h-clock":'<div class="clock-item"><time>22:47</time><p>“Can you see me tomorrow? I\'ve lost a filling.”<small>Two slots offered, appointment booked.</small></p></div><div class="clock-item"><time>07:12</time><p>“Does the house on the harbour road have a garage?”<small>Question answered, viewing booked for Saturday.</small></p></div><div class="clock-item"><time>01:30</time><p>“Wir kommen heute spät an, wie bekommen wir die Schlüssel?”<small>Reply in German with check-in instructions.</small></p></div><p class="clock-cap">Illustrative examples of requests that arrive at awkward times.</p>',
+    "d-head":'<p class="eyebrow">Interactive demo</p><h2 id="demo-t">See how it answers your customers</h2><p class="lead">Choose your sector and a situation. You can also type a question in the chat.</p>',
+    "d-nl":"1. Your sector", "n1":"Dental practice", "n2":"Real estate agency", "n3":"B&amp;B and hotel",
+    "d-sl":"2. More situations to try",
+    "s1":"<strong>FAQ</strong><span>hours, services, information</span>",
+    "s2":"<strong>Appointment</strong><span>picks a time and confirms</span>",
+    "s3":"<strong>After hours</strong><span>a message at night</span>",
+    "s4":"<strong>Talk to a person</strong><span>when staff are needed</span>",
+    "d-flag":"Demo: example businesses and pre-set replies. Nothing you type is sent or saved. The real assistant is set up with your own business details. In Italian, English and German as standard.",
+    "d-sub":"Virtual assistant · demo", "d-restart":"Restart",
+    "d-hint":"Try for example: “what are your opening hours?”, “I'd like an appointment”, “can I talk to someone?”",
+    "c-head":'<p class="eyebrow">How it works</p><h2 id="come-t">Live in two weeks, no technical work for you</h2>',
+    "c-steps":'<li><div><h3>Tell us about your business</h3><p>In one call we collect opening hours, services, frequent questions, your preferred tone, what the assistant must not say and who to hand over to.</p><span class="when">45-minute call</span></div></li><li><div><h3>We build it and test it together</h3><p>We set up the assistant on WhatsApp and on the phone. Then you ask all the tricky questions you like and we fine-tune it.</p><span class="when">30-minute joint test</span></div></li><li><div><h3>It starts after hours first</h3><p>The first 30 days are a free trial (up to 100 call minutes). At first it only answers in the evening and at weekends, with a daily summary. When you are happy, it answers all the time. Every month you get a report.</p><span class="when">Live in 14 days</span></div></li>',
+    "p-head":'<p class="eyebrow">Who it\'s for</p><h2 id="chi-t">Built for three businesses where the phone never stops ringing</h2>',
+    "p1h":"Dental practices", "p1l":"<li>First visits, check-ups and hygiene</li><li>Rescheduling and cancellations on WhatsApp</li><li>Emergencies passed straight to the practice</li><li>Never any medical advice</li>",
+    "p1q":"A patient writes at 10 pm to move her cleaning: the assistant offers two free slots.", "p1b":"Try the demo for dental practices",
+    "p2h":"Real estate agencies", "p2l":"<li>Replies to enquiries from listings</li><li>Questions on budget, area and timing</li><li>Viewings booked in the calendar</li><li>Valuations passed to the agent</li>",
+    "p2q":"An enquiry from a listing arrives at 11 pm: next morning the agent finds a qualified lead.", "p2b":"Try the demo for agencies",
+    "p3h":"B&amp;Bs, holiday rentals and hotels", "p3l":"<li>Availability and booking links</li><li>Check-in, parking, pets</li><li>Replies in Italian, English and German</li><li>Room issues reported to staff</li>",
+    "p3q":"Guests arrive at 1 am: they get the key instructions straight away.", "p3b":"Try the demo for hotels and B&amp;Bs",
+    "b-head":'<p class="eyebrow">For the owner</p><h2 id="cambia-t">What changes in your day</h2>',
+    "b-list":'<div><h3>No enquiry goes unanswered</h3><p>Evenings, Sundays, lunch breaks: whoever writes or calls gets an answer straight away, instead of looking elsewhere.</p></div><div><h3>Fewer interruptions while you work</h3><p>The assistant handles repetitive questions. You and your staff focus on the people in front of you.</p></div><div><h3>Your calendar fills up in order</h3><p>Appointments, viewings and booking requests arrive in the calendar with the details you need.</p></div><div><h3>You decide what it says</h3><p>Hours, services, tone and limits are set by you. Every day you see what was asked and what was answered.</p></div><div><h3>A person when needed</h3><p>Emergencies, complaints, delicate cases or unanswered questions go to whoever you choose, with a ready summary.</p></div><div><h3>Personal support, wherever you are</h3><p>One point of contact, support on WhatsApp and by video call, content updates whenever something changes. We work with businesses across Italy and abroad.</p></div>',
+    "price":"",
+    "f-head":'<p class="eyebrow">FAQ</p><h2 id="faq-t">The questions we hear most often</h2>',
+    "f-list":'<details><summary>Do my customers know they are talking to an AI?</summary><div class="ans"><p>Yes. The assistant always introduces itself as a virtual assistant, as required by the EU rules on artificial intelligence (AI Act). At any time the customer can ask to speak to a person.</p></div></details><details><summary>What happens if the assistant doesn\'t know the answer?</summary><div class="ans"><p>It doesn\'t make things up. It says it will check, collects the request and passes it to the person you have chosen, with a summary. The same happens for emergencies, complaints and delicate cases.</p><p>Unanswered questions appear in your summary: we add them, so next time the assistant knows the answer.</p></div></details><details><summary>How is my customers\' data handled? Is it GDPR compliant?</summary><div class="ans"><p>Celea processes data on your behalf, as data processor: we sign an agreement under Art. 28 GDPR before starting. Data is only used to reply, book appointments and pass requests to your staff.</p><p>We provide a sample text to update your privacy notice, to be checked by your own adviser.</p></div></details><details><summary>Can a dental practice use it? What about health data?</summary><div class="ans"><p>Yes, with clear rules: the assistant gives no medical advice and makes no diagnosis. For pain or emergencies it passes the patient straight to the practice or gives the emergency number. It handles appointments and practical information, asking only for the data needed.</p></div></details><details><summary>Do I need to change my number or software?</summary><div class="ans"><p>No. We look together at how to connect the WhatsApp and phone you already use: for example, calls the practice doesn\'t answer can go to the assistant. Appointments go into the calendar you use today or through your booking system\'s link.</p></div></details><details><summary>Does it replace my receptionist?</summary><div class="ans"><p>No. It takes repetitive questions off her plate and covers the hours when nobody is there. People remain the reference point for everything that needs attention.</p></div></details><details><summary>Which languages does it speak?</summary><div class="ans"><p>Italian, English and German, included in every package: useful if you work with tourists and foreign clients. Other languages can be added for €19 a month each, only after a written test from us. In every language the assistant says it is a virtual assistant.</p></div></details><details><summary>Do you only work in Sicily?</summary><div class="ans"><p>No. Celea is based in Sicily and works with businesses across Italy and abroad. Setup, testing and support are done remotely, by video call and on WhatsApp.</p></div></details><details><summary>Are there other costs besides the monthly fee?</summary><div class="ans"><p>Only WhatsApp messages, which you pay directly to Meta with no mark-up from us. No hidden costs: extra minutes €0.45/min and premium voice +€79/month only if you use or choose them. Full details in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details><details><summary>When can the service start?</summary><div class="ans"><p>The demo is available now. Activations, with the free 30-day trial, start from November–December 2026: after the demo we send you a proposal and agree the start date together.</p></div></details><details><summary>Do you also build websites?</summary><div class="ans"><p>Yes: from a one-page landing page (€490 + €29/month) to a 5-page showcase website (€990 + €49/month) and a premium website in Italian, English and German (€1,990 + €79/month), with the assistant built in if you wish. The domain is always registered in your name. All prices are in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details>',
+    "about":'<p class="eyebrow">About us</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Born in Sicily, working everywhere</h2><p>Celea was founded by William and is based in Sicily. We work with dental practices, real estate agencies and hospitality businesses across Italy and abroad, by video call and on WhatsApp.</p><p>Our symbol is two arcs, one embracing the other, and a dot: the answer that arrives. That is how we want to treat your customers, calmly and with care, at any hour.</p><p>We set up and look after every assistant ourselves. You have a single point of contact who knows your business.</p>',
+    "k-h":"Book a short call",
+    "k-p":"Send us the name of your business and when you would like us to call. We will show you the assistant with examples from your sector.",
+    "k-email":"Email", "k-wav":"Number coming soon",
+    "k-was":"Celea's WhatsApp number will be active soon. In the meantime, please email us: we reply within one working day.",
+    "k-dove":"Where", "k-dovev":"Based in Sicily · clients across Italy and abroad", "k-doves":"Demos and meetings by video call.",
+    "k-btn":"Email us",
+    "legal":'<p class="eyebrow">Legal</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Privacy and cookies</h2><details><summary>Privacy notice (summary)</summary><div class="body"><h4>Data controller</h4><p>Celea, by William. Contact: team.celea@gmail.com. Full business name, VAT number and address will be shown here before the final launch.</p><h4>What data we process</h4><p>Only the data you send us on your own initiative by email or WhatsApp (name, business, contact details, message content), to answer your request and organise the demo. Legal basis: pre-contractual steps at your request (Art. 6(1)(b) GDPR).</p><h4>The demo on this page</h4><p>The demo chat runs only in your browser with pre-set replies: what you type is not sent to us or to third parties and is not saved.</p><h4>Retention and rights</h4><p>We keep messages for as long as needed to handle the request and any business relationship. You can request access, rectification, erasure, restriction, objection and portability by writing to team.celea@gmail.com, and you can lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali).</p></div></details><details><summary>Cookies</summary><div class="body"><p>This page uses no profiling cookies or analytics and shows no advertising. Fonts are hosted on this site: no connection to Google Fonts. The site is hosted by GitHub Pages (GitHub, Inc.), which logs visitors\' IP addresses for security.</p></div></details>',
+    "ft-sign":"Celea · always answers, with care.",
+    "ft-small":'AI receptionist on WhatsApp and phone for dental practices, real estate agencies and hospitality businesses, in Italy and abroad. Contact: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Privacy and cookies</a>'
+  };
+  // ---- Versione tedesca (contatti in Germania, Austria e Svizzera) ----
+  var D_DE = {
+    dentista:{
+      name:"Zahnarztpraxis (Beispiel)",
+      hello:"Guten Morgen, ich bin der virtuelle Assistent der Praxis. Ich kann Ihnen Auskünfte geben, einen Termin vereinbaren oder verschieben oder Sie mit dem Praxisteam verbinden. Wie kann ich Ihnen helfen?",
+      faq:[{u:"Guten Tag, wann haben Sie geöffnet? Machen Sie auch Zahnreinigung?"},
+        {b:"Guten Tag! Die Praxis ist von Montag bis Freitag geöffnet, 9–13 und 15–19 Uhr. Ja, wir bieten professionelle Zahnreinigung an: Sie dauert etwa 45 Minuten."},
+        {b:"Soll ich Ihnen einen freien Termin vorschlagen?"},
+        {c:[{l:"Ja, gerne",n:"prenota"},{l:"Rechnen Sie mit meiner Versicherung ab?",n:[{b:"Die Praxis arbeitet mit einigen Versicherungen zusammen: Nennen Sie mir Ihre, und ich prüfe das. Steht sie nicht auf der Liste, gebe ich Ihre Frage an die Rezeption weiter, die sich während der Öffnungszeiten bei Ihnen meldet."},{s:"Frage für die Rezeption notiert",i:"person"}]}]}],
+      prenota:[{u:"Ich möchte einen Ersttermin vereinbaren."},
+        {b:"Gerne. Lieber vormittags oder nachmittags?"},
+        {c:[{l:"Vormittags",n:[{b:"Diese Termine sind frei: Dienstag um 9:30 oder Donnerstag um 11:00."},{c:[{l:"Dienstag 9:30",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Erledigt, Frau Beispiel: Ersttermin am Dienstag um 9:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung. Zum Verschieben schreiben Sie mir einfach."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]},{l:"Donnerstag 11:00",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Erledigt, Frau Beispiel: Ersttermin am Donnerstag um 11:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]}]}]},
+          {l:"Nachmittags",n:[{b:"Diese Termine sind frei: Montag um 16:00 oder Mittwoch um 17:30."},{c:[{l:"Montag 16:00",n:[{b:"Erledigt: Ersttermin am Montag um 16:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]},{l:"Mittwoch 17:30",n:[{b:"Erledigt: Ersttermin am Mittwoch um 17:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]}]}]}]}],
+      notte:[{s:"22:47 · Praxis geschlossen",i:"moon"},
+        {u:"Hallo, mir ist eine Füllung herausgefallen und es ist etwas unangenehm. Können Sie mich morgen drannehmen?",t:"22:47"},
+        {b:"Das tut mir leid. Medizinische Ratschläge kann ich nicht geben: Wenn die Schmerzen stark werden, rufen Sie bitte die von der Praxis angegebene Notfallnummer an.",t:"22:47"},
+        {b:"Ich kann Ihnen schon jetzt einen Termin für morgen reservieren: um 9:00 oder um 12:30?",t:"22:47"},
+        {c:[{l:"Um 9:00",n:[{b:"Für morgen um 9:00 reserviert. Ich habe dem Zahnarzt mitgeteilt, dass es um eine verlorene Füllung geht, damit er vorab informiert ist.",t:"22:48"},{s:"Termin reserviert und Zahnarzt für morgen früh informiert",i:"cal"}]},{l:"Um 12:30",n:[{b:"Für morgen um 12:30 reserviert. Ich habe dem Zahnarzt mitgeteilt, dass es um eine verlorene Füllung geht.",t:"22:48"},{s:"Termin reserviert und Zahnarzt für morgen früh informiert",i:"cal"}]}]}],
+      umano:[{u:"Kann ich mit der Zahnärztin sprechen? Es geht um ihren Kostenvoranschlag."},
+        {b:"Natürlich. Bei Kostenvoranschlägen ist es am besten, wenn sich die Praxis direkt darum kümmert. Möchten Sie zurückgerufen werden oder lieber hier auf WhatsApp eine Antwort erhalten?"},
+        {c:[{l:"Bitte zurückrufen",n:[{b:"In Ordnung. Ich habe Ihre Anfrage mit einer Zusammenfassung an die Rezeption weitergegeben: Sie ruft Sie bis morgen Vormittag während der Öffnungszeiten zurück."},{s:"Gespräch an die Rezeption übergeben",i:"person"}]},{l:"Antwort hier",n:[{b:"In Ordnung. Ich habe Ihre Frage mit einer Zusammenfassung an die Zahnärztin weitergegeben: Sie antwortet Ihnen hier so bald wie möglich."},{s:"Gespräch an die Zahnärztin übergeben",i:"person"}]}]}]
+    },
+    immobiliare:{
+      name:"Immobilienagentur (Beispiel)",
+      hello:"Guten Morgen, ich bin der virtuelle Assistent der Agentur. Ich kann Ihnen Auskünfte zu den Immobilien geben, eine Besichtigung vereinbaren oder Sie mit einem Makler verbinden. Wie kann ich Ihnen helfen?",
+      faq:[{u:"Ist die Dreizimmerwohnung im Zentrum aus der Anzeige noch verfügbar?"},
+        {b:"Ja, die Wohnung im Zentrum ist noch verfügbar: drei Zimmer, zweiter Stock mit Aufzug, Balkon. Damit ich Ihnen besser helfen kann: Möchten Sie kaufen oder mieten?"},
+        {c:[{l:"Kaufen",n:[{b:"Danke. Benötigen Sie eine Finanzierung?"},{c:[{l:"Ja, schon bewilligt",n:[{b:"Sehr gut, ich notiere das für den Makler. Möchten Sie eine Besichtigung vereinbaren?"},{s:"Qualifizierter Kontakt: Kauf, Finanzierung bewilligt",i:"person"},{c:[{l:"Ja, gerne",n:"prenota"}]}]},{l:"Muss mich noch informieren",n:[{b:"Kein Problem: Die Agentur kann Ihnen sagen, an wen Sie sich wenden können. Ich notiere das für den Makler. Möchten Sie eine Besichtigung vereinbaren?"},{s:"Qualifizierter Kontakt: Kauf, Finanzierung offen",i:"person"},{c:[{l:"Ja, gerne",n:"prenota"}]}]}]}]},
+          {l:"Mieten",n:[{b:"Diese Immobilie steht zum Verkauf, aber die Agentur hat auch Mietobjekte. Nennen Sie mir Gegend und monatliches Budget? Ich gebe Ihre Anfrage an einen Makler weiter, der Ihnen passende Angebote schickt."},{s:"Mietanfrage an einen Makler weitergegeben",i:"person"}]}]}],
+      prenota:[{u:"Kann ich das Haus diesen Samstag besichtigen?"},
+        {b:"Gerne. Am Samstag hat der Makler um 10:00 oder um 11:30 Zeit. Was passt Ihnen besser?"},
+        {c:[{l:"Um 10:00",n:[{b:"Bestätigt: Samstag um 10:00. Am Freitag erhalten Sie hier die genaue Adresse und den Namen des Maklers, der Sie begleitet."},{s:"Besichtigung im Kalender des Maklers eingetragen",i:"cal"}]},{l:"Um 11:30",n:[{b:"Bestätigt: Samstag um 11:30. Am Freitag erhalten Sie hier die genaue Adresse und den Namen des Maklers, der Sie begleitet."},{s:"Besichtigung im Kalender des Maklers eingetragen",i:"cal"}]}]}],
+      notte:[{s:"23:10 · Agentur geschlossen",i:"moon"},
+        {u:"Ich habe die Anzeige für das Einfamilienhaus gesehen, hat es einen Garten? Könnte ich es besichtigen?",t:"23:10"},
+        {b:"Guten Abend! Ja, das Haus hat einen Garten von etwa 200 m² und einen überdachten Stellplatz. Ich kann Ihnen eine Besichtigung vereinbaren: Wann möchten Sie umziehen?",t:"23:10"},
+        {c:[{l:"In den nächsten 3 Monaten",n:[{b:"Danke. Morgen Vormittag ruft Sie ein Makler an, um die Besichtigung festzulegen: lieber vor 10 oder nach 12 Uhr?",t:"23:11"},{c:[{l:"Vor 10 Uhr",n:[{b:"Notiert: Rückruf morgen vor 10 Uhr. Einen schönen Abend!",t:"23:11"},{s:"Rückruf für morgen früh eingeplant",i:"cal"}]},{l:"Nach 12 Uhr",n:[{b:"Notiert: Rückruf morgen nach 12 Uhr. Einen schönen Abend!",t:"23:11"},{s:"Rückruf für morgen eingeplant",i:"cal"}]}]}]},{l:"Ich schaue nur",n:[{b:"Kein Problem. Soll ich Ihnen ähnliche Häuser schicken, sobald welche frei werden? Ich schreibe Ihnen nur, wenn Sie das bestätigen.",t:"23:11"}]}]}],
+      umano:[{u:"Ich möchte meine Wohnung bewerten lassen, ich denke über einen Verkauf nach."},
+        {b:"Sehr gerne. Für eine Bewertung muss ein Makler die Immobilie besichtigen. Nennen Sie mir Gegend und Art der Immobilie? Ich gebe Ihre Anfrage mit einer Zusammenfassung weiter."},
+        {u:"Eine Vierzimmerwohnung im Norden der Stadt."},
+        {b:"Danke. Ich habe Ihre Anfrage weitergegeben: Ein Makler meldet sich bis morgen bei Ihnen, um einen Besichtigungstermin zu vereinbaren."},
+        {s:"Bewertungsanfrage an einen Makler weitergegeben",i:"person"}]
+    },
+    ricettivo:{
+      name:"B&B am Meer (Beispiel)",
+      hello:"Herzlich willkommen! Ich bin der virtuelle Assistent der Unterkunft. Ich beantworte Fragen zu Verfügbarkeit, Check-in und Leistungen, auf Deutsch, Englisch und Italienisch. Wie kann ich Ihnen helfen?",
+      faq:[{u:"Hi! What time is check-in? Is there parking?"},
+        {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
+        {u:"Sind Hunde erlaubt?"},
+        {b:"Ja, kleine Hunde sind willkommen, gegen einen Reinigungszuschlag. Ich vermerke es bei der Buchung, damit wir das Zimmer vorbereiten."}],
+      prenota:[{u:"Haben Sie vom 20. bis 23. ein Doppelzimmer frei?"},
+        {b:"Für diese Daten ist ein Doppelzimmer mit Meerblick frei. Möchten Sie gleich online buchen oder ein Angebot vom Inhaber erhalten?"},
+        {c:[{l:"Online buchen",n:[{b:"Hier ist der Link zum Buchungssystem der Unterkunft, mit Ihren Daten bereits eingetragen. Besondere Wünsche schreiben Sie mir gern hier."},{s:"Buchungslink gesendet (Buchungssystem der Unterkunft)",i:"cal"}]},{l:"Ich möchte ein Angebot",n:[{b:"Gerne. Ich habe Ihre Anfrage mit Daten und Personenzahl an den Inhaber weitergegeben: Sie erhalten das Angebot noch heute hier."},{s:"Angebotsanfrage an den Inhaber weitergegeben",i:"person"}]}]}],
+      notte:[{s:"01:15 · Rezeption geschlossen",i:"moon"},
+        {u:"Wir kommen spät an, gegen halb zwei. Wie kommen wir an die Schlüssel?",t:"01:15"},
+        {b:"Kein Problem! Am Eingang finden Sie einen Schlüsselkasten: Den Code erhalten Sie hier 30 Minuten vor Ihrer Ankunft. Ihr Zimmer liegt im ersten Stock, das Treppenlicht schaltet sich automatisch ein.",t:"01:15"},
+        {b:"Frühstück gibt es morgen bis 10:30 Uhr. Gute Reise!",t:"01:15"},
+        {s:"Späte Ankunft an das Personal gemeldet",i:"person"}],
+      umano:[{u:"Entschuldigung, in unserem Zimmer gibt es kein warmes Wasser."},
+        {b:"Das tut mir sehr leid. Ich habe sofort das diensthabende Personal informiert, das sich in wenigen Minuten bei Ihnen meldet. Können Sie mir die Zimmernummer bestätigen?"},
+        {c:[{l:"Zimmer 3",n:[{b:"Danke, Zimmer 3 ist gemeldet. Das Personal ist unterwegs."},{s:"Problem an das diensthabende Personal übergeben",i:"person"}]},{l:"Zimmer 5",n:[{b:"Danke, Zimmer 5 ist gemeldet. Das Personal ist unterwegs."},{s:"Problem an das diensthabende Personal übergeben",i:"person"}]}]}]
+    }
+  };
+  var DE = {
+    "skip":"Zur Demo springen",
+    "nav":'<a href="#demo">Demo</a><a href="#come-funziona">So funktioniert\'s</a><a href="#per-chi">Für wen</a><a href="#prezzi">Preise</a><a href="#domande">FAQ</a><a href="#contatti">Kontakt</a>',
+    "topcta":"Demo testen",
+    "h-eye":"KI-Rezeption · Italien und Ausland",
+    "h-h1":"Ihre Kunden bekommen eine Antwort. <em>Immer.</em>",
+    "h-lead":"Celea ist der Assistent, der rund um die Uhr auf WhatsApp und am Telefon antwortet: Er gibt Auskünfte, vereinbart Termine und übergibt an einen Menschen, wenn es nötig ist. Für Zahnarztpraxen, Immobilienagenturen sowie Hotels, B&amp;Bs und Ferienwohnungen.",
+    "h-cta":'<a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Demo testen</a><a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Kurzes Gespräch vereinbaren</a>',
+    "h-note":"Wir richten ihn für Sie ein, zugeschnitten auf Ihren Betrieb, mit 30 Tagen kostenloser Testphase (bis zu 100 Telefonminuten). Er stellt sich immer als virtueller Assistent vor. Klare Preise, <a href=\"#prezzi\">alle hier aufgeführt</a>.",
+    "h-clock":'<div class="clock-item"><time>22:47</time><p>„Können Sie mich morgen drannehmen? Mir ist eine Füllung herausgefallen.“<small>Zwei Termine vorgeschlagen, Termin vereinbart.</small></p></div><div class="clock-item"><time>07:12</time><p>„Hat das Haus an der Hafenstraße eine Garage?“<small>Frage beantwortet, Besichtigung für Samstag vereinbart.</small></p></div><div class="clock-item"><time>01:30</time><p>„We\'re arriving late tonight, how do we get the keys?“<small>Antwort auf Englisch mit den Check-in-Hinweisen.</small></p></div><p class="clock-cap">Beispiele für Anfragen, die zu ungünstigen Zeiten eintreffen.</p>',
+    "d-head":'<p class="eyebrow">Interaktive Demo</p><h2 id="demo-t">So antwortet er Ihren Kunden</h2><p class="lead">Wählen Sie Ihre Branche und eine Situation. Sie können auch selbst eine Frage in den Chat schreiben.</p>',
+    "d-nl":"1. Ihre Branche", "n1":"Zahnarztpraxis", "n2":"Immobilienagentur", "n3":"B&amp;B und Hotel",
+    "d-sl":"2. Weitere Situationen zum Ausprobieren",
+    "s1":"<strong>Häufige Fragen</strong><span>Öffnungszeiten, Leistungen, Infos</span>",
+    "s2":"<strong>Termin</strong><span>wählt eine Uhrzeit und bestätigt</span>",
+    "s3":"<strong>Außerhalb der Zeiten</strong><span>eine Nachricht in der Nacht</span>",
+    "s4":"<strong>Mit einem Menschen</strong><span>wenn das Team gefragt ist</span>",
+    "d-flag":"Demo: Beispielbetriebe und vorbereitete Antworten. Nichts, was Sie schreiben, wird gesendet oder gespeichert. Der echte Assistent wird mit den Daten Ihres Betriebs eingerichtet, standardmäßig auf Italienisch, Englisch und Deutsch.",
+    "d-sub":"Virtueller Assistent · Demo", "d-restart":"Neu starten",
+    "d-hint":"Probieren Sie zum Beispiel: „Wann haben Sie geöffnet?“, „Ich möchte einen Termin“, „Kann ich mit jemandem sprechen?“",
+    "c-head":'<p class="eyebrow">So funktioniert\'s</p><h2 id="come-t">In zwei Wochen startklar, ohne technischen Aufwand für Sie</h2>',
+    "c-steps":'<li><div><h3>Sie erzählen uns von Ihrem Betrieb</h3><p>In einem Gespräch erfassen wir Öffnungszeiten, Leistungen, häufige Fragen, den gewünschten Ton, was der Assistent nicht sagen darf und an wen er übergibt.</p><span class="when">Gespräch von 45 Minuten</span></div></li><li><div><h3>Wir richten ihn ein und testen ihn gemeinsam</h3><p>Wir richten den Assistenten auf WhatsApp und am Telefon ein. Dann stellen Sie alle schwierigen Fragen, die Sie möchten, und wir passen ihn an.</p><span class="when">Gemeinsamer Test von 30 Minuten</span></div></li><li><div><h3>Er startet, zuerst außerhalb der Öffnungszeiten</h3><p>Die ersten 30 Tage sind eine kostenlose Testphase (bis zu 100 Telefonminuten). Anfangs antwortet er nur abends und am Wochenende, mit einer täglichen Zusammenfassung. Wenn Sie zufrieden sind, antwortet er immer. Jeden Monat erhalten Sie einen Bericht.</p><span class="when">Startklar in 14 Tagen</span></div></li>',
+    "p-head":'<p class="eyebrow">Für wen</p><h2 id="chi-t">Gemacht für drei Branchen, in denen das Telefon nie stillsteht</h2>',
+    "p1h":"Zahnarztpraxen", "p1l":"<li>Erstbesuche, Kontrollen und Prophylaxe</li><li>Verschiebungen und Absagen per WhatsApp</li><li>Notfälle sofort an die Praxis weitergeleitet</li><li>Niemals medizinische Ratschläge</li>",
+    "p1q":"Eine Patientin schreibt um 22 Uhr, um ihre Zahnreinigung zu verschieben: Der Assistent schlägt zwei freie Termine vor.", "p1b":"Demo für Zahnarztpraxen testen",
+    "p2h":"Immobilienagenturen", "p2l":"<li>Antworten auf Anfragen aus Anzeigen</li><li>Fragen zu Budget, Lage und Zeitrahmen</li><li>Besichtigungen im Kalender</li><li>Bewertungen an den Makler übergeben</li>",
+    "p2q":"Eine Anfrage aus einer Anzeige kommt um 23 Uhr: Am nächsten Morgen findet der Makler einen bereits qualifizierten Kontakt.", "p2b":"Demo für Agenturen testen",
+    "p3h":"B&amp;Bs, Ferienwohnungen und Hotels", "p3l":"<li>Verfügbarkeit und Buchungslinks</li><li>Check-in, Parken, Haustiere</li><li>Antworten auf Italienisch, Englisch und Deutsch</li><li>Probleme im Zimmer an das Personal gemeldet</li>",
+    "p3q":"Gäste kommen um 1 Uhr nachts an: Sie erhalten sofort die Hinweise zu den Schlüsseln.", "p3b":"Demo für Hotels und B&amp;Bs testen",
+    "b-head":'<p class="eyebrow">Für Inhaber</p><h2 id="cambia-t">Was sich in Ihrem Alltag ändert</h2>',
+    "b-list":'<div><h3>Keine Anfrage bleibt unbeantwortet</h3><p>Abends, sonntags, in der Mittagspause: Wer schreibt oder anruft, bekommt sofort eine Antwort, statt sich anderswo umzusehen.</p></div><div><h3>Weniger Unterbrechungen bei der Arbeit</h3><p>Wiederkehrende Fragen übernimmt der Assistent. Sie und Ihr Team kümmern sich um die Menschen vor Ort.</p></div><div><h3>Ihr Kalender füllt sich geordnet</h3><p>Termine, Besichtigungen und Buchungsanfragen landen mit allen nötigen Angaben im Kalender.</p></div><div><h3>Sie bestimmen, was er sagt</h3><p>Öffnungszeiten, Leistungen, Ton und Grenzen legen Sie fest. Jeden Tag sehen Sie, was gefragt und was geantwortet wurde.</p></div><div><h3>Ein Mensch, wenn es nötig ist</h3><p>Notfälle, Beschwerden, heikle Fälle oder unbeantwortete Fragen gehen an die Person Ihrer Wahl, mit fertiger Zusammenfassung.</p></div><div><h3>Persönliche Betreuung, wo immer Sie sind</h3><p>Ein fester Ansprechpartner, Support per WhatsApp und Videocall, Aktualisierung der Inhalte, wenn sich etwas ändert. Wir arbeiten mit Betrieben in ganz Italien und im Ausland.</p></div>',
+    "price":"",
+    "f-head":'<p class="eyebrow">FAQ</p><h2 id="faq-t">Die Fragen, die wir am häufigsten hören</h2>',
+    "f-list":'<details><summary>Wissen meine Kunden, dass sie mit einer KI sprechen?</summary><div class="ans"><p>Ja. Der Assistent stellt sich immer als virtueller Assistent vor, wie es die EU-Regeln zur künstlichen Intelligenz (AI Act) verlangen. Der Kunde kann jederzeit verlangen, mit einem Menschen zu sprechen.</p></div></details><details><summary>Was passiert, wenn der Assistent keine Antwort weiß?</summary><div class="ans"><p>Er erfindet nichts. Er sagt, dass er nachfragt, nimmt die Anfrage auf und gibt sie mit einer Zusammenfassung an die Person weiter, die Sie bestimmt haben. Dasselbe gilt für Notfälle, Beschwerden und heikle Fälle.</p><p>Unbeantwortete Fragen erscheinen in Ihrer Zusammenfassung: Wir ergänzen sie, damit der Assistent beim nächsten Mal antworten kann.</p></div></details><details><summary>Wie werden die Daten meiner Kunden behandelt? Ist das DSGVO-konform?</summary><div class="ans"><p>Celea verarbeitet die Daten in Ihrem Auftrag, als Auftragsverarbeiter: Vor dem Start unterzeichnen wir einen Vertrag nach Art. 28 DSGVO. Die Daten dienen nur dazu, zu antworten, Termine zu vereinbaren und Anfragen an Ihr Team weiterzugeben.</p><p>Wir stellen Ihnen einen Mustertext zur Aktualisierung Ihrer Datenschutzerklärung bereit, den Ihr eigener Berater prüfen sollte.</p></div></details><details><summary>Kann eine Zahnarztpraxis ihn nutzen? Und die Gesundheitsdaten?</summary><div class="ans"><p>Ja, mit klaren Regeln: Der Assistent gibt keine medizinischen Ratschläge und stellt keine Diagnosen. Bei Schmerzen oder Notfällen verweist er sofort an die Praxis oder nennt die Notfallnummer. Er kümmert sich um Termine und praktische Informationen und fragt nur die nötigen Daten ab.</p></div></details><details><summary>Muss ich meine Nummer oder meine Software wechseln?</summary><div class="ans"><p>Nein. Wir prüfen gemeinsam, wie WhatsApp und das Telefon, die Sie schon nutzen, angebunden werden: Zum Beispiel können Anrufe, die die Praxis nicht annimmt, an den Assistenten gehen. Termine landen in dem Kalender, den Sie heute nutzen, oder über den Link Ihres Buchungssystems.</p></div></details><details><summary>Ersetzt er meine Empfangskraft?</summary><div class="ans"><p>Nein. Er nimmt ihr wiederkehrende Fragen ab und deckt die Stunden ab, in denen niemand da ist. Menschen bleiben der Bezugspunkt für alles, was Aufmerksamkeit braucht.</p></div></details><details><summary>In welchen Sprachen antwortet er?</summary><div class="ans"><p>Auf Italienisch, Englisch und Deutsch, in jedem Paket enthalten: nützlich, wenn Sie mit Touristen und internationalen Kunden arbeiten. Weitere Sprachen kosten je 19 € im Monat, nur nach einem schriftlichen Test von uns. In jeder Sprache sagt der Assistent, dass er ein virtueller Assistent ist.</p></div></details><details><summary>Arbeiten Sie nur in Sizilien?</summary><div class="ans"><p>Nein. Celea hat seinen Sitz in Sizilien und arbeitet mit Betrieben in ganz Italien und im Ausland. Einrichtung, Test und Support erfolgen aus der Ferne, per Videocall und WhatsApp.</p></div></details><details><summary>Gibt es neben der Monatsgebühr weitere Kosten?</summary><div class="ans"><p>Nur die WhatsApp-Nachrichten, die Sie direkt an Meta zahlen, ohne Aufschlag von uns. Keine versteckten Kosten: zusätzliche Minuten 0,45 €/Min. und Premium-Stimme +79 €/Monat nur, wenn Sie sie nutzen oder wählen. Alle Details im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details><details><summary>Wann kann der Dienst starten?</summary><div class="ans"><p>Die Demo ist sofort verfügbar. Die Dienste starten, mit 30 Tagen kostenloser Testphase, ab November–Dezember 2026: Nach der Demo senden wir Ihnen ein Angebot und legen den Starttermin gemeinsam fest.</p></div></details><details><summary>Erstellen Sie auch Websites?</summary><div class="ans"><p>Ja: von der Landingpage mit einer Seite (490 € + 29 €/Monat) über die Präsentations-Website mit 5 Seiten (990 € + 49 €/Monat) bis zur Premium-Website auf Italienisch, Englisch und Deutsch (1.990 € + 79 €/Monat), auf Wunsch mit integriertem Assistenten. Die Domain wird immer auf Sie registriert. Alle Preise im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details>',
+    "about":'<p class="eyebrow">Über uns</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Geboren in Sizilien, im Einsatz überall</h2><p>Celea wurde von William gegründet und hat seinen Sitz in Sizilien. Wir arbeiten mit Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetrieben in ganz Italien und im Ausland, per Videocall und WhatsApp.</p><p>Unser Symbol sind zwei Bögen, einer umarmt den anderen, und ein Punkt: die Antwort, die ankommt. So möchten wir Ihre Kunden behandeln, ruhig und sorgfältig, zu jeder Stunde.</p><p>Wir richten jeden Assistenten selbst ein und betreuen ihn. Sie haben einen festen Ansprechpartner, der Ihren Betrieb kennt.</p>',
+    "k-h":"Kurzes Gespräch vereinbaren",
+    "k-p":"Schreiben Sie uns den Namen Ihres Betriebs und wann wir Sie am besten zurückrufen. Wir zeigen Ihnen den Assistenten mit Beispielen aus Ihrer Branche.",
+    "k-email":"E-Mail", "k-wav":"Nummer folgt in Kürze",
+    "k-was":"Die WhatsApp-Nummer von Celea ist bald aktiv. Schreiben Sie uns bis dahin per E-Mail: Wir antworten innerhalb eines Werktags.",
+    "k-dove":"Wo", "k-dovev":"Sitz in Sizilien · Kunden in ganz Italien und im Ausland", "k-doves":"Demos und Termine per Videocall.",
+    "k-btn":"E-Mail schreiben",
+    "legal":'<p class="eyebrow">Rechtliches</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Datenschutz und Cookies</h2><details><summary>Datenschutzhinweise (Kurzfassung)</summary><div class="body"><h4>Verantwortlicher</h4><p>Celea, von William. Kontakt: team.celea@gmail.com. Vollständiger Firmenname, USt-IdNr. und Anschrift werden hier vor dem endgültigen Start angegeben.</p><h4>Welche Daten wir verarbeiten</h4><p>Nur die Daten, die Sie uns von sich aus per E-Mail oder WhatsApp senden (Name, Betrieb, Kontaktdaten, Inhalt der Nachricht), um Ihre Anfrage zu beantworten und die Demo zu organisieren. Rechtsgrundlage: vorvertragliche Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).</p><h4>Die Demo auf dieser Seite</h4><p>Der Demo-Chat läuft nur in Ihrem Browser mit vorbereiteten Antworten: Was Sie schreiben, wird weder an uns noch an Dritte gesendet und nicht gespeichert.</p><h4>Speicherung und Rechte</h4><p>Wir speichern Nachrichten so lange, wie es für die Bearbeitung der Anfrage und eine eventuelle Geschäftsbeziehung nötig ist. Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen, indem Sie an team.celea@gmail.com schreiben, und Beschwerde bei der italienischen Datenschutzbehörde (Garante per la protezione dei dati personali) einlegen.</p></div></details><details><summary>Cookies</summary><div class="body"><p>Diese Seite verwendet keine Profiling-Cookies und keine Statistik-Tools und zeigt keine Werbung. Die Schriftarten liegen auf dieser Website: keine Verbindung zu Google Fonts. Die Website wird von GitHub Pages (GitHub, Inc.) bereitgestellt, das aus Sicherheitsgründen die IP-Adressen der Besucher protokolliert.</p></div></details>',
+    "ft-sign":"Celea · antwortet immer, mit Sorgfalt.",
+    "ft-small":'KI-Rezeption auf WhatsApp und am Telefon für Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetriebe, in Italien und im Ausland. Kontakt: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Datenschutz und Cookies</a>'
+  };
+  var tplEn=document.getElementById("tpl-price-en"); if(tplEn) EN.price = tplEn.innerHTML;
+  var tplDe=document.getElementById("tpl-price-de"); if(tplDe) DE.price = tplDe.innerHTML;
+  var lang = "it", IT = {};
+  document.querySelectorAll("[data-i18n]").forEach(function(el){ IT[el.dataset.i18n] = el.innerHTML; });
+  function cur(){ return lang==="en" ? D_EN : (lang==="de" ? D_DE : D_IT); }
+  function applyLang(l, user){
+    lang = (l==="en"||l==="de") ? l : "it";
+    document.documentElement.lang = lang;
+    document.title = UI[lang].title;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k = el.dataset.i18n; var v = lang==="en" ? EN[k] : (lang==="de" ? DE[k] : IT[k]);
+      if(v!=null && el.innerHTML!==v) el.innerHTML = v;
+    });
+    document.querySelectorAll("[data-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang===lang?"true":"false"); });
+    input.placeholder = UI[lang].ph;
+    cp.textContent = UI[lang].copy;
+    var mb = document.getElementById("mail-btn");
+    if(mb) mb.href = "mailto:team.celea@gmail.com?subject=" + encodeURIComponent(lang==="en" ? "Celea demo request" : (lang==="de" ? "Demo-Anfrage Celea" : "Richiesta demo Celea"));
+    var bar = document.getElementById("langbar"); if(bar && lang!=="it") bar.hidden = true;
+    if(user){ try{ localStorage.setItem("celea-lang", lang); }catch(e){} }
+  }
+
+  document.querySelectorAll("[data-lang]").forEach(function(b){ b.addEventListener("click", function(){ if(b.dataset.lang!==lang){ applyLang(b.dataset.lang, true); reset(); startScenario("notte", true); } }); });
+  var toEn=document.getElementById("to-en"); if(toEn) toEn.addEventListener("click", function(){ applyLang(toEn.dataset.to||"en", true); reset(); startScenario("notte", true); });
+  document.getElementById("restart").addEventListener("click", function(){ reset(); });
+  // Lingua: scelta salvata, oppure ?lang=en / #en nell'indirizzo; il browser non italiano vede solo un invito a passare all'inglese.
+  var saved=null; try{ saved=localStorage.getItem("celea-lang"); }catch(e){}
+  var asked=null; try{ var m=(location.search+location.hash).match(/(?:lang=|#)(en|it|de)\b/); if(m) asked=m[1]; }catch(e){}
+  applyLang(asked || saved || "it", false);
+  var nav=(navigator.languages&&navigator.languages[0])||navigator.language||"it";
+  if(lang==="it" && !saved && !asked && !/^it/i.test(nav)){
+    var lb=document.getElementById("langbar");
+    if(lb){
+      if(/^de/i.test(nav) && toEn){ document.getElementById("lb-text").textContent="Diese Seite gibt es auch auf Deutsch."; toEn.textContent="Auf Deutsch lesen"; toEn.dataset.to="de"; toEn.lang="de"; }
+      lb.hidden=false;
+    }
+  }
+  reset();
+  // All'apertura parte da sola la situazione «Fuori orario», così la demo mostra subito cosa fa.
+  startScenario("notte", true);
+})();
+</script>
+
+</body></html>
