@@ -3,9 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<link rel="canonical" href="https://www.celea.it/">
-<meta property="og:url" content="https://www.celea.it/">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Sito di Celea v1.7 · 22/10/2026 · Studio web. Due copie con gli stessi contenuti: questo file (www.celea.it) e l'artifact claude.ai. -->
 <title>Celea · receptionist AI</title>
 <meta name="description" content="Celea è la receptionist AI per studi dentistici, agenzie immobiliari e strutture ricettive in tutta Italia e all'estero: risponde su WhatsApp e al telefono 24 ore su 24, fissa appuntamenti e passa a una persona quando serve. Provi subito la demo e prenoti 30 giorni di prova gratuita.">
 <meta name="keywords" content="receptionist AI, assistente WhatsApp studio dentistico, segreteria virtuale AI, risposta automatica agenzia immobiliare, assistente virtuale hotel e B&B, AI receptionist Italy">
@@ -18,8 +16,20 @@
 <meta property="og:description" content="Risponde ai Suoi clienti su WhatsApp e al telefono, 24 ore su 24. Studi dentistici, agenzie immobiliari e strutture ricettive, in Italia e all'estero. Provi la demo.">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0F4C5C">
+<link rel="canonical" href="https://www.celea.it/">
+<link rel="alternate" hreflang="it" href="https://www.celea.it/">
+<link rel="alternate" hreflang="en" href="https://www.celea.it/#en">
+<link rel="alternate" hreflang="de" href="https://www.celea.it/#de">
+<link rel="alternate" hreflang="x-default" href="https://www.celea.it/">
+<meta property="og:url" content="https://www.celea.it/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='26' fill='%230F4C5C'/%3E%3Cg transform='translate(14 12) scale(0.8)'%3E%3Cpath d='M85.71 90.64A40 40 0 1 1 85.71 29.36' fill='none' stroke='%23F4EDE3' stroke-width='12' stroke-linecap='round'/%3E%3Cpath d='M72.86 75.32A20 20 0 1 1 72.86 44.68' fill='none' stroke='%23E08A6A' stroke-width='10' stroke-linecap='round'/%3E%3Ccircle cx='96' cy='60' r='6' fill='%23E08A6A'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+/* Caratteri ospitati sul sito (nessun collegamento a Google Fonts); ripiego Helvetica/Arial. File già presenti nel repository celea-sito, cartella fonts. */
+@font-face{font-family:"Manrope";src:url("fonts/Manrope-VariableFont_wght.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Celea","description":"Receptionist AI su WhatsApp e al telefono, 24 ore su 24, per studi dentistici, agenzie immobiliari e strutture ricettive. Siti web come servizio aggiuntivo.","email":"team.celea@gmail.com","founder":{"@type":"Person","name":"William"},"address":{"@type":"PostalAddress","addressRegion":"Sicilia","addressCountry":"IT"},"areaServed":[{"@type":"Country","name":"Italia"},{"@type":"Place","name":"Europa"}],"knowsLanguage":["it","en","de"],"availableLanguage":["it","en","de"],"priceRange":"da 139 €/mese + IVA","slogan":"Risponde sempre, con cura."}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Celea","description":"Receptionist AI su WhatsApp e al telefono, 24 ore su 24, per studi dentistici, agenzie immobiliari e strutture ricettive. Siti web come servizio aggiuntivo.","email":"team.celea@gmail.com","founder":{"@type":"Person","name":"William"},"address":{"@type":"PostalAddress","addressRegion":"Sicilia","addressCountry":"IT"},"areaServed":[{"@type":"Country","name":"Italia"},{"@type":"Place","name":"Europa"}],"knowsLanguage":["it","en","de"],"availableLanguage":["it","en","de"],"priceRange":"da 139 €/mese, prezzo finale senza IVA (regime forfettario)","slogan":"Risponde sempre, con cura."}
 </script>
 <style>
 /* Layout: mobile-first single column; hero + live chat demo first, then quiet sand sections; one terracotta accent per block. Brand: guida Celea 1.0 «L'abbraccio». */
@@ -78,7 +88,9 @@ section{padding-block:72px}
 .nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.98rem}
 .nav a:hover{color:var(--accent-text)}
 .top .btn{min-height:42px;padding:8px 16px;font-size:.92rem}
-@media (min-width:900px){.nav{display:flex}}
+@media (min-width:1024px){.nav{display:flex}}
+.nav a{white-space:nowrap}
+@media (min-width:1024px) and (max-width:1180px){.nav{gap:14px}.nav a{font-size:.9rem}.top .btn{display:none}}
 
 /* hero */
 .hero{padding-block:56px 40px;position:relative;overflow:hidden}
@@ -283,13 +295,45 @@ footer .sign{font-family:var(--f-display);font-weight:700}
 @media (max-width:400px){.top .btn{display:none}}
 .niches,.scen{grid-template-columns:repeat(3,minmax(0,1fr))}.scen{grid-template-columns:repeat(2,minmax(0,1fr))}
 .niche span,.scen button,.chips button,h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto}
+/* v1.6: Perché Celea */
+.whysec{background:var(--deep);color:#F4EDE3}
+.whysec h2,.whysec h3{color:#F4EDE3}
+.whysec .eyebrow{color:#E08A6A}
+.whysec .lead{color:#F4EDE3;opacity:.88}
+.whysec .sec-head{margin-bottom:28px}
+.whysec .btn-ghost{color:#F4EDE3;border-color:#F4EDE3}
+.wgrid{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:14px}
+@media (min-width:700px){.wgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.wgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.wgrid li{background:rgba(244,237,227,.06);border:1px solid rgba(244,237,227,.18);border-top:4px solid #E08A6A;border-radius:var(--r);padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
+.wgrid .wn{font-family:var(--f-display);font-weight:800;font-size:.85rem;letter-spacing:.1em;color:#E08A6A}
+.wgrid h3{font-size:1.1rem}
+.wgrid p{color:#F4EDE3;opacity:.86;font-size:.98rem}
+/* v1.7: prezzi finali, modulo prova gratuita, scheda d'esempio */
+.tform{display:grid;gap:10px;padding:16px;border:1px solid rgba(244,237,227,.25);border-radius:var(--r);background:rgba(244,237,227,.06)}
+.tform label{display:grid;gap:4px;font-size:.9rem}
+.tform label>span{font-family:var(--f-display);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#E08A6A}
+.tform input,.tform select,.tform textarea{width:100%;min-height:44px;border:1px solid rgba(244,237,227,.4);border-radius:8px;background:#F4EDE3;color:#1F2D33;padding:9px 12px;font:inherit;font-size:1rem}
+.tform input[aria-invalid="true"]{outline:2px solid #E08A6A}
+.tform textarea{min-height:120px;font-size:.9rem}
+.tform .chk{grid-template-columns:22px 1fr;align-items:start;gap:10px}
+.tform .chk>span{font-family:var(--f-body);font-weight:400;font-size:.92rem;letter-spacing:0;text-transform:none;color:#F4EDE3}
+[hidden]{display:none!important}
+.tform .chk input{width:20px;height:20px;min-height:0;margin-top:3px;accent-color:#E08A6A}
+.tform .tiny{font-size:.82rem;opacity:.8}
+.tform .tiny a{color:#E08A6A}
+.tform .btn{justify-self:start}
+.tout{display:grid;gap:6px;font-size:.9rem}
+@media (min-width:600px){.tform{grid-template-columns:1fr 1fr}.tform .chk,.tform .tiny,.tform .btn,.tform .tout{grid-column:1/-1}}
+.scheda{position:relative;display:grid;gap:4px;margin-top:4px;padding:16px 16px 14px;border:1px dashed var(--accent-text);border-radius:var(--r);background:var(--surface);font-size:.95rem;max-width:36rem}
+.scheda b{font-family:var(--f-display);color:var(--brand);font-size:.98rem;margin-bottom:4px;padding-right:70px}
+.scheda span{display:grid;grid-template-columns:96px 1fr;gap:8px;align-items:baseline}
+.scheda span i{font-style:normal;font-family:var(--f-display);font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:360px){.scheda span{grid-template-columns:1fr}}
+.scheda-tag{position:absolute;right:12px;top:12px;font-family:var(--f-display);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text);border:1px solid var(--accent-text);border-radius:6px;padding:2px 7px}
 
 </style>
-<style>
-/* Caratteri ospitati sul sito (nessun collegamento a Google Fonts). Se i file non ci sono, il sito usa Helvetica/Arial. */
-@font-face{font-family:"Manrope";src:url("fonts/Manrope-VariableFont_wght.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
-@font-face{font-family:"Source Sans 3";src:url("fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
-</style>
+
 </head>
 <body>
 <a class="skip" href="#demo" data-i18n="skip">Vai alla demo</a>
@@ -338,7 +382,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <p class="lead" data-i18n="h-lead">Celea è l'assistente che risponde su WhatsApp e al telefono 24 ore su 24: dà informazioni, fissa appuntamenti e passa la parola a una persona quando serve. Per studi dentistici, agenzie immobiliari e strutture ricettive.</p>
         <div class="cta-row" data-i18n="h-cta">
           <a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Prova la demo</a>
-          <a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Prenoti una breve chiamata</a>
+          <a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Prenoti la prova gratuita</a>
         </div>
         <p class="hero-note" data-i18n="h-note">Lo configuriamo noi, su misura per la Sua attività, con 30 giorni di prova gratuita (fino a 100 minuti di telefonate). Si presenta sempre come assistente virtuale. Prezzi chiari, <a href="#prezzi">tutti scritti qui</a>.</p>
       </div>
@@ -376,13 +420,13 @@ footer .sign{font-family:var(--f-display);font-weight:700}
             <button type="button" data-scen="umano" data-i18n="s4"><strong>Passa a una persona</strong><span>quando serve lo staff</span></button>
           </div>
         </div>
-        <p class="demo-flag"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="d-flag">Dimostrazione: attività di esempio e risposte preimpostate. Nulla di ciò che scrive viene inviato o salvato. Il vero assistente viene configurato con i dati della Sua attività.</span></p>
+        <p class="demo-flag"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="d-flag">Dimostrazione: attività di esempio e risposte preimpostate. Nulla di ciò che scrive viene inviato o salvato. I nomi Sofia, Marco ed Elena sono d'esempio: il vero assistente viene configurato con i dati e il nome che sceglie Lei.</span></p>
       </div>
 
       <div class="phone">
         <div class="chat-head">
           <svg aria-hidden="true"><use href="#i-logo"/></svg>
-          <div><b id="chat-name">Studio dentistico (esempio)</b><small data-i18n="d-sub">Assistente virtuale · demo</small></div>
+          <div><b id="chat-name">Sofia · Studio dentistico (esempio)</b><small data-i18n="d-sub">Assistente virtuale · demo</small></div>
           <span class="tag">DEMO</span>
           <button type="button" class="restart" id="restart" aria-label="Ricomincia la conversazione" data-i18n="d-restart">Ricomincia</button>
         </div>
@@ -447,6 +491,25 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     </div>
   </section>
 
+  <section class="whysec" id="perche" aria-labelledby="perche-t">
+    <div class="wrap" data-i18n="why">
+        <div class="sec-head">
+          <p class="eyebrow">Perché Celea</p>
+          <h2 id="perche-t">Un solo assistente, preparato sulla Sua attività</h2>
+          <p class="lead">Sei cose che trova con Celea, scritte chiare prima di decidere.</p>
+        </div>
+        <ul class="wgrid">
+          <li><span class="wn">01</span><h3>Telefono e WhatsApp insieme</h3><p>Con il Pro lo stesso assistente risponde ai messaggi e alle chiamate, con le stesse informazioni e lo stesso tono. Non due strumenti da gestire.</p></li>
+          <li><span class="wn">02</span><h3>Italiano, inglese e tedesco inclusi</h3><p>In ogni pacchetto, senza costi in più: per pazienti, clienti e ospiti che arrivano dall'estero.</p></li>
+          <li><span class="wn">03</span><h3>Lo configuriamo noi</h3><p>Nessun programma da imparare: lo prepariamo sulle regole della Sua attività, lo proviamo con Lei e lo aggiorniamo quando cambia qualcosa.</p></li>
+          <li><span class="wn">04</span><h3>Nessun cambio di gestionale</h3><p>Continua a lavorare con i programmi di oggi: l'assistente raccoglie la richiesta e la Sua segreteria la conferma da una scheda già pronta; nella prova gratuita possiamo collegarlo a un calendario online come Google Calendar.</p></li>
+          <li><span class="wn">05</span><h3>30 giorni di prova gratuita</h3><p>30 giorni, fino a 100 minuti di telefonate e 300 conversazioni WhatsApp: vale il limite che arriva prima. Si prenota da subito, senza firma né pagamento; entro il 30° giorno può disdire senza costi.</p></li>
+          <li><span class="wn">06</span><h3>Prezzi scritti, nessun costo nascosto</h3><p>Canone, attivazione ed extra sono tutti nella sezione Prezzi. I messaggi WhatsApp li paga direttamente a Meta, senza nostri ricarichi.</p></li>
+        </ul>
+        <div class="cta-row"><a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Prova la demo</a><a class="btn btn-ghost" href="#prezzi">Veda i prezzi</a></div>
+    </div>
+  </section>
+
   <section aria-labelledby="cambia-t">
     <div class="wrap">
       <div class="sec-head" data-i18n="b-head">
@@ -456,7 +519,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       <div class="ben" data-i18n="b-list">
         <div><h3>Nessuna richiesta resta senza risposta</h3><p>Sera, domenica, pausa pranzo: chi scrive o chiama riceve subito una risposta, invece di cercare qualcun altro.</p></div>
         <div><h3>Meno interruzioni mentre lavora</h3><p>Le domande ripetitive le gestisce l'assistente. Lei e il Suo staff vi occupate delle persone davanti a voi.</p></div>
-        <div><h3>L'agenda si riempie con ordine</h3><p>Appuntamenti, visite e richieste di prenotazione arrivano nel calendario con i dati che servono.</p></div>
+        <div><h3>L'agenda si riempie con ordine</h3><p>Appuntamenti, visite e richieste di prenotazione arrivano alla segreteria o nel calendario online con i dati che servono.</p></div>
         <div><h3>Decide Lei cosa dice</h3><p>Orari, servizi, tono e limiti li stabilisce Lei. Ogni giorno vede cosa è stato chiesto e cosa è stato risposto.</p></div>
         <div><h3>Una persona quando serve</h3><p>Urgenze, reclami, casi delicati o domande senza risposta passano a chi indica Lei, con il riepilogo già pronto.</p></div>
         <div><h3>Seguito da vicino, ovunque si trovi</h3><p>Un referente unico, assistenza su WhatsApp e in videochiamata, aggiornamenti dei contenuti quando cambia qualcosa. Lavoriamo con attività in tutta Italia e all'estero.</p></div>
@@ -470,18 +533,18 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <p class="eyebrow">Prezzi</p>
         <h2 id="prezzi-t">Tutto quello che paga, scritto qui.</h2>
         <p class="lead">Un canone mensile, un'attivazione una tantum e nessun costo nascosto. Qui trova cosa è incluso, cosa può costare in più e quanto spende davvero ogni mese. Prima di decidere, provi la demo.</p>
-        <p class="start"><span>Prezzi IVA esclusa. Le attivazioni partono da novembre–dicembre 2026; la demo si prova da subito.</span></p>
+        <p class="start"><span>Prezzi finali, senza IVA aggiunta: Celea lavora in regime forfettario (art. 1, commi 54–89, legge 190/2014) e non applica l'IVA. Le attivazioni partono da novembre–dicembre 2026; la demo si prova da subito.</span></p>
       </div>
 
       <div class="pbox trial">
         <p class="pk-n">Prova gratuita</p>
         <h3>Prima di pagare, 30 giorni gratis.</h3>
-        <p>Uguale per tutti: configuriamo l'assistente sulla Sua attività e Lei lo usa per 30 giorni senza pagare, con fino a 100 minuti di telefonate (la prova finisce quando si raggiunge il primo dei due limiti). Si prenota da subito, senza firma né pagamento; parte da novembre–dicembre 2026, con l'avvio dei servizi.</p>
+        <p>Uguale per tutti: configuriamo l'assistente sulla Sua attività e Lei lo usa per 30 giorni senza pagare, con fino a 100 minuti di telefonate e 300 conversazioni WhatsApp (la prova finisce al primo limite raggiunto). Si prenota da subito, senza firma né pagamento; parte con la firma del contratto, da novembre–dicembre 2026, e fino al 30° giorno può disdire senza alcun costo. Durante la prova i messaggi WhatsApp li paga a Meta, come da abbonato.</p>
       </div>
 
       <h3 class="ph">I tre pacchetti della receptionist</h3>
       <div class="pk">
-        <article><p class="pk-n">Base</p><h4>Risponde su WhatsApp</h4><p>L'assistente risponde ai Suoi clienti su WhatsApp, 24 ore su 24: informazioni, appuntamenti, passaggio a una persona quando serve.</p><ul><li>Fino a 300 conversazioni al mese</li><li>Italiano, inglese e tedesco inclusi</li></ul></article>
+        <article><p class="pk-n">Base</p><h4>Per iniziare con WhatsApp</h4><p>L'assistente risponde ai Suoi clienti su WhatsApp, 24 ore su 24: informazioni, appuntamenti, passaggio a una persona quando serve.</p><ul><li>Fino a 300 conversazioni al mese</li><li>Italiano, inglese e tedesco inclusi</li></ul></article>
         <article><p class="pk-n">Pro</p><h4>WhatsApp e telefono</h4><p>Tutto il Base, più le telefonate: l'assistente risponde anche al telefono, con voce standard inclusa.</p><ul><li>400 minuti di telefonate al mese</li><li>Fino a 500 conversazioni WhatsApp</li><li>Italiano, inglese e tedesco inclusi</li></ul></article>
         <article><p class="pk-n">Pro + sito</p><h4>WhatsApp, telefono e sito</h4><p>Tutto il Pro, più un sito web di 5 pagine per la Sua attività, con l'assistente già integrato.</p><ul><li>Come il Pro</li><li>Sito di 5 pagine incluso</li></ul></article>
       </div>
@@ -510,16 +573,17 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <h3>I messaggi WhatsApp li paga a Meta, senza nostri ricarichi.</h3>
           <p>WhatsApp appartiene a Meta, che fa pagare alcuni messaggi alle aziende. Lei collega la Sua carta al Suo account WhatsApp e paga questi messaggi direttamente a Meta: noi non ci guadagniamo nulla e non aggiungiamo ricarichi. Così vede sempre quanto spende, voce per voce.</p>
           <ul class="plist"><li><span>Con il Base (stima)</span><b>da 0 a circa 20 €/mese</b></li><li><span>Con il Pro e il Pro + sito, uso medio (stima)</span><b>circa 29–35 €/mese</b></li><li><span>Con il Pro, nei mesi più pieni (stima)</span><b>fino a circa 50–60 €/mese</b></li></ul>
-          <p class="pnote">Stime IVA esclusa: la cifra dipende da quante conversazioni gestisce l'assistente nel mese e da quanti promemoria si mandano. Le risposte a chi Le scrive sono gratis fino a 1.000 al mese; si pagano le risposte oltre quella soglia e i promemoria. Uno studio dentistico che manda il promemoria a tutti gli appuntamenti arriva a circa 62 € nei mesi pieni; una struttura con molti ospiti dall'estero fino a circa 76 €. Per gli studi dentistici, che di solito non recuperano l'IVA, la stima IVA inclusa è da 0 a circa 24 € al mese con il Base e circa 11–75 € al mese con il Pro.</p>
-          <p class="pnote"><strong>Esempio di costo totale al mese:</strong> uno studio dentistico con il Pro paga 329 € di canone più i messaggi Meta, cioè di solito circa 364 € al mese in tutto e al massimo circa 391 € nei mesi più pieni (IVA esclusa). Un B&amp;B con il Base: 139 € più i messaggi Meta, cioè 139–159 € al mese in tutto.</p>
+          <p class="pnote">Stime sui prezzi di Meta (IVA di Meta esclusa): la cifra dipende da quante conversazioni gestisce l'assistente nel mese e da quanti promemoria si mandano. Le risposte a chi Le scrive sono gratis fino a 1.000 al mese; si pagano le risposte oltre quella soglia e i promemoria. Uno studio dentistico che manda il promemoria a tutti gli appuntamenti arriva a circa 62 € nei mesi pieni; una struttura con molti ospiti dall'estero fino a circa 76 €. Per gli studi dentistici, che di solito non recuperano l'IVA, la stima con l'IVA di Meta è da 0 a circa 24 € al mese con il Base e circa 11–75 € al mese con il Pro.</p>
+          <p class="pnote"><strong>Esempio di costo totale al mese:</strong> uno studio dentistico con il Pro paga 329 € di canone più i messaggi Meta, cioè di solito circa 364 € al mese in tutto e al massimo circa 391 € nei mesi più pieni (canone finale senza IVA; messaggi Meta alle tariffe di Meta). Un B&amp;B con il Base: 139 € più i messaggi Meta, cioè 139–159 € al mese in tutto.</p>
         </div>
       </div>
 
       <div class="pbox">
         <h3>Le condizioni, chiare</h3>
         <ul class="terms">
-          <li><b>Prova gratuita:</b> 30 giorni gratis (fino a 100 minuti di telefonate; vale il limite che si raggiunge prima), con l'assistente configurato sulla Sua attività. Si prenota da subito, senza firma né pagamento; parte da novembre–dicembre 2026.</li>
+          <li><b>Prova gratuita:</b> 30 giorni gratis (fino a 100 minuti di telefonate e 300 conversazioni WhatsApp; vale il limite che si raggiunge prima), con l'assistente configurato sulla Sua attività. Si prenota da subito, senza firma né pagamento; parte con la firma del contratto, da novembre–dicembre 2026; disdetta libera e senza costi fino al 30° giorno. I messaggi Meta durante la prova li paga a Meta.</li>
           <li><b>Attivazione:</b> si paga una volta sola, all'inizio (390 € Base, 690 € Pro, 1.390 € Pro + sito).</li>
+          <li><b>IVA:</b> nessuna. I prezzi sono finali: Celea lavora in regime forfettario e non applica l'IVA, quindi in fattura non viene aggiunto nulla (salvo l'eventuale imposta di bollo di 2 € prevista dalla legge sulle fatture oltre 77,47 €).</li>
           <li><b>Durata minima:</b> 6 mesi. Dopo, si continua mese per mese e si può smettere con 30 giorni di preavviso.</li>
           <li><b>Pagamento annuale:</b> 12 mesi al prezzo di 11.</li>
           <li><b>Pausa stagionale</b> (B&amp;B, case vacanza e hotel): nei mesi di chiusura l'assistente resta acceso solo su WhatsApp (telefono spento) e il canone scende al 20%, con un minimo di 59 € al mese.</li>
@@ -539,15 +603,16 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       <h3 class="ph">Servizi digitali singoli <small>anche senza receptionist</small></h3>
       <div class="svc">
         <div><h4>Social</h4><ul class="plist"><li><span>Social Start · 1 canale, 8 post, 4 storie</span><b>290 €/mese + 190 €</b></li><li><span>Social Plus · 2 canali, 12 post, 2 video brevi</span><b>490 €/mese + 290 €</b></li><li><span>Social Pro · 3 canali, 20 post, 4 video brevi</span><b>790 €/mese + 390 €</b></li></ul></div>
-        <div><h4>Siti web</h4><ul class="plist"><li><span>Landing page · 1 pagina, dominio e hosting</span><b>490 € + 29 €/mese</b></li><li><span>Sito vetrina · 5 pagine, SEO di base</span><b>990 € + 49 €/mese</b></li><li><span>Sito premium · 10 pagine in italiano, inglese e tedesco</span><b>1.990 € + 79 €/mese</b></li></ul></div>
+        <div><h4>Siti web</h4><ul class="plist"><li><span>Landing page · 1 pagina, hosting e collegamento del Suo dominio</span><b>490 € + 29 €/mese</b></li><li><span>Sito vetrina · 5 pagine, SEO di base</span><b>990 € + 49 €/mese</b></li><li><span>Sito premium · 10 pagine in italiano, inglese e tedesco</span><b>1.990 € + 79 €/mese</b></li></ul></div>
         <div><h4>Google e recensioni</h4><ul class="plist"><li><span>Google &amp; Recensioni · scheda Google, 4 post al mese, risposte alle recensioni</span><b>149 €/mese + 190 €</b></li><li><span>SEO locale completo</span><b>299 €/mese + 390 €</b></li></ul></div>
-        <div><h4>Clienti già acquisiti</h4><ul class="plist"><li><span>Newsletter mensile</span><b>149 €/mese + 190 €</b></li><li><span>Campagne WhatsApp ai clienti (messaggi Meta a parte)</span><b>99 €/mese + 190 €</b></li><li><span>Ricontatto automatico delle richieste</span><b>79 €/mese + 190 €</b></li><li><span>Assistente sul sito, in aggiunta alla receptionist</span><b>49 €/mese + 90 €</b></li></ul></div>
+        <div><h4>Clienti già acquisiti</h4><ul class="plist"><li><span>Newsletter mensile</span><b>149 €/mese + 190 €</b></li><li><span>Campagne WhatsApp ai clienti (i messaggi li paga Lei direttamente a Meta)</span><b>99 €/mese + 190 €</b></li><li><span>Ricontatto automatico delle richieste</span><b>79 €/mese + 190 €</b></li><li><span>Assistente sul sito, in aggiunta alla receptionist</span><b>49 €/mese + 90 €</b></li></ul></div>
       </div>
-      <p class="pnote">Il primo importo è il canone (o il prezzo una tantum per i siti), il secondo l'attivazione o il canone del sito. Su richiesta prepariamo un preventivo su misura per email.</p>
+      <p class="pnote">Il primo importo è il canone (o il prezzo una tantum per i siti), il secondo l'attivazione o il canone del sito. Il dominio è sempre intestato a Lei: il primo collegamento è compreso, il rinnovo annuale non è nei canoni dei siti e lo paga direttamente al registrar, oppure lo anticipiamo noi al costo. Su richiesta prepariamo un preventivo su misura per email.</p>
 
       <div class="faq pfaq">
         <h3 class="ph">Domande sui costi</h3>
-        <details><summary>Posso provarlo prima di pagare?</summary><div class="ans"><p>Sì. Oltre alla demo che prova qui subito, c'è una prova gratuita di 30 giorni con l'assistente configurato sulla Sua attività e fino a 100 minuti di telefonate. È uguale per tutti, si prenota da subito senza firma né pagamento e parte da novembre–dicembre 2026.</p></div></details>
+        <details><summary>Posso provarlo prima di pagare?</summary><div class="ans"><p>Sì. Oltre alla demo che prova qui subito, c'è una prova gratuita di 30 giorni con l'assistente configurato sulla Sua attività, fino a 100 minuti di telefonate e 300 conversazioni WhatsApp. È uguale per tutti, si prenota da subito senza firma né pagamento, parte con la firma del contratto da novembre–dicembre 2026 e può disdirla senza costi entro il 30° giorno.</p></div></details>
+        <details><summary>I prezzi comprendono l'IVA?</summary><div class="ans"><p>Sono prezzi finali. Celea lavora in regime forfettario (legge 190/2014) e non applica l'IVA: il canone che legge qui è quello che paga, senza IVA aggiunta in fattura. Solo l'imposta di bollo di 2 € prevista dalla legge può comparire sulle fatture oltre 77,47 €. I messaggi WhatsApp li paga a Meta, alle tariffe di Meta.</p></div></details>
         <details><summary>Ci sono costi nascosti?</summary><div class="ans"><p>No. Paga il canone mensile e l'attivazione una tantum. Tutto il resto è scritto in questa pagina e lo paga solo se lo usa o lo sceglie: minuti in più, voce premium, altre lingue, seconda sede. I messaggi WhatsApp li paga direttamente a Meta, senza nostri ricarichi.</p></div></details>
         <details><summary>Cosa succede se supero i minuti di telefonata?</summary><div class="ans"><p>L'assistente continua a rispondere: non resta mai nessuno senza risposta. I minuti oltre i 400 inclusi costano 0,45 € al minuto (0,65 € con la voce premium) e li trova indicati nel report mensile.</p></div></details>
         <details><summary>E se supero le conversazioni WhatsApp?</summary><div class="ans"><p>L'assistente continua a rispondere. Le conversazioni oltre il limite del pacchetto costano 15 € ogni 100.</p></div></details>
@@ -556,12 +621,6 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <details><summary>Le lingue straniere costano in più?</summary><div class="ans"><p>Italiano, inglese e tedesco sono inclusi in ogni pacchetto. Altre lingue costano 19 € al mese ciascuna, solo dopo una nostra prova che ne garantisca la qualità.</p></div></details>
         <details><summary>Posso pagare una volta all'anno?</summary><div class="ans"><p>Sì: con il pagamento annuale paga 11 mesi e ne riceve 12.</p></div></details>
         <details><summary>Quanto devo restare? Posso fermarmi d'estate o d'inverno?</summary><div class="ans"><p>La durata minima è di 6 mesi, poi si continua mese per mese con 30 giorni di preavviso. Le strutture ricettive possono mettere in pausa il servizio nei mesi di chiusura: resta acceso solo WhatsApp e il canone scende al 20%, con un minimo di 59 € al mese.</p></div></details>
-      </div>
-
-      <div class="why">
-        <div><h4>Telefono e WhatsApp insieme</h4><p>Un solo assistente risponde sia ai messaggi sia alle chiamate, con le stesse informazioni e lo stesso tono. Non due strumenti da gestire.</p></div>
-        <div><h4>Lo configuriamo noi</h4><p>Non deve imparare un programma: prepariamo l'assistente sulle regole della Sua attività, lo proviamo con Lei e lo aggiorniamo quando cambia qualcosa.</p></div>
-        <div><h4>Un referente unico</h4><p>Una persona che conosce la Sua attività, raggiungibile su WhatsApp e in videochiamata, per l'assistente e, se vuole, anche per sito, scheda Google e social.</p></div>
       </div>
 
       <div class="pend">
@@ -576,18 +635,18 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <p class="eyebrow">Pricing</p>
         <h2 id="prezzi-t">Everything you pay, written right here.</h2>
         <p class="lead">One monthly fee, a one-off setup fee and no hidden costs. See what is included, what may cost extra and what you really spend each month. Before you decide, try the demo.</p>
-        <p class="start"><span>Prices exclude VAT. Services go live from November–December 2026; the demo is available right away.</span></p>
+        <p class="start"><span>Final prices, no VAT added: Celea operates under the Italian flat-rate scheme (regime forfettario, Law 190/2014, art. 1, par. 54–89) and does not charge VAT. Services go live from November–December 2026; the demo is available right away.</span></p>
       </div>
 
       <div class="pbox trial">
         <p class="pk-n">Free trial</p>
         <h3>Before you pay: 30 days free.</h3>
-        <p>The same for everyone: we set up the assistant for your business and you use it for 30 days without paying, with up to 100 call minutes (the trial ends when the first of the two limits is reached). You can book it right away, with no signature and no payment; it starts from November–December 2026, when services go live.</p>
+        <p>The same for everyone: we set up the assistant for your business and you use it for 30 days without paying, with up to 100 call minutes and 300 WhatsApp conversations (the trial ends at the first limit reached). You can book it right away, with no signature and no payment; it starts when the contract is signed, from November–December 2026, and up to day 30 you can cancel at no cost. During the trial you pay WhatsApp messages to Meta, as a subscriber would.</p>
       </div>
 
       <h3 class="ph">The three receptionist packages</h3>
       <div class="pk">
-        <article><p class="pk-n">Base</p><h4>Answers on WhatsApp</h4><p>Your assistant answers customers on WhatsApp, 24/7: information, appointments and hand-over to a person when needed.</p><ul><li>Up to 300 conversations a month</li><li>Italian, English and German included</li></ul></article>
+        <article><p class="pk-n">Base</p><h4>To get started on WhatsApp</h4><p>Your assistant answers customers on WhatsApp, 24/7: information, appointments and hand-over to a person when needed.</p><ul><li>Up to 300 conversations a month</li><li>Italian, English and German included</li></ul></article>
         <article><p class="pk-n">Pro</p><h4>WhatsApp and phone</h4><p>Everything in Base, plus phone calls: the assistant also answers the phone, with a standard voice included.</p><ul><li>400 call minutes a month</li><li>Up to 500 WhatsApp conversations</li><li>Italian, English and German included</li></ul></article>
         <article><p class="pk-n">Pro + website</p><h4>WhatsApp, phone and website</h4><p>Everything in Pro, plus a 5-page website for your business with the assistant built in.</p><ul><li>Same as Pro</li><li>5-page website included</li></ul></article>
       </div>
@@ -616,16 +675,17 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <h3>You pay WhatsApp messages to Meta, with no mark-up from us.</h3>
           <p>WhatsApp belongs to Meta, which charges businesses for some messages. You link your card to your own WhatsApp account and pay these messages directly to Meta: we earn nothing on them and add no mark-up. You always see exactly what you spend.</p>
           <ul class="plist"><li><span>With Base (estimate)</span><b>from €0 to about €20/month</b></li><li><span>With Pro and Pro + website, average use (estimate)</span><b>about €29–35/month</b></li><li><span>With Pro, in the busiest months (estimate)</span><b>up to about €50–60/month</b></li></ul>
-          <p class="pnote">Estimates excluding VAT: the amount depends on how many conversations the assistant handles in the month and how many reminders are sent. Replies to people who write to you are free up to 1,000 a month; replies beyond that and reminders are charged. A dental practice that sends a reminder for every appointment reaches about €62 in busy months; a property with many guests from abroad up to about €76. For dental practices, which usually cannot reclaim VAT, the estimate including VAT is from €0 to about €24 a month with Base and about €11–75 a month with Pro.</p>
-          <p class="pnote"><strong>Example of total monthly cost:</strong> a dental practice on Pro pays €329 plus Meta messages, usually about €364 a month in total and at most about €391 in the busiest months (excl. VAT). A B&amp;B on Base: €139 plus Meta messages, €139–159 a month in total.</p>
+          <p class="pnote">Estimates based on Meta's prices (Meta's VAT excluded): the amount depends on how many conversations the assistant handles in the month and how many reminders are sent. Replies to people who write to you are free up to 1,000 a month; replies beyond that and reminders are charged. A dental practice that sends a reminder for every appointment reaches about €62 in busy months; a property with many guests from abroad up to about €76. For dental practices, which usually cannot reclaim VAT, the estimate with Meta's VAT is from €0 to about €24 a month with Base and about €11–75 a month with Pro.</p>
+          <p class="pnote"><strong>Example of total monthly cost:</strong> a dental practice on Pro pays €329 plus Meta messages, usually about €364 a month in total and at most about €391 in the busiest months (final fee with no VAT; Meta messages at Meta's rates). A B&amp;B on Base: €139 plus Meta messages, €139–159 a month in total.</p>
         </div>
       </div>
 
       <div class="pbox">
         <h3>Clear terms</h3>
         <ul class="terms">
-          <li><b>Free trial:</b> 30 days free (up to 100 call minutes; whichever limit is reached first), with the assistant set up for your business. Book it right away, with no signature and no payment; it starts from November–December 2026.</li>
+          <li><b>Free trial:</b> 30 days free (up to 100 call minutes and 300 WhatsApp conversations; whichever limit is reached first), with the assistant set up for your business. Book it right away, with no signature and no payment; it starts when the contract is signed, from November–December 2026; free cancellation at no cost up to day 30. Meta messages during the trial are paid to Meta.</li>
           <li><b>Setup:</b> paid once, at the start (€390 Base, €690 Pro, €1,390 Pro + website).</li>
+          <li><b>VAT:</b> none. Prices are final: Celea operates under the Italian flat-rate scheme and does not charge VAT, so nothing is added to the invoice (except the €2 stamp duty that Italian law may require on invoices above €77.47).</li>
           <li><b>Minimum term:</b> 6 months. After that, month to month with 30 days' notice.</li>
           <li><b>Annual payment:</b> 12 months for the price of 11.</li>
           <li><b>Seasonal pause</b> (B&amp;Bs, holiday homes and hotels): during closing months the assistant stays on WhatsApp only (phone off) and the fee drops to 20%, with a minimum of €59 a month.</li>
@@ -645,15 +705,16 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       <h3 class="ph">Individual digital services <small>also without the receptionist</small></h3>
       <div class="svc">
         <div><h4>Social media</h4><ul class="plist"><li><span>Social Start · 1 channel, 8 posts, 4 stories</span><b>€290/month + €190</b></li><li><span>Social Plus · 2 channels, 12 posts, 2 short videos</span><b>€490/month + €290</b></li><li><span>Social Pro · 3 channels, 20 posts, 4 short videos</span><b>€790/month + €390</b></li></ul></div>
-        <div><h4>Websites</h4><ul class="plist"><li><span>Landing page · 1 page, domain and hosting</span><b>€490 + €29/month</b></li><li><span>Showcase website · 5 pages, basic SEO</span><b>€990 + €49/month</b></li><li><span>Premium website · 10 pages in Italian, English and German</span><b>€1,990 + €79/month</b></li></ul></div>
+        <div><h4>Websites</h4><ul class="plist"><li><span>Landing page · 1 page, hosting and connection of your domain</span><b>€490 + €29/month</b></li><li><span>Showcase website · 5 pages, basic SEO</span><b>€990 + €49/month</b></li><li><span>Premium website · 10 pages in Italian, English and German</span><b>€1,990 + €79/month</b></li></ul></div>
         <div><h4>Google and reviews</h4><ul class="plist"><li><span>Google &amp; Reviews · Google profile, 4 posts a month, replies to reviews</span><b>€149/month + €190</b></li><li><span>Full local SEO</span><b>€299/month + €390</b></li></ul></div>
-        <div><h4>Existing customers</h4><ul class="plist"><li><span>Monthly newsletter</span><b>€149/month + €190</b></li><li><span>WhatsApp campaigns to your customers (Meta messages extra)</span><b>€99/month + €190</b></li><li><span>Automatic follow-up of enquiries</span><b>€79/month + €190</b></li><li><span>Assistant on your website, added to the receptionist</span><b>€49/month + €90</b></li></ul></div>
+        <div><h4>Existing customers</h4><ul class="plist"><li><span>Monthly newsletter</span><b>€149/month + €190</b></li><li><span>WhatsApp campaigns to your customers (you pay the messages directly to Meta)</span><b>€99/month + €190</b></li><li><span>Automatic follow-up of enquiries</span><b>€79/month + €190</b></li><li><span>Assistant on your website, added to the receptionist</span><b>€49/month + €90</b></li></ul></div>
       </div>
-      <p class="pnote">The first amount is the monthly fee (or the one-off price for websites), the second the setup or the website's monthly fee. On request we prepare a tailored quote by email.</p>
+      <p class="pnote">The first amount is the monthly fee (or the one-off price for websites), the second the setup or the website's monthly fee. The domain is always registered in your name: the first connection is included, while the yearly renewal is not part of the website fees and you pay it directly to the registrar, or we pay it for you at cost. On request we prepare a tailored quote by email.</p>
 
       <div class="faq pfaq">
         <h3 class="ph">Pricing questions</h3>
-        <details><summary>Can I try it before I pay?</summary><div class="ans"><p>Yes. Besides the demo you can try here right away, there is a free 30-day trial with the assistant set up for your business and up to 100 call minutes. It is the same for everyone, can be booked right away with no signature and no payment, and starts from November–December 2026.</p></div></details>
+        <details><summary>Can I try it before I pay?</summary><div class="ans"><p>Yes. Besides the demo you can try here right away, there is a free 30-day trial with the assistant set up for your business, up to 100 call minutes and 300 WhatsApp conversations. It is the same for everyone, can be booked right away with no signature and no payment, starts when the contract is signed from November–December 2026, and you can cancel at no cost up to day 30.</p></div></details>
+        <details><summary>Do prices include VAT?</summary><div class="ans"><p>They are final prices. Celea operates under the Italian flat-rate scheme (Law 190/2014) and does not charge VAT: the fee you read here is what you pay, with no VAT added to the invoice. Only the €2 stamp duty required by Italian law may appear on invoices above €77.47. WhatsApp messages are paid to Meta, at Meta's rates.</p></div></details>
         <details><summary>Are there any hidden costs?</summary><div class="ans"><p>No. You pay the monthly fee and the one-off setup. Everything else is on this page and you only pay it if you use or choose it: extra minutes, premium voice, extra languages, a second location. WhatsApp messages are paid directly to Meta, with no mark-up from us.</p></div></details>
         <details><summary>What happens if I go over my call minutes?</summary><div class="ans"><p>The assistant keeps answering: nobody is left without a reply. Minutes beyond the 400 included cost €0.45 per minute (€0.65 with the premium voice) and are shown in your monthly report.</p></div></details>
         <details><summary>And if I go over my WhatsApp conversations?</summary><div class="ans"><p>The assistant keeps answering. Conversations beyond your package limit cost €15 per 100.</p></div></details>
@@ -662,12 +723,6 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <details><summary>Do foreign languages cost extra?</summary><div class="ans"><p>Italian, English and German are included in every package. Other languages cost €19 a month each, only after a test from us that confirms the quality.</p></div></details>
         <details><summary>Can I pay once a year?</summary><div class="ans"><p>Yes: with annual payment you pay for 11 months and get 12.</p></div></details>
         <details><summary>How long do I have to stay? Can I pause in the off-season?</summary><div class="ans"><p>The minimum term is 6 months, then month to month with 30 days' notice. Hospitality businesses can pause during closing months: only WhatsApp stays on and the fee drops to 20%, with a minimum of €59 a month.</p></div></details>
-      </div>
-
-      <div class="why">
-        <div><h4>Phone and WhatsApp together</h4><p>One assistant answers both messages and calls, with the same information and the same tone. Not two tools to manage.</p></div>
-        <div><h4>We set it up for you</h4><p>No software to learn: we build the assistant around your business rules, test it with you and update it whenever something changes.</p></div>
-        <div><h4>One single contact person</h4><p>Someone who knows your business, reachable on WhatsApp and video call, for the assistant and, if you wish, for your website, Google profile and social media too.</p></div>
       </div>
 
       <div class="pend">
@@ -681,18 +736,18 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <p class="eyebrow">Preise</p>
         <h2 id="prezzi-t">Alles, was Sie zahlen, steht hier.</h2>
         <p class="lead">Eine monatliche Gebühr, eine einmalige Einrichtung und keine versteckten Kosten. Hier sehen Sie, was enthalten ist, was zusätzlich kosten kann und was Sie wirklich jeden Monat ausgeben. Bevor Sie sich entscheiden, testen Sie die Demo.</p>
-        <p class="start"><span>Preise zzgl. MwSt. Der Start der Dienste ist ab November–Dezember 2026 möglich; die Demo können Sie sofort testen.</span></p>
+        <p class="start"><span>Endpreise ohne Mehrwertsteuer: Celea arbeitet in der italienischen Pauschalregelung (regime forfettario, Gesetz 190/2014, Art. 1 Abs. 54–89) und berechnet keine MwSt. Der Start der Dienste ist ab November–Dezember 2026 möglich; die Demo können Sie sofort testen.</span></p>
       </div>
 
       <div class="pbox trial">
         <p class="pk-n">Kostenlose Testphase</p>
         <h3>Bevor Sie zahlen: 30 Tage kostenlos.</h3>
-        <p>Für alle gleich: Wir richten den Assistenten für Ihren Betrieb ein, und Sie nutzen ihn 30 Tage, ohne zu zahlen, mit bis zu 100 Telefonminuten (die Testphase endet, sobald eine der beiden Grenzen erreicht ist). Buchbar ab sofort, ohne Unterschrift und ohne Zahlung; Start ab November–Dezember 2026, mit dem Start der Dienste.</p>
+        <p>Für alle gleich: Wir richten den Assistenten für Ihren Betrieb ein, und Sie nutzen ihn 30 Tage, ohne zu zahlen, mit bis zu 100 Telefonminuten und 300 WhatsApp-Gesprächen (die Testphase endet bei der ersten erreichten Grenze). Buchbar ab sofort, ohne Unterschrift und ohne Zahlung; sie beginnt mit der Unterzeichnung des Vertrags, ab November–Dezember 2026, und bis zum 30. Tag können Sie ohne Kosten kündigen. Während der Testphase zahlen Sie die WhatsApp-Nachrichten an Meta, wie als Abonnent.</p>
       </div>
 
       <h3 class="ph">Die drei Pakete der Rezeption</h3>
       <div class="pk">
-        <article><p class="pk-n">Base</p><h4>Antwortet auf WhatsApp</h4><p>Der Assistent antwortet Ihren Kunden rund um die Uhr auf WhatsApp: Auskünfte, Termine und Übergabe an einen Menschen, wenn es nötig ist.</p><ul><li>Bis zu 300 Gespräche im Monat</li><li>Italienisch, Englisch und Deutsch inklusive</li></ul></article>
+        <article><p class="pk-n">Base</p><h4>Für den Einstieg mit WhatsApp</h4><p>Der Assistent antwortet Ihren Kunden rund um die Uhr auf WhatsApp: Auskünfte, Termine und Übergabe an einen Menschen, wenn es nötig ist.</p><ul><li>Bis zu 300 Gespräche im Monat</li><li>Italienisch, Englisch und Deutsch inklusive</li></ul></article>
         <article><p class="pk-n">Pro</p><h4>WhatsApp und Telefon</h4><p>Alles aus Base, dazu Anrufe: Der Assistent nimmt auch Telefonate an, mit Standardstimme inklusive.</p><ul><li>400 Telefonminuten im Monat</li><li>Bis zu 500 WhatsApp-Gespräche</li><li>Italienisch, Englisch und Deutsch inklusive</li></ul></article>
         <article><p class="pk-n">Pro + Website</p><h4>WhatsApp, Telefon und Website</h4><p>Alles aus Pro, dazu eine Website mit 5 Seiten für Ihren Betrieb, mit integriertem Assistenten.</p><ul><li>Wie Pro</li><li>Website mit 5 Seiten inklusive</li></ul></article>
       </div>
@@ -721,16 +776,17 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <h3>WhatsApp-Nachrichten zahlen Sie an Meta, ohne Aufschlag von uns.</h3>
           <p>WhatsApp gehört zu Meta, das Unternehmen einige Nachrichten in Rechnung stellt. Sie hinterlegen Ihre Karte in Ihrem eigenen WhatsApp-Konto und zahlen diese Nachrichten direkt an Meta: Wir verdienen daran nichts und schlagen nichts auf. So sehen Sie immer genau, was Sie ausgeben.</p>
           <ul class="plist"><li><span>Mit Base (Schätzung)</span><b>0 bis etwa 20 €/Monat</b></li><li><span>Mit Pro und Pro + Website, durchschnittliche Nutzung (Schätzung)</span><b>etwa 29–35 €/Monat</b></li><li><span>Mit Pro, in den vollsten Monaten (Schätzung)</span><b>bis etwa 50–60 €/Monat</b></li></ul>
-          <p class="pnote">Schätzungen zzgl. MwSt.: Der Betrag hängt davon ab, wie viele Gespräche der Assistent im Monat führt und wie viele Erinnerungen verschickt werden. Antworten an Personen, die Ihnen schreiben, sind bis 1.000 im Monat kostenlos; berechnet werden Antworten über dieser Schwelle und Erinnerungen. Eine Zahnarztpraxis, die zu jedem Termin eine Erinnerung schickt, kommt in vollen Monaten auf etwa 62 €; eine Unterkunft mit vielen Gästen aus dem Ausland auf bis zu etwa 76 €. Für Zahnarztpraxen, die die MwSt. meist nicht zurückerhalten, beträgt die Schätzung inkl. MwSt. 0 bis etwa 24 € im Monat mit Base und etwa 11–75 € im Monat mit Pro.</p>
-          <p class="pnote"><strong>Beispiel der Gesamtkosten pro Monat:</strong> Eine Zahnarztpraxis mit Pro zahlt 329 € Gebühr plus die Meta-Nachrichten, also meist etwa 364 € im Monat insgesamt und höchstens etwa 391 € in den vollsten Monaten (zzgl. MwSt.). Ein B&amp;B mit Base: 139 € plus die Meta-Nachrichten, also 139–159 € im Monat insgesamt.</p>
+          <p class="pnote">Schätzungen auf Basis der Meta-Preise (ohne die MwSt. von Meta): Der Betrag hängt davon ab, wie viele Gespräche der Assistent im Monat führt und wie viele Erinnerungen verschickt werden. Antworten an Personen, die Ihnen schreiben, sind bis 1.000 im Monat kostenlos; berechnet werden Antworten über dieser Schwelle und Erinnerungen. Eine Zahnarztpraxis, die zu jedem Termin eine Erinnerung schickt, kommt in vollen Monaten auf etwa 62 €; eine Unterkunft mit vielen Gästen aus dem Ausland auf bis zu etwa 76 €. Für Zahnarztpraxen, die die MwSt. meist nicht zurückerhalten, beträgt die Schätzung mit der MwSt. von Meta 0 bis etwa 24 € im Monat mit Base und etwa 11–75 € im Monat mit Pro.</p>
+          <p class="pnote"><strong>Beispiel der Gesamtkosten pro Monat:</strong> Eine Zahnarztpraxis mit Pro zahlt 329 € Gebühr plus die Meta-Nachrichten, also meist etwa 364 € im Monat insgesamt und höchstens etwa 391 € in den vollsten Monaten (Endgebühr ohne MwSt.; Meta-Nachrichten zu den Tarifen von Meta). Ein B&amp;B mit Base: 139 € plus die Meta-Nachrichten, also 139–159 € im Monat insgesamt.</p>
         </div>
       </div>
 
       <div class="pbox">
         <h3>Die Bedingungen, klar</h3>
         <ul class="terms">
-          <li><b>Kostenlose Testphase:</b> 30 Tage kostenlos (bis zu 100 Telefonminuten; es gilt die Grenze, die zuerst erreicht wird), mit dem für Ihren Betrieb eingerichteten Assistenten. Buchbar ab sofort, ohne Unterschrift und ohne Zahlung; Start ab November–Dezember 2026.</li>
+          <li><b>Kostenlose Testphase:</b> 30 Tage kostenlos (bis zu 100 Telefonminuten und 300 WhatsApp-Gespräche; es gilt die Grenze, die zuerst erreicht wird), mit dem für Ihren Betrieb eingerichteten Assistenten. Buchbar ab sofort, ohne Unterschrift und ohne Zahlung; sie beginnt mit der Unterzeichnung des Vertrags, ab November–Dezember 2026; kostenlose Kündigung bis zum 30. Tag. Meta-Nachrichten während der Testphase zahlen Sie an Meta.</li>
           <li><b>Einrichtung:</b> wird einmal zu Beginn bezahlt (390 € Base, 690 € Pro, 1.390 € Pro + Website).</li>
+          <li><b>MwSt.:</b> keine. Die Preise sind Endpreise: Celea arbeitet in der italienischen Pauschalregelung und berechnet keine MwSt., auf der Rechnung kommt also nichts hinzu (außer der eventuellen Stempelsteuer von 2 €, die das italienische Gesetz bei Rechnungen über 77,47 € vorsehen kann).</li>
           <li><b>Mindestlaufzeit:</b> 6 Monate. Danach monatlich, kündbar mit 30 Tagen Frist.</li>
           <li><b>Jahreszahlung:</b> 12 Monate zum Preis von 11.</li>
           <li><b>Saisonpause</b> (B&amp;Bs, Ferienwohnungen und Hotels): In den Schließmonaten bleibt der Assistent nur auf WhatsApp aktiv (Telefon aus) und die Gebühr sinkt auf 20 %, mindestens 59 € im Monat.</li>
@@ -750,15 +806,16 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       <h3 class="ph">Einzelne digitale Dienste <small>auch ohne Rezeption</small></h3>
       <div class="svc">
         <div><h4>Social Media</h4><ul class="plist"><li><span>Social Start · 1 Kanal, 8 Beiträge, 4 Storys</span><b>290 €/Monat + 190 €</b></li><li><span>Social Plus · 2 Kanäle, 12 Beiträge, 2 kurze Videos</span><b>490 €/Monat + 290 €</b></li><li><span>Social Pro · 3 Kanäle, 20 Beiträge, 4 kurze Videos</span><b>790 €/Monat + 390 €</b></li></ul></div>
-        <div><h4>Websites</h4><ul class="plist"><li><span>Landingpage · 1 Seite, Domain und Hosting</span><b>490 € + 29 €/Monat</b></li><li><span>Präsentations-Website · 5 Seiten, Basis-SEO</span><b>990 € + 49 €/Monat</b></li><li><span>Premium-Website · 10 Seiten auf Italienisch, Englisch und Deutsch</span><b>1.990 € + 79 €/Monat</b></li></ul></div>
+        <div><h4>Websites</h4><ul class="plist"><li><span>Landingpage · 1 Seite, Hosting und Anbindung Ihrer Domain</span><b>490 € + 29 €/Monat</b></li><li><span>Präsentations-Website · 5 Seiten, Basis-SEO</span><b>990 € + 49 €/Monat</b></li><li><span>Premium-Website · 10 Seiten auf Italienisch, Englisch und Deutsch</span><b>1.990 € + 79 €/Monat</b></li></ul></div>
         <div><h4>Google und Bewertungen</h4><ul class="plist"><li><span>Google &amp; Bewertungen · Google-Profil, 4 Beiträge im Monat, Antworten auf Bewertungen</span><b>149 €/Monat + 190 €</b></li><li><span>Lokale SEO komplett</span><b>299 €/Monat + 390 €</b></li></ul></div>
-        <div><h4>Bestehende Kunden</h4><ul class="plist"><li><span>Monatlicher Newsletter</span><b>149 €/Monat + 190 €</b></li><li><span>WhatsApp-Kampagnen an Ihre Kunden (Meta-Nachrichten separat)</span><b>99 €/Monat + 190 €</b></li><li><span>Automatisches Nachfassen von Anfragen</span><b>79 €/Monat + 190 €</b></li><li><span>Assistent auf der Website, zusätzlich zur Rezeption</span><b>49 €/Monat + 90 €</b></li></ul></div>
+        <div><h4>Bestehende Kunden</h4><ul class="plist"><li><span>Monatlicher Newsletter</span><b>149 €/Monat + 190 €</b></li><li><span>WhatsApp-Kampagnen an Ihre Kunden (die Nachrichten zahlen Sie direkt an Meta)</span><b>99 €/Monat + 190 €</b></li><li><span>Automatisches Nachfassen von Anfragen</span><b>79 €/Monat + 190 €</b></li><li><span>Assistent auf der Website, zusätzlich zur Rezeption</span><b>49 €/Monat + 90 €</b></li></ul></div>
       </div>
-      <p class="pnote">Der erste Betrag ist die monatliche Gebühr (bei Websites der einmalige Preis), der zweite die Einrichtung bzw. die monatliche Gebühr der Website. Auf Wunsch erstellen wir ein individuelles Angebot per E-Mail.</p>
+      <p class="pnote">Der erste Betrag ist die monatliche Gebühr (bei Websites der einmalige Preis), der zweite die Einrichtung bzw. die monatliche Gebühr der Website. Die Domain wird immer auf Sie registriert: Die erste Anbindung ist enthalten, die jährliche Verlängerung gehört nicht zu den Website-Gebühren und Sie zahlen sie direkt beim Registrar, oder wir legen sie zum Selbstkostenpreis aus. Auf Wunsch erstellen wir ein individuelles Angebot per E-Mail.</p>
 
       <div class="faq pfaq">
         <h3 class="ph">Fragen zu den Kosten</h3>
-        <details><summary>Kann ich es testen, bevor ich zahle?</summary><div class="ans"><p>Ja. Neben der Demo, die Sie hier sofort ausprobieren, gibt es eine kostenlose Testphase von 30 Tagen mit dem für Ihren Betrieb eingerichteten Assistenten und bis zu 100 Telefonminuten. Sie gilt für alle gleich, ist ab sofort ohne Unterschrift und ohne Zahlung buchbar und startet ab November–Dezember 2026.</p></div></details>
+        <details><summary>Kann ich es testen, bevor ich zahle?</summary><div class="ans"><p>Ja. Neben der Demo, die Sie hier sofort ausprobieren, gibt es eine kostenlose Testphase von 30 Tagen mit dem für Ihren Betrieb eingerichteten Assistenten, bis zu 100 Telefonminuten und 300 WhatsApp-Gesprächen. Sie gilt für alle gleich, ist ab sofort ohne Unterschrift und ohne Zahlung buchbar, beginnt mit der Unterzeichnung des Vertrags ab November–Dezember 2026, und bis zum 30. Tag können Sie ohne Kosten kündigen.</p></div></details>
+        <details><summary>Sind die Preise inklusive oder exklusive MwSt.?</summary><div class="ans"><p>Es sind Endpreise. Celea arbeitet in der italienischen Pauschalregelung (Gesetz 190/2014) und berechnet keine MwSt.: Die Gebühr, die Sie hier lesen, ist der Betrag, den Sie zahlen, ohne MwSt. auf der Rechnung. Nur die Stempelsteuer von 2 €, die das italienische Gesetz vorsieht, kann auf Rechnungen über 77,47 € erscheinen. WhatsApp-Nachrichten zahlen Sie an Meta, zu den Tarifen von Meta.</p></div></details>
         <details><summary>Gibt es versteckte Kosten?</summary><div class="ans"><p>Nein. Sie zahlen die monatliche Gebühr und die einmalige Einrichtung. Alles andere steht auf dieser Seite und Sie zahlen es nur, wenn Sie es nutzen oder wählen: zusätzliche Minuten, Premium-Stimme, weitere Sprachen, ein zweiter Standort. WhatsApp-Nachrichten zahlen Sie direkt an Meta, ohne Aufschlag von uns.</p></div></details>
         <details><summary>Was passiert, wenn ich meine Telefonminuten überschreite?</summary><div class="ans"><p>Der Assistent antwortet weiter: Niemand bleibt ohne Antwort. Minuten über die 400 enthaltenen hinaus kosten 0,45 € pro Minute (0,65 € mit Premium-Stimme) und stehen in Ihrem Monatsbericht.</p></div></details>
         <details><summary>Und wenn ich die WhatsApp-Gespräche überschreite?</summary><div class="ans"><p>Der Assistent antwortet weiter. Gespräche über das Paketlimit hinaus kosten 15 € je 100.</p></div></details>
@@ -767,12 +824,6 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <details><summary>Kosten Fremdsprachen extra?</summary><div class="ans"><p>Italienisch, Englisch und Deutsch sind in jedem Paket enthalten. Weitere Sprachen kosten je 19 € im Monat, nur nach einem Test von uns, der die Qualität bestätigt.</p></div></details>
         <details><summary>Kann ich einmal im Jahr zahlen?</summary><div class="ans"><p>Ja: Bei Jahreszahlung zahlen Sie 11 Monate und erhalten 12.</p></div></details>
         <details><summary>Wie lange muss ich bleiben? Kann ich in der Nebensaison pausieren?</summary><div class="ans"><p>Die Mindestlaufzeit beträgt 6 Monate, danach monatlich mit 30 Tagen Kündigungsfrist. Beherbergungsbetriebe können in den Schließmonaten pausieren: Nur WhatsApp bleibt aktiv und die Gebühr sinkt auf 20 %, mindestens 59 € im Monat.</p></div></details>
-      </div>
-
-      <div class="why">
-        <div><h4>Telefon und WhatsApp zusammen</h4><p>Ein einziger Assistent beantwortet Nachrichten und Anrufe, mit denselben Informationen und demselben Ton. Nicht zwei Werkzeuge, die Sie verwalten müssen.</p></div>
-        <div><h4>Wir richten ihn für Sie ein</h4><p>Keine Software zu lernen: Wir bauen den Assistenten nach den Regeln Ihres Betriebs auf, testen ihn mit Ihnen und aktualisieren ihn, wenn sich etwas ändert.</p></div>
-        <div><h4>Ein fester Ansprechpartner</h4><p>Jemand, der Ihren Betrieb kennt, erreichbar per WhatsApp und Videocall, für den Assistenten und auf Wunsch auch für Website, Google-Profil und Social Media.</p></div>
       </div>
 
       <div class="pend">
@@ -793,13 +844,13 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <details><summary>Cosa succede se l'assistente non sa rispondere?</summary><div class="ans"><p>Non inventa. Dice che verificherà, raccoglie la richiesta e la passa alla persona che Lei ha indicato, con un riepilogo. Lo stesso accade per urgenze, reclami e casi delicati.</p><p>Le domande rimaste senza risposta Le arrivano nel riepilogo: le aggiungiamo, così la volta dopo l'assistente sa rispondere.</p></div></details>
         <details><summary>Come vengono trattati i dati dei miei clienti? È a norma GDPR?</summary><div class="ans"><p>Celea tratta i dati per Suo conto, come responsabile del trattamento: firmiamo un accordo secondo l'art. 28 del GDPR prima di iniziare. I dati servono solo a rispondere, fissare appuntamenti e passare le richieste allo staff.</p><p>Le forniamo un testo di esempio per aggiornare la Sua informativa privacy, da far verificare al Suo consulente.</p></div></details>
         <details><summary>Uno studio dentistico può usarlo? E i dati sanitari?</summary><div class="ans"><p>Sì, con regole precise: l'assistente non dà consigli medici e non fa diagnosi. Per dolore o urgenze passa subito allo studio o indica il numero per le urgenze. Gestisce appuntamenti e informazioni pratiche, chiedendo solo i dati necessari.</p></div></details>
-        <details><summary>Devo cambiare numero o programmi?</summary><div class="ans"><p>No. Valutiamo insieme come collegare WhatsApp e il telefono che già usa: ad esempio, le chiamate a cui lo studio non risponde possono passare all'assistente. Gli appuntamenti arrivano sul calendario che usa oggi o tramite il link del Suo gestionale.</p></div></details>
+        <details><summary>Devo cambiare numero o programmi?</summary><div class="ans"><p>No. Valutiamo insieme come collegare WhatsApp e il telefono che già usa: ad esempio, le chiamate a cui lo studio non risponde possono passare all'assistente. Le richieste di appuntamento arrivano alla segreteria come scheda da confermare o, se lo desidera, su un calendario online come Google Calendar; alle strutture ricettive l'assistente manda il link del loro sistema di prenotazione.</p></div></details><details><summary>Si collega al mio gestionale?</summary><div class="ans"><p>Non deve cambiare gestionale. Oggi l'assistente raccoglie la richiesta e la Sua segreteria la conferma; nella prova gratuita possiamo collegarlo a un calendario online come Google Calendar. Il collegamento diretto con il Suo gestionale dipende dal produttore: lo verifichiamo insieme, caso per caso, senza promettere date.</p><p>La Sua segreteria riceve una scheda come questa (dati inventati):</p><div class="scheda" role="img" aria-label="Esempio di scheda di prenotazione"><span class="scheda-tag">esempio</span><b>Studio dentistico · nuovo appuntamento · priorità normale</b><span><i>Nome</i> Giulia Esempio</span><span><i>Telefono</i> +39 333 000 0000 · canale: telefono</span><span><i>Motivo</i> igiene</span><span><i>Preferenza</i> martedì pomeriggio</span><span><i>Note</i> prima volta nello studio; chiede conferma su WhatsApp</span></div></div></details>
         <details><summary>Sostituisce la mia segretaria?</summary><div class="ans"><p>No. La alleggerisce dalle domande ripetitive e copre le ore in cui non c'è nessuno. Le persone restano il punto di riferimento per tutto ciò che richiede attenzione.</p></div></details>
         <details><summary>In quali lingue risponde?</summary><div class="ans"><p>In italiano, inglese e tedesco, inclusi in ogni pacchetto: utile per chi lavora con turisti e clienti stranieri. Altre lingue si aggiungono a 19 € al mese ciascuna, solo dopo una nostra prova scritta. In ogni lingua l'assistente dice di essere un assistente virtuale.</p></div></details>
         <details><summary>Lavorate solo in Sicilia?</summary><div class="ans"><p>No. Celea ha sede in Sicilia e lavora con attività in tutta Italia e all'estero. Configurazione, prova e assistenza si fanno a distanza, in videochiamata e su WhatsApp.</p></div></details>
         <details><summary>Ci sono altri costi oltre al canone?</summary><div class="ans"><p>Solo i messaggi WhatsApp, che paga direttamente a Meta senza nostri ricarichi. Nessun costo nascosto: minuti in più 0,45 €/min e voce premium +79 €/mese solo se li usa o li sceglie. Il dettaglio è nella sezione <a href="#prezzi">Prezzi</a>.</p></div></details>
         <details><summary>Quando può partire il servizio?</summary><div class="ans"><p>La demo è disponibile da subito. Le attivazioni, con i 30 giorni di prova gratuita, partono da novembre–dicembre 2026: dopo la demo Le inviamo una proposta e concordiamo insieme la data.</p></div></details>
-        <details><summary>Fate anche siti web?</summary><div class="ans"><p>Sì: dalla landing page di una pagina (490 € + 29 €/mese) al sito vetrina di 5 pagine (990 € + 49 €/mese) e al sito premium in italiano, inglese e tedesco (1.990 € + 79 €/mese), con l'assistente integrato se lo desidera. Il dominio è sempre intestato a Lei. Tutti i prezzi sono nella sezione <a href="#prezzi">Prezzi</a>.</p></div></details>
+        <details><summary>Fate anche siti web?</summary><div class="ans"><p>Sì: dalla landing page di una pagina (490 € + 29 €/mese) al sito vetrina di 5 pagine (990 € + 49 €/mese) e al sito premium in italiano, inglese e tedesco (1.990 € + 79 €/mese), con l'assistente integrato se lo desidera. Il dominio è sempre intestato a Lei e il rinnovo annuale non è compreso nel canone. Tutti i prezzi sono nella sezione <a href="#prezzi">Prezzi</a>.</p></div></details>
       </div>
     </div>
   </section>
@@ -813,25 +864,36 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <p>Il nostro simbolo sono due archi, uno che avvolge l'altro, e un punto: la risposta che arriva. È il modo in cui vogliamo trattare i Suoi clienti, con calma e con cura, a qualsiasi ora.</p>
         <p>Configuriamo e seguiamo noi ogni assistente. Lei ha un unico referente, che conosce la Sua attività.</p>
       </div>
-      <div class="contact">
-        <h3 data-i18n="k-h">Prenoti una breve chiamata</h3>
-        <p data-i18n="k-p">Ci scriva il nome della Sua attività e quando preferisce essere richiamato. Le mostriamo l'assistente con esempi del Suo settore.</p>
+      <div class="contact" data-i18n="contact">
+        <h3>Prenoti la prova gratuita o una breve chiamata</h3>
+        <p>Compili il modulo: si apre la Sua posta con la richiesta già scritta, da inviare a team.celea@gmail.com. Rispondiamo entro un giorno lavorativo.</p>
+        <form class="tform" id="trial-form" novalidate>
+          <label><span>Nome e cognome</span><input name="nome" autocomplete="name" required></label>
+          <label><span>Attività</span><input name="attivita" autocomplete="organization" required></label>
+          <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <label><span>Telefono</span><input type="tel" name="tel" autocomplete="tel"></label>
+          <label><span>Settore</span><select name="settore"><option>Studio dentistico</option><option>Agenzia immobiliare</option><option>B&amp;B, casa vacanze o hotel</option><option>Altro</option></select></label>
+          <label><span>Cosa preferisce</span><select name="cosa"><option>Prova gratuita</option><option>Breve chiamata</option></select></label>
+          <label class="chk"><input type="checkbox" name="consenso"><span>Acconsento a ricevere da Celea informazioni commerciali via email e WhatsApp; posso revocare in ogni momento scrivendo STOP.</span></label>
+          <p class="tiny">I dati del modulo (nome, attività, email, telefono, settore) servono solo a risponderLe e a organizzare la prova; se non si conclude nulla, li conserviamo 12 mesi. Il consenso qui sopra non è obbligatorio e serve solo per inviarLe materiale promozionale. Nessun cookie di tracciamento. Informativa completa: <a href="https://www.celea.it/privacy/">celea.it/privacy</a>.</p>
+          <button class="btn btn-light" type="submit">Prepari l'email</button>
+          <div class="tout" id="tf-out" hidden><p>Se la posta non si apre, copi questo testo e lo mandi a team.celea@gmail.com:</p><textarea id="tf-text" rows="7" readonly></textarea></div>
+        </form>
         <div class="row">
-          <span class="k" data-i18n="k-email">Email</span>
+          <span class="k">Email</span>
           <span class="v" id="email">team.celea@gmail.com</span>
           <button class="copy" type="button" id="copy-email">Copia indirizzo</button>
         </div>
         <div class="row">
           <span class="k">WhatsApp</span>
-          <span class="v" data-i18n="k-wav">Numero in arrivo</span>
-          <span class="soon" data-i18n="k-was">Il numero WhatsApp di Celea sarà attivo a breve. Nel frattempo ci scriva per email: rispondiamo entro un giorno lavorativo.</span>
+          <span class="v">Numero in arrivo</span>
+          <span class="soon">Il numero WhatsApp di Celea sarà attivo a breve. Nel frattempo ci scriva per email.</span>
         </div>
         <div class="row">
-          <span class="k" data-i18n="k-dove">Dove</span>
-          <span class="v" data-i18n="k-dovev">Sede in Sicilia · clienti in tutta Italia e all'estero</span>
-          <span class="soon" data-i18n="k-doves">Demo e incontri in videochiamata.</span>
+          <span class="k">Dove</span>
+          <span class="v">Sede in Sicilia · clienti in tutta Italia e all'estero</span>
+          <span class="soon">Demo e incontri in videochiamata.</span>
         </div>
-        <a class="btn btn-light" href="mailto:team.celea@gmail.com?subject=Richiesta%20demo%20Celea" id="mail-btn" data-i18n="k-btn">Ci scriva per email</a>
       </div>
     </div>
   </section>
@@ -844,19 +906,19 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <summary>Informativa privacy (sintesi)</summary>
         <div class="body">
           <h4>Titolare del trattamento</h4>
-          <p>Celea, di William. Contatto: team.celea@gmail.com. Ragione sociale, partita IVA e indirizzo completi saranno indicati qui prima della messa online definitiva.</p>
+          <p>Celea, di William. Contatto: team.celea@gmail.com. Ragione sociale, partita IVA e indirizzo completi saranno indicati qui e nella pagina privacy prima della messa online definitiva.</p>
           <h4>Quali dati trattiamo</h4>
-          <p>Solo i dati che ci invia di sua iniziativa via email o WhatsApp (nome, attività, recapiti, contenuto del messaggio), per rispondere alla richiesta e organizzare la demo. Base giuridica: misure precontrattuali richieste dall'interessato (art. 6.1.b GDPR).</p>
+          <p>Solo i dati che ci invia Lei, con il modulo di questa pagina, per email o su WhatsApp (nome, attività, recapiti, settore, contenuto del messaggio), per rispondere alla richiesta e organizzare la demo o la prova gratuita. Base giuridica: misure precontrattuali richieste dall'interessato (art. 6.1.b GDPR). Materiale promozionale solo con il consenso separato del modulo, revocabile scrivendo STOP.</p>
           <h4>La demo su questa pagina</h4>
           <p>La chat dimostrativa funziona solo nel Suo browser con risposte preimpostate: ciò che scrive non viene inviato a noi né a terzi e non viene salvato.</p>
           <h4>Conservazione e diritti</h4>
-          <p>Conserviamo i messaggi per il tempo necessario a gestire la richiesta e l'eventuale rapporto commerciale. Può chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità scrivendo a team.celea@gmail.com, e può presentare reclamo al Garante per la protezione dei dati personali.</p>
+          <p>Se non si conclude nulla, conserviamo la richiesta 12 mesi. Può chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità scrivendo a team.celea@gmail.com, e può presentare reclamo al Garante per la protezione dei dati personali. Informativa completa: <a href="https://www.celea.it/privacy/">www.celea.it/privacy</a>.</p>
         </div>
       </details>
       <details>
         <summary>Cookie</summary>
         <div class="body">
-          <p>Questa pagina non usa cookie di profilazione né strumenti di statistica e non mostra pubblicità. I caratteri tipografici sono ospitati su questo sito: nessun collegamento a Google Fonts. Il sito è ospitato da GitHub Pages (GitHub, Inc.), che per sicurezza registra l'indirizzo IP dei visitatori.</p>
+          <p>Questo sito non usa cookie: nessun cookie di tracciamento, di profilazione o di statistica, nessuna pubblicità. I caratteri tipografici sono ospitati sul sito. L'unica cosa salvata nel Suo browser è la lingua scelta (memoria locale, senza cookie). Dettagli nella <a href="https://www.celea.it/privacy/">pagina privacy</a>.</p>
         </div>
       </details>
     </div>
@@ -879,16 +941,16 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   //        {c:[{l:"etichetta", n:[passi...]}]} pulsanti di risposta rapida: la conversazione attende la scelta.
   var D = {
     dentista:{
-      name:"Studio dentistico (esempio)",
-      hello:"Buongiorno, sono l'assistente virtuale dello studio. Posso darLe informazioni, fissare o spostare un appuntamento, oppure passarLa a una persona dello staff. Come posso aiutarLa?",
+      name:"Sofia · Studio dentistico (esempio)",
+      hello:"Buongiorno, sono Sofia, l'assistente virtuale dello studio. Posso darLe informazioni, fissare o spostare un appuntamento, oppure passarLa a una persona dello staff. Come posso aiutarLa?",
       faq:[{u:"Buongiorno, che orari fate? E fate la pulizia dei denti?"},
         {b:"Buongiorno! Lo studio è aperto dal lunedì al venerdì, 9–13 e 15–19. Sì, facciamo l'igiene professionale: dura circa 45 minuti."},
         {b:"Vuole che Le proponga un orario libero?"},
         {c:[{l:"Sì, grazie",n:"prenota"},{l:"Accettate convenzioni?",n:[{b:"Lo studio lavora con alcune convenzioni: mi dica quale ha e verifico. Se non è nell'elenco, passo la domanda alla segreteria, che La ricontatta in orario di studio."},{s:"Domanda annotata per la segreteria",i:"person"}]}]}],
       prenota:[{u:"Vorrei prenotare una prima visita."},
         {b:"Con piacere. Preferisce la mattina o il pomeriggio?"},
-        {c:[{l:"Mattina",n:[{b:"Ho questi orari liberi: martedì alle 9:30 oppure giovedì alle 11:00."},{c:[{l:"Martedì 9:30",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Fatto, Anna: prima visita martedì alle 9:30. Il giorno prima riceverà un promemoria qui su WhatsApp. Per spostarla basta scrivermi."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]},{l:"Giovedì 11:00",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Fatto, Anna: prima visita giovedì alle 11:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]}]}]},
-          {l:"Pomeriggio",n:[{b:"Ho questi orari liberi: lunedì alle 16:00 oppure mercoledì alle 17:30."},{c:[{l:"Lunedì 16:00",n:[{b:"Fatto: prima visita lunedì alle 16:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]},{l:"Mercoledì 17:30",n:[{b:"Fatto: prima visita mercoledì alle 17:30. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento inserito nel calendario dello studio",i:"cal"}]}]}]}]}],
+        {c:[{l:"Mattina",n:[{b:"Ho questi orari liberi: martedì alle 9:30 oppure giovedì alle 11:00."},{c:[{l:"Martedì 9:30",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Segnato, Anna: prima visita martedì alle 9:30. Il giorno prima riceverà un promemoria qui su WhatsApp. Per spostarla basta scrivermi."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]},{l:"Giovedì 11:00",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Segnato, Anna: prima visita giovedì alle 11:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]}]}]},
+          {l:"Pomeriggio",n:[{b:"Ho questi orari liberi: lunedì alle 16:00 oppure mercoledì alle 17:30."},{c:[{l:"Lunedì 16:00",n:[{b:"Segnato: prima visita lunedì alle 16:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]},{l:"Mercoledì 17:30",n:[{b:"Segnato: prima visita mercoledì alle 17:30. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]}]}]}]}],
       notte:[{s:"Ore 22:47 · studio chiuso",i:"moon"},
         {u:"Salve, ho perso un'otturazione e mi dà un po' fastidio. Domani potete vedermi?",t:"22:47"},
         {b:"Mi dispiace per il fastidio. Non posso dare consigli medici: se il dolore diventa forte, chiami il numero per le urgenze indicato dallo studio.",t:"22:47"},
@@ -899,8 +961,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         {c:[{l:"Richiamatemi",n:[{b:"D'accordo. Ho passato la richiesta alla segreteria con il riepilogo: La richiamano entro la mattinata di domani, in orario di studio."},{s:"Conversazione passata alla segreteria dello studio",i:"person"}]},{l:"Rispondete qui",n:[{b:"D'accordo. Ho passato la domanda alla dottoressa con il riepilogo: Le risponderà qui appena possibile."},{s:"Conversazione passata alla dottoressa",i:"person"}]}]}]
     },
     immobiliare:{
-      name:"Agenzia immobiliare (esempio)",
-      hello:"Buongiorno, sono l'assistente virtuale dell'agenzia. Posso darLe informazioni sugli immobili, fissare una visita o metterLa in contatto con un agente. Come posso aiutarLa?",
+      name:"Marco · Agenzia immobiliare (esempio)",
+      hello:"Buongiorno, sono Marco, l'assistente virtuale dell'agenzia. Posso darLe informazioni sugli immobili, fissare una visita o metterLa in contatto con un agente. Come posso aiutarLa?",
       faq:[{u:"Il trilocale in centro dell'annuncio è ancora disponibile?"},
         {b:"Sì, il trilocale in centro è ancora disponibile: 3 vani, secondo piano con ascensore, balcone. Per aiutarLa meglio: cerca per acquisto o per affitto?"},
         {c:[{l:"Acquisto",n:[{b:"Grazie. Avrà bisogno di un mutuo?"},{c:[{l:"Sì, già approvato",n:[{b:"Ottimo, lo annoto per l'agente. Vuole fissare una visita?"},{s:"Contatto qualificato: acquisto, mutuo approvato",i:"person"},{c:[{l:"Sì, fissiamo",n:"prenota"}]}]},{l:"Devo informarmi",n:[{b:"Nessun problema: l'agenzia può indicarLe a chi rivolgersi. Lo annoto per l'agente. Vuole fissare una visita?"},{s:"Contatto qualificato: acquisto, mutuo da valutare",i:"person"},{c:[{l:"Sì, fissiamo",n:"prenota"}]}]}]}]},
@@ -919,8 +981,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         {s:"Richiesta di valutazione passata a un agente",i:"person"}]
     },
     ricettivo:{
-      name:"B&B sul mare (esempio)",
-      hello:"Benvenuto! Sono l'assistente virtuale della struttura. Posso rispondere sulla disponibilità, il check-in e i servizi, anche in inglese e tedesco. Come posso aiutarLa?",
+      name:"Elena · B&B sul mare (esempio)",
+      hello:"Benvenuto! Sono Elena, l'assistente virtuale della struttura. Posso rispondere sulla disponibilità, il check-in e i servizi, anche in inglese e tedesco. Come posso aiutarLa?",
       faq:[{u:"Hi! What time is check-in? Is there parking?"},
         {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
         {u:"Accettate anche cani?"},
@@ -1046,27 +1108,40 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     }
   });
 
-  var cp=document.getElementById("copy-email");
-  cp.addEventListener("click", function(){
+  document.addEventListener("click", function(e){
+    var cp=e.target.closest && e.target.closest("#copy-email"); if(!cp) return;
     var txt="team.celea@gmail.com";
     function sel(){ var r=document.createRange(); r.selectNodeContents(document.getElementById("email")); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); cp.textContent=UI[lang].selected; }
     try{ navigator.clipboard.writeText(txt).then(function(){ cp.textContent=UI[lang].copied; setTimeout(function(){cp.textContent=UI[lang].copy;},2000); }, sel); }catch(err){ sel(); }
+  });
+  // Modulo «Prenota la prova gratuita»: nessun server, prepara un'email con i dati scritti dal visitatore (niente viene salvato qui).
+  document.addEventListener("submit", function(e){
+    var f=e.target; if(!f || f.id!=="trial-form") return;
+    e.preventDefault();
+    var v=function(n){ var el=f.elements[n]; return el ? String(el.value||"").trim() : ""; };
+    var miss=["nome","attivita","email"].filter(function(n){ return !v(n); });
+    if(miss.length){ f.elements[miss[0]].focus(); f.elements[miss[0]].setAttribute("aria-invalid","true"); return; }
+    var T=UI[lang].form, yes=f.elements.consenso && f.elements.consenso.checked;
+    var body=[T.l1+": "+v("nome"), T.l2+": "+v("attivita"), "Email: "+v("email"), T.l4+": "+(v("tel")||"-"), T.l5+": "+v("settore"), T.l6+": "+v("cosa"), T.l7+": "+(yes?T.yes:T.no)].join("\n");
+    var out=document.getElementById("tf-out"), ta=document.getElementById("tf-text");
+    if(ta) ta.value=T.subj+"\n"+body; if(out) out.hidden=false;
+    location.href="mailto:team.celea@gmail.com?subject="+encodeURIComponent(T.subj)+"&body="+encodeURIComponent(body);
   });
 
   // ---- Versione inglese (contatti esteri) ----
   var D_IT = D;
   var D_EN = {
     dentista:{
-      name:"Dental practice (example)",
-      hello:"Good morning, I'm the practice's virtual assistant. I can give you information, book or move an appointment, or put you through to a member of staff. How can I help?",
+      name:"Sofia · Dental practice (example)",
+      hello:"Good morning, I'm Sofia, the practice's virtual assistant. I can give you information, book or move an appointment, or put you through to a member of staff. How can I help?",
       faq:[{u:"Hello, what are your opening hours? Do you do teeth cleaning?"},
         {b:"Hello! The practice is open Monday to Friday, 9–13 and 15–19. Yes, we offer professional cleaning: it takes about 45 minutes."},
         {b:"Would you like me to suggest a free slot?"},
         {c:[{l:"Yes, please",n:"prenota"},{l:"Do you accept insurance?",n:[{b:"The practice works with some insurance plans: tell me which one you have and I'll check. If it's not on the list, I'll pass your question to the front desk, who will get back to you during opening hours."},{s:"Question noted for the front desk",i:"person"}]}]}],
       prenota:[{u:"I'd like to book a first visit."},
         {b:"Of course. Do you prefer morning or afternoon?"},
-        {c:[{l:"Morning",n:[{b:"These slots are free: Tuesday at 9:30 or Thursday at 11:00."},{c:[{l:"Tuesday 9:30",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Done, Anna: first visit on Tuesday at 9:30. You'll get a reminder here on WhatsApp the day before. To move it, just write to me."},{s:"Appointment added to the practice calendar",i:"cal"}]},{l:"Thursday 11:00",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Done, Anna: first visit on Thursday at 11:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment added to the practice calendar",i:"cal"}]}]}]},
-          {l:"Afternoon",n:[{b:"These slots are free: Monday at 16:00 or Wednesday at 17:30."},{c:[{l:"Monday 16:00",n:[{b:"Done: first visit on Monday at 16:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment added to the practice calendar",i:"cal"}]},{l:"Wednesday 17:30",n:[{b:"Done: first visit on Wednesday at 17:30. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment added to the practice calendar",i:"cal"}]}]}]}]}],
+        {c:[{l:"Morning",n:[{b:"These slots are free: Tuesday at 9:30 or Thursday at 11:00."},{c:[{l:"Tuesday 9:30",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Noted, Anna: first visit on Tuesday at 9:30. You'll get a reminder here on WhatsApp the day before. To move it, just write to me."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]},{l:"Thursday 11:00",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Noted, Anna: first visit on Thursday at 11:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]}]}]},
+          {l:"Afternoon",n:[{b:"These slots are free: Monday at 16:00 or Wednesday at 17:30."},{c:[{l:"Monday 16:00",n:[{b:"Noted: first visit on Monday at 16:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]},{l:"Wednesday 17:30",n:[{b:"Noted: first visit on Wednesday at 17:30. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]}]}]}]}],
       notte:[{s:"22:47 · practice closed",i:"moon"},
         {u:"Hi, I've lost a filling and it's a bit uncomfortable. Can you see me tomorrow?",t:"22:47"},
         {b:"I'm sorry about the discomfort. I can't give medical advice: if the pain gets strong, please call the emergency number provided by the practice.",t:"22:47"},
@@ -1077,8 +1152,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         {c:[{l:"Call me back",n:[{b:"All right. I've passed your request to the front desk with a summary: they'll call you back by tomorrow morning, during opening hours."},{s:"Conversation passed to the front desk",i:"person"}]},{l:"Reply here",n:[{b:"All right. I've passed your question to the dentist with a summary: she'll reply here as soon as possible."},{s:"Conversation passed to the dentist",i:"person"}]}]}]
     },
     immobiliare:{
-      name:"Real estate agency (example)",
-      hello:"Good morning, I'm the agency's virtual assistant. I can give you information about properties, book a viewing or put you in touch with an agent. How can I help?",
+      name:"Marco · Real estate agency (example)",
+      hello:"Good morning, I'm Marco, the agency's virtual assistant. I can give you information about properties, book a viewing or put you in touch with an agent. How can I help?",
       faq:[{u:"Is the three-room flat in the centre from the listing still available?"},
         {b:"Yes, the flat in the centre is still available: three rooms, second floor with lift, balcony. To help you better: are you looking to buy or to rent?"},
         {c:[{l:"Buy",n:[{b:"Thank you. Will you need a mortgage?"},{c:[{l:"Yes, already approved",n:[{b:"Great, I'll note it for the agent. Would you like to book a viewing?"},{s:"Qualified lead: purchase, mortgage approved",i:"person"},{c:[{l:"Yes, let's book",n:"prenota"}]}]},{l:"Still looking into it",n:[{b:"No problem: the agency can tell you who to contact. I'll note it for the agent. Would you like to book a viewing?"},{s:"Qualified lead: purchase, mortgage to be assessed",i:"person"},{c:[{l:"Yes, let's book",n:"prenota"}]}]}]}]},
@@ -1097,8 +1172,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         {s:"Valuation request passed to an agent",i:"person"}]
     },
     ricettivo:{
-      name:"Seaside B&B (example)",
-      hello:"Welcome! I'm the property's virtual assistant. I can answer questions about availability, check-in and services, in English, German and Italian. How can I help?",
+      name:"Elena · Seaside B&B (example)",
+      hello:"Welcome! I'm Elena, the property's virtual assistant. I can answer questions about availability, check-in and services, in English, German and Italian. How can I help?",
       faq:[{u:"Hi! What time is check-in? Is there parking?"},
         {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
         {u:"Do you accept dogs?"},
@@ -1118,11 +1193,14 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   };
   var UI = {
     it:{day:"Oggi · conversazione dimostrativa", more:["Domande frequenti","Appuntamento","Fuori orario","Passa a una persona"], copy:"Copia indirizzo", copied:"Copiato", selected:"Indirizzo selezionato", ph:"Scriva una domanda…", typing:"L'assistente sta scrivendo",
-      fb1:"Su questo non ho un'informazione certa e preferisco non inventare. Passo la Sua domanda allo staff con il riepilogo della conversazione: Le rispondono appena possibile.", fb2:"Domanda senza risposta passata a una persona", fb3:"(Nota della demo: qui le risposte sono preimpostate. Provi i pulsanti qui sotto o domande su orari, appuntamenti, urgenze.)", title:"Celea · receptionist AI"},
+      fb1:"Su questo non ho un'informazione certa e preferisco non inventare. Passo la Sua domanda allo staff con il riepilogo della conversazione: Le rispondono appena possibile.", fb2:"Domanda senza risposta passata a una persona", fb3:"(Nota della demo: qui le risposte sono preimpostate. Provi i pulsanti qui sotto o domande su orari, appuntamenti, urgenze.)", title:"Celea · receptionist AI",
+      form:{subj:"Richiesta prova gratuita Celea", l1:"Nome", l2:"Attività", l4:"Telefono", l5:"Settore", l6:"Richiesta", l7:"Consenso a informazioni commerciali", yes:"sì", no:"no"}},
     en:{day:"Today · demo conversation", more:["FAQ","Appointment","After hours","Talk to a person"], copy:"Copy address", copied:"Copied", selected:"Address selected", ph:"Type a question…", typing:"The assistant is typing",
-      fb1:"I don't have reliable information on this and I'd rather not make it up. I'm passing your question to the staff with a summary of our conversation: they'll reply as soon as possible.", fb2:"Unanswered question passed to a person", fb3:"(Demo note: replies here are pre-set. Try the buttons below or questions about opening hours, appointments, emergencies.)", title:"Celea · AI receptionist"},
+      fb1:"I don't have reliable information on this and I'd rather not make it up. I'm passing your question to the staff with a summary of our conversation: they'll reply as soon as possible.", fb2:"Unanswered question passed to a person", fb3:"(Demo note: replies here are pre-set. Try the buttons below or questions about opening hours, appointments, emergencies.)", title:"Celea · AI receptionist",
+      form:{subj:"Celea free trial request", l1:"Name", l2:"Business", l4:"Phone", l5:"Sector", l6:"Request", l7:"Consent to commercial information", yes:"yes", no:"no"}},
     de:{day:"Heute · Demo-Gespräch", more:["Häufige Fragen","Termin","Außerhalb der Zeiten","Mit einem Menschen"], copy:"Adresse kopieren", copied:"Kopiert", selected:"Adresse markiert", ph:"Schreiben Sie eine Frage…", typing:"Der Assistent schreibt",
-      fb1:"Dazu habe ich keine gesicherte Information und möchte nichts erfinden. Ich gebe Ihre Frage mit einer Zusammenfassung des Gesprächs an das Team weiter: Sie erhalten so bald wie möglich eine Antwort.", fb2:"Unbeantwortete Frage an einen Menschen übergeben", fb3:"(Hinweis zur Demo: Die Antworten hier sind vorbereitet. Probieren Sie die Schaltflächen unten oder Fragen zu Öffnungszeiten, Terminen, Notfällen.)", title:"Celea · KI-Rezeption"}
+      fb1:"Dazu habe ich keine gesicherte Information und möchte nichts erfinden. Ich gebe Ihre Frage mit einer Zusammenfassung des Gesprächs an das Team weiter: Sie erhalten so bald wie möglich eine Antwort.", fb2:"Unbeantwortete Frage an einen Menschen übergeben", fb3:"(Hinweis zur Demo: Die Antworten hier sind vorbereitet. Probieren Sie die Schaltflächen unten oder Fragen zu Öffnungszeiten, Terminen, Notfällen.)", title:"Celea · KI-Rezeption",
+      form:{subj:"Anfrage kostenlose Testphase Celea", l1:"Name", l2:"Betrieb", l4:"Telefon", l5:"Branche", l6:"Anfrage", l7:"Einwilligung zu Werbeinformationen", yes:"ja", no:"nein"}}
   };
   var EN = {
     "skip":"Skip to the demo",
@@ -1131,7 +1209,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "h-eye":"AI receptionist · Italy and abroad",
     "h-h1":"Your customers get an answer. <em>Always.</em>",
     "h-lead":"Celea is the assistant that answers on WhatsApp and on the phone, 24 hours a day: it gives information, books appointments and hands over to a person when needed. For dental practices, real estate agencies and hotels, B&amp;Bs and holiday rentals.",
-    "h-cta":'<a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Try the demo</a><a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Book a short call</a>',
+    "h-cta":'<a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Try the demo</a><a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Book your free trial</a>',
     "h-note":"We set it up for you, tailored to your business, with a free 30-day trial (up to 100 call minutes). It always introduces itself as a virtual assistant. Clear prices, <a href=\"#prezzi\">all written here</a>.",
     "h-clock":'<div class="clock-item"><time>22:47</time><p>“Can you see me tomorrow? I\'ve lost a filling.”<small>Two slots offered, appointment booked.</small></p></div><div class="clock-item"><time>07:12</time><p>“Does the house on the harbour road have a garage?”<small>Question answered, viewing booked for Saturday.</small></p></div><div class="clock-item"><time>01:30</time><p>“Wir kommen heute spät an, wie bekommen wir die Schlüssel?”<small>Reply in German with check-in instructions.</small></p></div><p class="clock-cap">Illustrative examples of requests that arrive at awkward times.</p>',
     "d-head":'<p class="eyebrow">Interactive demo</p><h2 id="demo-t">See how it answers your customers</h2><p class="lead">Choose your sector and a situation. You can also type a question in the chat.</p>',
@@ -1141,7 +1219,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "s2":"<strong>Appointment</strong><span>picks a time and confirms</span>",
     "s3":"<strong>After hours</strong><span>a message at night</span>",
     "s4":"<strong>Talk to a person</strong><span>when staff are needed</span>",
-    "d-flag":"Demo: example businesses and pre-set replies. Nothing you type is sent or saved. The real assistant is set up with your own business details. In Italian, English and German as standard.",
+    "d-flag":"Demo: example businesses and pre-set replies. Nothing you type is sent or saved. Sofia, Marco and Elena are example names: the real assistant is set up with your own business details and the name you choose. In Italian, English and German as standard.",
     "d-sub":"Virtual assistant · demo", "d-restart":"Restart",
     "d-hint":"Try for example: “what are your opening hours?”, “I'd like an appointment”, “can I talk to someone?”",
     "c-head":'<p class="eyebrow">How it works</p><h2 id="come-t">Live in two weeks, no technical work for you</h2>',
@@ -1153,35 +1231,31 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "p2q":"An enquiry from a listing arrives at 11 pm: next morning the agent finds a qualified lead.", "p2b":"Try the demo for agencies", "p2x":'<a class="tryit" href="https://demo.celea.it/domea/#en">See a sample website: Domèa Immobiliare</a>',
     "p3h":"B&amp;Bs, holiday rentals and hotels", "p3l":"<li>Availability and booking links</li><li>Check-in, parking, pets</li><li>Replies in Italian, English and German</li><li>Room issues reported to staff</li>",
     "p3q":"Guests arrive at 1 am: they get the key instructions straight away.", "p3b":"Try the demo for hotels and B&amp;Bs", "p3x":'<a class="tryit" href="https://demo.celea.it/casa-lumea/#en">See a sample website: Casa Lumèa</a>',
+    "why":'<div class="sec-head"><p class="eyebrow">Why Celea</p><h2 id="perche-t">One assistant, set up around your business</h2><p class="lead">Six things you get with Celea, written down clearly before you decide.</p></div><ul class="wgrid"><li><span class="wn">01</span><h3>Phone and WhatsApp together</h3><p>With Pro the same assistant answers messages and calls, with the same information and the same tone. Not two tools to manage.</p></li><li><span class="wn">02</span><h3>Italian, English and German included</h3><p>In every package at no extra cost: for patients, clients and guests from abroad.</p></li><li><span class="wn">03</span><h3>We set it up for you</h3><p>No software to learn: we build it around your business rules, test it with you and update it whenever something changes.</p></li><li><span class="wn">04</span><h3>No change of management software</h3><p>Keep working with the programs you use today: the assistant collects the request and your front desk confirms it from a ready-made card; during the free trial we can connect it to an online calendar such as Google Calendar.</p></li><li><span class="wn">05</span><h3>30-day free trial</h3><p>30 days, up to 100 call minutes and 300 WhatsApp conversations: whichever limit is reached first. Book it right away, with no signature and no payment; up to day 30 you can cancel at no cost.</p></li><li><span class="wn">06</span><h3>Written prices, no hidden costs</h3><p>Monthly fee, setup and extras are all in the Pricing section. You pay WhatsApp messages directly to Meta, with no mark-up from us.</p></li></ul><div class="cta-row"><a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Try the demo</a><a class="btn btn-ghost" href="#prezzi">See the prices</a></div>',
     "b-head":'<p class="eyebrow">For the owner</p><h2 id="cambia-t">What changes in your day</h2>',
-    "b-list":'<div><h3>No enquiry goes unanswered</h3><p>Evenings, Sundays, lunch breaks: whoever writes or calls gets an answer straight away, instead of looking elsewhere.</p></div><div><h3>Fewer interruptions while you work</h3><p>The assistant handles repetitive questions. You and your staff focus on the people in front of you.</p></div><div><h3>Your calendar fills up in order</h3><p>Appointments, viewings and booking requests arrive in the calendar with the details you need.</p></div><div><h3>You decide what it says</h3><p>Hours, services, tone and limits are set by you. Every day you see what was asked and what was answered.</p></div><div><h3>A person when needed</h3><p>Emergencies, complaints, delicate cases or unanswered questions go to whoever you choose, with a ready summary.</p></div><div><h3>Personal support, wherever you are</h3><p>One point of contact, support on WhatsApp and by video call, content updates whenever something changes. We work with businesses across Italy and abroad.</p></div>',
+    "b-list":'<div><h3>No enquiry goes unanswered</h3><p>Evenings, Sundays, lunch breaks: whoever writes or calls gets an answer straight away, instead of looking elsewhere.</p></div><div><h3>Fewer interruptions while you work</h3><p>The assistant handles repetitive questions. You and your staff focus on the people in front of you.</p></div><div><h3>Your calendar fills up in order</h3><p>Appointments, viewings and booking requests reach your front desk or online calendar with the details you need.</p></div><div><h3>You decide what it says</h3><p>Hours, services, tone and limits are set by you. Every day you see what was asked and what was answered.</p></div><div><h3>A person when needed</h3><p>Emergencies, complaints, delicate cases or unanswered questions go to whoever you choose, with a ready summary.</p></div><div><h3>Personal support, wherever you are</h3><p>One point of contact, support on WhatsApp and by video call, content updates whenever something changes. We work with businesses across Italy and abroad.</p></div>',
     "price":"",
     "f-head":'<p class="eyebrow">FAQ</p><h2 id="faq-t">The questions we hear most often</h2>',
-    "f-list":'<details><summary>Do my customers know they are talking to an AI?</summary><div class="ans"><p>Yes. The assistant always introduces itself as a virtual assistant, as required by the EU rules on artificial intelligence (AI Act). At any time the customer can ask to speak to a person.</p></div></details><details><summary>What happens if the assistant doesn\'t know the answer?</summary><div class="ans"><p>It doesn\'t make things up. It says it will check, collects the request and passes it to the person you have chosen, with a summary. The same happens for emergencies, complaints and delicate cases.</p><p>Unanswered questions appear in your summary: we add them, so next time the assistant knows the answer.</p></div></details><details><summary>How is my customers\' data handled? Is it GDPR compliant?</summary><div class="ans"><p>Celea processes data on your behalf, as data processor: we sign an agreement under Art. 28 GDPR before starting. Data is only used to reply, book appointments and pass requests to your staff.</p><p>We provide a sample text to update your privacy notice, to be checked by your own adviser.</p></div></details><details><summary>Can a dental practice use it? What about health data?</summary><div class="ans"><p>Yes, with clear rules: the assistant gives no medical advice and makes no diagnosis. For pain or emergencies it passes the patient straight to the practice or gives the emergency number. It handles appointments and practical information, asking only for the data needed.</p></div></details><details><summary>Do I need to change my number or software?</summary><div class="ans"><p>No. We look together at how to connect the WhatsApp and phone you already use: for example, calls the practice doesn\'t answer can go to the assistant. Appointments go into the calendar you use today or through your booking system\'s link.</p></div></details><details><summary>Does it replace my receptionist?</summary><div class="ans"><p>No. It takes repetitive questions off her plate and covers the hours when nobody is there. People remain the reference point for everything that needs attention.</p></div></details><details><summary>Which languages does it speak?</summary><div class="ans"><p>Italian, English and German, included in every package: useful if you work with tourists and foreign clients. Other languages can be added for €19 a month each, only after a written test from us. In every language the assistant says it is a virtual assistant.</p></div></details><details><summary>Do you only work in Sicily?</summary><div class="ans"><p>No. Celea is based in Sicily and works with businesses across Italy and abroad. Setup, testing and support are done remotely, by video call and on WhatsApp.</p></div></details><details><summary>Are there other costs besides the monthly fee?</summary><div class="ans"><p>Only WhatsApp messages, which you pay directly to Meta with no mark-up from us. No hidden costs: extra minutes €0.45/min and premium voice +€79/month only if you use or choose them. Full details in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details><details><summary>When can the service start?</summary><div class="ans"><p>The demo is available now. Activations, with the free 30-day trial, start from November–December 2026: after the demo we send you a proposal and agree the start date together.</p></div></details><details><summary>Do you also build websites?</summary><div class="ans"><p>Yes: from a one-page landing page (€490 + €29/month) to a 5-page showcase website (€990 + €49/month) and a premium website in Italian, English and German (€1,990 + €79/month), with the assistant built in if you wish. The domain is always registered in your name. All prices are in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details>',
+    "f-list":'<details><summary>Do my customers know they are talking to an AI?</summary><div class="ans"><p>Yes. The assistant always introduces itself as a virtual assistant, as required by the EU rules on artificial intelligence (AI Act). At any time the customer can ask to speak to a person.</p></div></details><details><summary>What happens if the assistant doesn\'t know the answer?</summary><div class="ans"><p>It doesn\'t make things up. It says it will check, collects the request and passes it to the person you have chosen, with a summary. The same happens for emergencies, complaints and delicate cases.</p><p>Unanswered questions appear in your summary: we add them, so next time the assistant knows the answer.</p></div></details><details><summary>How is my customers\' data handled? Is it GDPR compliant?</summary><div class="ans"><p>Celea processes data on your behalf, as data processor: we sign an agreement under Art. 28 GDPR before starting. Data is only used to reply, book appointments and pass requests to your staff.</p><p>We provide a sample text to update your privacy notice, to be checked by your own adviser.</p></div></details><details><summary>Can a dental practice use it? What about health data?</summary><div class="ans"><p>Yes, with clear rules: the assistant gives no medical advice and makes no diagnosis. For pain or emergencies it passes the patient straight to the practice or gives the emergency number. It handles appointments and practical information, asking only for the data needed.</p></div></details><details><summary>Do I need to change my number or software?</summary><div class="ans"><p>No. We look together at how to connect the WhatsApp and phone you already use: for example, calls the practice doesn\'t answer can go to the assistant. Appointment requests reach your front desk as a booking card to confirm or, if you prefer, an online calendar such as Google Calendar; for hospitality businesses the assistant sends the link to your booking system.</p></div></details><details><summary>Does it connect to my practice management software?</summary><div class="ans"><p>You don\'t need to change your software. Today the assistant collects the request and your front desk confirms it; during the free trial we can connect it to an online calendar such as Google Calendar. A direct link to your management software depends on the vendor: we check it together, case by case, without promising dates.</p><p>Your front desk receives a card like this (made-up data):</p><div class="scheda" role="img" aria-label="Example booking card"><span class="scheda-tag">example</span><b>Dental practice · new appointment · normal priority</b><span><i>Name</i> Giulia Example</span><span><i>Phone</i> +39 333 000 0000 · channel: phone</span><span><i>Reason</i> hygiene</span><span><i>Preference</i> Tuesday afternoon</span><span><i>Notes</i> first time at the practice; asks for confirmation on WhatsApp</span></div></div></details><details><summary>Does it replace my receptionist?</summary><div class="ans"><p>No. It takes repetitive questions off her plate and covers the hours when nobody is there. People remain the reference point for everything that needs attention.</p></div></details><details><summary>Which languages does it speak?</summary><div class="ans"><p>Italian, English and German, included in every package: useful if you work with tourists and foreign clients. Other languages can be added for €19 a month each, only after a written test from us. In every language the assistant says it is a virtual assistant.</p></div></details><details><summary>Do you only work in Sicily?</summary><div class="ans"><p>No. Celea is based in Sicily and works with businesses across Italy and abroad. Setup, testing and support are done remotely, by video call and on WhatsApp.</p></div></details><details><summary>Are there other costs besides the monthly fee?</summary><div class="ans"><p>Only WhatsApp messages, which you pay directly to Meta with no mark-up from us. No hidden costs: extra minutes €0.45/min and premium voice +€79/month only if you use or choose them. Full details in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details><details><summary>When can the service start?</summary><div class="ans"><p>The demo is available now. Activations, with the free 30-day trial, start from November–December 2026: after the demo we send you a proposal and agree the start date together.</p></div></details><details><summary>Do you also build websites?</summary><div class="ans"><p>Yes: from a one-page landing page (€490 + €29/month) to a 5-page showcase website (€990 + €49/month) and a premium website in Italian, English and German (€1,990 + €79/month), with the assistant built in if you wish. The domain is always registered in your name and its yearly renewal is not included in the fee. All prices are in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details>',
     "about":'<p class="eyebrow">About us</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Born in Sicily, working everywhere</h2><p>Celea was founded by William and is based in Sicily. We work with dental practices, real estate agencies and hospitality businesses across Italy and abroad, by video call and on WhatsApp.</p><p>Our symbol is two arcs, one embracing the other, and a dot: the answer that arrives. That is how we want to treat your customers, calmly and with care, at any hour.</p><p>We set up and look after every assistant ourselves. You have a single point of contact who knows your business.</p>',
-    "k-h":"Book a short call",
-    "k-p":"Send us the name of your business and when you would like us to call. We will show you the assistant with examples from your sector.",
-    "k-email":"Email", "k-wav":"Number coming soon",
-    "k-was":"Celea's WhatsApp number will be active soon. In the meantime, please email us: we reply within one working day.",
-    "k-dove":"Where", "k-dovev":"Based in Sicily · clients across Italy and abroad", "k-doves":"Demos and meetings by video call.",
-    "k-btn":"Email us",
-    "legal":'<p class="eyebrow">Legal</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Privacy and cookies</h2><details><summary>Privacy notice (summary)</summary><div class="body"><h4>Data controller</h4><p>Celea, by William. Contact: team.celea@gmail.com. Full business name, VAT number and address will be shown here before the final launch.</p><h4>What data we process</h4><p>Only the data you send us on your own initiative by email or WhatsApp (name, business, contact details, message content), to answer your request and organise the demo. Legal basis: pre-contractual steps at your request (Art. 6(1)(b) GDPR).</p><h4>The demo on this page</h4><p>The demo chat runs only in your browser with pre-set replies: what you type is not sent to us or to third parties and is not saved.</p><h4>Retention and rights</h4><p>We keep messages for as long as needed to handle the request and any business relationship. You can request access, rectification, erasure, restriction, objection and portability by writing to team.celea@gmail.com, and you can lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali).</p></div></details><details><summary>Cookies</summary><div class="body"><p>This page uses no profiling cookies or analytics and shows no advertising. Fonts are hosted on this site: no connection to Google Fonts. The site is hosted by GitHub Pages (GitHub, Inc.), which logs visitors\' IP addresses for security.</p></div></details>',
+    "contact":'<h3>Book your free trial or a short call</h3><p>Fill in the form: your email app opens with the request already written, to send to team.celea@gmail.com. We reply within one working day.</p><form class="tform" id="trial-form" novalidate><label><span>Full name</span><input name="nome" autocomplete="name" required></label><label><span>Business</span><input name="attivita" autocomplete="organization" required></label><label><span>Email</span><input type="email" name="email" autocomplete="email" required></label><label><span>Phone</span><input type="tel" name="tel" autocomplete="tel"></label><label><span>Sector</span><select name="settore"><option>Dental practice</option><option>Real estate agency</option><option>B&amp;B, holiday rental or hotel</option><option>Other</option></select></label><label><span>What would you like</span><select name="cosa"><option>Free trial</option><option>Short call</option></select></label><label class="chk"><input type="checkbox" name="consenso"><span>I agree to receive commercial information from Celea by email and WhatsApp; I can withdraw at any time by writing STOP.</span></label><p class="tiny">The form data (name, business, email, phone, sector) is used only to reply to you and organise the trial; if nothing follows, we keep it for 12 months. The consent above is optional and only needed to send you promotional material. No tracking cookies. Full privacy notice: <a href="https://www.celea.it/privacy/#en">celea.it/privacy</a>.</p><button class="btn btn-light" type="submit">Prepare the email</button><div class="tout" id="tf-out" hidden><p>If your email app does not open, copy this text and send it to team.celea@gmail.com:</p><textarea id="tf-text" rows="7" readonly></textarea></div></form><div class="row"><span class="k">Email</span><span class="v" id="email">team.celea@gmail.com</span><button class="copy" type="button" id="copy-email">Copy address</button></div><div class="row"><span class="k">WhatsApp</span><span class="v">Number coming soon</span><span class="soon">Celea\'s WhatsApp number will be active soon. In the meantime, please email us.</span></div><div class="row"><span class="k">Where</span><span class="v">Based in Sicily · clients across Italy and abroad</span><span class="soon">Demos and meetings by video call.</span></div>',
+    "legal":'<p class="eyebrow">Legal</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Privacy and cookies</h2><details><summary>Privacy notice (summary)</summary><div class="body"><h4>Data controller</h4><p>Celea, by William. Contact: team.celea@gmail.com. Full business name, VAT number and address will be shown here and on the privacy page before the final launch.</p><h4>What data we process</h4><p>Only the data you send us yourself, through the form on this page, by email or on WhatsApp (name, business, contact details, sector, message content), to answer your request and organise the demo or the free trial. Legal basis: pre-contractual steps at your request (Art. 6(1)(b) GDPR). Promotional material only with the separate consent in the form, which you can withdraw by writing STOP.</p><h4>The demo on this page</h4><p>The demo chat runs only in your browser with pre-set replies: what you type is not sent to us or to third parties and is not saved.</p><h4>Retention and rights</h4><p>If nothing follows, we keep your request for 12 months. You can request access, rectification, erasure, restriction, objection and portability by writing to team.celea@gmail.com, and you can lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali). Full notice: <a href="https://www.celea.it/privacy/#en">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>This site uses no cookies: no tracking, profiling or analytics cookies and no advertising. Fonts are hosted on the site. The only thing stored in your browser is the language you choose (local storage, no cookies). Details on the <a href="https://www.celea.it/privacy/#en">privacy page</a>.</p></div></details>',
     "ft-sign":"Celea · always answers, with care.",
     "ft-small":'AI receptionist on WhatsApp and phone for dental practices, real estate agencies and hospitality businesses, in Italy and abroad. Contact: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Privacy and cookies</a>'
   };
   // ---- Versione tedesca (contatti in Germania, Austria e Svizzera) ----
   var D_DE = {
     dentista:{
-      name:"Zahnarztpraxis (Beispiel)",
-      hello:"Guten Morgen, ich bin der virtuelle Assistent der Praxis. Ich kann Ihnen Auskünfte geben, einen Termin vereinbaren oder verschieben oder Sie mit dem Praxisteam verbinden. Wie kann ich Ihnen helfen?",
+      name:"Sofia · Zahnarztpraxis (Beispiel)",
+      hello:"Guten Morgen, ich bin Sofia, die virtuelle Assistentin der Praxis. Ich kann Ihnen Auskünfte geben, einen Termin vereinbaren oder verschieben oder Sie mit dem Praxisteam verbinden. Wie kann ich Ihnen helfen?",
       faq:[{u:"Guten Tag, wann haben Sie geöffnet? Machen Sie auch Zahnreinigung?"},
         {b:"Guten Tag! Die Praxis ist von Montag bis Freitag geöffnet, 9–13 und 15–19 Uhr. Ja, wir bieten professionelle Zahnreinigung an: Sie dauert etwa 45 Minuten."},
         {b:"Soll ich Ihnen einen freien Termin vorschlagen?"},
         {c:[{l:"Ja, gerne",n:"prenota"},{l:"Rechnen Sie mit meiner Versicherung ab?",n:[{b:"Die Praxis arbeitet mit einigen Versicherungen zusammen: Nennen Sie mir Ihre, und ich prüfe das. Steht sie nicht auf der Liste, gebe ich Ihre Frage an die Rezeption weiter, die sich während der Öffnungszeiten bei Ihnen meldet."},{s:"Frage für die Rezeption notiert",i:"person"}]}]}],
       prenota:[{u:"Ich möchte einen Ersttermin vereinbaren."},
         {b:"Gerne. Lieber vormittags oder nachmittags?"},
-        {c:[{l:"Vormittags",n:[{b:"Diese Termine sind frei: Dienstag um 9:30 oder Donnerstag um 11:00."},{c:[{l:"Dienstag 9:30",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Erledigt, Frau Beispiel: Ersttermin am Dienstag um 9:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung. Zum Verschieben schreiben Sie mir einfach."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]},{l:"Donnerstag 11:00",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Erledigt, Frau Beispiel: Ersttermin am Donnerstag um 11:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]}]}]},
-          {l:"Nachmittags",n:[{b:"Diese Termine sind frei: Montag um 16:00 oder Mittwoch um 17:30."},{c:[{l:"Montag 16:00",n:[{b:"Erledigt: Ersttermin am Montag um 16:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]},{l:"Mittwoch 17:30",n:[{b:"Erledigt: Ersttermin am Mittwoch um 17:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin in den Praxiskalender eingetragen",i:"cal"}]}]}]}]}],
+        {c:[{l:"Vormittags",n:[{b:"Diese Termine sind frei: Dienstag um 9:30 oder Donnerstag um 11:00."},{c:[{l:"Dienstag 9:30",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Vorgemerkt, Frau Beispiel: Ersttermin am Dienstag um 9:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung. Zum Verschieben schreiben Sie mir einfach."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]},{l:"Donnerstag 11:00",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Vorgemerkt, Frau Beispiel: Ersttermin am Donnerstag um 11:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]}]}]},
+          {l:"Nachmittags",n:[{b:"Diese Termine sind frei: Montag um 16:00 oder Mittwoch um 17:30."},{c:[{l:"Montag 16:00",n:[{b:"Vorgemerkt: Ersttermin am Montag um 16:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]},{l:"Mittwoch 17:30",n:[{b:"Vorgemerkt: Ersttermin am Mittwoch um 17:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]}]}]}]}],
       notte:[{s:"22:47 · Praxis geschlossen",i:"moon"},
         {u:"Hallo, mir ist eine Füllung herausgefallen und es ist etwas unangenehm. Können Sie mich morgen drannehmen?",t:"22:47"},
         {b:"Das tut mir leid. Medizinische Ratschläge kann ich nicht geben: Wenn die Schmerzen stark werden, rufen Sie bitte die von der Praxis angegebene Notfallnummer an.",t:"22:47"},
@@ -1192,8 +1266,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         {c:[{l:"Bitte zurückrufen",n:[{b:"In Ordnung. Ich habe Ihre Anfrage mit einer Zusammenfassung an die Rezeption weitergegeben: Sie ruft Sie bis morgen Vormittag während der Öffnungszeiten zurück."},{s:"Gespräch an die Rezeption übergeben",i:"person"}]},{l:"Antwort hier",n:[{b:"In Ordnung. Ich habe Ihre Frage mit einer Zusammenfassung an die Zahnärztin weitergegeben: Sie antwortet Ihnen hier so bald wie möglich."},{s:"Gespräch an die Zahnärztin übergeben",i:"person"}]}]}]
     },
     immobiliare:{
-      name:"Immobilienagentur (Beispiel)",
-      hello:"Guten Morgen, ich bin der virtuelle Assistent der Agentur. Ich kann Ihnen Auskünfte zu den Immobilien geben, eine Besichtigung vereinbaren oder Sie mit einem Makler verbinden. Wie kann ich Ihnen helfen?",
+      name:"Marco · Immobilienagentur (Beispiel)",
+      hello:"Guten Morgen, ich bin Marco, der virtuelle Assistent der Agentur. Ich kann Ihnen Auskünfte zu den Immobilien geben, eine Besichtigung vereinbaren oder Sie mit einem Makler verbinden. Wie kann ich Ihnen helfen?",
       faq:[{u:"Ist die Dreizimmerwohnung im Zentrum aus der Anzeige noch verfügbar?"},
         {b:"Ja, die Wohnung im Zentrum ist noch verfügbar: drei Zimmer, zweiter Stock mit Aufzug, Balkon. Damit ich Ihnen besser helfen kann: Möchten Sie kaufen oder mieten?"},
         {c:[{l:"Kaufen",n:[{b:"Danke. Benötigen Sie eine Finanzierung?"},{c:[{l:"Ja, schon bewilligt",n:[{b:"Sehr gut, ich notiere das für den Makler. Möchten Sie eine Besichtigung vereinbaren?"},{s:"Qualifizierter Kontakt: Kauf, Finanzierung bewilligt",i:"person"},{c:[{l:"Ja, gerne",n:"prenota"}]}]},{l:"Muss mich noch informieren",n:[{b:"Kein Problem: Die Agentur kann Ihnen sagen, an wen Sie sich wenden können. Ich notiere das für den Makler. Möchten Sie eine Besichtigung vereinbaren?"},{s:"Qualifizierter Kontakt: Kauf, Finanzierung offen",i:"person"},{c:[{l:"Ja, gerne",n:"prenota"}]}]}]}]},
@@ -1212,8 +1286,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         {s:"Bewertungsanfrage an einen Makler weitergegeben",i:"person"}]
     },
     ricettivo:{
-      name:"B&B am Meer (Beispiel)",
-      hello:"Herzlich willkommen! Ich bin der virtuelle Assistent der Unterkunft. Ich beantworte Fragen zu Verfügbarkeit, Check-in und Leistungen, auf Deutsch, Englisch und Italienisch. Wie kann ich Ihnen helfen?",
+      name:"Elena · B&B am Meer (Beispiel)",
+      hello:"Herzlich willkommen! Ich bin Elena, die virtuelle Assistentin der Unterkunft. Ich beantworte Fragen zu Verfügbarkeit, Check-in und Leistungen, auf Deutsch, Englisch und Italienisch. Wie kann ich Ihnen helfen?",
       faq:[{u:"Hi! What time is check-in? Is there parking?"},
         {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
         {u:"Sind Hunde erlaubt?"},
@@ -1238,7 +1312,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "h-eye":"KI-Rezeption · Italien und Ausland",
     "h-h1":"Ihre Kunden bekommen eine Antwort. <em>Immer.</em>",
     "h-lead":"Celea ist der Assistent, der rund um die Uhr auf WhatsApp und am Telefon antwortet: Er gibt Auskünfte, vereinbart Termine und übergibt an einen Menschen, wenn es nötig ist. Für Zahnarztpraxen, Immobilienagenturen sowie Hotels, B&amp;Bs und Ferienwohnungen.",
-    "h-cta":'<a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Demo testen</a><a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Kurzes Gespräch vereinbaren</a>',
+    "h-cta":'<a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Demo testen</a><a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Kostenlose Testphase buchen</a>',
     "h-note":"Wir richten ihn für Sie ein, zugeschnitten auf Ihren Betrieb, mit 30 Tagen kostenloser Testphase (bis zu 100 Telefonminuten). Er stellt sich immer als virtueller Assistent vor. Klare Preise, <a href=\"#prezzi\">alle hier aufgeführt</a>.",
     "h-clock":'<div class="clock-item"><time>22:47</time><p>„Können Sie mich morgen drannehmen? Mir ist eine Füllung herausgefallen.“<small>Zwei Termine vorgeschlagen, Termin vereinbart.</small></p></div><div class="clock-item"><time>07:12</time><p>„Hat das Haus an der Hafenstraße eine Garage?“<small>Frage beantwortet, Besichtigung für Samstag vereinbart.</small></p></div><div class="clock-item"><time>01:30</time><p>„We\'re arriving late tonight, how do we get the keys?“<small>Antwort auf Englisch mit den Check-in-Hinweisen.</small></p></div><p class="clock-cap">Beispiele für Anfragen, die zu ungünstigen Zeiten eintreffen.</p>',
     "d-head":'<p class="eyebrow">Interaktive Demo</p><h2 id="demo-t">So antwortet er Ihren Kunden</h2><p class="lead">Wählen Sie Ihre Branche und eine Situation. Sie können auch selbst eine Frage in den Chat schreiben.</p>',
@@ -1248,7 +1322,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "s2":"<strong>Termin</strong><span>wählt eine Uhrzeit und bestätigt</span>",
     "s3":"<strong>Außerhalb der Zeiten</strong><span>eine Nachricht in der Nacht</span>",
     "s4":"<strong>Mit einem Menschen</strong><span>wenn das Team gefragt ist</span>",
-    "d-flag":"Demo: Beispielbetriebe und vorbereitete Antworten. Nichts, was Sie schreiben, wird gesendet oder gespeichert. Der echte Assistent wird mit den Daten Ihres Betriebs eingerichtet, standardmäßig auf Italienisch, Englisch und Deutsch.",
+    "d-flag":"Demo: Beispielbetriebe und vorbereitete Antworten. Nichts, was Sie schreiben, wird gesendet oder gespeichert. Sofia, Marco und Elena sind Beispielnamen: Der echte Assistent wird mit den Daten Ihres Betriebs und dem Namen Ihrer Wahl eingerichtet, standardmäßig auf Italienisch, Englisch und Deutsch.",
     "d-sub":"Virtueller Assistent · Demo", "d-restart":"Neu starten",
     "d-hint":"Probieren Sie zum Beispiel: „Wann haben Sie geöffnet?“, „Ich möchte einen Termin“, „Kann ich mit jemandem sprechen?“",
     "c-head":'<p class="eyebrow">So funktioniert\'s</p><h2 id="come-t">In zwei Wochen startklar, ohne technischen Aufwand für Sie</h2>',
@@ -1260,19 +1334,15 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "p2q":"Eine Anfrage aus einer Anzeige kommt um 23 Uhr: Am nächsten Morgen findet der Makler einen bereits qualifizierten Kontakt.", "p2b":"Demo für Agenturen testen", "p2x":'<a class="tryit" href="https://demo.celea.it/domea/#de">Beispiel-Website ansehen: Domèa Immobiliare</a>',
     "p3h":"B&amp;Bs, Ferienwohnungen und Hotels", "p3l":"<li>Verfügbarkeit und Buchungslinks</li><li>Check-in, Parken, Haustiere</li><li>Antworten auf Italienisch, Englisch und Deutsch</li><li>Probleme im Zimmer an das Personal gemeldet</li>",
     "p3q":"Gäste kommen um 1 Uhr nachts an: Sie erhalten sofort die Hinweise zu den Schlüsseln.", "p3b":"Demo für Hotels und B&amp;Bs testen", "p3x":'<a class="tryit" href="https://demo.celea.it/casa-lumea/#de">Beispiel-Website ansehen: Casa Lumèa</a>',
+    "why":'<div class="sec-head"><p class="eyebrow">Warum Celea</p><h2 id="perche-t">Ein Assistent, eingerichtet für Ihren Betrieb</h2><p class="lead">Sechs Dinge, die Sie mit Celea bekommen, klar aufgeschrieben, bevor Sie sich entscheiden.</p></div><ul class="wgrid"><li><span class="wn">01</span><h3>Telefon und WhatsApp zusammen</h3><p>Mit Pro beantwortet derselbe Assistent Nachrichten und Anrufe, mit denselben Informationen und demselben Ton. Nicht zwei Werkzeuge, die Sie verwalten müssen.</p></li><li><span class="wn">02</span><h3>Italienisch, Englisch und Deutsch inklusive</h3><p>In jedem Paket ohne Aufpreis: für Patienten, Kunden und Gäste aus dem Ausland.</p></li><li><span class="wn">03</span><h3>Wir richten ihn für Sie ein</h3><p>Keine Software zu lernen: Wir bauen ihn nach den Regeln Ihres Betriebs auf, testen ihn mit Ihnen und aktualisieren ihn, wenn sich etwas ändert.</p></li><li><span class="wn">04</span><h3>Kein Wechsel der Verwaltungssoftware</h3><p>Sie arbeiten mit Ihren heutigen Programmen weiter: Der Assistent nimmt die Anfrage auf und Ihr Empfang bestätigt sie über eine fertige Buchungskarte; in der kostenlosen Testphase können wir ihn mit einem Online-Kalender wie Google Kalender verbinden.</p></li><li><span class="wn">05</span><h3>30 Tage kostenlos testen</h3><p>30 Tage, bis zu 100 Telefonminuten und 300 WhatsApp-Gespräche: Es gilt die Grenze, die zuerst erreicht wird. Buchbar ab sofort, ohne Unterschrift und ohne Zahlung; bis zum 30. Tag können Sie ohne Kosten kündigen.</p></li><li><span class="wn">06</span><h3>Klare Preise, keine versteckten Kosten</h3><p>Monatsgebühr, Einrichtung und Extras stehen alle im Bereich Preise. WhatsApp-Nachrichten zahlen Sie direkt an Meta, ohne Aufschlag von uns.</p></li></ul><div class="cta-row"><a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Demo testen</a><a class="btn btn-ghost" href="#prezzi">Preise ansehen</a></div>',
     "b-head":'<p class="eyebrow">Für Inhaber</p><h2 id="cambia-t">Was sich in Ihrem Alltag ändert</h2>',
-    "b-list":'<div><h3>Keine Anfrage bleibt unbeantwortet</h3><p>Abends, sonntags, in der Mittagspause: Wer schreibt oder anruft, bekommt sofort eine Antwort, statt sich anderswo umzusehen.</p></div><div><h3>Weniger Unterbrechungen bei der Arbeit</h3><p>Wiederkehrende Fragen übernimmt der Assistent. Sie und Ihr Team kümmern sich um die Menschen vor Ort.</p></div><div><h3>Ihr Kalender füllt sich geordnet</h3><p>Termine, Besichtigungen und Buchungsanfragen landen mit allen nötigen Angaben im Kalender.</p></div><div><h3>Sie bestimmen, was er sagt</h3><p>Öffnungszeiten, Leistungen, Ton und Grenzen legen Sie fest. Jeden Tag sehen Sie, was gefragt und was geantwortet wurde.</p></div><div><h3>Ein Mensch, wenn es nötig ist</h3><p>Notfälle, Beschwerden, heikle Fälle oder unbeantwortete Fragen gehen an die Person Ihrer Wahl, mit fertiger Zusammenfassung.</p></div><div><h3>Persönliche Betreuung, wo immer Sie sind</h3><p>Ein fester Ansprechpartner, Support per WhatsApp und Videocall, Aktualisierung der Inhalte, wenn sich etwas ändert. Wir arbeiten mit Betrieben in ganz Italien und im Ausland.</p></div>',
+    "b-list":'<div><h3>Keine Anfrage bleibt unbeantwortet</h3><p>Abends, sonntags, in der Mittagspause: Wer schreibt oder anruft, bekommt sofort eine Antwort, statt sich anderswo umzusehen.</p></div><div><h3>Weniger Unterbrechungen bei der Arbeit</h3><p>Wiederkehrende Fragen übernimmt der Assistent. Sie und Ihr Team kümmern sich um die Menschen vor Ort.</p></div><div><h3>Ihr Kalender füllt sich geordnet</h3><p>Termine, Besichtigungen und Buchungsanfragen erreichen Ihren Empfang oder Online-Kalender mit allen nötigen Angaben.</p></div><div><h3>Sie bestimmen, was er sagt</h3><p>Öffnungszeiten, Leistungen, Ton und Grenzen legen Sie fest. Jeden Tag sehen Sie, was gefragt und was geantwortet wurde.</p></div><div><h3>Ein Mensch, wenn es nötig ist</h3><p>Notfälle, Beschwerden, heikle Fälle oder unbeantwortete Fragen gehen an die Person Ihrer Wahl, mit fertiger Zusammenfassung.</p></div><div><h3>Persönliche Betreuung, wo immer Sie sind</h3><p>Ein fester Ansprechpartner, Support per WhatsApp und Videocall, Aktualisierung der Inhalte, wenn sich etwas ändert. Wir arbeiten mit Betrieben in ganz Italien und im Ausland.</p></div>',
     "price":"",
     "f-head":'<p class="eyebrow">FAQ</p><h2 id="faq-t">Die Fragen, die wir am häufigsten hören</h2>',
-    "f-list":'<details><summary>Wissen meine Kunden, dass sie mit einer KI sprechen?</summary><div class="ans"><p>Ja. Der Assistent stellt sich immer als virtueller Assistent vor, wie es die EU-Regeln zur künstlichen Intelligenz (AI Act) verlangen. Der Kunde kann jederzeit verlangen, mit einem Menschen zu sprechen.</p></div></details><details><summary>Was passiert, wenn der Assistent keine Antwort weiß?</summary><div class="ans"><p>Er erfindet nichts. Er sagt, dass er nachfragt, nimmt die Anfrage auf und gibt sie mit einer Zusammenfassung an die Person weiter, die Sie bestimmt haben. Dasselbe gilt für Notfälle, Beschwerden und heikle Fälle.</p><p>Unbeantwortete Fragen erscheinen in Ihrer Zusammenfassung: Wir ergänzen sie, damit der Assistent beim nächsten Mal antworten kann.</p></div></details><details><summary>Wie werden die Daten meiner Kunden behandelt? Ist das DSGVO-konform?</summary><div class="ans"><p>Celea verarbeitet die Daten in Ihrem Auftrag, als Auftragsverarbeiter: Vor dem Start unterzeichnen wir einen Vertrag nach Art. 28 DSGVO. Die Daten dienen nur dazu, zu antworten, Termine zu vereinbaren und Anfragen an Ihr Team weiterzugeben.</p><p>Wir stellen Ihnen einen Mustertext zur Aktualisierung Ihrer Datenschutzerklärung bereit, den Ihr eigener Berater prüfen sollte.</p></div></details><details><summary>Kann eine Zahnarztpraxis ihn nutzen? Und die Gesundheitsdaten?</summary><div class="ans"><p>Ja, mit klaren Regeln: Der Assistent gibt keine medizinischen Ratschläge und stellt keine Diagnosen. Bei Schmerzen oder Notfällen verweist er sofort an die Praxis oder nennt die Notfallnummer. Er kümmert sich um Termine und praktische Informationen und fragt nur die nötigen Daten ab.</p></div></details><details><summary>Muss ich meine Nummer oder meine Software wechseln?</summary><div class="ans"><p>Nein. Wir prüfen gemeinsam, wie WhatsApp und das Telefon, die Sie schon nutzen, angebunden werden: Zum Beispiel können Anrufe, die die Praxis nicht annimmt, an den Assistenten gehen. Termine landen in dem Kalender, den Sie heute nutzen, oder über den Link Ihres Buchungssystems.</p></div></details><details><summary>Ersetzt er meine Empfangskraft?</summary><div class="ans"><p>Nein. Er nimmt ihr wiederkehrende Fragen ab und deckt die Stunden ab, in denen niemand da ist. Menschen bleiben der Bezugspunkt für alles, was Aufmerksamkeit braucht.</p></div></details><details><summary>In welchen Sprachen antwortet er?</summary><div class="ans"><p>Auf Italienisch, Englisch und Deutsch, in jedem Paket enthalten: nützlich, wenn Sie mit Touristen und internationalen Kunden arbeiten. Weitere Sprachen kosten je 19 € im Monat, nur nach einem schriftlichen Test von uns. In jeder Sprache sagt der Assistent, dass er ein virtueller Assistent ist.</p></div></details><details><summary>Arbeiten Sie nur in Sizilien?</summary><div class="ans"><p>Nein. Celea hat seinen Sitz in Sizilien und arbeitet mit Betrieben in ganz Italien und im Ausland. Einrichtung, Test und Support erfolgen aus der Ferne, per Videocall und WhatsApp.</p></div></details><details><summary>Gibt es neben der Monatsgebühr weitere Kosten?</summary><div class="ans"><p>Nur die WhatsApp-Nachrichten, die Sie direkt an Meta zahlen, ohne Aufschlag von uns. Keine versteckten Kosten: zusätzliche Minuten 0,45 €/Min. und Premium-Stimme +79 €/Monat nur, wenn Sie sie nutzen oder wählen. Alle Details im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details><details><summary>Wann kann der Dienst starten?</summary><div class="ans"><p>Die Demo ist sofort verfügbar. Die Dienste starten, mit 30 Tagen kostenloser Testphase, ab November–Dezember 2026: Nach der Demo senden wir Ihnen ein Angebot und legen den Starttermin gemeinsam fest.</p></div></details><details><summary>Erstellen Sie auch Websites?</summary><div class="ans"><p>Ja: von der Landingpage mit einer Seite (490 € + 29 €/Monat) über die Präsentations-Website mit 5 Seiten (990 € + 49 €/Monat) bis zur Premium-Website auf Italienisch, Englisch und Deutsch (1.990 € + 79 €/Monat), auf Wunsch mit integriertem Assistenten. Die Domain wird immer auf Sie registriert. Alle Preise im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details>',
+    "f-list":'<details><summary>Wissen meine Kunden, dass sie mit einer KI sprechen?</summary><div class="ans"><p>Ja. Der Assistent stellt sich immer als virtueller Assistent vor, wie es die EU-Regeln zur künstlichen Intelligenz (AI Act) verlangen. Der Kunde kann jederzeit verlangen, mit einem Menschen zu sprechen.</p></div></details><details><summary>Was passiert, wenn der Assistent keine Antwort weiß?</summary><div class="ans"><p>Er erfindet nichts. Er sagt, dass er nachfragt, nimmt die Anfrage auf und gibt sie mit einer Zusammenfassung an die Person weiter, die Sie bestimmt haben. Dasselbe gilt für Notfälle, Beschwerden und heikle Fälle.</p><p>Unbeantwortete Fragen erscheinen in Ihrer Zusammenfassung: Wir ergänzen sie, damit der Assistent beim nächsten Mal antworten kann.</p></div></details><details><summary>Wie werden die Daten meiner Kunden behandelt? Ist das DSGVO-konform?</summary><div class="ans"><p>Celea verarbeitet die Daten in Ihrem Auftrag, als Auftragsverarbeiter: Vor dem Start unterzeichnen wir einen Vertrag nach Art. 28 DSGVO. Die Daten dienen nur dazu, zu antworten, Termine zu vereinbaren und Anfragen an Ihr Team weiterzugeben.</p><p>Wir stellen Ihnen einen Mustertext zur Aktualisierung Ihrer Datenschutzerklärung bereit, den Ihr eigener Berater prüfen sollte.</p></div></details><details><summary>Kann eine Zahnarztpraxis ihn nutzen? Und die Gesundheitsdaten?</summary><div class="ans"><p>Ja, mit klaren Regeln: Der Assistent gibt keine medizinischen Ratschläge und stellt keine Diagnosen. Bei Schmerzen oder Notfällen verweist er sofort an die Praxis oder nennt die Notfallnummer. Er kümmert sich um Termine und praktische Informationen und fragt nur die nötigen Daten ab.</p></div></details><details><summary>Muss ich meine Nummer oder meine Software wechseln?</summary><div class="ans"><p>Nein. Wir prüfen gemeinsam, wie WhatsApp und das Telefon, die Sie schon nutzen, angebunden werden: Zum Beispiel können Anrufe, die die Praxis nicht annimmt, an den Assistenten gehen. Terminanfragen erreichen Ihren Empfang als Buchungskarte zur Bestätigung oder, wenn Sie möchten, einen Online-Kalender wie Google Kalender; Beherbergungsbetrieben schickt der Assistent den Link zu ihrem Buchungssystem.</p></div></details><details><summary>Lässt er sich mit meiner Praxissoftware verbinden?</summary><div class="ans"><p>Sie müssen Ihre Software nicht wechseln. Heute nimmt der Assistent die Anfrage auf und Ihr Empfang bestätigt sie; in der kostenlosen Testphase können wir ihn mit einem Online-Kalender wie Google Kalender verbinden. Eine direkte Verbindung zu Ihrer Verwaltungssoftware hängt vom Hersteller ab: Wir prüfen das gemeinsam, Fall für Fall, ohne Termine zu versprechen.</p><p>Ihr Empfang erhält eine Buchungskarte wie diese (erfundene Daten):</p><div class="scheda" role="img" aria-label="Beispiel einer Buchungskarte"><span class="scheda-tag">Beispiel</span><b>Zahnarztpraxis · neuer Termin · Priorität normal</b><span><i>Name</i> Giulia Beispiel</span><span><i>Telefon</i> +39 333 000 0000 · Kanal: Telefon</span><span><i>Anliegen</i> Prophylaxe</span><span><i>Wunsch</i> Dienstagnachmittag</span><span><i>Hinweise</i> zum ersten Mal in der Praxis; bittet um Bestätigung per WhatsApp</span></div></div></details><details><summary>Ersetzt er meine Empfangskraft?</summary><div class="ans"><p>Nein. Er nimmt ihr wiederkehrende Fragen ab und deckt die Stunden ab, in denen niemand da ist. Menschen bleiben der Bezugspunkt für alles, was Aufmerksamkeit braucht.</p></div></details><details><summary>In welchen Sprachen antwortet er?</summary><div class="ans"><p>Auf Italienisch, Englisch und Deutsch, in jedem Paket enthalten: nützlich, wenn Sie mit Touristen und internationalen Kunden arbeiten. Weitere Sprachen kosten je 19 € im Monat, nur nach einem schriftlichen Test von uns. In jeder Sprache sagt der Assistent, dass er ein virtueller Assistent ist.</p></div></details><details><summary>Arbeiten Sie nur in Sizilien?</summary><div class="ans"><p>Nein. Celea hat seinen Sitz in Sizilien und arbeitet mit Betrieben in ganz Italien und im Ausland. Einrichtung, Test und Support erfolgen aus der Ferne, per Videocall und WhatsApp.</p></div></details><details><summary>Gibt es neben der Monatsgebühr weitere Kosten?</summary><div class="ans"><p>Nur die WhatsApp-Nachrichten, die Sie direkt an Meta zahlen, ohne Aufschlag von uns. Keine versteckten Kosten: zusätzliche Minuten 0,45 €/Min. und Premium-Stimme +79 €/Monat nur, wenn Sie sie nutzen oder wählen. Alle Details im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details><details><summary>Wann kann der Dienst starten?</summary><div class="ans"><p>Die Demo ist sofort verfügbar. Die Dienste starten, mit 30 Tagen kostenloser Testphase, ab November–Dezember 2026: Nach der Demo senden wir Ihnen ein Angebot und legen den Starttermin gemeinsam fest.</p></div></details><details><summary>Erstellen Sie auch Websites?</summary><div class="ans"><p>Ja: von der Landingpage mit einer Seite (490 € + 29 €/Monat) über die Präsentations-Website mit 5 Seiten (990 € + 49 €/Monat) bis zur Premium-Website auf Italienisch, Englisch und Deutsch (1.990 € + 79 €/Monat), auf Wunsch mit integriertem Assistenten. Die Domain wird immer auf Sie registriert, die jährliche Verlängerung ist nicht in der Gebühr enthalten. Alle Preise im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details>',
     "about":'<p class="eyebrow">Über uns</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Geboren in Sizilien, im Einsatz überall</h2><p>Celea wurde von William gegründet und hat seinen Sitz in Sizilien. Wir arbeiten mit Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetrieben in ganz Italien und im Ausland, per Videocall und WhatsApp.</p><p>Unser Symbol sind zwei Bögen, einer umarmt den anderen, und ein Punkt: die Antwort, die ankommt. So möchten wir Ihre Kunden behandeln, ruhig und sorgfältig, zu jeder Stunde.</p><p>Wir richten jeden Assistenten selbst ein und betreuen ihn. Sie haben einen festen Ansprechpartner, der Ihren Betrieb kennt.</p>',
-    "k-h":"Kurzes Gespräch vereinbaren",
-    "k-p":"Schreiben Sie uns den Namen Ihres Betriebs und wann wir Sie am besten zurückrufen. Wir zeigen Ihnen den Assistenten mit Beispielen aus Ihrer Branche.",
-    "k-email":"E-Mail", "k-wav":"Nummer folgt in Kürze",
-    "k-was":"Die WhatsApp-Nummer von Celea ist bald aktiv. Schreiben Sie uns bis dahin per E-Mail: Wir antworten innerhalb eines Werktags.",
-    "k-dove":"Wo", "k-dovev":"Sitz in Sizilien · Kunden in ganz Italien und im Ausland", "k-doves":"Demos und Termine per Videocall.",
-    "k-btn":"E-Mail schreiben",
-    "legal":'<p class="eyebrow">Rechtliches</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Datenschutz und Cookies</h2><details><summary>Datenschutzhinweise (Kurzfassung)</summary><div class="body"><h4>Verantwortlicher</h4><p>Celea, von William. Kontakt: team.celea@gmail.com. Vollständiger Firmenname, USt-IdNr. und Anschrift werden hier vor dem endgültigen Start angegeben.</p><h4>Welche Daten wir verarbeiten</h4><p>Nur die Daten, die Sie uns von sich aus per E-Mail oder WhatsApp senden (Name, Betrieb, Kontaktdaten, Inhalt der Nachricht), um Ihre Anfrage zu beantworten und die Demo zu organisieren. Rechtsgrundlage: vorvertragliche Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).</p><h4>Die Demo auf dieser Seite</h4><p>Der Demo-Chat läuft nur in Ihrem Browser mit vorbereiteten Antworten: Was Sie schreiben, wird weder an uns noch an Dritte gesendet und nicht gespeichert.</p><h4>Speicherung und Rechte</h4><p>Wir speichern Nachrichten so lange, wie es für die Bearbeitung der Anfrage und eine eventuelle Geschäftsbeziehung nötig ist. Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen, indem Sie an team.celea@gmail.com schreiben, und Beschwerde bei der italienischen Datenschutzbehörde (Garante per la protezione dei dati personali) einlegen.</p></div></details><details><summary>Cookies</summary><div class="body"><p>Diese Seite verwendet keine Profiling-Cookies und keine Statistik-Tools und zeigt keine Werbung. Die Schriftarten liegen auf dieser Website: keine Verbindung zu Google Fonts. Die Website wird von GitHub Pages (GitHub, Inc.) bereitgestellt, das aus Sicherheitsgründen die IP-Adressen der Besucher protokolliert.</p></div></details>',
+    "contact":'<h3>Kostenlose Testphase oder kurzes Gespräch buchen</h3><p>Füllen Sie das Formular aus: Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an team.celea@gmail.com. Wir antworten innerhalb eines Werktags.</p><form class="tform" id="trial-form" novalidate><label><span>Vor- und Nachname</span><input name="nome" autocomplete="name" required></label><label><span>Betrieb</span><input name="attivita" autocomplete="organization" required></label><label><span>E-Mail</span><input type="email" name="email" autocomplete="email" required></label><label><span>Telefon</span><input type="tel" name="tel" autocomplete="tel"></label><label><span>Branche</span><select name="settore"><option>Zahnarztpraxis</option><option>Immobilienagentur</option><option>B&amp;B, Ferienwohnung oder Hotel</option><option>Andere</option></select></label><label><span>Was möchten Sie</span><select name="cosa"><option>Kostenlose Testphase</option><option>Kurzes Gespräch</option></select></label><label class="chk"><input type="checkbox" name="consenso"><span>Ich bin einverstanden, von Celea Werbeinformationen per E-Mail und WhatsApp zu erhalten; ich kann dies jederzeit mit STOP widerrufen.</span></label><p class="tiny">Die Formulardaten (Name, Betrieb, E-Mail, Telefon, Branche) dienen nur der Antwort und der Organisation der Testphase; kommt nichts zustande, bewahren wir sie 12 Monate auf. Die Einwilligung oben ist freiwillig und nur für Werbematerial nötig. Keine Tracking-Cookies. Vollständige Datenschutzhinweise: <a href="https://www.celea.it/privacy/#de">celea.it/privacy</a>.</p><button class="btn btn-light" type="submit">E-Mail vorbereiten</button><div class="tout" id="tf-out" hidden><p>Falls sich Ihr E-Mail-Programm nicht öffnet, kopieren Sie diesen Text und senden Sie ihn an team.celea@gmail.com:</p><textarea id="tf-text" rows="7" readonly></textarea></div></form><div class="row"><span class="k">E-Mail</span><span class="v" id="email">team.celea@gmail.com</span><button class="copy" type="button" id="copy-email">Adresse kopieren</button></div><div class="row"><span class="k">WhatsApp</span><span class="v">Nummer folgt in Kürze</span><span class="soon">Die WhatsApp-Nummer von Celea ist bald aktiv. Schreiben Sie uns bis dahin per E-Mail.</span></div><div class="row"><span class="k">Wo</span><span class="v">Sitz in Sizilien · Kunden in ganz Italien und im Ausland</span><span class="soon">Demos und Termine per Videocall.</span></div>',
+    "legal":'<p class="eyebrow">Rechtliches</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Datenschutz und Cookies</h2><details><summary>Datenschutzhinweise (Kurzfassung)</summary><div class="body"><h4>Verantwortlicher</h4><p>Celea, von William. Kontakt: team.celea@gmail.com. Vollständiger Firmenname, USt-IdNr. und Anschrift werden hier und auf der Datenschutzseite vor dem endgültigen Start angegeben.</p><h4>Welche Daten wir verarbeiten</h4><p>Nur die Daten, die Sie uns selbst senden, über das Formular auf dieser Seite, per E-Mail oder WhatsApp (Name, Betrieb, Kontaktdaten, Branche, Inhalt der Nachricht), um Ihre Anfrage zu beantworten und die Demo oder die kostenlose Testphase zu organisieren. Rechtsgrundlage: vorvertragliche Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Werbematerial nur mit der gesonderten Einwilligung im Formular, widerrufbar mit STOP.</p><h4>Die Demo auf dieser Seite</h4><p>Der Demo-Chat läuft nur in Ihrem Browser mit vorbereiteten Antworten: Was Sie schreiben, wird weder an uns noch an Dritte gesendet und nicht gespeichert.</p><h4>Speicherung und Rechte</h4><p>Kommt nichts zustande, bewahren wir Ihre Anfrage 12 Monate auf. Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen, indem Sie an team.celea@gmail.com schreiben, und Beschwerde bei der italienischen Datenschutzbehörde (Garante per la protezione dei dati personali) einlegen. Vollständige Hinweise: <a href="https://www.celea.it/privacy/#de">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>Diese Website verwendet keine Cookies: keine Tracking-, Profiling- oder Statistik-Cookies und keine Werbung. Die Schriftarten werden auf der Website bereitgestellt. Das Einzige, was in Ihrem Browser gespeichert wird, ist die gewählte Sprache (lokaler Speicher, ohne Cookies). Details auf der <a href="https://www.celea.it/privacy/#de">Datenschutzseite</a>.</p></div></details>',
     "ft-sign":"Celea · antwortet immer, mit Sorgfalt.",
     "ft-small":'KI-Rezeption auf WhatsApp und am Telefon für Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetriebe, in Italien und im Ausland. Kontakt: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Datenschutz und Cookies</a>'
   };
@@ -1291,9 +1361,6 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     });
     document.querySelectorAll("[data-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang===lang?"true":"false"); });
     input.placeholder = UI[lang].ph;
-    cp.textContent = UI[lang].copy;
-    var mb = document.getElementById("mail-btn");
-    if(mb) mb.href = "mailto:team.celea@gmail.com?subject=" + encodeURIComponent(lang==="en" ? "Celea demo request" : (lang==="de" ? "Demo-Anfrage Celea" : "Richiesta demo Celea"));
     var bar = document.getElementById("langbar"); if(bar && lang!=="it") bar.hidden = true;
     if(user){ try{ localStorage.setItem("celea-lang", lang); }catch(e){} }
   }
@@ -1319,4 +1386,5 @@ footer .sign{font-family:var(--f-display);font-weight:700}
 })();
 </script>
 
-</body></html>
+</body>
+</html>

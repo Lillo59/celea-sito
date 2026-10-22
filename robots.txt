@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /privacy/
 Sitemap: https://www.celea.it/sitemap.xml
