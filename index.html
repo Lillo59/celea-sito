@@ -116,7 +116,7 @@ section{padding-block:72px}
 .demo-grid{display:grid;gap:32px}
 @media (min-width:960px){.demo-grid{grid-template-columns:.85fr 1.15fr;align-items:start;gap:56px}}
 .demo-side{display:contents}
-.demo-grid>.phone{order:3}.demo-side>.sec-head{order:1}.p-niche{order:2}.p-scen{order:4}.demo-flag{order:5}
+.demo-grid>.phone{order:3}.demo-side>.sec-head{order:1}.p-niche{order:2}.p-scen{order:4}.demo-custom{order:5}.live{order:6}.demo-flag{order:7}
 @media (min-width:960px){.demo-side{display:grid;gap:22px;min-width:0;grid-column:1;grid-row:1}.demo-grid>.phone{grid-column:2;grid-row:1}}
 .picker{display:grid;gap:10px}
 .picker-label{font-family:var(--f-display);font-weight:700;font-size:.95rem}
@@ -132,6 +132,23 @@ section{padding-block:72px}
 .scen button:disabled{opacity:.5;cursor:wait}
 .demo-flag{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;background:color-mix(in srgb,var(--d-fg) 10%,transparent);border-radius:var(--r);padding:12px 14px}
 .demo-flag svg{width:20px;height:20px;flex:none;margin-top:2px}
+.demo-custom{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;line-height:1.45;border:2px solid #E08A6A;background:color-mix(in srgb,#E08A6A 16%,transparent);border-radius:var(--r);padding:14px 16px}
+.demo-custom svg{width:22px;height:22px;flex:none;margin-top:2px;color:#E08A6A}
+.demo-custom strong{display:block;font-family:var(--f-display);font-size:1.02rem;margin-bottom:2px}
+.scen button{padding:10px 12px}
+.live{display:grid;gap:10px;border:1px solid color-mix(in srgb,var(--d-fg) 30%,transparent);border-radius:var(--r);padding:16px}
+.live[hidden]{display:none}
+.live-lead{margin:0;font-size:.95rem}
+.live-form{display:grid;gap:10px}
+.live-row{display:flex;gap:8px;flex-wrap:wrap}
+.live-row input{flex:1 1 180px;min-width:0;font:inherit;padding:12px;border-radius:var(--r);border:1px solid color-mix(in srgb,var(--d-fg) 40%,transparent);background:var(--d-fg);color:var(--d-bg)}
+.live-row .btn{flex:0 0 auto}
+.live-row .btn svg{width:18px;height:18px}
+.live-ok{display:flex;gap:8px;align-items:flex-start;font-size:.85rem;line-height:1.4}
+.live-ok input{margin-top:3px;flex:none}
+.live-ok a{color:inherit}
+.live-msg{margin:0;font-size:.92rem;font-weight:600;min-height:1.2em}
+.live-note{margin:0;font-size:.8rem;opacity:.75}
 
 .phone{background:var(--chat-bg);color:var(--ink);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(4,26,33,.35);display:flex;flex-direction:column;height:min(640px,82vh);min-height:480px;border:6px solid var(--deep);min-width:0}
 .chat-head{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--deep);color:#F4EDE3}
@@ -350,6 +367,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 11.5a1.5 1.5 0 1 0 0-.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
   <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.2v.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
   <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2.5-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
@@ -413,14 +432,25 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         </div>
         <div class="picker p-scen">
           <span class="picker-label" id="scen-l" data-i18n="d-sl">2. Altre situazioni da provare</span>
-          <div class="scen" role="group" aria-labelledby="scen-l">
-            <button type="button" data-scen="faq" data-i18n="s1"><strong>Domande frequenti</strong><span>orari, servizi, informazioni</span></button>
-            <button type="button" data-scen="prenota" data-i18n="s2"><strong>Appuntamento</strong><span>sceglie l'orario e conferma</span></button>
-            <button type="button" data-scen="notte" data-i18n="s3"><strong>Fuori orario</strong><span>un messaggio di notte</span></button>
-            <button type="button" data-scen="umano" data-i18n="s4"><strong>Passa a una persona</strong><span>quando serve lo staff</span></button>
-          </div>
+          <div class="scen" id="scen" role="group" aria-labelledby="scen-l"></div>
         </div>
-        <p class="demo-flag"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="d-flag">Dimostrazione: attività di esempio e risposte preimpostate. Nulla di ciò che scrive viene inviato o salvato. I nomi Sofia, Marco ed Elena sono d'esempio: il vero assistente viene configurato con i dati e il nome che sceglie Lei.</span></p>
+        <p class="demo-custom"><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="d-custom"><strong>Ogni risposta si configura come vuole Lei.</strong> Orari, prezzi, tono, cosa dire e cosa no, a chi passare la conversazione e in quanto tempo richiamare: decide Lei. Noi lo impostiamo e lo proviamo insieme prima di attivarlo.</span></p>
+        <div class="live" id="live" hidden>
+          <span class="picker-label" data-i18n="d-ll">3. Lo provi dal vivo, al telefono</span>
+          <p class="live-lead" id="live-lead"></p>
+          <form class="live-form" id="live-form" novalidate>
+            <label for="live-tel" class="skip" data-i18n="d-ltel">Il Suo numero di cellulare</label>
+            <div class="live-row">
+              <input id="live-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="+39 3xx xxx xxxx" maxlength="20">
+              <button type="submit" class="btn btn-accent" id="live-btn"><svg aria-hidden="true"><use href="#i-phone"/></svg><span id="live-btn-t">Mi chiami</span></button>
+            </div>
+            <label class="live-ok"><input type="checkbox" id="live-ok"> <span data-i18n="d-lok">Acconsento a ricevere una sola chiamata dimostrativa a questo numero. Il numero serve solo per la chiamata e per il limite di prove (vedi <a href="#privacy">privacy</a>).</span></label>
+            <div id="live-cf"></div>
+          </form>
+          <p class="live-msg" id="live-msg" role="status" aria-live="polite"></p>
+          <p class="live-note" data-i18n="d-lnote">Prova gratuita · al massimo 2 prove per connessione · solo numeri italiani · dalle 8 alle 21 · chiamata breve, poi si chiude da sola</p>
+        </div>
+        <p class="demo-flag"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="d-flag">Dimostrazione con attività inventate e risposte preimpostate, con le stesse regole dell'assistente al telefono e su WhatsApp. Nulla di ciò che scrive qui viene inviato o salvato. I nomi Sofia, Marco ed Elena sono d'esempio: il vero assistente parla con i dati e il nome che sceglie Lei.</span></p>
       </div>
 
       <div class="phone">
@@ -437,7 +467,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <input id="chat-input" type="text" placeholder="Scriva una domanda…" maxlength="200">
           <button type="submit" aria-label="Invia"><svg aria-hidden="true"><use href="#i-send"/></svg></button>
         </form>
-        <p class="composer-hint" data-i18n="d-hint">Provi ad esempio: «che orari fate?», «vorrei un appuntamento», «posso parlare con qualcuno?»</p>
+        <p class="composer-hint" data-i18n="d-hint">Provi ad esempio: «ho un dolore fortissimo», «vorrei un appuntamento», «sei un robot?», «mi fate uno sconto?»</p>
       </div>
     </div>
   </section>
@@ -917,6 +947,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <p>Solo i dati che ci invia Lei, con il modulo di questa pagina, per email o su WhatsApp (nome, attività, recapiti, settore, contenuto del messaggio), per rispondere alla richiesta e organizzare la demo o la prova gratuita. Base giuridica: misure precontrattuali richieste dall'interessato (art. 6.1.b GDPR). Materiale promozionale solo con il consenso separato del modulo, revocabile scrivendo STOP.</p>
           <h4>La demo su questa pagina</h4>
           <p>La chat dimostrativa funziona solo nel Suo browser con risposte preimpostate: ciò che scrive non viene inviato a noi né a terzi e non viene salvato.</p>
+          <h4>La prova «Mi chiami»</h4>
+          <p>Quando è attiva e solo se lascia il Suo numero con la spunta del consenso, il numero viene usato per una sola chiamata dimostrativa fatta dall'assistente virtuale tramite i nostri fornitori di telefonia e intelligenza artificiale (Retell AI, Twilio) e per il controllo anti-bot (Cloudflare Turnstile). Per limitare le prove conserviamo per 30 giorni solo un'impronta cifrata del numero e della connessione, non il numero in chiaro. Base giuridica: la Sua richiesta (art. 6.1.b GDPR).</p>
           <h4>Conservazione e diritti</h4>
           <p>Se non si conclude nulla, conserviamo la richiesta 12 mesi. Può chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità scrivendo a team.celea@gmail.com, e può presentare reclamo al Garante per la protezione dei dati personali. Informativa completa: <a href="https://www.celea.it/privacy/">www.celea.it/privacy</a>.</p>
         </div>
@@ -939,86 +971,22 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   </div>
 </footer>
 
+<script src="demo-scenari.js"></script>
 <script>
 (function(){
   "use strict";
-  // ---- Contenuti della demo (attività di esempio, risposte preimpostate) ----
-  // Passo: {b:"testo"} messaggio dell'assistente · {u:"testo"} messaggio del cliente · {s:"nota", i:"cal|person|moon"} nota di sistema
-  //        {c:[{l:"etichetta", n:[passi...]}]} pulsanti di risposta rapida: la conversazione attende la scelta.
-  var D = {
-    dentista:{
-      name:"Sofia · Studio dentistico (esempio)",
-      hello:"Buongiorno, sono Sofia, l'assistente virtuale dello studio. Posso darLe informazioni, fissare o spostare un appuntamento, oppure passarLa a una persona dello staff. Come posso aiutarLa?",
-      faq:[{u:"Buongiorno, che orari fate? E fate la pulizia dei denti?"},
-        {b:"Buongiorno! Lo studio è aperto dal lunedì al venerdì, 9–13 e 15–19. Sì, facciamo l'igiene professionale: dura circa 45 minuti."},
-        {b:"Vuole che Le proponga un orario libero?"},
-        {c:[{l:"Sì, grazie",n:"prenota"},{l:"Accettate convenzioni?",n:[{b:"Lo studio lavora con alcune convenzioni: mi dica quale ha e verifico. Se non è nell'elenco, passo la domanda alla segreteria, che La ricontatta in orario di studio."},{s:"Domanda annotata per la segreteria",i:"person"}]}]}],
-      prenota:[{u:"Vorrei prenotare una prima visita."},
-        {b:"Con piacere. Preferisce la mattina o il pomeriggio?"},
-        {c:[{l:"Mattina",n:[{b:"Ho questi orari liberi: martedì alle 9:30 oppure giovedì alle 11:00."},{c:[{l:"Martedì 9:30",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Segnato, Anna: prima visita martedì alle 9:30. Il giorno prima riceverà un promemoria qui su WhatsApp. Per spostarla basta scrivermi."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]},{l:"Giovedì 11:00",n:[{b:"Perfetto. Mi lascia nome e cognome per la prenotazione?"},{u:"Anna Esempio"},{b:"Segnato, Anna: prima visita giovedì alle 11:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]}]}]},
-          {l:"Pomeriggio",n:[{b:"Ho questi orari liberi: lunedì alle 16:00 oppure mercoledì alle 17:30."},{c:[{l:"Lunedì 16:00",n:[{b:"Segnato: prima visita lunedì alle 16:00. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]},{l:"Mercoledì 17:30",n:[{b:"Segnato: prima visita mercoledì alle 17:30. Il giorno prima riceverà un promemoria qui su WhatsApp."},{s:"Appuntamento registrato: la segreteria lo conferma",i:"cal"}]}]}]}]}],
-      notte:[{s:"Ore 22:47 · studio chiuso",i:"moon"},
-        {u:"Salve, ho perso un'otturazione e mi dà un po' fastidio. Domani potete vedermi?",t:"22:47"},
-        {b:"Mi dispiace per il fastidio. Non posso dare consigli medici: se il dolore diventa forte, chiami il numero per le urgenze indicato dallo studio.",t:"22:47"},
-        {b:"Intanto posso riservarLe un posto domani: alle 9:00 o alle 12:30?",t:"22:47"},
-        {c:[{l:"Alle 9:00",n:[{b:"Riservato domani alle 9:00. Ho segnalato al dottore che si tratta di un'otturazione persa, così è informato prima di vederLa.",t:"22:48"},{s:"Posto riservato e dottore avvisato per domattina",i:"cal"}]},{l:"Alle 12:30",n:[{b:"Riservato domani alle 12:30. Ho segnalato al dottore che si tratta di un'otturazione persa.",t:"22:48"},{s:"Posto riservato e dottore avvisato per domattina",i:"cal"}]}]}],
-      umano:[{u:"Posso parlare con la dottoressa? È per il preventivo che mi ha fatto."},
-        {b:"Certo. Per i preventivi è meglio che La segua direttamente lo studio. Preferisce essere richiamata o ricevere una risposta qui su WhatsApp?"},
-        {c:[{l:"Richiamatemi",n:[{b:"D'accordo. Ho passato la richiesta alla segreteria con il riepilogo: La richiamano entro la mattinata di domani, in orario di studio."},{s:"Conversazione passata alla segreteria dello studio",i:"person"}]},{l:"Rispondete qui",n:[{b:"D'accordo. Ho passato la domanda alla dottoressa con il riepilogo: Le risponderà qui appena possibile."},{s:"Conversazione passata alla dottoressa",i:"person"}]}]}]
-    },
-    immobiliare:{
-      name:"Marco · Agenzia immobiliare (esempio)",
-      hello:"Buongiorno, sono Marco, l'assistente virtuale dell'agenzia. Posso darLe informazioni sugli immobili, fissare una visita o metterLa in contatto con un agente. Come posso aiutarLa?",
-      faq:[{u:"Il trilocale in centro dell'annuncio è ancora disponibile?"},
-        {b:"Sì, il trilocale in centro è ancora disponibile: 3 vani, secondo piano con ascensore, balcone. Per aiutarLa meglio: cerca per acquisto o per affitto?"},
-        {c:[{l:"Acquisto",n:[{b:"Grazie. Avrà bisogno di un mutuo?"},{c:[{l:"Sì, già approvato",n:[{b:"Ottimo, lo annoto per l'agente. Vuole fissare una visita?"},{s:"Contatto qualificato: acquisto, mutuo approvato",i:"person"},{c:[{l:"Sì, fissiamo",n:"prenota"}]}]},{l:"Devo informarmi",n:[{b:"Nessun problema: l'agenzia può indicarLe a chi rivolgersi. Lo annoto per l'agente. Vuole fissare una visita?"},{s:"Contatto qualificato: acquisto, mutuo da valutare",i:"person"},{c:[{l:"Sì, fissiamo",n:"prenota"}]}]}]}]},
-          {l:"Affitto",n:[{b:"Questo immobile è in vendita, ma l'agenzia ha anche case in affitto. Mi dice zona e budget mensile? Passo la richiesta a un agente che Le invia le proposte."},{s:"Richiesta di affitto passata all'agente",i:"person"}]}]}],
-      prenota:[{u:"Posso vedere la casa questo sabato?"},
-        {b:"Certo. Sabato l'agente è disponibile alle 10:00 o alle 11:30. Quale preferisce?"},
-        {c:[{l:"Alle 10:00",n:[{b:"Confermato: sabato alle 10:00. Venerdì riceverà qui l'indirizzo esatto e il nome dell'agente che La accompagna."},{s:"Visita inserita nell'agenda dell'agente",i:"cal"}]},{l:"Alle 11:30",n:[{b:"Confermato: sabato alle 11:30. Venerdì riceverà qui l'indirizzo esatto e il nome dell'agente che La accompagna."},{s:"Visita inserita nell'agenda dell'agente",i:"cal"}]}]}],
-      notte:[{s:"Ore 23:10 · agenzia chiusa",i:"moon"},
-        {u:"Ho visto l'annuncio della villetta, ha il giardino? Potrei vederla?",t:"23:10"},
-        {b:"Buonasera! Sì, la villetta ha un giardino di circa 200 m² e un posto auto coperto. Posso fissarLe una visita: in quale zona cerca e con che tempi?",t:"23:10"},
-        {c:[{l:"Entro 3 mesi",n:[{b:"Grazie. Domattina un agente La richiama per fissare la visita: preferisce prima delle 10 o dopo le 12?",t:"23:11"},{c:[{l:"Prima delle 10",n:[{b:"Annotato: richiamata domattina prima delle 10. Buona serata!",t:"23:11"},{s:"Richiamata in agenda per domattina",i:"cal"}]},{l:"Dopo le 12",n:[{b:"Annotato: richiamata domani dopo le 12. Buona serata!",t:"23:11"},{s:"Richiamata in agenda per domani",i:"cal"}]}]}]},{l:"Sto solo guardando",n:[{b:"Nessun problema. Vuole che Le invii altre case simili quando escono? Le scrivo solo se me lo conferma.",t:"23:11"}]}]}],
-      umano:[{u:"Vorrei far valutare la mia casa, sto pensando di venderla."},
-        {b:"Con piacere. Per la valutazione serve un agente che veda l'immobile. Mi dice zona e tipo di casa? Passo la richiesta con il riepilogo."},
-        {u:"Un quadrilocale in zona Nord."},
-        {b:"Grazie. Ho passato la richiesta: un agente La contatta entro domani per fissare il sopralluogo."},
-        {s:"Richiesta di valutazione passata a un agente",i:"person"}]
-    },
-    ricettivo:{
-      name:"Elena · B&B sul mare (esempio)",
-      hello:"Benvenuto! Sono Elena, l'assistente virtuale della struttura. Posso rispondere sulla disponibilità, il check-in e i servizi, anche in inglese e tedesco. Come posso aiutarLa?",
-      faq:[{u:"Hi! What time is check-in? Is there parking?"},
-        {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
-        {u:"Accettate anche cani?"},
-        {b:"Sì, cani di piccola taglia sono i benvenuti, con un supplemento per la pulizia. Lo segnalo alla prenotazione così prepariamo la camera."}],
-      prenota:[{u:"Avete una camera doppia libera dal 20 al 23?"},
-        {b:"Per quelle date c'è una doppia disponibile con vista mare. Preferisce prenotare subito online o ricevere un preventivo dal titolare?"},
-        {c:[{l:"Prenoto online",n:[{b:"Ecco il link al sistema di prenotazione della struttura, con le date già inserite. Se ha richieste particolari, me le scriva qui."},{s:"Link di prenotazione inviato (gestionale della struttura)",i:"cal"}]},{l:"Voglio un preventivo",n:[{b:"D'accordo. Ho passato la richiesta al titolare con date e persone: Le invia il preventivo qui entro oggi."},{s:"Richiesta di preventivo passata al titolare",i:"person"}]}]}],
-      notte:[{s:"Ore 01:15 · reception chiusa",i:"moon"},
-        {u:"Arriviamo tardi, verso l'una e mezza. Come facciamo con le chiavi?",t:"01:15"},
-        {b:"Nessun problema! All'ingresso trova una cassetta delle chiavi: il codice Le arriva qui 30 minuti prima dell'arrivo. La camera è al primo piano, la luce delle scale si accende da sola.",t:"01:15"},
-        {b:"Domattina la colazione è servita fino alle 10:30. Buon viaggio!",t:"01:15"},
-        {s:"Arrivo tardivo segnalato al personale",i:"person"}],
-      umano:[{u:"Scusate, in camera non c'è acqua calda."},
-        {b:"Mi dispiace molto. Ho avvisato subito il personale reperibile, che La contatta tra pochi minuti. Mi conferma il numero della camera?"},
-        {c:[{l:"Camera 3",n:[{b:"Grazie, camera 3 segnalata. Il personale sta arrivando."},{s:"Problema passato al personale reperibile",i:"person"}]},{l:"Camera 5",n:[{b:"Grazie, camera 5 segnalata. Il personale sta arrivando."},{s:"Problema passato al personale reperibile",i:"person"}]}]}]
-    }
-  };
-  // Parole chiave per le domande scritte a mano
-  var KW = [
-    {re:/(umano|persona|operatore|parlar|dottor|titolare|agente|staff|segreteria|qualcuno|reclamo|problema|human|person|someone|speak|talk|dentist|owner|agent|complain|problem|no hot water|mensch|mitarbeiter|sprechen|zahnärzt|inhaber|makler|jemand|beschwerde|warm)/i, k:"umano"},
-    {re:/(urgen|dolore|male|notte|tardi|chiav|stasera|domani|emergenc|pain|night|late|key|tonight|tomorrow|notfall|schmerz|nacht|spät|schlüssel|heute abend|füllung)/i, k:"notte"},
-    {re:/(appuntament|prenot|visita|vedere|disponibil|libero|camera|orario libero|fissare|appointment|book|visit|viewing|see the|availab|free|room|termin|buch|besichtig|verfügbar|frei|zimmer)/i, k:"prenota"},
-    {re:/(orari|aperti|apert|quando|prezz|cost|quanto|parcheg|cani|animali|check|servizi|info|giardino|pulizia|igiene|convenz|hours|open|when|price|how much|parking|dog|pet|service|garden|clean|hygiene|insurance|öffnungszeit|geöffnet|wann|preis|kost|parkpl|hund|tier|leistung|garten|reinigung|versicherung)/i, k:"faq"}
-  ];
+  // ---- Contenuti della demo: file demo-scenari.js (stesse attività e regole degli assistenti al telefono) ----
+  var DEMO = window.CELEA_DEMO, KW = DEMO.kw;
+  // ---- Prova dal vivo «Mi chiami» (Guida 3) ----
+  // Resta nascosta finché qui non c'è l'indirizzo del Worker Cloudflare che controlla i limiti e fa partire la chiamata.
+  // endpoint: es. "https://prova.celea.it"  ·  turnstile: la «Site Key» di Cloudflare Turnstile (anti-bot), pubblica.
+  var LIVE = { endpoint:"", turnstile:"" };
 
   var chat = document.getElementById("chat"), chips = document.getElementById("chips");
   var nameEl = document.getElementById("chat-name"), form = document.getElementById("composer"), input = document.getElementById("chat-input");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var niche = "dentista", run = 0, busy = false;
-  var icons = {cal:"#i-cal", person:"#i-person", moon:"#i-moon"};
+  var icons = {cal:"#i-cal", person:"#i-person", moon:"#i-moon", alert:"#i-alert"};
 
   function nowStr(){ var d=new Date(); return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); }
   function wait(ms){ return new Promise(function(r){ setTimeout(r, reduce?Math.min(ms,120):ms); }); }
@@ -1042,9 +1010,19 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     else w = h>=5&&h<18 ? "Buongiorno" : "Buonasera";
     return t.replace(/^(Buongiorno|Good morning|Guten Morgen)/, w);
   }
-  function setBusy(v){ busy=v; document.querySelectorAll(".scen button").forEach(function(b){ b.disabled=v; }); }
+  var scenBox = document.getElementById("scen");
+  function setBusy(v){ busy=v; scenBox.querySelectorAll("button").forEach(function(b){ b.disabled=v; }); }
+  // Pulsanti delle situazioni: vengono dall'elenco «list» del settore scelto.
+  function renderScen(){
+    scenBox.innerHTML="";
+    cur()[niche].list.forEach(function(x){
+      var b=document.createElement("button"); b.type="button"; b.dataset.scen=x.k;
+      var st=document.createElement("strong"); st.textContent=x.t; var sp=document.createElement("span"); sp.textContent=x.d;
+      b.appendChild(st); b.appendChild(sp); b.addEventListener("click", function(){ startScenario(x.k, false); }); scenBox.appendChild(b);
+    });
+  }
 
-  async function play(steps, id){
+  async function play(steps, id, nested){
     if(typeof steps==="string"){ steps = cur()[niche][steps]; if(steps[0] && steps[0].u) steps = steps.slice(1); }
     for(var i=0;i<steps.length;i++){
       if(id!==run) return;
@@ -1056,6 +1034,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         await wait(Math.min(700+s.b.length*12, 1900)); ty.remove(); if(id!==run) return; bubble("bot", s.b, s.t);
       }
       else if(s.s){ await wait(400); if(id!==run) return; sys(s.s, s.i); }
+      else if(s.g){ await play(cur()[niche][s.g], id, true); if(id!==run) return; }
       else if(s.c){
         setBusy(false);
         var choice = await new Promise(function(res){
@@ -1069,27 +1048,31 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         return;
       }
     }
-    if(id===run){ setBusy(false); offerMore(); }
+    if(id===run && !nested){ setBusy(false); offerMore(); }
   }
+  var lastScen = null;
   function offerMore(){
     chips.innerHTML="";
-    ["faq","prenota","notte","umano"].forEach(function(k,ix){
-      var x=[k, UI[lang].more[ix]];
-      var b=document.createElement("button"); b.type="button"; b.textContent=x[1]; b.onclick=function(){ startScenario(x[0], true); }; chips.appendChild(b);
-    });
+    var L = cur()[niche].list, start = 0;
+    for(var i=0;i<L.length;i++){ if(L[i].k===lastScen){ start=i+1; break; } }
+    for(var j=0;j<4 && j<L.length;j++){
+      var x = L[(start+j)%L.length];
+      (function(x){ var b=document.createElement("button"); b.type="button"; b.textContent=x.t; b.onclick=function(){ startScenario(x.k, true); }; chips.appendChild(b); })(x);
+    }
   }
   function reset(){
     run++; chips.innerHTML=""; chat.innerHTML="";
     var d=document.createElement("div"); d.className="day"; d.textContent=UI[lang].day; chat.appendChild(d);
-    nameEl.textContent=cur()[niche].name;
+    nameEl.textContent=cur()[niche].name; renderScen(); lastScen=null; liveText();
     bubble("bot", greet(cur()[niche].hello));
     setBusy(false); offerMore();
   }
   function startScenario(k, keep){
     if(!keep){ reset(); }
     run++; var id=run; chips.innerHTML=""; setBusy(true);
-    document.querySelectorAll(".scen button").forEach(function(b){ b.setAttribute("aria-current", b.dataset.scen===k?"true":"false"); });
-    play(k, id);
+    lastScen = k;
+    scenBox.querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-current", b.dataset.scen===k?"true":"false"); });
+    play(cur()[niche][k], id);
   }
   function setNiche(n){
     niche=n;
@@ -1097,7 +1080,6 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     reset();
   }
   document.querySelectorAll(".niche").forEach(function(b){ b.addEventListener("click", function(){ setNiche(b.dataset.niche); }); });
-  document.querySelectorAll(".scen button").forEach(function(b){ b.addEventListener("click", function(){ startScenario(b.dataset.scen, false); }); });
   document.querySelectorAll("[data-try]").forEach(function(b){ b.addEventListener("click", function(){ setNiche(b.dataset.try); document.getElementById("demo").scrollIntoView({behavior: reduce?"auto":"smooth"}); }); });
 
   form.addEventListener("submit", async function(e){
@@ -1105,8 +1087,10 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     var q=input.value.trim(); if(!q || busy) return;
     input.value=""; run++; var id=run; chips.innerHTML=""; setBusy(true);
     bubble("me", q);
-    var hit=null; for(var i=0;i<KW.length;i++){ if(KW[i].re.test(q)){ hit=KW[i].k; break; } }
+    var hit=null;
+    for(var i=0;i<KW.length && !hit;i++){ if(KW[i].re.test(q)){ for(var j=0;j<KW[i].k.length;j++){ if(cur()[niche][KW[i].k[j]]){ hit=KW[i].k[j]; break; } } } }
     if(hit){
+      lastScen = hit;
       var steps=cur()[niche][hit].filter(function(s,ix){ return !(ix===0 && s.u) && !(s.s && /^(Ore )?\d\d:\d\d/.test(s.s)) && !(s.u && ix<2); });
       await play(steps, id);
     } else {
@@ -1134,78 +1118,18 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     location.href="mailto:team.celea@gmail.com?subject="+encodeURIComponent(T.subj)+"&body="+encodeURIComponent(body);
   });
 
-  // ---- Versione inglese (contatti esteri) ----
-  var D_IT = D;
-  var D_EN = {
-    dentista:{
-      name:"Sofia · Dental practice (example)",
-      hello:"Good morning, I'm Sofia, the practice's virtual assistant. I can give you information, book or move an appointment, or put you through to a member of staff. How can I help?",
-      faq:[{u:"Hello, what are your opening hours? Do you do teeth cleaning?"},
-        {b:"Hello! The practice is open Monday to Friday, 9–13 and 15–19. Yes, we offer professional cleaning: it takes about 45 minutes."},
-        {b:"Would you like me to suggest a free slot?"},
-        {c:[{l:"Yes, please",n:"prenota"},{l:"Do you accept insurance?",n:[{b:"The practice works with some insurance plans: tell me which one you have and I'll check. If it's not on the list, I'll pass your question to the front desk, who will get back to you during opening hours."},{s:"Question noted for the front desk",i:"person"}]}]}],
-      prenota:[{u:"I'd like to book a first visit."},
-        {b:"Of course. Do you prefer morning or afternoon?"},
-        {c:[{l:"Morning",n:[{b:"These slots are free: Tuesday at 9:30 or Thursday at 11:00."},{c:[{l:"Tuesday 9:30",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Noted, Anna: first visit on Tuesday at 9:30. You'll get a reminder here on WhatsApp the day before. To move it, just write to me."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]},{l:"Thursday 11:00",n:[{b:"Perfect. May I have your full name for the booking?"},{u:"Anna Example"},{b:"Noted, Anna: first visit on Thursday at 11:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]}]}]},
-          {l:"Afternoon",n:[{b:"These slots are free: Monday at 16:00 or Wednesday at 17:30."},{c:[{l:"Monday 16:00",n:[{b:"Noted: first visit on Monday at 16:00. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]},{l:"Wednesday 17:30",n:[{b:"Noted: first visit on Wednesday at 17:30. You'll get a reminder here on WhatsApp the day before."},{s:"Appointment recorded: the front desk will confirm it",i:"cal"}]}]}]}]}],
-      notte:[{s:"22:47 · practice closed",i:"moon"},
-        {u:"Hi, I've lost a filling and it's a bit uncomfortable. Can you see me tomorrow?",t:"22:47"},
-        {b:"I'm sorry about the discomfort. I can't give medical advice: if the pain gets strong, please call the emergency number provided by the practice.",t:"22:47"},
-        {b:"In the meantime I can hold a slot for you tomorrow: 9:00 or 12:30?",t:"22:47"},
-        {c:[{l:"9:00",n:[{b:"Booked for tomorrow at 9:00. I've told the dentist it's a lost filling, so they know before seeing you.",t:"22:48"},{s:"Slot held and dentist informed for tomorrow morning",i:"cal"}]},{l:"12:30",n:[{b:"Booked for tomorrow at 12:30. I've told the dentist it's a lost filling.",t:"22:48"},{s:"Slot held and dentist informed for tomorrow morning",i:"cal"}]}]}],
-      umano:[{u:"Can I speak to the dentist? It's about the quote she gave me."},
-        {b:"Of course. For quotes it's best that the practice follows up directly. Would you like a call back or a reply here on WhatsApp?"},
-        {c:[{l:"Call me back",n:[{b:"All right. I've passed your request to the front desk with a summary: they'll call you back by tomorrow morning, during opening hours."},{s:"Conversation passed to the front desk",i:"person"}]},{l:"Reply here",n:[{b:"All right. I've passed your question to the dentist with a summary: she'll reply here as soon as possible."},{s:"Conversation passed to the dentist",i:"person"}]}]}]
-    },
-    immobiliare:{
-      name:"Marco · Real estate agency (example)",
-      hello:"Good morning, I'm Marco, the agency's virtual assistant. I can give you information about properties, book a viewing or put you in touch with an agent. How can I help?",
-      faq:[{u:"Is the three-room flat in the centre from the listing still available?"},
-        {b:"Yes, the flat in the centre is still available: three rooms, second floor with lift, balcony. To help you better: are you looking to buy or to rent?"},
-        {c:[{l:"Buy",n:[{b:"Thank you. Will you need a mortgage?"},{c:[{l:"Yes, already approved",n:[{b:"Great, I'll note it for the agent. Would you like to book a viewing?"},{s:"Qualified lead: purchase, mortgage approved",i:"person"},{c:[{l:"Yes, let's book",n:"prenota"}]}]},{l:"Still looking into it",n:[{b:"No problem: the agency can tell you who to contact. I'll note it for the agent. Would you like to book a viewing?"},{s:"Qualified lead: purchase, mortgage to be assessed",i:"person"},{c:[{l:"Yes, let's book",n:"prenota"}]}]}]}]},
-          {l:"Rent",n:[{b:"This property is for sale, but the agency also has homes to rent. Could you tell me the area and your monthly budget? I'll pass your request to an agent who will send you options."},{s:"Rental request passed to an agent",i:"person"}]}]}],
-      prenota:[{u:"Can I see the house this Saturday?"},
-        {b:"Certainly. On Saturday the agent is free at 10:00 or 11:30. Which do you prefer?"},
-        {c:[{l:"10:00",n:[{b:"Confirmed: Saturday at 10:00. On Friday you'll receive the exact address and the name of the agent here."},{s:"Viewing added to the agent's calendar",i:"cal"}]},{l:"11:30",n:[{b:"Confirmed: Saturday at 11:30. On Friday you'll receive the exact address and the name of the agent here."},{s:"Viewing added to the agent's calendar",i:"cal"}]}]}],
-      notte:[{s:"23:10 · agency closed",i:"moon"},
-        {u:"I saw the listing for the detached house, does it have a garden? Could I see it?",t:"23:10"},
-        {b:"Good evening! Yes, the house has a garden of about 200 m² and a covered parking space. I can arrange a viewing: when are you planning to move?",t:"23:10"},
-        {c:[{l:"Within 3 months",n:[{b:"Thank you. Tomorrow morning an agent will call you to set the viewing: before 10 or after 12?",t:"23:11"},{c:[{l:"Before 10",n:[{b:"Noted: call back tomorrow before 10. Have a good evening!",t:"23:11"},{s:"Call back scheduled for tomorrow morning",i:"cal"}]},{l:"After 12",n:[{b:"Noted: call back tomorrow after 12. Have a good evening!",t:"23:11"},{s:"Call back scheduled for tomorrow",i:"cal"}]}]}]},{l:"Just browsing",n:[{b:"No problem. Would you like me to send you similar homes when they come up? I'll only write if you confirm.",t:"23:11"}]}]}],
-      umano:[{u:"I'd like a valuation of my home, I'm thinking of selling."},
-        {b:"With pleasure. A valuation needs an agent to see the property. Could you tell me the area and type of home? I'll pass on your request with a summary."},
-        {u:"A four-room flat in the north of town."},
-        {b:"Thank you. I've passed your request on: an agent will contact you by tomorrow to arrange a visit."},
-        {s:"Valuation request passed to an agent",i:"person"}]
-    },
-    ricettivo:{
-      name:"Elena · Seaside B&B (example)",
-      hello:"Welcome! I'm Elena, the property's virtual assistant. I can answer questions about availability, check-in and services, in English, German and Italian. How can I help?",
-      faq:[{u:"Hi! What time is check-in? Is there parking?"},
-        {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
-        {u:"Do you accept dogs?"},
-        {b:"Yes, small dogs are welcome, with a cleaning supplement. I'll note it on the booking so we can prepare the room."}],
-      prenota:[{u:"Do you have a double room free from the 20th to the 23rd?"},
-        {b:"For those dates there is a double room with sea view. Would you like to book online now or get a quote from the owner?"},
-        {c:[{l:"Book online",n:[{b:"Here is the link to the property's booking system, with your dates already filled in. If you have special requests, just write them here."},{s:"Booking link sent (property's booking system)",i:"cal"}]},{l:"I'd like a quote",n:[{b:"All right. I've passed your request to the owner with dates and guests: you'll receive the quote here today."},{s:"Quote request passed to the owner",i:"person"}]}]}],
-      notte:[{s:"01:15 · reception closed",i:"moon"},
-        {u:"We're arriving late, around 1:30. How do we get the keys?",t:"01:15"},
-        {b:"No problem! At the entrance there's a key box: the code will arrive here 30 minutes before you arrive. Your room is on the first floor, and the stair lights switch on automatically.",t:"01:15"},
-        {b:"Breakfast is served until 10:30 tomorrow. Safe travels!",t:"01:15"},
-        {s:"Late arrival reported to staff",i:"person"}],
-      umano:[{u:"Sorry, there's no hot water in our room."},
-        {b:"I'm very sorry. I've alerted the staff on call, who will contact you in a few minutes. Could you confirm your room number?"},
-        {c:[{l:"Room 3",n:[{b:"Thank you, room 3 reported. Staff are on their way."},{s:"Issue passed to staff on call",i:"person"}]},{l:"Room 5",n:[{b:"Thank you, room 5 reported. Staff are on their way."},{s:"Issue passed to staff on call",i:"person"}]}]}]
-    }
-  };
   var UI = {
     it:{day:"Oggi · conversazione dimostrativa", more:["Domande frequenti","Appuntamento","Fuori orario","Passa a una persona"], copy:"Copia indirizzo", copied:"Copiato", selected:"Indirizzo selezionato", ph:"Scriva una domanda…", typing:"L'assistente sta scrivendo",
       fb1:"Su questo non ho un'informazione certa e preferisco non inventare. Passo la Sua domanda allo staff con il riepilogo della conversazione: Le rispondono appena possibile.", fb2:"Domanda senza risposta passata a una persona", fb3:"(Nota della demo: qui le risposte sono preimpostate. Provi i pulsanti qui sotto o domande su orari, appuntamenti, urgenze.)", title:"Celea · receptionist AI",
+      live:{lead:"Lasci il Suo numero: {n} La chiama sul cellulare in pochi secondi. Sente la voce vera dell'assistente e può fare tutte le domande che vuole, anche le più difficili.", btn:"Mi chiami", sending:"Avvio la chiamata…", ok:"Fatto! {n} La chiama tra pochi secondi. Risponda pure: è la chiamata dimostrativa.", errTel:"Scriva un numero italiano, per esempio 333 123 4567.", errOk:"Per ricevere la chiamata serve la spunta del consenso.", errCf:"Completi prima la verifica anti-bot.", limit:"Ha già usato le prove disponibili. Per una prova sul Suo caso, con i Suoi dati, ci scriva: la prepariamo noi.", day:"Per oggi le prove sono finite: riprovi domani, oppure ci scriva.", hours:"Le chiamate di prova partono dalle 8 alle 21: riprovi in quell'orario.", err:"Non sono riuscito ad avviare la chiamata. Riprovi tra poco."},
       form:{subj:"Richiesta prova gratuita Celea", l1:"Nome", l2:"Attività", l4:"Telefono", l5:"Settore", l6:"Richiesta", l7:"Consenso a informazioni commerciali", yes:"sì", no:"no"}},
     en:{day:"Today · demo conversation", more:["FAQ","Appointment","After hours","Talk to a person"], copy:"Copy address", copied:"Copied", selected:"Address selected", ph:"Type a question…", typing:"The assistant is typing",
       fb1:"I don't have reliable information on this and I'd rather not make it up. I'm passing your question to the staff with a summary of our conversation: they'll reply as soon as possible.", fb2:"Unanswered question passed to a person", fb3:"(Demo note: replies here are pre-set. Try the buttons below or questions about opening hours, appointments, emergencies.)", title:"Celea · AI receptionist",
+      live:{lead:"Leave your number: {n} will call your mobile in a few seconds. You'll hear the assistant's real voice and can ask anything you like, even the tricky questions.", btn:"Call me", sending:"Starting the call…", ok:"Done! {n} will call you in a few seconds. Do pick up: it's the demo call.", errTel:"Please enter an Italian number, for example 333 123 4567.", errOk:"Please tick the consent box to receive the call.", errCf:"Please complete the anti-bot check first.", limit:"You've already used the available trials. For a trial on your own case, with your details, write to us and we'll set it up.", day:"Today's trials are used up: try again tomorrow, or write to us.", hours:"Demo calls run from 8 am to 9 pm Italian time: please try again then.", err:"I couldn't start the call. Please try again shortly."},
       form:{subj:"Celea free trial request", l1:"Name", l2:"Business", l4:"Phone", l5:"Sector", l6:"Request", l7:"Consent to commercial information", yes:"yes", no:"no"}},
     de:{day:"Heute · Demo-Gespräch", more:["Häufige Fragen","Termin","Außerhalb der Zeiten","Mit einem Menschen"], copy:"Adresse kopieren", copied:"Kopiert", selected:"Adresse markiert", ph:"Schreiben Sie eine Frage…", typing:"Der Assistent schreibt",
       fb1:"Dazu habe ich keine gesicherte Information und möchte nichts erfinden. Ich gebe Ihre Frage mit einer Zusammenfassung des Gesprächs an das Team weiter: Sie erhalten so bald wie möglich eine Antwort.", fb2:"Unbeantwortete Frage an einen Menschen übergeben", fb3:"(Hinweis zur Demo: Die Antworten hier sind vorbereitet. Probieren Sie die Schaltflächen unten oder Fragen zu Öffnungszeiten, Terminen, Notfällen.)", title:"Celea · KI-Rezeption",
+      live:{lead:"Hinterlassen Sie Ihre Nummer: {n} ruft Sie in wenigen Sekunden auf dem Handy an. Sie hören die echte Stimme der Assistenz und können alles fragen, auch schwierige Fragen.", btn:"Rufen Sie mich an", sending:"Der Anruf wird gestartet…", ok:"Erledigt! {n} ruft Sie in wenigen Sekunden an. Nehmen Sie ruhig ab: Es ist der Demo-Anruf.", errTel:"Bitte geben Sie eine italienische Nummer ein, zum Beispiel 333 123 4567.", errOk:"Bitte setzen Sie das Häkchen zur Einwilligung.", errCf:"Bitte schließen Sie zuerst die Anti-Bot-Prüfung ab.", limit:"Sie haben die verfügbaren Tests schon genutzt. Für einen Test mit Ihren eigenen Daten schreiben Sie uns: Wir richten ihn ein.", day:"Die Tests für heute sind aufgebraucht: Versuchen Sie es morgen wieder oder schreiben Sie uns.", hours:"Demo-Anrufe gibt es von 8 bis 21 Uhr italienischer Zeit: Bitte versuchen Sie es dann erneut.", err:"Der Anruf konnte nicht gestartet werden. Bitte versuchen Sie es gleich noch einmal."},
       form:{subj:"Anfrage kostenlose Testphase Celea", l1:"Name", l2:"Betrieb", l4:"Telefon", l5:"Branche", l6:"Anfrage", l7:"Einwilligung zu Werbeinformationen", yes:"ja", no:"nein"}}
   };
   var EN = {
@@ -1225,9 +1149,13 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "s2":"<strong>Appointment</strong><span>picks a time and confirms</span>",
     "s3":"<strong>After hours</strong><span>a message at night</span>",
     "s4":"<strong>Talk to a person</strong><span>when staff are needed</span>",
-    "d-flag":"Demo: example businesses and pre-set replies. Nothing you type is sent or saved. Sofia, Marco and Elena are example names: the real assistant is set up with your own business details and the name you choose. In Italian, English and German as standard.",
+    "d-flag":"Demo with made-up businesses and pre-set replies, following the same rules as the assistant on the phone and on WhatsApp. Nothing you type here is sent or saved. Sofia, Marco and Elena are example names: the real assistant uses your business details and the name you choose. In Italian, English and German as standard.",
+    "d-custom":"<strong>Every reply is set up the way you want.</strong> Opening hours, prices, tone, what to say and what not to say, who to hand the conversation to and how quickly to call back: you decide. We set it up and test it with you before it goes live.",
+    "d-ll":"3. Try it live, on the phone", "d-ltel":"Your mobile number",
+    "d-lok":"I agree to receive a single demo call on this number. The number is used only for the call and for the trial limit (see <a href=\"#privacy\">privacy</a>).",
+    "d-lnote":"Free trial · at most 2 trials per connection · Italian numbers only · 8 am to 9 pm · a short call that ends by itself",
     "d-sub":"Virtual assistant · demo", "d-restart":"Restart",
-    "d-hint":"Try for example: “what are your opening hours?”, “I'd like an appointment”, “can I talk to someone?”",
+    "d-hint":"Try for example: “I have a terrible toothache”, “I'd like an appointment”, “are you a robot?”, “can you give me a discount?”",
     "c-head":'<p class="eyebrow">How it works</p><h2 id="come-t">Live in two weeks, no technical work for you</h2>',
     "c-steps":'<li><div><h3>Tell us about your business</h3><p>In one call we collect opening hours, services, frequent questions, your preferred tone, what the assistant must not say and who to hand over to.</p><span class="when">45-minute call</span></div></li><li><div><h3>We build it and test it together</h3><p>We set up the assistant on WhatsApp and on the phone. Then you ask all the tricky questions you like and we fine-tune it.</p><span class="when">30-minute joint test</span></div></li><li><div><h3>It starts after hours first</h3><p>The first 30 days are a free trial (up to 100 call minutes). At first it only answers in the evening and at weekends, with a daily summary. When you are happy, it answers all the time. Every month you get a report.</p><span class="when">Live in 14 days</span></div></li>',
     "p-head":'<p class="eyebrow">Who it\'s for</p><h2 id="chi-t">Built for three businesses where the phone never stops ringing</h2>',
@@ -1245,72 +1173,11 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "f-list":'<details><summary>Do my customers know they are talking to an AI?</summary><div class="ans"><p>Yes. The assistant always introduces itself as a virtual assistant, as required by the EU rules on artificial intelligence (AI Act). At any time the customer can ask to speak to a person.</p></div></details><details><summary>What happens if the assistant doesn\'t know the answer?</summary><div class="ans"><p>It doesn\'t make things up. It says it will check, collects the request and passes it to the person you have chosen, with a summary. The same happens for emergencies, complaints and delicate cases.</p><p>Unanswered questions appear in your summary: we add them, so next time the assistant knows the answer.</p></div></details><details><summary>How is my customers\' data handled? Is it GDPR compliant?</summary><div class="ans"><p>Celea processes data on your behalf, as data processor: we sign an agreement under Art. 28 GDPR before starting. Data is only used to reply, book appointments and pass requests to your staff.</p><p>We provide a sample text to update your privacy notice, to be checked by your own adviser.</p></div></details><details><summary>Can a dental practice use it? What about health data?</summary><div class="ans"><p>Yes, with clear rules: the assistant gives no medical advice and makes no diagnosis. For pain or emergencies it passes the patient straight to the practice or gives the emergency number. It handles appointments and practical information, asking only for the data needed.</p></div></details><details><summary>Do I need to change my number or software?</summary><div class="ans"><p>No. We look together at how to connect the WhatsApp and phone you already use: for example, calls the practice doesn\'t answer can go to the assistant. Appointment requests reach your front desk as a booking card to confirm or, if you prefer, an online calendar such as Google Calendar; for hospitality businesses the assistant sends the link to your booking system.</p></div></details><details><summary>Does it connect to my practice management software?</summary><div class="ans"><p>You don\'t need to change your software. Today the assistant collects the request and your front desk confirms it; during the free trial we can connect it to an online calendar such as Google Calendar. A direct link to your management software depends on the vendor: we check it together, case by case, without promising dates.</p><p>Your front desk receives a card like this (made-up data):</p><div class="scheda" role="img" aria-label="Example booking card"><span class="scheda-tag">example</span><b>Dental practice · new appointment · normal priority</b><span><i>Name</i> Giulia Example</span><span><i>Phone</i> +39 333 000 0000 · channel: phone</span><span><i>Reason</i> hygiene</span><span><i>Preference</i> Tuesday afternoon</span><span><i>Notes</i> first time at the practice; asks for confirmation on WhatsApp</span></div></div></details><details><summary>Does it replace my receptionist?</summary><div class="ans"><p>No. It takes repetitive questions off her plate and covers the hours when nobody is there. People remain the reference point for everything that needs attention.</p></div></details><details><summary>Which languages does it speak?</summary><div class="ans"><p>Italian, English and German, included in every package: useful if you work with tourists and foreign clients. Other languages can be added at no extra cost, only after our own test confirms the quality. In every language the assistant says it is a virtual assistant.</p></div></details><details><summary>Do you only work in Sicily?</summary><div class="ans"><p>No. Celea is based in Sicily and works with businesses across Italy and abroad. Setup, testing and support are done remotely, by video call and on WhatsApp.</p></div></details><details><summary>Are there other costs besides the monthly fee?</summary><div class="ans"><p>Only WhatsApp messages, which you pay directly to Meta with no mark-up from us. No hidden costs: extra minutes €0.25/min and premium voice from €79/month only if you use or choose them. Full details in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details><details><summary>When can the service start?</summary><div class="ans"><p>The demo is available now. Activations, with the free 30-day trial, start from November–December 2026: after the demo we send you a proposal and agree the start date together.</p></div></details><details><summary>Do you also build websites?</summary><div class="ans"><p>Yes: from a one-page landing page (€290 + €19/month) to a 5-page showcase website (€590 + €29/month, or included in the Pro + website plan at €249/month) and a premium website in Italian, English and German (€1,190 + €49/month), with the assistant built in if you wish. The domain is always registered in your name and its yearly renewal is not included in the fee. All prices are in the <a href=\"#prezzi\">Pricing</a> section.</p></div></details>',
     "about":'<p class="eyebrow">About us</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Born in Sicily, working everywhere</h2><p>Celea was founded by William and is based in Sicily. We work with dental practices, real estate agencies and hospitality businesses across Italy and abroad, by video call and on WhatsApp.</p><p>Our symbol is two arcs, one embracing the other, and a dot: the answer that arrives. That is how we want to treat your customers, calmly and with care, at any hour.</p><p>We set up and look after every assistant ourselves. You have a single point of contact who knows your business.</p>',
     "contact":'<h3>Book your free trial or a short call</h3><p>Fill in the form: your email app opens with the request already written, to send to team.celea@gmail.com. We reply within one working day.</p><form class="tform" id="trial-form" novalidate><label><span>Full name</span><input name="nome" autocomplete="name" required></label><label><span>Business</span><input name="attivita" autocomplete="organization" required></label><label><span>Email</span><input type="email" name="email" autocomplete="email" required></label><label><span>Phone</span><input type="tel" name="tel" autocomplete="tel"></label><label><span>Sector</span><select name="settore"><option>Dental practice</option><option>Real estate agency</option><option>B&amp;B, holiday rental or hotel</option><option>Other</option></select></label><label><span>What would you like</span><select name="cosa"><option>Free trial</option><option>Short call</option></select></label><label class="chk"><input type="checkbox" name="consenso"><span>I agree to receive commercial information from Celea by email and WhatsApp; I can withdraw at any time by writing STOP.</span></label><p class="tiny">The form data (name, business, email, phone, sector) is used only to reply to you and organise the trial; if nothing follows, we keep it for 12 months. The consent above is optional and only needed to send you promotional material. No tracking cookies. Full privacy notice: <a href="https://www.celea.it/privacy/#en">celea.it/privacy</a>.</p><button class="btn btn-light" type="submit">Prepare the email</button><div class="tout" id="tf-out" hidden><p>If your email app does not open, copy this text and send it to team.celea@gmail.com:</p><textarea id="tf-text" rows="7" readonly></textarea></div></form><div class="row"><span class="k">Email</span><span class="v" id="email">team.celea@gmail.com</span><button class="copy" type="button" id="copy-email">Copy address</button></div><div class="row"><span class="k">WhatsApp</span><span class="v">Number coming soon</span><span class="soon">Celea\'s WhatsApp number will be active soon. In the meantime, please email us.</span></div><div class="row"><span class="k">Where</span><span class="v">Based in Sicily · clients across Italy and abroad</span><span class="soon">Demos and meetings by video call.</span></div>',
-    "legal":'<p class="eyebrow">Legal</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Privacy and cookies</h2><details><summary>Privacy notice (summary)</summary><div class="body"><h4>Data controller</h4><p>Celea, by William. Contact: team.celea@gmail.com. Full business name, VAT number and address will be shown here and on the privacy page before the final launch.</p><h4>What data we process</h4><p>Only the data you send us yourself, through the form on this page, by email or on WhatsApp (name, business, contact details, sector, message content), to answer your request and organise the demo or the free trial. Legal basis: pre-contractual steps at your request (Art. 6(1)(b) GDPR). Promotional material only with the separate consent in the form, which you can withdraw by writing STOP.</p><h4>The demo on this page</h4><p>The demo chat runs only in your browser with pre-set replies: what you type is not sent to us or to third parties and is not saved.</p><h4>Retention and rights</h4><p>If nothing follows, we keep your request for 12 months. You can request access, rectification, erasure, restriction, objection and portability by writing to team.celea@gmail.com, and you can lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali). Full notice: <a href="https://www.celea.it/privacy/#en">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>This site uses no cookies: no tracking, profiling or analytics cookies and no advertising. Fonts are hosted on the site. The only thing stored in your browser is the language you choose (local storage, no cookies). Details on the <a href="https://www.celea.it/privacy/#en">privacy page</a>.</p></div></details>',
+    "legal":'<p class="eyebrow">Legal</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Privacy and cookies</h2><details><summary>Privacy notice (summary)</summary><div class="body"><h4>Data controller</h4><p>Celea, by William. Contact: team.celea@gmail.com. Full business name, VAT number and address will be shown here and on the privacy page before the final launch.</p><h4>What data we process</h4><p>Only the data you send us yourself, through the form on this page, by email or on WhatsApp (name, business, contact details, sector, message content), to answer your request and organise the demo or the free trial. Legal basis: pre-contractual steps at your request (Art. 6(1)(b) GDPR). Promotional material only with the separate consent in the form, which you can withdraw by writing STOP.</p><h4>The demo on this page</h4><p>The demo chat runs only in your browser with pre-set replies: what you type is not sent to us or to third parties and is not saved.</p><h4>The “Call me” trial</h4><p>When it is active, and only if you leave your number and tick the consent box, the number is used for a single demo call made by the virtual assistant through our telephony and AI providers (Retell AI, Twilio) and for the anti-bot check (Cloudflare Turnstile). To limit trials we keep only an encrypted fingerprint of the number and of the connection for 30 days, never the number itself. Legal basis: your request (Art. 6.1.b GDPR).</p><h4>Retention and rights</h4><p>If nothing follows, we keep your request for 12 months. You can request access, rectification, erasure, restriction, objection and portability by writing to team.celea@gmail.com, and you can lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali). Full notice: <a href="https://www.celea.it/privacy/#en">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>This site uses no cookies: no tracking, profiling or analytics cookies and no advertising. Fonts are hosted on the site. The only thing stored in your browser is the language you choose (local storage, no cookies). Details on the <a href="https://www.celea.it/privacy/#en">privacy page</a>.</p></div></details>',
     "ft-sign":"Celea · always answers, with care.",
     "ft-small":'AI receptionist on WhatsApp and phone for dental practices, real estate agencies and hospitality businesses, in Italy and abroad. Contact: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Privacy and cookies</a>'
   };
   // ---- Versione tedesca (contatti in Germania, Austria e Svizzera) ----
-  var D_DE = {
-    dentista:{
-      name:"Sofia · Zahnarztpraxis (Beispiel)",
-      hello:"Guten Morgen, ich bin Sofia, die virtuelle Assistentin der Praxis. Ich kann Ihnen Auskünfte geben, einen Termin vereinbaren oder verschieben oder Sie mit dem Praxisteam verbinden. Wie kann ich Ihnen helfen?",
-      faq:[{u:"Guten Tag, wann haben Sie geöffnet? Machen Sie auch Zahnreinigung?"},
-        {b:"Guten Tag! Die Praxis ist von Montag bis Freitag geöffnet, 9–13 und 15–19 Uhr. Ja, wir bieten professionelle Zahnreinigung an: Sie dauert etwa 45 Minuten."},
-        {b:"Soll ich Ihnen einen freien Termin vorschlagen?"},
-        {c:[{l:"Ja, gerne",n:"prenota"},{l:"Rechnen Sie mit meiner Versicherung ab?",n:[{b:"Die Praxis arbeitet mit einigen Versicherungen zusammen: Nennen Sie mir Ihre, und ich prüfe das. Steht sie nicht auf der Liste, gebe ich Ihre Frage an die Rezeption weiter, die sich während der Öffnungszeiten bei Ihnen meldet."},{s:"Frage für die Rezeption notiert",i:"person"}]}]}],
-      prenota:[{u:"Ich möchte einen Ersttermin vereinbaren."},
-        {b:"Gerne. Lieber vormittags oder nachmittags?"},
-        {c:[{l:"Vormittags",n:[{b:"Diese Termine sind frei: Dienstag um 9:30 oder Donnerstag um 11:00."},{c:[{l:"Dienstag 9:30",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Vorgemerkt, Frau Beispiel: Ersttermin am Dienstag um 9:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung. Zum Verschieben schreiben Sie mir einfach."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]},{l:"Donnerstag 11:00",n:[{b:"Perfekt. Darf ich Ihren Vor- und Nachnamen für die Buchung haben?"},{u:"Anna Beispiel"},{b:"Vorgemerkt, Frau Beispiel: Ersttermin am Donnerstag um 11:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]}]}]},
-          {l:"Nachmittags",n:[{b:"Diese Termine sind frei: Montag um 16:00 oder Mittwoch um 17:30."},{c:[{l:"Montag 16:00",n:[{b:"Vorgemerkt: Ersttermin am Montag um 16:00. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]},{l:"Mittwoch 17:30",n:[{b:"Vorgemerkt: Ersttermin am Mittwoch um 17:30. Am Vortag erhalten Sie hier auf WhatsApp eine Erinnerung."},{s:"Termin vorgemerkt: der Empfang bestätigt ihn",i:"cal"}]}]}]}]}],
-      notte:[{s:"22:47 · Praxis geschlossen",i:"moon"},
-        {u:"Hallo, mir ist eine Füllung herausgefallen und es ist etwas unangenehm. Können Sie mich morgen drannehmen?",t:"22:47"},
-        {b:"Das tut mir leid. Medizinische Ratschläge kann ich nicht geben: Wenn die Schmerzen stark werden, rufen Sie bitte die von der Praxis angegebene Notfallnummer an.",t:"22:47"},
-        {b:"Ich kann Ihnen schon jetzt einen Termin für morgen reservieren: um 9:00 oder um 12:30?",t:"22:47"},
-        {c:[{l:"Um 9:00",n:[{b:"Für morgen um 9:00 reserviert. Ich habe dem Zahnarzt mitgeteilt, dass es um eine verlorene Füllung geht, damit er vorab informiert ist.",t:"22:48"},{s:"Termin reserviert und Zahnarzt für morgen früh informiert",i:"cal"}]},{l:"Um 12:30",n:[{b:"Für morgen um 12:30 reserviert. Ich habe dem Zahnarzt mitgeteilt, dass es um eine verlorene Füllung geht.",t:"22:48"},{s:"Termin reserviert und Zahnarzt für morgen früh informiert",i:"cal"}]}]}],
-      umano:[{u:"Kann ich mit der Zahnärztin sprechen? Es geht um ihren Kostenvoranschlag."},
-        {b:"Natürlich. Bei Kostenvoranschlägen ist es am besten, wenn sich die Praxis direkt darum kümmert. Möchten Sie zurückgerufen werden oder lieber hier auf WhatsApp eine Antwort erhalten?"},
-        {c:[{l:"Bitte zurückrufen",n:[{b:"In Ordnung. Ich habe Ihre Anfrage mit einer Zusammenfassung an die Rezeption weitergegeben: Sie ruft Sie bis morgen Vormittag während der Öffnungszeiten zurück."},{s:"Gespräch an die Rezeption übergeben",i:"person"}]},{l:"Antwort hier",n:[{b:"In Ordnung. Ich habe Ihre Frage mit einer Zusammenfassung an die Zahnärztin weitergegeben: Sie antwortet Ihnen hier so bald wie möglich."},{s:"Gespräch an die Zahnärztin übergeben",i:"person"}]}]}]
-    },
-    immobiliare:{
-      name:"Marco · Immobilienagentur (Beispiel)",
-      hello:"Guten Morgen, ich bin Marco, der virtuelle Assistent der Agentur. Ich kann Ihnen Auskünfte zu den Immobilien geben, eine Besichtigung vereinbaren oder Sie mit einem Makler verbinden. Wie kann ich Ihnen helfen?",
-      faq:[{u:"Ist die Dreizimmerwohnung im Zentrum aus der Anzeige noch verfügbar?"},
-        {b:"Ja, die Wohnung im Zentrum ist noch verfügbar: drei Zimmer, zweiter Stock mit Aufzug, Balkon. Damit ich Ihnen besser helfen kann: Möchten Sie kaufen oder mieten?"},
-        {c:[{l:"Kaufen",n:[{b:"Danke. Benötigen Sie eine Finanzierung?"},{c:[{l:"Ja, schon bewilligt",n:[{b:"Sehr gut, ich notiere das für den Makler. Möchten Sie eine Besichtigung vereinbaren?"},{s:"Qualifizierter Kontakt: Kauf, Finanzierung bewilligt",i:"person"},{c:[{l:"Ja, gerne",n:"prenota"}]}]},{l:"Muss mich noch informieren",n:[{b:"Kein Problem: Die Agentur kann Ihnen sagen, an wen Sie sich wenden können. Ich notiere das für den Makler. Möchten Sie eine Besichtigung vereinbaren?"},{s:"Qualifizierter Kontakt: Kauf, Finanzierung offen",i:"person"},{c:[{l:"Ja, gerne",n:"prenota"}]}]}]}]},
-          {l:"Mieten",n:[{b:"Diese Immobilie steht zum Verkauf, aber die Agentur hat auch Mietobjekte. Nennen Sie mir Gegend und monatliches Budget? Ich gebe Ihre Anfrage an einen Makler weiter, der Ihnen passende Angebote schickt."},{s:"Mietanfrage an einen Makler weitergegeben",i:"person"}]}]}],
-      prenota:[{u:"Kann ich das Haus diesen Samstag besichtigen?"},
-        {b:"Gerne. Am Samstag hat der Makler um 10:00 oder um 11:30 Zeit. Was passt Ihnen besser?"},
-        {c:[{l:"Um 10:00",n:[{b:"Bestätigt: Samstag um 10:00. Am Freitag erhalten Sie hier die genaue Adresse und den Namen des Maklers, der Sie begleitet."},{s:"Besichtigung im Kalender des Maklers eingetragen",i:"cal"}]},{l:"Um 11:30",n:[{b:"Bestätigt: Samstag um 11:30. Am Freitag erhalten Sie hier die genaue Adresse und den Namen des Maklers, der Sie begleitet."},{s:"Besichtigung im Kalender des Maklers eingetragen",i:"cal"}]}]}],
-      notte:[{s:"23:10 · Agentur geschlossen",i:"moon"},
-        {u:"Ich habe die Anzeige für das Einfamilienhaus gesehen, hat es einen Garten? Könnte ich es besichtigen?",t:"23:10"},
-        {b:"Guten Abend! Ja, das Haus hat einen Garten von etwa 200 m² und einen überdachten Stellplatz. Ich kann Ihnen eine Besichtigung vereinbaren: Wann möchten Sie umziehen?",t:"23:10"},
-        {c:[{l:"In den nächsten 3 Monaten",n:[{b:"Danke. Morgen Vormittag ruft Sie ein Makler an, um die Besichtigung festzulegen: lieber vor 10 oder nach 12 Uhr?",t:"23:11"},{c:[{l:"Vor 10 Uhr",n:[{b:"Notiert: Rückruf morgen vor 10 Uhr. Einen schönen Abend!",t:"23:11"},{s:"Rückruf für morgen früh eingeplant",i:"cal"}]},{l:"Nach 12 Uhr",n:[{b:"Notiert: Rückruf morgen nach 12 Uhr. Einen schönen Abend!",t:"23:11"},{s:"Rückruf für morgen eingeplant",i:"cal"}]}]}]},{l:"Ich schaue nur",n:[{b:"Kein Problem. Soll ich Ihnen ähnliche Häuser schicken, sobald welche frei werden? Ich schreibe Ihnen nur, wenn Sie das bestätigen.",t:"23:11"}]}]}],
-      umano:[{u:"Ich möchte meine Wohnung bewerten lassen, ich denke über einen Verkauf nach."},
-        {b:"Sehr gerne. Für eine Bewertung muss ein Makler die Immobilie besichtigen. Nennen Sie mir Gegend und Art der Immobilie? Ich gebe Ihre Anfrage mit einer Zusammenfassung weiter."},
-        {u:"Eine Vierzimmerwohnung im Norden der Stadt."},
-        {b:"Danke. Ich habe Ihre Anfrage weitergegeben: Ein Makler meldet sich bis morgen bei Ihnen, um einen Besichtigungstermin zu vereinbaren."},
-        {s:"Bewertungsanfrage an einen Makler weitergegeben",i:"person"}]
-    },
-    ricettivo:{
-      name:"Elena · B&B am Meer (Beispiel)",
-      hello:"Herzlich willkommen! Ich bin Elena, die virtuelle Assistentin der Unterkunft. Ich beantworte Fragen zu Verfügbarkeit, Check-in und Leistungen, auf Deutsch, Englisch und Italienisch. Wie kann ich Ihnen helfen?",
-      faq:[{u:"Hi! What time is check-in? Is there parking?"},
-        {b:"Hello and welcome! Check-in is from 2 pm to 8 pm, with self check-in available for late arrivals. There is free parking about 100 metres from the entrance."},
-        {u:"Sind Hunde erlaubt?"},
-        {b:"Ja, kleine Hunde sind willkommen, gegen einen Reinigungszuschlag. Ich vermerke es bei der Buchung, damit wir das Zimmer vorbereiten."}],
-      prenota:[{u:"Haben Sie vom 20. bis 23. ein Doppelzimmer frei?"},
-        {b:"Für diese Daten ist ein Doppelzimmer mit Meerblick frei. Möchten Sie gleich online buchen oder ein Angebot vom Inhaber erhalten?"},
-        {c:[{l:"Online buchen",n:[{b:"Hier ist der Link zum Buchungssystem der Unterkunft, mit Ihren Daten bereits eingetragen. Besondere Wünsche schreiben Sie mir gern hier."},{s:"Buchungslink gesendet (Buchungssystem der Unterkunft)",i:"cal"}]},{l:"Ich möchte ein Angebot",n:[{b:"Gerne. Ich habe Ihre Anfrage mit Daten und Personenzahl an den Inhaber weitergegeben: Sie erhalten das Angebot noch heute hier."},{s:"Angebotsanfrage an den Inhaber weitergegeben",i:"person"}]}]}],
-      notte:[{s:"01:15 · Rezeption geschlossen",i:"moon"},
-        {u:"Wir kommen spät an, gegen halb zwei. Wie kommen wir an die Schlüssel?",t:"01:15"},
-        {b:"Kein Problem! Am Eingang finden Sie einen Schlüsselkasten: Den Code erhalten Sie hier 30 Minuten vor Ihrer Ankunft. Ihr Zimmer liegt im ersten Stock, das Treppenlicht schaltet sich automatisch ein.",t:"01:15"},
-        {b:"Frühstück gibt es morgen bis 10:30 Uhr. Gute Reise!",t:"01:15"},
-        {s:"Späte Ankunft an das Personal gemeldet",i:"person"}],
-      umano:[{u:"Entschuldigung, in unserem Zimmer gibt es kein warmes Wasser."},
-        {b:"Das tut mir sehr leid. Ich habe sofort das diensthabende Personal informiert, das sich in wenigen Minuten bei Ihnen meldet. Können Sie mir die Zimmernummer bestätigen?"},
-        {c:[{l:"Zimmer 3",n:[{b:"Danke, Zimmer 3 ist gemeldet. Das Personal ist unterwegs."},{s:"Problem an das diensthabende Personal übergeben",i:"person"}]},{l:"Zimmer 5",n:[{b:"Danke, Zimmer 5 ist gemeldet. Das Personal ist unterwegs."},{s:"Problem an das diensthabende Personal übergeben",i:"person"}]}]}]
-    }
-  };
   var DE = {
     "skip":"Zur Demo springen",
     "nav":'<a href="#demo">Demo</a><a href="#come-funziona">So funktioniert\'s</a><a href="#per-chi">Für wen</a><a href="#prezzi">Preise</a><a href="https://demo.celea.it/">Beispiele</a><a href="#domande">FAQ</a><a href="#contatti">Kontakt</a>',
@@ -1328,9 +1195,13 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "s2":"<strong>Termin</strong><span>wählt eine Uhrzeit und bestätigt</span>",
     "s3":"<strong>Außerhalb der Zeiten</strong><span>eine Nachricht in der Nacht</span>",
     "s4":"<strong>Mit einem Menschen</strong><span>wenn das Team gefragt ist</span>",
-    "d-flag":"Demo: Beispielbetriebe und vorbereitete Antworten. Nichts, was Sie schreiben, wird gesendet oder gespeichert. Sofia, Marco und Elena sind Beispielnamen: Der echte Assistent wird mit den Daten Ihres Betriebs und dem Namen Ihrer Wahl eingerichtet, standardmäßig auf Italienisch, Englisch und Deutsch.",
+    "d-flag":"Demo mit erfundenen Betrieben und vorbereiteten Antworten, nach denselben Regeln wie die Assistenz am Telefon und auf WhatsApp. Nichts, was Sie hier schreiben, wird gesendet oder gespeichert. Sofia, Marco und Elena sind Beispielnamen: Die echte Assistenz arbeitet mit den Daten Ihres Betriebs und dem Namen Ihrer Wahl, standardmäßig auf Italienisch, Englisch und Deutsch.",
+    "d-custom":"<strong>Jede Antwort wird so eingerichtet, wie Sie es möchten.</strong> Öffnungszeiten, Preise, Tonfall, was gesagt wird und was nicht, an wen das Gespräch übergeben wird und wie schnell zurückgerufen wird: Sie entscheiden. Wir richten alles ein und testen es mit Ihnen, bevor es startet.",
+    "d-ll":"3. Live testen, am Telefon", "d-ltel":"Ihre Handynummer",
+    "d-lok":"Ich bin einverstanden, einen einzigen Demo-Anruf unter dieser Nummer zu erhalten. Die Nummer dient nur dem Anruf und der Begrenzung der Tests (siehe <a href=\"#privacy\">Datenschutz</a>).",
+    "d-lnote":"Kostenloser Test · höchstens 2 Tests pro Verbindung · nur italienische Nummern · 8 bis 21 Uhr · kurzer Anruf, der von selbst endet",
     "d-sub":"Virtueller Assistent · Demo", "d-restart":"Neu starten",
-    "d-hint":"Probieren Sie zum Beispiel: „Wann haben Sie geöffnet?“, „Ich möchte einen Termin“, „Kann ich mit jemandem sprechen?“",
+    "d-hint":"Probieren Sie zum Beispiel: „Ich habe starke Zahnschmerzen“, „Ich möchte einen Termin“, „Sind Sie ein Roboter?“, „Bekomme ich einen Rabatt?“",
     "c-head":'<p class="eyebrow">So funktioniert\'s</p><h2 id="come-t">In zwei Wochen startklar, ohne technischen Aufwand für Sie</h2>',
     "c-steps":'<li><div><h3>Sie erzählen uns von Ihrem Betrieb</h3><p>In einem Gespräch erfassen wir Öffnungszeiten, Leistungen, häufige Fragen, den gewünschten Ton, was der Assistent nicht sagen darf und an wen er übergibt.</p><span class="when">Gespräch von 45 Minuten</span></div></li><li><div><h3>Wir richten ihn ein und testen ihn gemeinsam</h3><p>Wir richten den Assistenten auf WhatsApp und am Telefon ein. Dann stellen Sie alle schwierigen Fragen, die Sie möchten, und wir passen ihn an.</p><span class="when">Gemeinsamer Test von 30 Minuten</span></div></li><li><div><h3>Er startet, zuerst außerhalb der Öffnungszeiten</h3><p>Die ersten 30 Tage sind eine kostenlose Testphase (bis zu 100 Telefonminuten). Anfangs antwortet er nur abends und am Wochenende, mit einer täglichen Zusammenfassung. Wenn Sie zufrieden sind, antwortet er immer. Jeden Monat erhalten Sie einen Bericht.</p><span class="when">Startklar in 14 Tagen</span></div></li>',
     "p-head":'<p class="eyebrow">Für wen</p><h2 id="chi-t">Gemacht für drei Branchen, in denen das Telefon nie stillsteht</h2>',
@@ -1348,7 +1219,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "f-list":'<details><summary>Wissen meine Kunden, dass sie mit einer KI sprechen?</summary><div class="ans"><p>Ja. Der Assistent stellt sich immer als virtueller Assistent vor, wie es die EU-Regeln zur künstlichen Intelligenz (AI Act) verlangen. Der Kunde kann jederzeit verlangen, mit einem Menschen zu sprechen.</p></div></details><details><summary>Was passiert, wenn der Assistent keine Antwort weiß?</summary><div class="ans"><p>Er erfindet nichts. Er sagt, dass er nachfragt, nimmt die Anfrage auf und gibt sie mit einer Zusammenfassung an die Person weiter, die Sie bestimmt haben. Dasselbe gilt für Notfälle, Beschwerden und heikle Fälle.</p><p>Unbeantwortete Fragen erscheinen in Ihrer Zusammenfassung: Wir ergänzen sie, damit der Assistent beim nächsten Mal antworten kann.</p></div></details><details><summary>Wie werden die Daten meiner Kunden behandelt? Ist das DSGVO-konform?</summary><div class="ans"><p>Celea verarbeitet die Daten in Ihrem Auftrag, als Auftragsverarbeiter: Vor dem Start unterzeichnen wir einen Vertrag nach Art. 28 DSGVO. Die Daten dienen nur dazu, zu antworten, Termine zu vereinbaren und Anfragen an Ihr Team weiterzugeben.</p><p>Wir stellen Ihnen einen Mustertext zur Aktualisierung Ihrer Datenschutzerklärung bereit, den Ihr eigener Berater prüfen sollte.</p></div></details><details><summary>Kann eine Zahnarztpraxis ihn nutzen? Und die Gesundheitsdaten?</summary><div class="ans"><p>Ja, mit klaren Regeln: Der Assistent gibt keine medizinischen Ratschläge und stellt keine Diagnosen. Bei Schmerzen oder Notfällen verweist er sofort an die Praxis oder nennt die Notfallnummer. Er kümmert sich um Termine und praktische Informationen und fragt nur die nötigen Daten ab.</p></div></details><details><summary>Muss ich meine Nummer oder meine Software wechseln?</summary><div class="ans"><p>Nein. Wir prüfen gemeinsam, wie WhatsApp und das Telefon, die Sie schon nutzen, angebunden werden: Zum Beispiel können Anrufe, die die Praxis nicht annimmt, an den Assistenten gehen. Terminanfragen erreichen Ihren Empfang als Buchungskarte zur Bestätigung oder, wenn Sie möchten, einen Online-Kalender wie Google Kalender; Beherbergungsbetrieben schickt der Assistent den Link zu ihrem Buchungssystem.</p></div></details><details><summary>Lässt er sich mit meiner Praxissoftware verbinden?</summary><div class="ans"><p>Sie müssen Ihre Software nicht wechseln. Heute nimmt der Assistent die Anfrage auf und Ihr Empfang bestätigt sie; in der kostenlosen Testphase können wir ihn mit einem Online-Kalender wie Google Kalender verbinden. Eine direkte Verbindung zu Ihrer Verwaltungssoftware hängt vom Hersteller ab: Wir prüfen das gemeinsam, Fall für Fall, ohne Termine zu versprechen.</p><p>Ihr Empfang erhält eine Buchungskarte wie diese (erfundene Daten):</p><div class="scheda" role="img" aria-label="Beispiel einer Buchungskarte"><span class="scheda-tag">Beispiel</span><b>Zahnarztpraxis · neuer Termin · Priorität normal</b><span><i>Name</i> Giulia Beispiel</span><span><i>Telefon</i> +39 333 000 0000 · Kanal: Telefon</span><span><i>Anliegen</i> Prophylaxe</span><span><i>Wunsch</i> Dienstagnachmittag</span><span><i>Hinweise</i> zum ersten Mal in der Praxis; bittet um Bestätigung per WhatsApp</span></div></div></details><details><summary>Ersetzt er meine Empfangskraft?</summary><div class="ans"><p>Nein. Er nimmt ihr wiederkehrende Fragen ab und deckt die Stunden ab, in denen niemand da ist. Menschen bleiben der Bezugspunkt für alles, was Aufmerksamkeit braucht.</p></div></details><details><summary>In welchen Sprachen antwortet er?</summary><div class="ans"><p>Auf Italienisch, Englisch und Deutsch, in jedem Paket enthalten: nützlich, wenn Sie mit Touristen und internationalen Kunden arbeiten. Weitere Sprachen fügen wir ohne Aufpreis hinzu, erst nachdem ein eigener Test die Qualität bestätigt hat. In jeder Sprache sagt der Assistent, dass er ein virtueller Assistent ist.</p></div></details><details><summary>Arbeiten Sie nur in Sizilien?</summary><div class="ans"><p>Nein. Celea hat seinen Sitz in Sizilien und arbeitet mit Betrieben in ganz Italien und im Ausland. Einrichtung, Test und Support erfolgen aus der Ferne, per Videocall und WhatsApp.</p></div></details><details><summary>Gibt es neben der Monatsgebühr weitere Kosten?</summary><div class="ans"><p>Nur die WhatsApp-Nachrichten, die Sie direkt an Meta zahlen, ohne Aufschlag von uns. Keine versteckten Kosten: zusätzliche Minuten 0,25 €/Min. und Premium-Stimme ab 79 €/Monat nur, wenn Sie sie nutzen oder wählen. Alle Details im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details><details><summary>Wann kann der Dienst starten?</summary><div class="ans"><p>Die Demo ist sofort verfügbar. Die Dienste starten, mit 30 Tagen kostenloser Testphase, ab November–Dezember 2026: Nach der Demo senden wir Ihnen ein Angebot und legen den Starttermin gemeinsam fest.</p></div></details><details><summary>Erstellen Sie auch Websites?</summary><div class="ans"><p>Ja: von der Landingpage mit einer Seite (290 € + 19 €/Monat) über die Präsentations-Website mit 5 Seiten (590 € + 29 €/Monat, oder im Plan Pro + Website für 249 €/Monat enthalten) bis zur Premium-Website auf Italienisch, Englisch und Deutsch (1.190 € + 49 €/Monat), auf Wunsch mit integriertem Assistenten. Die Domain wird immer auf Sie registriert, die jährliche Verlängerung ist nicht in der Gebühr enthalten. Alle Preise im Bereich <a href=\"#prezzi\">Preise</a>.</p></div></details>',
     "about":'<p class="eyebrow">Über uns</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Geboren in Sizilien, im Einsatz überall</h2><p>Celea wurde von William gegründet und hat seinen Sitz in Sizilien. Wir arbeiten mit Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetrieben in ganz Italien und im Ausland, per Videocall und WhatsApp.</p><p>Unser Symbol sind zwei Bögen, einer umarmt den anderen, und ein Punkt: die Antwort, die ankommt. So möchten wir Ihre Kunden behandeln, ruhig und sorgfältig, zu jeder Stunde.</p><p>Wir richten jeden Assistenten selbst ein und betreuen ihn. Sie haben einen festen Ansprechpartner, der Ihren Betrieb kennt.</p>',
     "contact":'<h3>Kostenlose Testphase oder kurzes Gespräch buchen</h3><p>Füllen Sie das Formular aus: Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an team.celea@gmail.com. Wir antworten innerhalb eines Werktags.</p><form class="tform" id="trial-form" novalidate><label><span>Vor- und Nachname</span><input name="nome" autocomplete="name" required></label><label><span>Betrieb</span><input name="attivita" autocomplete="organization" required></label><label><span>E-Mail</span><input type="email" name="email" autocomplete="email" required></label><label><span>Telefon</span><input type="tel" name="tel" autocomplete="tel"></label><label><span>Branche</span><select name="settore"><option>Zahnarztpraxis</option><option>Immobilienagentur</option><option>B&amp;B, Ferienwohnung oder Hotel</option><option>Andere</option></select></label><label><span>Was möchten Sie</span><select name="cosa"><option>Kostenlose Testphase</option><option>Kurzes Gespräch</option></select></label><label class="chk"><input type="checkbox" name="consenso"><span>Ich bin einverstanden, von Celea Werbeinformationen per E-Mail und WhatsApp zu erhalten; ich kann dies jederzeit mit STOP widerrufen.</span></label><p class="tiny">Die Formulardaten (Name, Betrieb, E-Mail, Telefon, Branche) dienen nur der Antwort und der Organisation der Testphase; kommt nichts zustande, bewahren wir sie 12 Monate auf. Die Einwilligung oben ist freiwillig und nur für Werbematerial nötig. Keine Tracking-Cookies. Vollständige Datenschutzhinweise: <a href="https://www.celea.it/privacy/#de">celea.it/privacy</a>.</p><button class="btn btn-light" type="submit">E-Mail vorbereiten</button><div class="tout" id="tf-out" hidden><p>Falls sich Ihr E-Mail-Programm nicht öffnet, kopieren Sie diesen Text und senden Sie ihn an team.celea@gmail.com:</p><textarea id="tf-text" rows="7" readonly></textarea></div></form><div class="row"><span class="k">E-Mail</span><span class="v" id="email">team.celea@gmail.com</span><button class="copy" type="button" id="copy-email">Adresse kopieren</button></div><div class="row"><span class="k">WhatsApp</span><span class="v">Nummer folgt in Kürze</span><span class="soon">Die WhatsApp-Nummer von Celea ist bald aktiv. Schreiben Sie uns bis dahin per E-Mail.</span></div><div class="row"><span class="k">Wo</span><span class="v">Sitz in Sizilien · Kunden in ganz Italien und im Ausland</span><span class="soon">Demos und Termine per Videocall.</span></div>',
-    "legal":'<p class="eyebrow">Rechtliches</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Datenschutz und Cookies</h2><details><summary>Datenschutzhinweise (Kurzfassung)</summary><div class="body"><h4>Verantwortlicher</h4><p>Celea, von William. Kontakt: team.celea@gmail.com. Vollständiger Firmenname, USt-IdNr. und Anschrift werden hier und auf der Datenschutzseite vor dem endgültigen Start angegeben.</p><h4>Welche Daten wir verarbeiten</h4><p>Nur die Daten, die Sie uns selbst senden, über das Formular auf dieser Seite, per E-Mail oder WhatsApp (Name, Betrieb, Kontaktdaten, Branche, Inhalt der Nachricht), um Ihre Anfrage zu beantworten und die Demo oder die kostenlose Testphase zu organisieren. Rechtsgrundlage: vorvertragliche Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Werbematerial nur mit der gesonderten Einwilligung im Formular, widerrufbar mit STOP.</p><h4>Die Demo auf dieser Seite</h4><p>Der Demo-Chat läuft nur in Ihrem Browser mit vorbereiteten Antworten: Was Sie schreiben, wird weder an uns noch an Dritte gesendet und nicht gespeichert.</p><h4>Speicherung und Rechte</h4><p>Kommt nichts zustande, bewahren wir Ihre Anfrage 12 Monate auf. Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen, indem Sie an team.celea@gmail.com schreiben, und Beschwerde bei der italienischen Datenschutzbehörde (Garante per la protezione dei dati personali) einlegen. Vollständige Hinweise: <a href="https://www.celea.it/privacy/#de">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>Diese Website verwendet keine Cookies: keine Tracking-, Profiling- oder Statistik-Cookies und keine Werbung. Die Schriftarten werden auf der Website bereitgestellt. Das Einzige, was in Ihrem Browser gespeichert wird, ist die gewählte Sprache (lokaler Speicher, ohne Cookies). Details auf der <a href="https://www.celea.it/privacy/#de">Datenschutzseite</a>.</p></div></details>',
+    "legal":'<p class="eyebrow">Rechtliches</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Datenschutz und Cookies</h2><details><summary>Datenschutzhinweise (Kurzfassung)</summary><div class="body"><h4>Verantwortlicher</h4><p>Celea, von William. Kontakt: team.celea@gmail.com. Vollständiger Firmenname, USt-IdNr. und Anschrift werden hier und auf der Datenschutzseite vor dem endgültigen Start angegeben.</p><h4>Welche Daten wir verarbeiten</h4><p>Nur die Daten, die Sie uns selbst senden, über das Formular auf dieser Seite, per E-Mail oder WhatsApp (Name, Betrieb, Kontaktdaten, Branche, Inhalt der Nachricht), um Ihre Anfrage zu beantworten und die Demo oder die kostenlose Testphase zu organisieren. Rechtsgrundlage: vorvertragliche Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Werbematerial nur mit der gesonderten Einwilligung im Formular, widerrufbar mit STOP.</p><h4>Die Demo auf dieser Seite</h4><p>Der Demo-Chat läuft nur in Ihrem Browser mit vorbereiteten Antworten: Was Sie schreiben, wird weder an uns noch an Dritte gesendet und nicht gespeichert.</p><h4>Der Test „Rufen Sie mich an“</h4><p>Wenn er aktiv ist und nur wenn Sie Ihre Nummer mit Häkchen zur Einwilligung hinterlassen, wird die Nummer für einen einzigen Demo-Anruf der virtuellen Assistenz über unsere Telefonie- und KI-Dienstleister (Retell AI, Twilio) und für die Anti-Bot-Prüfung (Cloudflare Turnstile) verwendet. Zur Begrenzung der Tests speichern wir 30 Tage lang nur einen verschlüsselten Fingerabdruck der Nummer und der Verbindung, nie die Nummer selbst. Rechtsgrundlage: Ihre Anfrage (Art. 6.1.b DSGVO).</p><h4>Speicherung und Rechte</h4><p>Kommt nichts zustande, bewahren wir Ihre Anfrage 12 Monate auf. Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen, indem Sie an team.celea@gmail.com schreiben, und Beschwerde bei der italienischen Datenschutzbehörde (Garante per la protezione dei dati personali) einlegen. Vollständige Hinweise: <a href="https://www.celea.it/privacy/#de">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>Diese Website verwendet keine Cookies: keine Tracking-, Profiling- oder Statistik-Cookies und keine Werbung. Die Schriftarten werden auf der Website bereitgestellt. Das Einzige, was in Ihrem Browser gespeichert wird, ist die gewählte Sprache (lokaler Speicher, ohne Cookies). Details auf der <a href="https://www.celea.it/privacy/#de">Datenschutzseite</a>.</p></div></details>',
     "ft-sign":"Celea · antwortet immer, mit Sorgfalt.",
     "ft-small":'KI-Rezeption auf WhatsApp und am Telefon für Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetriebe, in Italien und im Ausland. Kontakt: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Datenschutz und Cookies</a>'
   };
@@ -1356,7 +1227,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   var tplDe=document.getElementById("tpl-price-de"); if(tplDe) DE.price = tplDe.innerHTML;
   var lang = "it", IT = {};
   document.querySelectorAll("[data-i18n]").forEach(function(el){ IT[el.dataset.i18n] = el.innerHTML; });
-  function cur(){ return lang==="en" ? D_EN : (lang==="de" ? D_DE : D_IT); }
+  function cur(){ return DEMO[lang] || DEMO.it; }
   function applyLang(l, user){
     lang = (l==="en"||l==="de") ? l : "it";
     document.documentElement.lang = lang;
@@ -1369,6 +1240,40 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     input.placeholder = UI[lang].ph;
     var bar = document.getElementById("langbar"); if(bar && lang!=="it") bar.hidden = true;
     if(user){ try{ localStorage.setItem("celea-lang", lang); }catch(e){} }
+  }
+
+  // ---- Prova dal vivo: il visitatore lascia il numero e l'assistente lo chiama. I limiti li controlla il Worker. ----
+  var liveBox=document.getElementById("live"), liveLead=document.getElementById("live-lead"), liveBtnT=document.getElementById("live-btn-t");
+  var liveForm=document.getElementById("live-form"), liveMsg=document.getElementById("live-msg"), liveTel=document.getElementById("live-tel"), liveOk=document.getElementById("live-ok");
+  var cfId=null, liveBusy=false;
+  function liveName(){ return cur()[niche].name.split(" · ")[0]; }
+  function liveText(){ if(!liveBox) return; var L=UI[lang].live; liveLead.textContent=L.lead.replace("{n}",liveName()); liveBtnT.textContent=L.btn; liveMsg.textContent=""; }
+  function telIt(v){
+    var t=String(v||"").replace(/[\s.\-\/()]/g,"");
+    if(/^0039/.test(t)) t="+"+t.slice(2); else if(/^39\d{9,11}$/.test(t)) t="+"+t; else if(/^[03]\d{5,11}$/.test(t)) t="+39"+t;
+    return /^\+39(3\d{8,9}|0\d{5,10})$/.test(t) ? t : null;
+  }
+  if(LIVE.endpoint && liveBox){
+    liveBox.hidden=false;
+    if(LIVE.turnstile){
+      window.celeaCf=function(){ try{ cfId=window.turnstile.render("#live-cf",{sitekey:LIVE.turnstile, language:lang}); }catch(e){} };
+      var sc=document.createElement("script"); sc.src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=celeaCf&render=explicit"; sc.async=true; document.head.appendChild(sc);
+    }
+    liveForm.addEventListener("submit", async function(e){
+      e.preventDefault(); if(liveBusy) return;
+      var L=UI[lang].live, tel=telIt(liveTel.value);
+      if(!tel){ liveMsg.textContent=L.errTel; liveTel.focus(); return; }
+      if(!liveOk.checked){ liveMsg.textContent=L.errOk; liveOk.focus(); return; }
+      var token=""; if(LIVE.turnstile){ try{ token=window.turnstile.getResponse(cfId)||""; }catch(err){} if(!token){ liveMsg.textContent=L.errCf; return; } }
+      liveBusy=true; liveMsg.textContent=L.sending;
+      try{
+        var r=await fetch(LIVE.endpoint.replace(/\/$/,"")+"/callback",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({niche:niche,lang:lang,tel:tel,ok:true,token:token})});
+        var j={}; try{ j=await r.json(); }catch(err){}
+        if(j.ok) liveMsg.textContent=L.ok.replace("{n}",liveName());
+        else liveMsg.textContent = ({limit:L.limit, day:L.day, hours:L.hours, tel:L.errTel, captcha:L.errCf, consent:L.errOk})[j.code] || L.err;
+      }catch(err){ liveMsg.textContent=L.err; }
+      liveBusy=false; try{ if(cfId!=null) window.turnstile.reset(cfId); }catch(err){}
+    });
   }
 
   document.querySelectorAll("[data-lang]").forEach(function(b){ b.addEventListener("click", function(){ if(b.dataset.lang!==lang){ applyLang(b.dataset.lang, true); reset(); startScenario("notte", true); } }); });
