@@ -156,6 +156,8 @@ b6 += el(f'<div class="sub" style="color:{MUTED}">Lo configuriamo noi, su misura
 R["r6-fondatori"] = (13.5, False, page(b6 + cta(9.7, dark=False, line="Scriva <b>FONDATORE</b> nei commenti"), False, 13.5))
 
 
+exec(open("reels_batch2.py").read())
+
 def music(path, dur, bpm=122, seed=0):
     """Loop techno minimale originale: cassa, hi-hat, basso, pad. Volume basso, fade in/out."""
     sr = 44100
