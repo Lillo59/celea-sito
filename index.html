@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<!-- Sito di Celea v1.7 · 22/10/2026 · Studio web. Due copie con gli stessi contenuti: questo file (www.celea.it) e l'artifact claude.ai. -->
+<!-- Sito di Celea v1.9 · 28/10/2026 (aggiunta: sezione Agende intelligenti) · base v1.7 · 22/10/2026 · Studio web. Due copie con gli stessi contenuti: questo file (www.celea.it) e l'artifact claude.ai. -->
 <title>Celea · receptionist AI</title>
 <meta name="description" content="Celea è la receptionist AI per studi dentistici, agenzie immobiliari e strutture ricettive in tutta Italia e all'estero: risponde su WhatsApp e al telefono 24 ore su 24, fissa appuntamenti e passa a una persona quando serve. Provi subito la demo e prenoti 30 giorni di prova gratuita.">
 <meta name="keywords" content="receptionist AI, assistente WhatsApp studio dentistico, segreteria virtuale AI, risposta automatica agenzia immobiliare, assistente virtuale hotel e B&B, AI receptionist Italy">
@@ -356,6 +356,60 @@ footer .sign{font-family:var(--f-display);font-weight:700}
 @media (max-width:360px){.scheda span{grid-template-columns:1fr}}
 .scheda-tag{position:absolute;right:12px;top:12px;font-family:var(--f-display);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text);border:1px solid var(--accent-text);border-radius:6px;padding:2px 7px}
 
+
+/* v1.9 · Agende intelligenti (solo aggiunta) */
+.ag-grid{display:grid;gap:14px;margin-bottom:24px}
+@media (min-width:860px){.ag-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ag-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.ag-card h3{font-size:1.15rem}
+.ag-price{font-family:var(--f-display);font-weight:800;color:var(--brand)}
+.ag-fine{font-size:.9rem;color:var(--muted)}
+.ag-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:14px;min-width:0;margin-bottom:20px}
+.ag-box h3{font-size:1.2rem}
+.ag-tabs{display:flex;flex-wrap:wrap;gap:8px}
+.ag-tabs button,.ag-slots button{min-height:44px;padding:8px 14px;border-radius:var(--r);border:1.5px solid var(--brand);background:transparent;color:var(--brand);font-family:var(--f-display);font-weight:700;font-size:.92rem;cursor:pointer;max-width:100%;text-align:left}
+.ag-tabs button[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink)}
+.agw-ctl{display:grid;gap:12px}
+@media (min-width:860px){.agw-ctl{grid-template-columns:auto auto;justify-content:start;gap:28px}}
+.agw-l{display:block;font-family:var(--f-display);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);margin-bottom:6px}
+.agw-grid{display:grid;gap:16px}
+@media (min-width:900px){.agw-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:start}}
+.agw-who{font-family:var(--f-display);font-weight:700;color:var(--brand);margin-bottom:8px}
+.ag-log{display:grid;gap:8px;background:var(--chat-bg);border-radius:var(--r);padding:14px;min-height:150px;align-content:start}
+.ag-log p{padding:9px 12px;border-radius:12px;max-width:92%;font-size:.96rem;overflow-wrap:anywhere}
+.ag-log .me{background:var(--bubble-me);justify-self:end}
+.ag-log .bot{background:var(--bubble-bot);justify-self:start;border:1px solid var(--line)}
+.ag-slots{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.agw-hint{font-size:.9rem;color:var(--muted);width:100%}
+.agw-cal{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg);min-width:0}
+.agw-ch{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface)}
+.agw-ch b{font-family:var(--f-display);color:var(--brand)}
+.agw-ch span{font-size:.9rem;color:var(--muted)}
+.agw-wrap{max-height:460px;overflow-y:auto}
+.agw-g{display:grid}
+.agw-hd{font-family:var(--f-display);font-weight:700;font-size:.8rem;text-align:center;padding:6px 2px;border-bottom:1px solid var(--line);color:var(--brand);overflow-wrap:anywhere;position:sticky;top:0;background:var(--bg);z-index:2}
+.agw-tm{position:relative;font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.agw-tm span{position:absolute;right:6px}
+.agw-col{position:relative;border-left:1px solid var(--line)}
+.agw-col>i{position:absolute;left:0;right:0;height:1px;background:var(--line)}
+.agw-ev{position:absolute;left:3px;right:3px;border-radius:7px;padding:2px 6px;font-size:.74rem;line-height:1.2;overflow:hidden;z-index:1}
+.agw-ev small{display:block;font-size:.68rem;opacity:.9}
+.agw-busy{background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
+.agw-off{border:2px dashed var(--accent-text);color:var(--accent-text);font-weight:700;background:var(--surface)}
+.agw-new{background:#A9502F;color:#fff;font-weight:700;animation:agpop .35s ease-out}
+.agw-pend{background:#E7B45C;color:#2B2109;font-weight:700;animation:agpop .35s ease-out}
+@keyframes agpop{from{transform:scale(.85);opacity:.3}to{transform:none;opacity:1}}
+.agw-leg{display:flex;flex-wrap:wrap;gap:6px 14px;padding:10px 14px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line)}
+.agw-leg span{display:inline-flex;align-items:center;gap:6px}
+.agw-leg em{font-style:normal}
+.agw-leg i{display:inline-block;width:14px;height:12px;border-radius:3px}
+.k-busy{background:var(--surface-2);border:1px solid var(--line)}.k-off{border:2px dashed var(--accent-text)}.k-new{background:#A9502F}.k-pend{background:#E7B45C}
+.ag-note{font-size:.88rem;color:var(--muted)}
+.ag-calc{display:grid;gap:12px}
+@media (min-width:760px){.ag-calc{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ag-calc label{display:grid;gap:6px;font-size:.93rem;font-weight:600;align-content:end}
+.ag-calc input{min-height:44px;padding:8px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;width:100%}
+.ag-out{font-family:var(--f-display);font-weight:700;font-size:1.08rem;padding:14px;border-radius:var(--r);background:var(--surface-2);overflow-wrap:anywhere}
 </style>
 
 </head>
@@ -388,7 +442,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       <svg class="logo" viewBox="0 0 340 120" role="img" aria-label="celea"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="var(--logo-big)" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="var(--logo-small)" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="var(--logo-small)"/><text x="122" y="78" font-size="54" font-weight="800" letter-spacing="-1.5" fill="var(--logo-text)">celea</text></svg>
     </a>
     <nav class="nav" aria-label="Sezioni" data-i18n="nav">
-      <a href="#demo">Demo</a><a href="#come-funziona">Come funziona</a><a href="#per-chi">Per chi</a><a href="#prezzi">Prezzi</a><a href="https://demo.celea.it/">Esempi</a><a href="#domande">Domande</a><a href="#contatti">Contatti</a>
+      <a href="#demo">Demo</a><a href="#come-funziona">Come funziona</a><a href="#per-chi">Per chi</a><a href="#agende">Agende</a><a href="#prezzi">Prezzi</a><a href="https://demo.celea.it/">Esempi</a><a href="#domande">Domande</a><a href="#contatti">Contatti</a>
     </nav>
     <div class="right">
       <div class="lang" role="group" aria-label="Lingua / Language / Sprache">
@@ -532,6 +586,16 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <span data-i18n="p3x"><a class="tryit" href="https://demo.celea.it/casa-lumea/">Guardi un sito di esempio: Casa Lumèa</a></span>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section id="agende" aria-labelledby="agende-t">
+    <div class="wrap">
+      <div class="sec-head" data-i18n="ag-head"><p class="eyebrow">Agende intelligenti</p><h2 id="agende-t">L'assistente riempie la Sua agenda, con le Sue regole</h2><p class="lead">Al telefono e su WhatsApp propone solo gli orari liberi, raccoglie i dati e mette l'appuntamento nel calendario. Lei decide tipi di appuntamento, orari e quando serve la Sua conferma. Provi qui sotto come funziona.</p></div>
+      <div class="ag-grid" data-i18n="ag-cards"><article class="ag-card"><p class="pk-n">Agenda</p><h3>Inclusa in ogni piano</h3><p class="ag-price">Start, Pro e Pro + sito</p><p>Un calendario e fino a 2 tipi di appuntamento, per esempio prima visita e controllo.</p></article><article class="ag-card"><p class="pk-n">Agenda Plus</p><h3>Più tipi, più controllo</h3><p class="ag-price">Inclusa in Pro e Pro + sito · 29 €/mese con lo Start</p><p>Fino a 5 tipi di appuntamento, conferma del titolare, lista d'attesa sui posti che si liberano, promemoria.</p><p class="ag-fine">Con lo Start: attivazione 49 € una tantum, gratis per i clienti fondatori.</p></article><article class="ag-card"><p class="pk-n">Agenda su misura</p><h3>Un'agenda per ogni persona o servizio</h3><p class="ag-price">79 €/mese con 2 operatori · 39 € per ogni operatore in più</p><p>Agende per persona, servizio o immobile, richiami automatici e un report settimanale. Con il Pro o il Pro + sito, dopo un colloquio con noi.</p><p class="ag-fine">Attivazione 149 € una tantum, gratis per i clienti fondatori.</p></article></div>
+      <div class="ag-box"><div id="agw"></div></div>
+      <div class="ag-box"><div id="agcalc"></div></div>
+      <div class="cta-row" data-i18n="ag-cta"><a class="btn btn-accent" href="#demo"><svg aria-hidden="true"><use href="#i-chat"/></svg>Provi l'assistente nella demo</a><a class="btn btn-ghost" href="#contatti"><svg aria-hidden="true"><use href="#i-cal"/></svg>Prenoti la prova gratuita</a></div>
     </div>
   </section>
 
@@ -1157,7 +1221,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   };
   var EN = {
     "skip":"Skip to the demo",
-    "nav":'<a href="#demo">Demo</a><a href="#come-funziona">How it works</a><a href="#per-chi">Who it\'s for</a><a href="#prezzi">Pricing</a><a href="https://demo.celea.it/">Examples</a><a href="#domande">FAQ</a><a href="#contatti">Contact</a>',
+    "nav":'<a href="#demo">Demo</a><a href="#come-funziona">How it works</a><a href="#per-chi">Who it\'s for</a><a href="#agende">Calendars</a><a href="#prezzi">Pricing</a><a href="https://demo.celea.it/">Examples</a><a href="#domande">FAQ</a><a href="#contatti">Contact</a>',
     "topcta":"Try the demo",
     "h-eye":"AI receptionist · Italy and abroad",
     "h-h1":"Your customers get an answer. <em>Always.</em>",
@@ -1197,13 +1261,16 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "about":'<p class="eyebrow">About us</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Born in Sicily, working everywhere</h2><p>Celea was founded by William and is based in Sicily. We work with dental practices, real estate agencies and hospitality businesses across Italy and abroad, by video call and on WhatsApp.</p><p>Our symbol is two arcs, one embracing the other, and a dot: the answer that arrives. That is how we want to treat your customers, calmly and with care, at any hour.</p><p>We set up and look after every assistant ourselves. You have a single point of contact who knows your business.</p>',
     "contact":'<h3>Book your free trial or a short call</h3><p>Fill in the form: your email app opens with the request already written, to send to team.celea@gmail.com. We reply within one working day.</p><form class="tform" id="trial-form" novalidate><label><span>Full name</span><input name="nome" autocomplete="name" required></label><label><span>Business</span><input name="attivita" autocomplete="organization" required></label><label><span>Email</span><input type="email" name="email" autocomplete="email" required></label><label><span>Phone</span><input type="tel" name="tel" autocomplete="tel"></label><label><span>Sector</span><select name="settore"><option>Dental practice</option><option>Real estate agency</option><option>B&amp;B, holiday rental or hotel</option><option>Other</option></select></label><label><span>What would you like</span><select name="cosa"><option>Free trial</option><option>Short call</option></select></label><label class="chk"><input type="checkbox" name="consenso"><span>I agree to receive commercial information from Celea by email and WhatsApp; I can withdraw at any time by writing STOP.</span></label><p class="tiny">The form data (name, business, email, phone, sector) is used only to reply to you and organise the trial; if nothing follows, we keep it for 12 months. The consent above is optional and only needed to send you promotional material. No tracking cookies. Full privacy notice: <a href="https://www.celea.it/privacy/#en">celea.it/privacy</a>.</p><button class="btn btn-light" type="submit">Prepare the email</button><div class="tout" id="tf-out" hidden><p>If your email app does not open, copy this text and send it to team.celea@gmail.com:</p><textarea id="tf-text" rows="7" readonly></textarea></div></form><div class="row"><span class="k">Email</span><span class="v" id="email">team.celea@gmail.com</span><button class="copy" type="button" id="copy-email">Copy address</button></div><div class="row"><span class="k">WhatsApp</span><span class="v">Number coming soon</span><span class="soon">Celea\'s WhatsApp number will be active soon. In the meantime, please email us.</span></div><div class="row"><span class="k">Where</span><span class="v">Based in Sicily · clients across Italy and abroad</span><span class="soon">Demos and meetings by video call.</span></div>',
     "legal":'<p class="eyebrow">Legal</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Privacy and cookies</h2><details><summary>Privacy notice (summary)</summary><div class="body"><h4>Data controller</h4><p>Celea, by William. Contact: team.celea@gmail.com. Full business name, VAT number and address will be shown here and on the privacy page before the final launch.</p><h4>What data we process</h4><p>Only the data you send us yourself, through the form on this page, by email or on WhatsApp (name, business, contact details, sector, message content), to answer your request and organise the demo or the free trial. Legal basis: pre-contractual steps at your request (Art. 6(1)(b) GDPR). Promotional material only with the separate consent in the form, which you can withdraw by writing STOP.</p><h4>The demo on this page</h4><p>The demo chat runs only in your browser with pre-set replies: what you type is not sent to us or to third parties and is not saved.</p><h4>The “Talk now” button</h4><p>Only if you click “Talk now” does your browser connect to Retell AI (our voice and AI provider) for a spoken conversation with the demo assistant, and to Google reCAPTCHA for the anti-bot check. Nothing is loaded before the click. The conversation may be recorded and transcribed by the provider: we use it only to improve the assistant. The assistant uses sample data and does not ask for personal data: please do not share any. Legal basis: your request (Art. 6.1.b GDPR).</p><h4>The “Call me” trial</h4><p>When it is active, and only if you leave your number and tick the consent box, the number is used for a single demo call made by the virtual assistant through our telephony and AI providers (Retell AI, Twilio) and for the anti-bot check (Cloudflare Turnstile). To limit trials we keep only an encrypted fingerprint of the number and of the connection for 30 days, never the number itself. Legal basis: your request (Art. 6.1.b GDPR).</p><h4>Retention and rights</h4><p>If nothing follows, we keep your request for 12 months. You can request access, rectification, erasure, restriction, objection and portability by writing to team.celea@gmail.com, and you can lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali). Full notice: <a href="https://www.celea.it/privacy/#en">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>This site uses no cookies: no tracking, profiling or analytics cookies and no advertising. Fonts are hosted on the site. The only thing stored in your browser is the language you choose (local storage, no cookies). Only if you click “Talk now” are Retell AI and Google reCAPTCHA loaded, which may use technical cookies needed for the call and for security. Details on the <a href="https://www.celea.it/privacy/#en">privacy page</a>.</p></div></details>',
+    "ag-head":"<p class=\"eyebrow\">Smart calendars</p><h2 id=\"agende-t\">The assistant fills your calendar, by your rules</h2><p class=\"lead\">On the phone and on WhatsApp it only offers free times, collects the details and puts the appointment in the calendar. You decide the appointment types, the hours and when your confirmation is needed. Try how it works below.</p>",
+    "ag-cards":"<article class=\"ag-card\"><p class=\"pk-n\">Calendar</p><h3>Included in every plan</h3><p class=\"ag-price\">Start, Pro and Pro + website</p><p>One calendar and up to 2 appointment types, for example first visit and check-up.</p></article><article class=\"ag-card\"><p class=\"pk-n\">Calendar Plus</p><h3>More types, more control</h3><p class=\"ag-price\">Included in Pro and Pro + website · €29/month with Start</p><p>Up to 5 appointment types, owner confirmation, waiting list for freed-up slots, reminders.</p><p class=\"ag-fine\">With Start: one-off activation €49, free for founding customers.</p></article><article class=\"ag-card\"><p class=\"pk-n\">Tailored calendar</p><h3>A calendar for each person or service</h3><p class=\"ag-price\">€79/month with 2 staff members · €39 for each extra one</p><p>Calendars per person, service or property, automatic recalls and a weekly report. With Pro or Pro + website, after a call with us.</p><p class=\"ag-fine\">One-off activation €149, free for founding customers.</p></article>",
+    "ag-cta":"<a class=\"btn btn-accent\" href=\"#demo\"><svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg>Try the assistant in the demo</a><a class=\"btn btn-ghost\" href=\"#contatti\"><svg aria-hidden=\"true\"><use href=\"#i-cal\"/></svg>Book your free trial</a>",
     "ft-sign":"Celea · always answers, with care.",
     "ft-small":'AI receptionist on WhatsApp and phone for dental practices, real estate agencies and hospitality businesses, in Italy and abroad. Contact: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Privacy and cookies</a>'
   };
   // ---- Versione tedesca (contatti in Germania, Austria e Svizzera) ----
   var DE = {
     "skip":"Zur Demo springen",
-    "nav":'<a href="#demo">Demo</a><a href="#come-funziona">So funktioniert\'s</a><a href="#per-chi">Für wen</a><a href="#prezzi">Preise</a><a href="https://demo.celea.it/">Beispiele</a><a href="#domande">FAQ</a><a href="#contatti">Kontakt</a>',
+    "nav":'<a href="#demo">Demo</a><a href="#come-funziona">So funktioniert\'s</a><a href="#per-chi">Für wen</a><a href="#agende">Kalender</a><a href="#prezzi">Preise</a><a href="https://demo.celea.it/">Beispiele</a><a href="#domande">FAQ</a><a href="#contatti">Kontakt</a>',
     "topcta":"Demo testen",
     "h-eye":"KI-Rezeption · Italien und Ausland",
     "h-h1":"Ihre Kunden bekommen eine Antwort. <em>Immer.</em>",
@@ -1243,6 +1310,9 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "about":'<p class="eyebrow">Über uns</p><h2 id="chisiamo-t" style="margin:12px 0 20px">Geboren in Sizilien, im Einsatz überall</h2><p>Celea wurde von William gegründet und hat seinen Sitz in Sizilien. Wir arbeiten mit Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetrieben in ganz Italien und im Ausland, per Videocall und WhatsApp.</p><p>Unser Symbol sind zwei Bögen, einer umarmt den anderen, und ein Punkt: die Antwort, die ankommt. So möchten wir Ihre Kunden behandeln, ruhig und sorgfältig, zu jeder Stunde.</p><p>Wir richten jeden Assistenten selbst ein und betreuen ihn. Sie haben einen festen Ansprechpartner, der Ihren Betrieb kennt.</p>',
     "contact":'<h3>Kostenlose Testphase oder kurzes Gespräch buchen</h3><p>Füllen Sie das Formular aus: Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an team.celea@gmail.com. Wir antworten innerhalb eines Werktags.</p><form class="tform" id="trial-form" novalidate><label><span>Vor- und Nachname</span><input name="nome" autocomplete="name" required></label><label><span>Betrieb</span><input name="attivita" autocomplete="organization" required></label><label><span>E-Mail</span><input type="email" name="email" autocomplete="email" required></label><label><span>Telefon</span><input type="tel" name="tel" autocomplete="tel"></label><label><span>Branche</span><select name="settore"><option>Zahnarztpraxis</option><option>Immobilienagentur</option><option>B&amp;B, Ferienwohnung oder Hotel</option><option>Andere</option></select></label><label><span>Was möchten Sie</span><select name="cosa"><option>Kostenlose Testphase</option><option>Kurzes Gespräch</option></select></label><label class="chk"><input type="checkbox" name="consenso"><span>Ich bin einverstanden, von Celea Werbeinformationen per E-Mail und WhatsApp zu erhalten; ich kann dies jederzeit mit STOP widerrufen.</span></label><p class="tiny">Die Formulardaten (Name, Betrieb, E-Mail, Telefon, Branche) dienen nur der Antwort und der Organisation der Testphase; kommt nichts zustande, bewahren wir sie 12 Monate auf. Die Einwilligung oben ist freiwillig und nur für Werbematerial nötig. Keine Tracking-Cookies. Vollständige Datenschutzhinweise: <a href="https://www.celea.it/privacy/#de">celea.it/privacy</a>.</p><button class="btn btn-light" type="submit">E-Mail vorbereiten</button><div class="tout" id="tf-out" hidden><p>Falls sich Ihr E-Mail-Programm nicht öffnet, kopieren Sie diesen Text und senden Sie ihn an team.celea@gmail.com:</p><textarea id="tf-text" rows="7" readonly></textarea></div></form><div class="row"><span class="k">E-Mail</span><span class="v" id="email">team.celea@gmail.com</span><button class="copy" type="button" id="copy-email">Adresse kopieren</button></div><div class="row"><span class="k">WhatsApp</span><span class="v">Nummer folgt in Kürze</span><span class="soon">Die WhatsApp-Nummer von Celea ist bald aktiv. Schreiben Sie uns bis dahin per E-Mail.</span></div><div class="row"><span class="k">Wo</span><span class="v">Sitz in Sizilien · Kunden in ganz Italien und im Ausland</span><span class="soon">Demos und Termine per Videocall.</span></div>',
     "legal":'<p class="eyebrow">Rechtliches</p><h2 id="priv-t" style="font-size:1.5rem;margin-top:10px">Datenschutz und Cookies</h2><details><summary>Datenschutzhinweise (Kurzfassung)</summary><div class="body"><h4>Verantwortlicher</h4><p>Celea, von William. Kontakt: team.celea@gmail.com. Vollständiger Firmenname, USt-IdNr. und Anschrift werden hier und auf der Datenschutzseite vor dem endgültigen Start angegeben.</p><h4>Welche Daten wir verarbeiten</h4><p>Nur die Daten, die Sie uns selbst senden, über das Formular auf dieser Seite, per E-Mail oder WhatsApp (Name, Betrieb, Kontaktdaten, Branche, Inhalt der Nachricht), um Ihre Anfrage zu beantworten und die Demo oder die kostenlose Testphase zu organisieren. Rechtsgrundlage: vorvertragliche Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Werbematerial nur mit der gesonderten Einwilligung im Formular, widerrufbar mit STOP.</p><h4>Die Demo auf dieser Seite</h4><p>Der Demo-Chat läuft nur in Ihrem Browser mit vorbereiteten Antworten: Was Sie schreiben, wird weder an uns noch an Dritte gesendet und nicht gespeichert.</p><h4>Die Schaltfläche „Jetzt sprechen“</h4><p>Nur wenn Sie auf „Jetzt sprechen“ klicken, verbindet sich Ihr Browser mit Retell AI (unserem Dienstleister für Stimme und KI) für ein Gespräch mit der Demo-Assistenz sowie mit Google reCAPTCHA für die Anti-Bot-Prüfung. Vor dem Klick wird nichts geladen. Das Gespräch kann vom Dienstleister aufgezeichnet und transkribiert werden: Wir nutzen es nur, um die Assistenz zu verbessern. Die Assistenz verwendet Beispieldaten und fragt keine personenbezogenen Daten ab: Bitte teilen Sie keine mit. Rechtsgrundlage: Ihre Anfrage (Art. 6.1.b DSGVO).</p><h4>Der Test „Rufen Sie mich an“</h4><p>Wenn er aktiv ist und nur wenn Sie Ihre Nummer mit Häkchen zur Einwilligung hinterlassen, wird die Nummer für einen einzigen Demo-Anruf der virtuellen Assistenz über unsere Telefonie- und KI-Dienstleister (Retell AI, Twilio) und für die Anti-Bot-Prüfung (Cloudflare Turnstile) verwendet. Zur Begrenzung der Tests speichern wir 30 Tage lang nur einen verschlüsselten Fingerabdruck der Nummer und der Verbindung, nie die Nummer selbst. Rechtsgrundlage: Ihre Anfrage (Art. 6.1.b DSGVO).</p><h4>Speicherung und Rechte</h4><p>Kommt nichts zustande, bewahren wir Ihre Anfrage 12 Monate auf. Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen, indem Sie an team.celea@gmail.com schreiben, und Beschwerde bei der italienischen Datenschutzbehörde (Garante per la protezione dei dati personali) einlegen. Vollständige Hinweise: <a href="https://www.celea.it/privacy/#de">www.celea.it/privacy</a>.</p></div></details><details><summary>Cookies</summary><div class="body"><p>Diese Website verwendet keine Cookies: keine Tracking-, Profiling- oder Statistik-Cookies und keine Werbung. Die Schriftarten werden auf der Website bereitgestellt. Das Einzige, was in Ihrem Browser gespeichert wird, ist die gewählte Sprache (lokaler Speicher, ohne Cookies). Nur wenn Sie auf „Jetzt sprechen“ klicken, werden Retell AI und Google reCAPTCHA geladen, die für den Anruf und die Sicherheit notwendige technische Cookies verwenden können. Details auf der <a href="https://www.celea.it/privacy/#de">Datenschutzseite</a>.</p></div></details>',
+    "ag-head":"<p class=\"eyebrow\">Intelligente Kalender</p><h2 id=\"agende-t\">Die Assistenz füllt Ihren Kalender, nach Ihren Regeln</h2><p class=\"lead\">Am Telefon und auf WhatsApp bietet sie nur freie Zeiten an, nimmt die Angaben auf und trägt den Termin in den Kalender ein. Sie bestimmen Terminarten, Zeiten und wann Ihre Bestätigung nötig ist. Probieren Sie es unten aus.</p>",
+    "ag-cards":"<article class=\"ag-card\"><p class=\"pk-n\">Kalender</p><h3>In jedem Tarif enthalten</h3><p class=\"ag-price\">Start, Pro und Pro + Website</p><p>Ein Kalender und bis zu 2 Terminarten, zum Beispiel Ersttermin und Kontrolle.</p></article><article class=\"ag-card\"><p class=\"pk-n\">Kalender Plus</p><h3>Mehr Terminarten, mehr Kontrolle</h3><p class=\"ag-price\">In Pro und Pro + Website enthalten · 29 €/Monat mit Start</p><p>Bis zu 5 Terminarten, Bestätigung durch den Inhaber, Warteliste für frei gewordene Termine, Erinnerungen.</p><p class=\"ag-fine\">Mit Start: einmalige Aktivierung 49 €, kostenlos für Gründungskunden.</p></article><article class=\"ag-card\"><p class=\"pk-n\">Maßgeschneiderter Kalender</p><h3>Ein Kalender für jede Person oder Leistung</h3><p class=\"ag-price\">79 €/Monat mit 2 Mitarbeitenden · 39 € für jede weitere Person</p><p>Kalender pro Person, Leistung oder Immobilie, automatische Erinnerungen an Folgetermine und ein Wochenbericht. Mit Pro oder Pro + Website, nach einem Gespräch mit uns.</p><p class=\"ag-fine\">Einmalige Aktivierung 149 €, kostenlos für Gründungskunden.</p></article>",
+    "ag-cta":"<a class=\"btn btn-accent\" href=\"#demo\"><svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg>Assistenz in der Demo testen</a><a class=\"btn btn-ghost\" href=\"#contatti\"><svg aria-hidden=\"true\"><use href=\"#i-cal\"/></svg>Kostenlose Testphase buchen</a>",
     "ft-sign":"Celea · antwortet immer, mit Sorgfalt.",
     "ft-small":'KI-Rezeption auf WhatsApp und am Telefon für Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetriebe, in Italien und im Ausland. Kontakt: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Datenschutz und Cookies</a>'
   };
@@ -1345,5 +1415,180 @@ footer .sign{font-family:var(--f-display);font-weight:700}
 })();
 </script>
 
+<script>
+/* v1.9 · Agende intelligenti: prova dell'agenda e calcolatore. Blocco indipendente: legge la lingua da <html lang>. Nessun dato inviato o salvato. */
+(function(){
+  "use strict";
+  var W=document.getElementById("agw"), C=document.getElementById("agcalc");
+  if(!W||!C) return;
+  var T={
+   it:{tap:"Tocca la domanda:",restart:"Ricomincia",end:"Prova finita. Cambi piano o attività per un altro esempio.",me:"Le {t}, grazie.",prop:"proposto",
+     busy:"già occupato",offer:"orari proposti",fix:"prenotato dall'assistente",pend:"da confermare dal titolare",
+     niche:{dentisti:"Studio dentistico",agenzie:"Agenzia immobiliare",hotel:"Hotel e B&B"},plan:{base:"Agenda",plus:"Agenda Plus",misura:"Su misura"},
+     nl:"Attività",pl:"Piano",note:"Simulazione con dati d'esempio: nel servizio vero l'assistente lavora sul calendario reale dell'attività e si presenta sempre come assistente AI.",
+     cal:{dentisti:"Agenda dello studio",agenzie:"Agenda visite dell'agenzia",hotel:"Servizi dell'hotel"},day:{dentisti:"giovedì 5 novembre",agenzie:"sabato 7 novembre",hotel:"venerdì 6 novembre"},
+     ass:{dentisti:"Sofia · assistente AI dello studio",agenzie:"Marco · assistente AI dell'agenzia",hotel:"Elena · assistente AI dell'hotel"},
+     cH:"Quanto valgono le richieste senza risposta?",cL:"Un esempio con i Suoi numeri. Cambi i valori: il calcolo si aggiorna da solo.",
+     c1:"Chiamate o messaggi senza risposta al mese",c2:"Quanti sarebbero diventati appuntamenti (%)",c3:"Valore medio di un appuntamento o cliente (€)",
+     cOut:"Circa {n} appuntamenti persi al mese: {m} € al mese, {y} € all'anno.",cCmp:"Per confronto, il piano Pro costa 189 € al mese.",
+     cNote:"Esempio con ipotesi Sue: non è una promessa di risultato. Nulla di ciò che scrive viene inviato o salvato."},
+   en:{tap:"Tap the question:",restart:"Restart",end:"Done. Change plan or business for another example.",me:"{t}, thank you.",prop:"offered",
+     busy:"already booked",offer:"offered times",fix:"booked by the assistant",pend:"to be confirmed by the owner",
+     niche:{dentisti:"Dental practice",agenzie:"Real estate agency",hotel:"Hotel and B&B"},plan:{base:"Calendar",plus:"Calendar Plus",misura:"Tailored"},
+     nl:"Business",pl:"Plan",note:"Simulation with sample data: in the real service the assistant works on the business's real calendar and always introduces itself as an AI assistant.",
+     cal:{dentisti:"Practice calendar",agenzie:"Agency viewing calendar",hotel:"Hotel services"},day:{dentisti:"Thursday 5 November",agenzie:"Saturday 7 November",hotel:"Friday 6 November"},
+     ass:{dentisti:"Sofia · the practice's AI assistant",agenzie:"Marco · the agency's AI assistant",hotel:"Elena · the hotel's AI assistant"},
+     cH:"What are unanswered enquiries worth?",cL:"An example with your own numbers. Change the values: the result updates by itself.",
+     c1:"Unanswered calls or messages per month",c2:"How many would have become appointments (%)",c3:"Average value of an appointment or customer (€)",
+     cOut:"About {n} lost appointments a month: €{m} a month, €{y} a year.",cCmp:"For comparison, the Pro plan costs €189 a month.",
+     cNote:"An example based on your assumptions, not a promise of results. Nothing you type is sent or saved."},
+   de:{tap:"Tippen Sie auf die Frage:",restart:"Neu starten",end:"Fertig. Wählen Sie einen anderen Tarif oder Betrieb für ein weiteres Beispiel.",me:"{t}, danke.",prop:"angeboten",
+     busy:"bereits belegt",offer:"angebotene Zeiten",fix:"von der Assistenz gebucht",pend:"vom Inhaber zu bestätigen",
+     niche:{dentisti:"Zahnarztpraxis",agenzie:"Immobilienagentur",hotel:"Hotel und B&B"},plan:{base:"Kalender",plus:"Kalender Plus",misura:"Maßgeschneidert"},
+     nl:"Betrieb",pl:"Tarif",note:"Simulation mit Beispieldaten: im echten Dienst arbeitet die Assistenz im echten Kalender des Betriebs und stellt sich immer als KI-Assistenz vor.",
+     cal:{dentisti:"Kalender der Praxis",agenzie:"Besichtigungskalender der Agentur",hotel:"Leistungen des Hotels"},day:{dentisti:"Donnerstag, 5. November",agenzie:"Samstag, 7. November",hotel:"Freitag, 6. November"},
+     ass:{dentisti:"Sofia · KI-Assistenz der Praxis",agenzie:"Marco · KI-Assistenz der Agentur",hotel:"Elena · KI-Assistenz des Hotels"},
+     cH:"Was sind unbeantwortete Anfragen wert?",cL:"Ein Beispiel mit Ihren Zahlen. Ändern Sie die Werte: das Ergebnis passt sich selbst an.",
+     c1:"Unbeantwortete Anrufe oder Nachrichten pro Monat",c2:"Wie viele wären Termine geworden (%)",c3:"Durchschnittlicher Wert eines Termins oder Kunden (€)",
+     cOut:"Etwa {n} verlorene Termine pro Monat: {m} € im Monat, {y} € im Jahr.",cCmp:"Zum Vergleich: der Pro-Tarif kostet 189 € im Monat.",
+     cNote:"Ein Beispiel mit Ihren Annahmen, kein Ergebnisversprechen. Nichts, was Sie eingeben, wird gesendet oder gespeichert."}
+  };
+  // Scenari: [colonna, inizio, fine, etichetta]; testi per lingua.
+  var S={
+   dentisti:{start:9,end:19,
+    base:{cols:{it:["Agenda"],en:["Calendar"],de:["Kalender"]},busy:[[0,9,10,"c"],[0,10.5,11.5,"v"],[0,13,15,"p"],[0,15,16,"k"],[0,17.5,18.5,"c"]],
+      lab:{it:{c:"Controllo",v:"Prima visita",p:"Pausa",k:"Cura"},en:{c:"Check-up",v:"First visit",p:"Break",k:"Treatment"},de:{c:"Kontrolle",v:"Ersttermin",p:"Pause",k:"Behandlung"}},
+      off:[[0,11.5,12,"11:30"],[0,12,12.5,"12:00"]],pick:1,st:"new",
+      it:["Vorrei una prima visita giovedì mattina.","Buongiorno, sono Sofia, l'assistente AI dello studio. Giovedì mattina ho libero alle 11:30 o alle 12:00. Quale preferisce?","Fatto: prima visita giovedì alle 12:00. Le arriva la conferma via email.","Prima visita · M. Rossi"],
+      en:["I'd like a first visit on Thursday morning.","Good morning, I'm Sofia, the practice's AI assistant. On Thursday morning I have 11:30 or 12:00 free. Which do you prefer?","Done: first visit on Thursday at 12:00. You'll get a confirmation by email.","First visit · M. Rossi"],
+      de:["Ich hätte gern einen Ersttermin am Donnerstagvormittag.","Guten Tag, ich bin Sofia, die KI-Assistenz der Praxis. Am Donnerstagvormittag ist um 11:30 oder um 12:00 frei. Was passt Ihnen?","Erledigt: Ersttermin am Donnerstag um 12:00. Sie erhalten eine Bestätigung per E-Mail.","Ersttermin · M. Rossi"]},
+    plus:{cols:{it:["Agenda"],en:["Calendar"],de:["Kalender"]},busy:[[0,9,10,"c"],[0,10.5,11.5,"v"],[0,13,15,"p"],[0,15,16,"k"],[0,17.5,18.5,"c"]],
+      lab:{it:{c:"Controllo",v:"Prima visita",p:"Pausa",k:"Cura"},en:{c:"Check-up",v:"First visit",p:"Break",k:"Treatment"},de:{c:"Kontrolle",v:"Ersttermin",p:"Pause",k:"Behandlung"}},
+      off:[[0,11.5,12.25,"11:30"],[0,16,16.75,"16:00"]],pick:1,st:"new",
+      it:["Vorrei prenotare l'igiene dei denti.","Certo. L'igiene dura 45 minuti: giovedì ho libero alle 11:30 o alle 16:00. Quale preferisce?","Fissato: igiene giovedì alle 16:00. Il giorno prima Le arriva un promemoria.","Igiene · 45 min"],
+      en:["I'd like to book a dental cleaning.","Of course. A cleaning takes 45 minutes: on Thursday I have 11:30 or 16:00 free. Which do you prefer?","Booked: cleaning on Thursday at 16:00. You'll get a reminder the day before.","Cleaning · 45 min"],
+      de:["Ich möchte eine Zahnreinigung buchen.","Gern. Die Reinigung dauert 45 Minuten: am Donnerstag ist um 11:30 oder um 16:00 frei. Was passt Ihnen?","Gebucht: Zahnreinigung am Donnerstag um 16:00. Am Vortag erhalten Sie eine Erinnerung.","Reinigung · 45 Min."]},
+    misura:{cols:{it:["Dott. Rossi","Igienista Giulia"],en:["Dr Rossi","Hygienist Giulia"],de:["Dr. Rossi","Hygienikerin Giulia"]},busy:[[0,9,10,"c"],[0,10.5,11.5,"v"],[0,15,16.5,"k"],[1,9,9.75,"i"],[1,11,11.75,"i"],[1,16,16.75,"i"]],
+      lab:{it:{c:"Controllo",v:"Prima visita",k:"Cura",i:"Igiene"},en:{c:"Check-up",v:"First visit",k:"Treatment",i:"Cleaning"},de:{c:"Kontrolle",v:"Ersttermin",k:"Behandlung",i:"Reinigung"}},
+      off:[[1,10,10.75,"10:00"],[1,17,17.75,"17:00"]],pick:0,st:"new",
+      it:["Vorrei l'igiene con Giulia.","Giulia giovedì ha libero alle 10:00 o alle 17:00. Quale preferisce?","Fissato: igiene con Giulia giovedì alle 10:00, nella sua agenda.","Igiene · con Giulia"],
+      en:["I'd like a cleaning with Giulia.","Giulia is free on Thursday at 10:00 or 17:00. Which do you prefer?","Booked: cleaning with Giulia on Thursday at 10:00, in her calendar.","Cleaning · with Giulia"],
+      de:["Ich möchte eine Reinigung bei Giulia.","Giulia hat am Donnerstag um 10:00 oder um 17:00 frei. Was passt Ihnen?","Gebucht: Reinigung bei Giulia am Donnerstag um 10:00, in ihrem Kalender.","Reinigung · bei Giulia"]}},
+   agenzie:{start:9,end:19,
+    base:{cols:{it:["Visite"],en:["Viewings"],de:["Besichtigungen"]},busy:[[0,9.5,10,"a"],[0,11,11.5,"b"],[0,16,16.5,"c"]],
+      lab:{it:{a:"Visita PA-104",b:"Visita PA-102",c:"Visita PA-110"},en:{a:"Viewing PA-104",b:"Viewing PA-102",c:"Viewing PA-110"},de:{a:"Besichtigung PA-104",b:"Besichtigung PA-102",c:"Besichtigung PA-110"}},
+      off:[[0,15.5,16,"15:30"],[0,17,17.5,"17:00"]],pick:1,st:"pend",
+      it:["Vorrei vedere il trilocale PA-101 sabato pomeriggio.","Buongiorno, sono Marco, l'assistente AI dell'agenzia. Sabato pomeriggio ho libero alle 15:30 o alle 17:00. Quale preferisce?","Ho registrato la visita al PA-101 sabato alle 17:00: l'agente la conferma entro 2 ore lavorative.","Visita PA-101 · da confermare"],
+      en:["I'd like to view the flat PA-101 on Saturday afternoon.","Good morning, I'm Marco, the agency's AI assistant. On Saturday afternoon I have 15:30 or 17:00 free. Which do you prefer?","I've registered the viewing of PA-101 on Saturday at 17:00: the agent confirms it within 2 working hours.","Viewing PA-101 · to confirm"],
+      de:["Ich möchte die Wohnung PA-101 am Samstagnachmittag besichtigen.","Guten Tag, ich bin Marco, die KI-Assistenz der Agentur. Am Samstagnachmittag ist um 15:30 oder um 17:00 frei. Was passt Ihnen?","Ich habe die Besichtigung von PA-101 am Samstag um 17:00 eingetragen: der Makler bestätigt sie innerhalb von 2 Arbeitsstunden.","Besichtigung PA-101 · zu bestätigen"]},
+    plus:{cols:{it:["Visite"],en:["Viewings"],de:["Besichtigungen"]},busy:[[0,9.5,10,"a"],[0,11,11.5,"b"],[0,16,16.5,"c"]],
+      lab:{it:{a:"Visita PA-104",b:"Visita PA-102",c:"Visita PA-110"},en:{a:"Viewing PA-104",b:"Viewing PA-102",c:"Viewing PA-110"},de:{a:"Besichtigung PA-104",b:"Besichtigung PA-102",c:"Besichtigung PA-110"}},
+      off:[[0,12,13,"12:00"],[0,17.5,18.5,"17:30"]],pick:0,st:"pend",
+      it:["Vorrei far valutare la mia casa.","Per la valutazione il titolare viene a vedere la casa, circa un'ora. Sabato ho libero alle 12:00 o alle 17:30. Quale preferisce?","Ho registrato la valutazione sabato alle 12:00: il titolare la conferma entro 2 ore lavorative.","Valutazione · sopralluogo"],
+      en:["I'd like my home valued.","For the valuation the owner comes to see the property, about one hour. On Saturday I have 12:00 or 17:30 free. Which do you prefer?","I've registered the valuation on Saturday at 12:00: the owner confirms it within 2 working hours.","Valuation · on site"],
+      de:["Ich möchte meine Wohnung bewerten lassen.","Für die Bewertung kommt der Inhaber vorbei, etwa eine Stunde. Am Samstag ist um 12:00 oder um 17:30 frei. Was passt Ihnen?","Ich habe die Bewertung am Samstag um 12:00 eingetragen: der Inhaber bestätigt sie innerhalb von 2 Arbeitsstunden.","Bewertung · vor Ort"]},
+    misura:{cols:{it:["PA-101","PA-105","Ufficio"],en:["PA-101","PA-105","Office"],de:["PA-101","PA-105","Büro"]},busy:[[0,9.5,10,"v"],[1,10,10.5,"v"],[1,16,16.5,"v"],[2,9,10,"f"]],
+      lab:{it:{v:"Visita",f:"Firma"},en:{v:"Viewing",f:"Signing"},de:{v:"Besichtigung",f:"Unterschrift"}},
+      off:[[0,10.67,11,"10:40"],[0,11.33,11.67,"11:20"]],pick:0,st:"pend",
+      it:["Organizzate una giornata porte aperte per il PA-101?","Sì: sabato il PA-101 è aperto dalle 10:00 alle 12:00, a gruppi di 20 minuti. Ho ancora posto alle 10:40 o alle 11:20.","Ho registrato la Sua visita alle 10:40 della giornata porte aperte: l'agente la conferma entro 2 ore lavorative.","Porte aperte · 10:40"],
+      en:["Is there an open house for PA-101?","Yes: on Saturday PA-101 is open from 10:00 to 12:00, in 20-minute groups. I still have places at 10:40 or 11:20.","I've registered your visit at 10:40 during the open house: the agent confirms it within 2 working hours.","Open house · 10:40"],
+      de:["Gibt es einen Tag der offenen Tür für PA-101?","Ja: am Samstag ist PA-101 von 10:00 bis 12:00 geöffnet, in Gruppen zu 20 Minuten. Frei ist noch um 10:40 oder um 11:20.","Ich habe Ihren Besuch um 10:40 am Tag der offenen Tür eingetragen: der Makler bestätigt ihn innerhalb von 2 Arbeitsstunden.","Offene Tür · 10:40"]}},
+   hotel:{start:9,end:21,
+    base:{cols:{it:["Transfer"],en:["Transfers"],de:["Transfers"]},busy:[[0,10,11,"t"],[0,17,18,"t"]],
+      lab:{it:{t:"Transfer"},en:{t:"Transfer"},de:{t:"Transfer"}},
+      off:[[0,15,16,"15:00"],[0,16,17,"16:00"]],pick:0,st:"pend",
+      it:["Mi serve il transfer dall'aeroporto venerdì alle 15.","Buonasera, sono Elena, l'assistente AI dell'hotel. Venerdì ho libero il transfer alle 15:00 o alle 16:00. Quale preferisce?","Ho registrato il transfer venerdì alle 15:00: la reception lo conferma entro 2 ore e Le indica il prezzo.","Transfer aeroporto · da confermare"],
+      en:["I need an airport transfer on Friday at 3 pm.","Good evening, I'm Elena, the hotel's AI assistant. On Friday the transfer is free at 15:00 or 16:00. Which do you prefer?","I've registered the transfer on Friday at 15:00: reception confirms it within 2 hours and tells you the price.","Airport transfer · to confirm"],
+      de:["Ich brauche am Freitag um 15 Uhr einen Flughafentransfer.","Guten Abend, ich bin Elena, die KI-Assistenz des Hotels. Am Freitag ist der Transfer um 15:00 oder um 16:00 frei. Was passt Ihnen?","Ich habe den Transfer am Freitag um 15:00 eingetragen: die Rezeption bestätigt ihn innerhalb von 2 Stunden und nennt Ihnen den Preis.","Flughafentransfer · zu bestätigen"]},
+    plus:{cols:{it:["Transfer","Escursioni"],en:["Transfers","Excursions"],de:["Transfers","Ausflüge"]},busy:[[0,10,11,"t"],[0,17,18,"t"],[1,15.5,19,"m"]],
+      lab:{it:{t:"Transfer",m:"Monreale"},en:{t:"Transfer",m:"Monreale"},de:{t:"Transfer",m:"Monreale"}},
+      off:[[1,9,12,"9:00"],[1,12,15,"12:00"]],pick:0,st:"pend",
+      it:["Venerdì c'è un'escursione a Cefalù per due persone?","Sì, l'escursione a Cefalù dura circa 3 ore e parte dall'hotel. Venerdì ho posto alle 9:00 o alle 12:00. Quale preferisce?","Ho registrato due posti per Cefalù alle 9:00: la reception conferma entro 2 ore e Le indica il prezzo.","Escursione Cefalù · 2 persone"],
+      en:["Is there an excursion to Cefalù on Friday for two people?","Yes, the Cefalù excursion takes about 3 hours and leaves from the hotel. On Friday there are places at 9:00 or 12:00. Which do you prefer?","I've registered two places for Cefalù at 9:00: reception confirms within 2 hours and tells you the price.","Cefalù excursion · 2 people"],
+      de:["Gibt es am Freitag einen Ausflug nach Cefalù für zwei Personen?","Ja, der Ausflug nach Cefalù dauert etwa 3 Stunden und startet am Hotel. Am Freitag ist um 9:00 oder um 12:00 Platz. Was passt Ihnen?","Ich habe zwei Plätze für Cefalù um 9:00 eingetragen: die Rezeption bestätigt innerhalb von 2 Stunden und nennt Ihnen den Preis.","Ausflug Cefalù · 2 Personen"]},
+    misura:{cols:{it:["Transfer","Spa","Ristorante"],en:["Transfers","Spa","Restaurant"],de:["Transfers","Spa","Restaurant"]},busy:[[0,10,11,"t"],[1,16,17,"s"],[2,19.5,20.5,"r"]],
+      lab:{it:{t:"Transfer",s:"Massaggio",r:"Tavolo 4"},en:{t:"Transfer",s:"Massage",r:"Table 4"},de:{t:"Transfer",s:"Massage",r:"Tisch 4"}},
+      off:[[1,17,18,"17:00"],[1,18,19,"18:00"]],pick:0,st:"pend",
+      it:["Vorrei un massaggio alla spa venerdì pomeriggio.","Alla spa ho libero alle 17:00 o alle 18:00, 50 minuti. Quale preferisce?","Ho registrato il massaggio alle 17:00: la reception conferma entro 2 ore e Le indica il prezzo.","Spa · massaggio 50 min"],
+      en:["I'd like a massage at the spa on Friday afternoon.","At the spa I have 17:00 or 18:00 free, 50 minutes. Which do you prefer?","I've registered the massage at 17:00: reception confirms within 2 hours and tells you the price.","Spa · massage 50 min"],
+      de:["Ich hätte gern am Freitagnachmittag eine Massage im Spa.","Im Spa ist um 17:00 oder um 18:00 frei, 50 Minuten. Was passt Ihnen?","Ich habe die Massage um 17:00 eingetragen: die Rezeption bestätigt innerhalb von 2 Stunden und nennt Ihnen den Preis.","Spa · Massage 50 Min."]}}
+  };
+  var N="dentisti",P="base",ev=[],stage=0,lock=false,PX=20;
+  function L(){ var l=document.documentElement.lang; return T[l]?l:"it"; }
+  function el(tag,cls,txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; }
+  function fmt(h){ var m=Math.round((h%1)*60); return Math.floor(h)+":"+String(m).padStart(2,"0"); }
+  W.innerHTML='<div class="agw-ctl"><div><span class="agw-l" id="agw-nl"></span><div class="ag-tabs" id="agw-n"></div></div><div><span class="agw-l" id="agw-pl"></span><div class="ag-tabs" id="agw-p"></div></div></div>'+
+   '<div class="agw-grid"><div class="agw-chat"><p class="agw-who" id="agw-who"></p><div class="ag-log" id="agw-log" aria-live="polite"></div><div class="ag-slots" id="agw-chips"></div></div>'+
+   '<div class="agw-cal"><div class="agw-ch"><b id="agw-ct"></b><span id="agw-cd"></span></div><div class="agw-wrap"><div class="agw-g" id="agw-g"></div></div>'+
+   '<p class="agw-leg"><span><i class="k-busy"></i><em id="agw-l1"></em></span><span><i class="k-off"></i><em id="agw-l2"></em></span><span><i class="k-new"></i><em id="agw-l3"></em></span><span><i class="k-pend"></i><em id="agw-l4"></em></span></p></div></div>'+
+   '<p class="ag-note" id="agw-note"></p>';
+  var $=function(i){ return document.getElementById(i); };
+  function tabs(){
+    var t=T[L()];
+    [["agw-n",["dentisti","agenzie","hotel"],t.niche,function(k){N=k;}],["agw-p",["base","plus","misura"],t.plan,function(k){P=k;}]].forEach(function(g){
+      var box=$(g[0]); box.innerHTML="";
+      g[1].forEach(function(k){ var b=el("button",null,g[2][k]); b.type="button"; b.setAttribute("aria-pressed",(g[0]==="agw-n"?N:P)===k?"true":"false");
+        b.onclick=function(){ g[3](k); reset(); }; box.appendChild(b); });
+    });
+  }
+  function msg(c,txt){ var p=el("p",c,txt); $("agw-log").appendChild(p); }
+  function draw(){
+    var n=S[N],p=n[P],l=L(),t=T[l],cols=p.cols[l],H=(n.end-n.start)*2*PX,g=$("agw-g");
+    g.style.gridTemplateColumns="44px repeat("+cols.length+",minmax(0,1fr))";
+    var h='<div class="agw-hd"></div>'; cols.forEach(function(c){ h+='<div class="agw-hd">'+c+'</div>'; });
+    var tm='<div class="agw-tm" style="height:'+H+'px">'; for(var x=n.start;x<n.end;x++) tm+='<span style="top:'+Math.max(0,(x-n.start)*2*PX-7)+'px">'+x+':00</span>'; h+=tm+'</div>';
+    for(var c=0;c<cols.length;c++){
+      var col='<div class="agw-col" style="height:'+H+'px">'; for(var y=n.start;y<n.end;y++) col+='<i style="top:'+((y-n.start)*2*PX)+'px"></i>';
+      ev.filter(function(e){return e.c===c;}).forEach(function(e){
+        var top=(e.s-n.start)*2*PX, ht=Math.max((e.e-e.s)*2*PX-2,16);
+        var lab=e.k==="off"? t.prop+" "+e.t : e.t;
+        col+='<div class="agw-ev agw-'+e.k+'" style="top:'+(top+1)+'px;height:'+ht+'px">'+lab.replace(/</g,"&lt;")+(e.k!=="off"&&e.k!=="busy"?' <small>'+fmt(e.s)+'–'+fmt(e.e)+'</small>':'')+'</div>';
+      });
+      h+=col+'</div>';
+    }
+    g.innerHTML=h;
+  }
+  function chips(list){
+    var c=$("agw-chips"), t=T[L()]; c.innerHTML="";
+    if(list){ list.forEach(function(x){ var b=el("button",null,x[0]); b.type="button"; b.onclick=x[1]; c.appendChild(b); }); return; }
+    var p=S[N][P], tx=p[L()];
+    if(stage===0){ c.appendChild(el("span","agw-hint",t.tap)); var b=el("button",null,tx[0]); b.type="button"; b.onclick=ask; c.appendChild(b); }
+    else { c.appendChild(el("span","agw-hint",t.end)); var r=el("button",null,t.restart); r.type="button"; r.onclick=reset; c.appendChild(r); }
+  }
+  function later(f,ms){ setTimeout(f, window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches?50:ms); }
+  function ask(){
+    if(lock) return; lock=true; var p=S[N][P], tx=p[L()]; $("agw-chips").innerHTML=""; msg("me",tx[0]);
+    later(function(){ msg("bot",tx[1]); p.off.forEach(function(o){ ev.push({c:o[0],s:o[1],e:o[2],t:o[3],k:"off"}); }); draw(); lock=false;
+      chips(p.off.map(function(o){ return [o[3],function(){ book(o); }]; })); },700);
+  }
+  function book(o){
+    if(lock) return; lock=true; var p=S[N][P], l=L(), tx=p[l], pt=p.off[p.pick][3], sw=function(s){ return s.split(pt).join(o[3]); };
+    $("agw-chips").innerHTML=""; msg("me",T[l].me.replace("{t}",o[3]));
+    later(function(){ ev=ev.filter(function(e){return e.k!=="off";}); ev.push({c:o[0],s:o[1],e:o[2],t:sw(tx[3]),k:p.st}); draw(); msg("bot",sw(tx[2])); stage=1; lock=false; chips(); },700);
+  }
+  function reset(){
+    var n=S[N],p=n[P],l=L(),t=T[l]; stage=0; lock=false; ev=p.busy.map(function(b){ return {c:b[0],s:b[1],e:b[2],t:p.lab[l][b[3]],k:"busy"}; });
+    $("agw-nl").textContent=t.nl; $("agw-pl").textContent=t.pl; $("agw-who").textContent=t.ass[N]; $("agw-ct").textContent=t.cal[N]; $("agw-cd").textContent=t.day[N];
+    $("agw-l1").textContent=t.busy; $("agw-l2").textContent=t.offer; $("agw-l3").textContent=t.fix; $("agw-l4").textContent=t.pend; $("agw-note").textContent=t.note;
+    $("agw-log").innerHTML=""; tabs(); draw(); chips();
+  }
+  // Calcolatore
+  var V=[30,30,80];
+  function calc(){
+    var t=T[L()], q=[0,1,2].map(function(i){ var x=parseFloat(String($("agc"+i).value).replace(",",".")); return isFinite(x)&&x>=0?x:0; });
+    V=q; var n=q[0]*Math.min(q[1],100)/100, m=Math.round(n*q[2]), loc=L()==="en"?"en-GB":(L()==="de"?"de-DE":"it-IT");
+    $("agc-out").textContent=t.cOut.replace("{n}",n.toLocaleString(loc,{maximumFractionDigits:1})).replace("{m}",m.toLocaleString(loc)).replace("{y}",(m*12).toLocaleString(loc));
+  }
+  function drawCalc(){
+    var t=T[L()];
+    C.innerHTML='<h3 id="agc-h"></h3><p class="ag-note" id="agc-l"></p><div class="ag-calc">'+[0,1,2].map(function(i){ return '<label><span id="agc-t'+i+'"></span><input id="agc'+i+'" type="number" inputmode="decimal" min="0" '+(i===1?'max="100" ':'')+'step="1" value="'+V[i]+'"></label>'; }).join("")+
+      '</div><p class="ag-out" id="agc-out" aria-live="polite"></p><p class="ag-note" id="agc-cmp"></p><p class="ag-note" id="agc-n"></p>';
+    $("agc-h").textContent=t.cH; $("agc-l").textContent=t.cL; $("agc-t0").textContent=t.c1; $("agc-t1").textContent=t.c2; $("agc-t2").textContent=t.c3; $("agc-cmp").textContent=t.cCmp; $("agc-n").textContent=t.cNote;
+    [0,1,2].forEach(function(i){ $("agc"+i).addEventListener("input",calc); }); calc();
+  }
+  reset(); drawCalc();
+  var last=L(); new MutationObserver(function(){ if(L()!==last){ last=L(); reset(); drawCalc(); } }).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+})();
+</script>
 </body>
 </html>
