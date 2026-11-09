@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Celea Uffici · un ufficio di assistenti AI per la Sua azienda</title>
+<meta name="description" content="Celea Uffici: una direttrice e dei reparti di assistenti AI, con una memoria condivisa e regole chiare, che lavorano per la Sua azienda. Lei decide spese, firme e contatti.">
+<link rel="canonical" href="https://www.celea.it/uffici/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='26' fill='%230F4C5C'/%3E%3Cg transform='translate(14 12) scale(0.8)'%3E%3Cpath d='M85.71 90.64A40 40 0 1 1 85.71 29.36' fill='none' stroke='%23F4EDE3' stroke-width='12' stroke-linecap='round'/%3E%3Cpath d='M72.86 75.32A20 20 0 1 1 72.86 44.68' fill='none' stroke='%23E08A6A' stroke-width='10' stroke-linecap='round'/%3E%3Ccircle cx='96' cy='60' r='6' fill='%23E08A6A'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="theme-color" content="#0F4C5C">
+<style>
+@font-face{font-family:"Manrope";src:url("../fonts/Manrope-VariableFont_wght.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("../fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+:root{--bg:#F4EDE3;--surface:#FFFFFF;--surface-2:#EFE6D8;--ink:#1F2D33;--muted:#5B6B70;--brand:#0F4C5C;--brand-ink:#F4EDE3;--deep:#0A3440;--accent:#C8664A;--accent-text:#A9502F;--line:#E3D8C7;--f-display:"Manrope",Helvetica,Arial,sans-serif;--f-body:"Source Sans 3",Helvetica,Arial,sans-serif;--r:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A3440;--surface:#0F4C5C;--surface-2:#0D4251;--ink:#F4EDE3;--muted:#B9C6C6;--brand:#F4EDE3;--brand-ink:#0A3440;--deep:#072833;--accent:#E08A6A;--accent-text:#E08A6A;--line:#22606F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A3440;--surface:#0F4C5C;--surface-2:#0D4251;--ink:#F4EDE3;--muted:#B9C6C6;--brand:#F4EDE3;--brand-ink:#0A3440;--deep:#072833;--accent:#E08A6A;--accent-text:#E08A6A;--line:#22606F;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;overflow-x:hidden}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-.02em;line-height:1.15;color:var(--brand);margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,6.5vw,3.2rem);font-weight:800}
+h1 em{font-style:normal;color:var(--accent)}
+h2{font-size:clamp(1.4rem,4vw,2rem);font-weight:800}
+h3{font-size:1.1rem;font-weight:700}
+p,li{margin:0}
+a{color:var(--accent-text)}
+:focus-visible{outline:3px solid var(--accent-text);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{display:block;width:118px;height:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 20px;border-radius:var(--r);background:var(--accent);color:#fff;font-family:var(--f-display);font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}
+:root[data-theme="dark"] .btn{color:#0A3440}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0A3440}}
+.btn-ghost{background:transparent;color:var(--brand);border:2px solid var(--brand)}
+.eyebrow{font-family:var(--f-display);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text);margin-bottom:10px}
+section{padding-block:56px}
+.hero{padding-block:56px 40px;display:grid;gap:18px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:62ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
+.card .n{font-family:var(--f-display);font-weight:800;color:var(--accent-text);font-size:.9rem}
+.alt{background:var(--surface-2)}
+ul.plain{padding-left:20px;display:grid;gap:6px}
+.steps{counter-reset:s;display:grid;gap:12px;margin-top:20px;padding:0;list-style:none}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 16px 16px 58px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-family:var(--f-display);font-weight:800}
+.note{font-size:.92rem;color:var(--muted)}
+form{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-top:20px;max-width:640px}
+label{display:grid;gap:4px;font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;font-weight:400;padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);min-height:44px;width:100%}
+label.chk{grid-template-columns:auto 1fr;align-items:start;gap:10px;font-weight:400}
+label.chk input{width:20px;min-height:20px;margin-top:3px}
+.out{display:grid;gap:8px}
+footer{background:var(--deep);color:#F4EDE3;padding-block:28px;font-size:.92rem}
+footer a{color:#E08A6A}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Celea, torna alla pagina principale"><svg class="logo" viewBox="0 0 340 120" role="img" aria-label="celea"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="var(--brand)" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="var(--accent)"/><text x="122" y="78" font-size="54" font-weight="800" letter-spacing="-1.5" fill="var(--brand)" style="font-family:Manrope,Helvetica,Arial,sans-serif">celea</text></svg></a>
+    <a class="btn btn-ghost" href="#parliamone">Parliamone</a>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow">Celea Uffici · novità</p>
+    <h1>Un ufficio di assistenti AI, <em>organizzato come un ufficio vero</em>.</h1>
+    <p class="lead">Una direttrice che fissa le priorità, reparti con compiti e orari, una memoria comune di decisioni e regole. Gli assistenti preparano il lavoro; Lei decide spese, firme e contatti.</p>
+    <div class="cta"><a class="btn" href="#parliamone">Chieda una chiamata di 30 minuti</a><a class="btn btn-ghost" href="#come">Come funziona</a></div>
+    <p class="note">Gli assistenti di Celea Uffici sono intelligenze artificiali. Quando scrivono o parlano a qualcuno fuori dall'azienda lo dichiarano sempre.</p>
+  </div>
+
+  <section id="come" class="alt"><div class="wrap">
+    <p class="eyebrow">Come funziona</p>
+    <h2>Non un singolo «chatbot»: una squadra con un metodo</h2>
+    <div class="grid">
+      <div class="card"><span class="n">01 · Direzione</span><h3>Una direttrice</h3><p>Legge cosa è successo, decide le priorità del giorno e assegna i compiti ai reparti. A Lei manda un riassunto breve, con le decisioni che spettano a Lei.</p></div>
+      <div class="card"><span class="n">02 · Reparti</span><h3>Reparti con orari</h3><p>Li scegliamo insieme in base al Suo lavoro, per esempio marketing, clienti e contatti, preventivi e documenti, ricerca. Ognuno ha il suo turno e il suo manuale.</p></div>
+      <div class="card"><span class="n">03 · Memoria</span><h3>Una memoria comune</h3><p>Decisioni, regole, errori già fatti e segnalazioni tra reparti stanno in un unico archivio. Così l'ufficio non ripete gli sbagli e non dimentica cosa ha deciso Lei.</p></div>
+      <div class="card"><span class="n">04 · Controllo</span><h3>Decide sempre Lei</h3><p>Nessuna spesa, nessun invio a clienti e nessuna firma senza il Suo sì. Le Sue decisioni valgono più di qualsiasi altra istruzione.</p></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <p class="eyebrow">Perché fidarsi</p>
+    <h2>È il metodo con cui lavora Celea</h2>
+    <div class="grid">
+      <div class="card"><h3>Lo usiamo noi per primi</h3><p>Celea è organizzata così: direzione, reparti, memoria comune e regole scritte. Le portiamo lo stesso metodo, adattato alla Sua azienda.</p></div>
+      <div class="card"><h3>L'ufficio resta Suo</h3><p>Regole, schede dei reparti e archivio sono in file Suoi, esportabili. L'intelligenza artificiale che lo fa funzionare si può cambiare senza rifare tutto.</p></div>
+      <div class="card"><h3>Regole chiare</h3><p>Dichiarazione AI, privacy e limiti scritti dall'inizio. Le attività con regole speciali, come quelle sanitarie o legali, le valutiamo prima di partire.</p></div>
+    </div>
+  </div></section>
+
+  <section class="alt"><div class="wrap">
+    <p class="eyebrow">Per chi</p>
+    <h2>A chi serve</h2>
+    <div class="grid">
+      <div class="card"><h3>Piccole e medie imprese</h3><p>Aziende con lavoro ripetitivo da organizzare (contatti, preventivi, documenti, comunicazione) che vogliono più ordine senza assumere subito.</p></div>
+      <div class="card"><h3>Studi e professionisti</h3><p>Chi ha poco tempo per la parte organizzativa e vuole un ufficio che prepari, ricordi e segnali.</p></div>
+      <div class="card"><h3>Consulenti e agenzie</h3><p>Chi vuole offrire un ufficio AI ai propri clienti con il nostro metodo, come partner.</p></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <p class="eyebrow">Come si parte</p>
+    <h2>Tre passi, senza impegno</h2>
+    <ol class="steps">
+      <li><strong>Chiamata di 30 minuti.</strong> Ci racconta come lavora e cosa vorrebbe affidare.</li>
+      <li><strong>Proposta su misura.</strong> Le diciamo quali reparti servono, cosa fanno, cosa non fanno e quanto costa.</li>
+      <li><strong>Prova prima di decidere.</strong> Vede l'ufficio al lavoro sul Suo caso prima di firmare.</li>
+    </ol>
+    <p class="note" style="margin-top:14px">Prezzo su misura: dipende da quanti reparti servono e da quanto lavoro fanno. Non promettiamo risultati che non possiamo misurare insieme.</p>
+  </div></section>
+
+  <section id="parliamone" class="alt"><div class="wrap">
+    <p class="eyebrow">Parliamone</p>
+    <h2>Chieda la chiamata</h2>
+    <p class="lead" style="margin-top:8px">Compili il modulo: si apre la Sua app di posta con la richiesta già scritta per team.celea@gmail.com.</p>
+    <form id="uf" novalidate>
+      <label>Nome e cognome<input name="nome" autocomplete="name" required></label>
+      <label>Azienda<input name="azienda" autocomplete="organization" required></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <label>Telefono<input type="tel" name="tel" autocomplete="tel"></label>
+      <label>Lei è<select name="chi"><option>Un'azienda che vuole l'ufficio</option><option>Uno studio o un professionista</option><option>Un consulente o un'agenzia (partner)</option></select></label>
+      <label>Quante persone lavorano da voi<select name="dim"><option>1–9</option><option>10–50</option><option>Più di 50</option></select></label>
+      <label>Cosa vorrebbe affidare all'ufficio<textarea name="cosa" rows="4"></textarea></label>
+      <label class="chk"><input type="checkbox" name="consenso"><span>Accetto di ricevere informazioni commerciali da Celea via email e WhatsApp; posso revocare quando voglio scrivendo STOP.</span></label>
+      <p class="note">I dati del modulo servono solo a risponderLe e a organizzare la chiamata; se non segue nulla li conserviamo 12 mesi. Il consenso sopra è facoltativo. Nessun cookie di tracciamento. Informativa completa: <a href="../privacy/">celea.it/privacy</a>.</p>
+      <button class="btn" type="submit">Prepara l'email</button>
+      <p class="note" id="err" role="alert" hidden>Scriva almeno nome, azienda e un'email valida.</p>
+      <div class="out" id="out" hidden><p>Se la Sua app di posta non si apre, copi questo testo e lo mandi a team.celea@gmail.com:</p><textarea id="txt" rows="8" readonly></textarea></div>
+    </form>
+  </div></section>
+</main>
+<footer><div class="wrap">Celea Uffici · un progetto di Celea · team.celea@gmail.com · <a href="../">www.celea.it</a> · <a href="../privacy/">Privacy</a></div></footer>
+<script>
+(function(){
+  var f=document.getElementById("uf"),err=document.getElementById("err"),out=document.getElementById("out"),txt=document.getElementById("txt");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var d=new FormData(f),email=(d.get("email")||"").trim();
+    if(!(d.get("nome")||"").trim()||!(d.get("azienda")||"").trim()||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.hidden=false;return}
+    err.hidden=true;
+    var body="Richiesta Celea Uffici\n\nNome: "+d.get("nome")+"\nAzienda: "+d.get("azienda")+"\nEmail: "+email+"\nTelefono: "+(d.get("tel")||"-")+"\nLei è: "+d.get("chi")+"\nPersone: "+d.get("dim")+"\nCosa vorrebbe affidare: "+(d.get("cosa")||"-")+"\nConsenso informazioni commerciali: "+(d.get("consenso")?"sì":"no");
+    txt.value=body;out.hidden=false;
+    location.href="mailto:team.celea@gmail.com?subject="+encodeURIComponent("Celea Uffici · "+d.get("azienda"))+"&body="+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
