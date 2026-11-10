@@ -38,4 +38,4 @@ rep('index.html', [
  ("calmly and with care, also outside opening hours.</p>", "calmly and with care, at any hour.</p>"),
  ("ruhig und sorgfältig, auch außerhalb der Öffnungszeiten.</p>", "ruhig und sorgfältig, zu jeder Uhrzeit.</p>"),
 ])
-rep('listino/index.html', [("<h1>L'assistente che risponde ai Suoi clienti. Anche fuori orario.</h1>", "<h1>L'assistente che risponde ai Suoi clienti quando Lei non può, a qualsiasi ora.</h1>")])
+rep('listino/index.html', [("<h1>L'assistente che risponde ai Suoi clienti. Anche fuori orario.</h1>", "<h1>Risponde ai Suoi clienti quando Lei non può, a qualsiasi ora.</h1>")])
