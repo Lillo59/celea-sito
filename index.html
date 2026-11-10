@@ -898,7 +898,12 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <div class="talk" id="talk" hidden>
           <span class="picker-label" data-i18n="d-tl">3. Parli a voce con l'assistente</span>
           <p class="talk-lead" id="talk-lead"></p>
-          <button type="button" class="btn btn-accent" id="talk-btn"><svg aria-hidden="true"><use href="#i-phone"/></svg><span id="talk-btn-t">Parla ora</span></button>
+          <!-- Demo personalizzata (listino v2.2): campo spento finché su Retell non c'è la variabile del nome (TALK.nome). Stesse classi del riquadro «dal vivo». -->
+          <div class="live-row">
+            <label for="talk-nome" class="skip" id="talk-nome-l">Nome della Sua attività (facoltativo)</label>
+            <input id="talk-nome" name="nome" type="text" autocomplete="organization" maxlength="40" placeholder="Nome della Sua attività (facoltativo)" hidden>
+            <button type="button" class="btn btn-accent" id="talk-btn"><svg aria-hidden="true"><use href="#i-phone"/></svg><span id="talk-btn-t">Parla ora</span></button>
+          </div>
           <p class="talk-msg" id="talk-msg" role="status" aria-live="polite"></p>
           <p class="live-note" data-i18n="d-tnote">Gratis, dal browser: serve solo il microfono · chiamata breve, al massimo 3 minuti · assistente AI con dati d'esempio · la conversazione può essere registrata per migliorare il servizio (vedi <a href="#privacy">privacy</a>)</p>
         </div>
@@ -1690,7 +1695,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   // La durata massima della chiamata (3 minuti) e i domini ammessi si impostano in Retell. Lasciare key vuota per nascondere il riquadro.
   var TALK = { key:"public_key_c73e28f264823fa5e478c", recaptcha:"6Lc2O_4tAAAAAMUHuzb58YLXZ14f1q23lMZsPcz4",
     agents:{ dentista:"agent_d707460b8b0bc2d50382aa3aa9", immobiliare:"agent_665333f44ade1c0d48ed000a7d", ricettivo:"agent_9f88879b0f2fd82c7a074dd2e6",
-      veterinario:"agent_b805f1d0866c4dcaba873a7ee7", impiantista:"agent_63311503c57ef5b6108635c50d" } };
+      veterinario:"agent_b805f1d0866c4dcaba873a7ee7", impiantista:"agent_63311503c57ef5b6108635c50d" },
+    nome:false }; // demo personalizzata: true solo dopo l'aggiornamento degli assistenti su Retell (variabile {{nome_attivita}})
 
   var chat = document.getElementById("chat"), chips = document.getElementById("chips");
   var nameEl = document.getElementById("chat-name"), form = document.getElementById("composer"), input = document.getElementById("chat-input");
@@ -1971,7 +1977,33 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   function liveName(){ return cur()[niche].name.split(" · ")[0]; }
   var talkBox=document.getElementById("talk"), talkLead=document.getElementById("talk-lead"), talkBtn=document.getElementById("talk-btn"), talkBtnT=document.getElementById("talk-btn-t"), talkMsg=document.getElementById("talk-msg");
   var talkLoaded=null;
-  function talkText(){ if(!talkBox) return; var T=UI[lang].talk, n=liveName(); talkLead.textContent=T.lead.replace("{n}",n); talkBtnT.textContent=T.btn.replace("{n}",n); talkMsg.textContent=""; }
+  // Demo personalizzata: l'assistente si presenta con il nome dell'attività scritto qui («assistente virtuale di [nome], esempio creato da Celea»).
+  // Si accende con TALK.nome = true solo quando gli assistenti su Retell usano la variabile {{nome_attivita}}.
+  // Limiti: chiamata al massimo 3 minuti (impostato su Retell); al massimo 2 demo al giorno da questo browser; tetto giornaliero complessivo da impostare su Retell.
+  var NOME = { max:2,
+    it:{ph:"Nome della Sua attività (facoltativo)", formato:"Scriva solo il nome dell'attività: da 2 a 40 caratteri, senza indirizzi web o email.", vietato:"Questo nome non si può usare nella demo: scriva il nome della Sua attività.", marchio:"Per la demo usi il nome della Sua attività, non quello di un'azienda conosciuta.", limite:"Per oggi ha già provato 2 demo da questo dispositivo: torni domani o prenoti una breve chiamata."},
+    en:{ph:"Your business name (optional)", formato:"Just type your business name: 2 to 40 characters, no web or email addresses.", vietato:"This name can't be used in the demo: please type your business name.", marchio:"For the demo, use your own business name, not a well-known company's.", limite:"You have already tried 2 demos today from this device: come back tomorrow or book a short call."},
+    de:{ph:"Name Ihres Betriebs (freiwillig)", formato:"Schreiben Sie nur den Namen Ihres Betriebs: 2 bis 40 Zeichen, ohne Web- oder E-Mail-Adressen.", vietato:"Dieser Name kann in der Demo nicht verwendet werden: bitte den Namen Ihres Betriebs eingeben.", marchio:"Verwenden Sie für die Demo den Namen Ihres Betriebs, nicht den eines bekannten Unternehmens.", limite:"Sie haben heute schon 2 Demos von diesem Gerät ausprobiert: kommen Sie morgen wieder oder buchen Sie ein kurzes Gespräch."},
+    // parole offensive (radici) e aziende famose: la demo non si presenta a nome loro
+    brutte:"cazz,minchi,merd,stronz,vaffancul,puttan,coglion,porcodio,bastard,fottut,fuck,bitch,cunt,nigger,scheiss,arschloch".split(","),
+    brutteParole:"culo,frocio,negro,troia,shit,fick,hure,nazi,nazista,hitler,mafia,mafioso,camorra,ndrangheta".split(","),
+    marchi:"amazon,google,apple,microsoft,meta,facebook,instagram,whatsapp,messenger,tiktok,netflix,samsung,fiat,ferrari,lamborghini,stellantis,barilla,ferrero,nutella,enel,eni,vodafone,iliad,fastweb,poste italiane,intesa sanpaolo,unicredit,generali,allianz,esselunga,coop,conad,lidl,aldi,carrefour,eurospin,mcdonald,burger king,ikea,zara,nike,adidas,coca cola,cocacola,pepsi,mercedes,bmw,volkswagen,audi,toyota,tesla,trenitalia,italo treno,ryanair,booking,airbnb,tripadvisor,immobiliare.it,idealista,tecnocasa,gabetti,remax,dentalpro,vitaldent,openai,chatgpt,anthropic,claude,retell,celea".split(",") };
+  function nomeNorm(v){ return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\s+/g," ").trim(); }
+  // restituisce {nome} se va bene, {err:"..."} se no, {} se il campo è vuoto
+  function nomeDemo(){
+    var el=document.getElementById("talk-nome"); if(!el || el.hidden) return {};
+    var v=String(el.value||"").replace(/\s+/g," ").trim(), T=NOME[lang]||NOME.it; el.removeAttribute("aria-invalid");
+    if(!v) return {};
+    var n=nomeNorm(v), no=function(k){ el.setAttribute("aria-invalid","true"); return {err:T[k]}; };
+    if(v.length<2 || v.length>40 || !/[a-z]/i.test(n) || /[@<>{}\[\]\\\/|#$%^*=+~`]|https?|www\.|\.(com|it|de|net|org)\b/.test(n) || !/^[\p{L}\p{N} &'’.,\-]+$/u.test(v)) return no("formato");
+    var compatto=n.replace(/[^a-z0-9]/g,"");
+    if(NOME.brutte.some(function(w){ return compatto.indexOf(w.replace(/ /g,""))>=0; })) return no("vietato");
+    if(NOME.brutteParole.some(function(w){ return new RegExp("(^|[^a-z0-9])"+w+"([^a-z0-9]|$)").test(n); })) return no("vietato");
+    if(NOME.marchi.some(function(w){ return new RegExp("(^|[^a-z0-9])"+w.replace(/[.]/g,"\\.")+"([^a-z0-9]|$)").test(n); })) return no("marchio");
+    return {nome:v};
+  }
+  function demoOggi(segna){ try{ var k="celea-demo-voce-"+new Date().toISOString().slice(0,10), n=+(localStorage.getItem(k)||0); if(segna) localStorage.setItem(k,String(n+1)); return n; }catch(e){ return 0; } }
+  function talkText(){ nomeTesti(); if(!talkBox) return; var T=UI[lang].talk, n=liveName(); talkLead.textContent=T.lead.replace("{n}",n); talkBtnT.textContent=T.btn.replace("{n}",n); talkMsg.textContent=""; }
   function addScript(src, attrs){ var sc=document.createElement("script"); sc.src=src; Object.keys(attrs||{}).forEach(function(k){ sc.setAttribute(k, attrs[k]); }); document.head.appendChild(sc); return sc; }
   // which/who/msg: un assistente fuori dalla demo (es. Leandro nei nuovi settori); senza, vale quello scelto nella demo.
   function talkStart(which, who, msg){
@@ -1983,14 +2015,24 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       out.textContent=T.switching.replace("{n}",n);
       location.href=location.pathname+"?parla="+which+"&lang="+lang+sez; return;
     }
+    var dyn=null;
+    if(TALK.nome && which===niche && !who){
+      var nd=nomeDemo(); if(nd.err){ out.textContent=nd.err; return; }
+      if(demoOggi(false)>=NOME.max){ out.textContent=(NOME[lang]||NOME.it).limite; return; }
+      if(nd.nome) dyn=JSON.stringify({nome_attivita:nd.nome});
+      demoOggi(true);
+    }
     talkLoaded=which; out.textContent=T.loading;
     if(TALK.recaptcha) addScript("https://www.google.com/recaptcha/api.js?render="+encodeURIComponent(TALK.recaptcha), {async:""});
     var w=addScript("https://dashboard.retellai.com/retell-widget-v2.js", {id:"retell-widget", type:"module",
       "data-voice-public-key":TALK.key, "data-voice-agent-id":TALK.agents[which], "data-recaptcha-key":TALK.recaptcha,
       "data-title":"Celea · "+n, "data-bot-name":n, "data-fab-text":T.fab.replace("{n}",n), "data-color":"#0F4C5C",
       "data-show-ai-popup":"false", "data-auto-open":"true"});
+    if(dyn) w.setAttribute("data-dynamic", dyn);
     w.onerror=function(){ talkLoaded=null; out.textContent=T.err; };
   }
+  function nomeTesti(){ var el=document.getElementById("talk-nome"), lb=document.getElementById("talk-nome-l"), T=NOME[lang]||NOME.it; if(!el) return; el.placeholder=T.ph; if(lb) lb.textContent=T.ph; el.hidden=!TALK.nome; }
+  nomeTesti();
   if(TALK.key && talkBox){ talkBox.hidden=false; talkBtn.addEventListener("click", function(){ talkStart(); }); }
   var cardTalks=document.querySelectorAll(".card-talk[data-talk]");
   cardTalks.forEach(function(box){
