@@ -1,0 +1,59 @@
+/* Ufficio isometrico (sezione «L'ufficio di Celea») · palette A, palette C in modalità scura */
+.iso-ufficio{position:relative;max-width:1000px;margin:0 auto 28px;--iso-floor:#F4ECDA;--iso-floor-on:#FBEFC8;--iso-wall-l:#E3D6BE;--iso-wall-r:#EDE3CF;--iso-edge:#D6C7AC;--iso-desk-t:#FFFFFF;--iso-desk-f:#E9DFC9;--iso-desk-s:#DCCFB6;--iso-card:#FFFFFF;--iso-ink:#1F2D33;--iso-muted:#56656A;--iso-glow:#E9B949}
+:root[data-theme="dark"] .iso-ufficio{--iso-floor:#0F4C5C;--iso-floor-on:#1F6474;--iso-wall-l:#0C3F4D;--iso-wall-r:#11505F;--iso-edge:#22606F;--iso-desk-t:#1C5E6E;--iso-desk-f:#0C3F4D;--iso-desk-s:#093744;--iso-card:#F4EDE3;--iso-ink:#0A3440;--iso-muted:#3A5560;--iso-glow:#E3B04B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .iso-ufficio{--iso-floor:#0F4C5C;--iso-floor-on:#1F6474;--iso-wall-l:#0C3F4D;--iso-wall-r:#11505F;--iso-edge:#22606F;--iso-desk-t:#1C5E6E;--iso-desk-f:#0C3F4D;--iso-desk-s:#093744;--iso-card:#F4EDE3;--iso-ink:#0A3440;--iso-muted:#3A5560;--iso-glow:#E3B04B}}
+.iso-svg{display:block;width:100%;height:auto;overflow:visible}
+.iso-floor{fill:var(--iso-floor);stroke:var(--iso-edge);stroke-width:1.5;transition:fill .6s ease}
+.iso-wall-l{fill:var(--iso-wall-l);stroke:var(--iso-edge);stroke-width:1.2}
+.iso-wall-r{fill:var(--iso-wall-r);stroke:var(--iso-edge);stroke-width:1.2}
+.iso-logo-wall{fill:#0F4C5C;stroke:#0A3440}
+.iso-desk-t{fill:var(--iso-desk-t);stroke:var(--iso-edge);stroke-width:1}
+.iso-desk-f{fill:var(--iso-desk-f)}
+.iso-desk-s{fill:var(--iso-desk-s)}
+.iso-glow{fill:var(--iso-glow);opacity:0;transition:opacity .6s ease}
+.iso-room.on .iso-floor{fill:var(--iso-floor-on)}
+.iso-room.on .iso-glow{opacity:.22}
+.iso-label rect{fill:var(--iso-card);stroke:var(--iso-edge);stroke-width:1}
+.iso-label text{font:700 15px var(--f-display);fill:var(--iso-ink);text-anchor:middle}
+.iso-label.on rect{stroke:var(--iso-glow);stroke-width:2.5}
+.iso-cal-bg{fill:#FFFFFF;stroke:#D6C7AC}.iso-cal-top{fill:#C8664A}.iso-cal-d{fill:#E9DFC9}.iso-cal-new{fill:#C8664A}
+/* cartellini sopra le scrivanie */
+.iso-card rect{fill:var(--iso-card);stroke:var(--iso-edge);stroke-width:1.2}
+.iso-card text{font:700 12.5px var(--f-display);fill:var(--iso-ink);text-anchor:middle}
+.iso-card .ln{fill:#E9DFC9;stroke:none}.iso-card .img{fill:#E9B949;stroke:none;opacity:.55}
+.iso-card .tot{fill:#0F4C5C;stroke:none}.iso-card .ok{fill:#0F4C5C;stroke:none}.iso-card .okv{fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.iso-card .s1{fill:#C8664A;stroke:none}.iso-card .s2{fill:#E9B949;stroke:none}.iso-card .s3{fill:#0F4C5C;stroke:none}
+.iso-phone circle{fill:#A9502F;stroke:none}.iso-phone path{fill:none;stroke:#fff;stroke-width:2.2;stroke-linejoin:round}
+.iso-bubble rect{fill:#0F4C5C;stroke:none}.iso-bubble text{fill:#FBF7EF}
+.iso-appt rect{fill:#FBEFC8;stroke:#C8664A}.iso-appt text{font-size:12px}
+.iso-wa rect{fill:var(--iso-card)}.iso-wa rect.me{fill:#D9E6E6}.iso-wa text{font-size:11px}
+.iso-card text[data-i18n$="2"]{font:600 12px var(--f-body);fill:var(--iso-muted)}
+/* Celeo cammina tra le stanze */
+.iso-celeo{position:absolute;width:6.2%;min-width:34px;height:auto;transform:translate(-50%,-100%);transition:left 1.3s cubic-bezier(.45,.05,.35,1),top 1.3s cubic-bezier(.45,.05,.35,1);pointer-events:none;filter:drop-shadow(0 6px 4px rgba(10,52,64,.22))}
+.iso-celeo.sx{transform:translate(-50%,-100%) scaleX(-1)}
+.js-r .iso-celeo.cammina{animation:iso-passo .32s ease-in-out infinite alternate}
+@keyframes iso-passo{from{margin-top:0}to{margin-top:-4px}}
+/* telefono del titolare: satellite fuori dall'ufficio */
+.iso-titolare{position:absolute;right:0;bottom:2%;width:min(270px,44%);display:grid;gap:4px;padding:12px 14px;border-radius:18px;background:#0A3440;color:#F4EDE3;box-shadow:0 18px 40px -20px rgba(10,52,64,.7);font-size:.86rem;line-height:1.35}
+.iso-t-h{display:flex;align-items:center;gap:8px}
+.iso-t-h svg{width:22px;height:22px;border-radius:6px;flex:none}
+.iso-t-h b{font-family:var(--f-display)}
+.iso-t-h small{margin-left:auto;font-size:.72rem;opacity:.75}
+/* passi: senza JavaScript o con «riduci movimento» resta il fotogramma finale, tutto visibile */
+.js-r .iso-ufficio.playing [data-at]{transition:opacity .45s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+.js-r .iso-ufficio.playing [data-at]:not(.on){opacity:0}
+.js-r .iso-ufficio.playing .iso-titolare:not(.on){transform:translateY(16px)}
+.js-r .iso-ufficio.playing .iso-ring{animation:iso-squillo .5s ease-in-out 3}
+.js-r .iso-ufficio.playing .iso-phone.on .iso-ring{animation:iso-squillo .5s ease-in-out 3}
+@keyframes iso-squillo{0%,100%{transform:rotate(0)}25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
+.iso-nota{text-align:center;font-size:.9rem;color:var(--muted);margin:-8px 0 26px}
+@media (max-width:640px){.iso-titolare{position:relative;right:auto;bottom:auto;width:auto;margin:-6px 4px 0}.iso-label text{font-size:17px}.iso-label rect{x:-80;width:160px;height:32px;y:-18}}
+
+/* telefono: inquadratura ingrandita che segue Celeo (la vista intera sarebbe troppo piccola per leggere) */
+.iso-vista{position:relative}
+.iso-cam{position:relative;transform-origin:0 0;transition:transform 1.3s cubic-bezier(.45,.05,.35,1)}
+@media (max-width:640px){.iso-vista{overflow:hidden;aspect-ratio:1/0.95;border-radius:18px;background:var(--surface-2)}}
+
+.iso-bubble rect{fill:#A9502F}
+:root[data-theme="dark"] .iso-logo-wall{fill:#072833;stroke:#E08A6A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .iso-logo-wall{fill:#072833;stroke:#E08A6A}}

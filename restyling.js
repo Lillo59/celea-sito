@@ -55,6 +55,40 @@ window.CELEA_R_OK=true;
     kpis.forEach(function(k,i){ setTimeout(function(){ k.classList.toggle("up", n>=1); }, n>=1 ? 250+i*180 : 0); });
   });
 
+  // Ufficio isometrico (10/11): squilla il telefono all'ingresso, risponde l'assistente AI, l'appuntamento va nel calendario;
+  // poi lavorano WhatsApp, Marketing, Contabilità, Legale, Vendite (ogni stanza si illumina); alla fine il riepilogo al titolare.
+  // Celeo cammina da una stanza all'altra e fa da guida. Circa 20 secondi, poi ricomincia dall'ingresso.
+  var isoBox=document.querySelector("[data-scene=ufficio]");
+  if(isoBox){
+    var rooms={}; [].forEach.call(isoBox.querySelectorAll(".iso-room"), function(g){ rooms[g.dataset.room]=g; });
+    var celeo=isoBox.querySelector(".iso-celeo"), perc={}; try{ perc=JSON.parse(isoBox.dataset.percorso); }catch(e){}
+    var dove="ingresso", passi=["ingresso","ingresso","ingresso","ingresso","whatsapp","marketing","contabilita","legale","vendite","ingresso"];
+    // telefono: la «camera» ingrandisce e segue la stanza dove lavora Celeo
+    var vista=isoBox.querySelector(".iso-vista"), cam=isoBox.querySelector(".iso-cam"), stretto=window.matchMedia("(max-width:640px)");
+    function inquadra(nome){
+      if(!cam || !perc[nome]) return;
+      if(!stretto.matches || !isoBox.classList.contains("playing")){ cam.style.transform=""; return; }
+      var k=2.1, vw=vista.clientWidth, vh=vista.clientHeight, ch=cam.offsetHeight;
+      var px=perc[nome][0]/100*vw*k, py=perc[nome][1]/100*ch*k;
+      var tx=Math.min(0, Math.max(vw-vw*k, vw*0.5-px)), ty=Math.min(0, Math.max(vh-ch*k, vh*0.66-py));
+      cam.style.transform="translate("+tx.toFixed(1)+"px,"+ty.toFixed(1)+"px) scale("+k+")";
+    }
+    function vai(nome){
+      inquadra(nome);
+      if(!celeo || !perc[nome] || nome===dove) return;
+      var da=perc[dove]; dove=nome;
+      celeo.classList.toggle("sx", perc[nome][0] < da[0]);
+      celeo.classList.add("cammina");
+      celeo.style.left=perc[nome][0]+"%"; celeo.style.top=perc[nome][1]+"%";
+      setTimeout(function(){ celeo.classList.remove("cammina"); }, 1300);
+    }
+    watch("[data-scene=ufficio]", [[0,1200],[1,1600],[2,1700],[3,1700],[4,2000],[5,2000],[6,2000],[7,2000],[8,2000],[9,3400]], function(n){
+      var qui=passi[n]; Object.keys(rooms).forEach(function(k){ rooms[k].classList.toggle("on", n>0 && k===qui); });
+      [].forEach.call(isoBox.querySelectorAll(".iso-label"), function(l){ l.classList.toggle("on", n>0 && l.dataset.for===qui); });
+      vai(qui);
+    });
+  }
+
   // 3) Reparti al lavoro: ogni reparto mostra a turno cosa sta facendo (solo quando l'ufficio è visibile)
   var stati=[].slice.call(document.querySelectorAll(".stato")), rt=null;
   function giro(){

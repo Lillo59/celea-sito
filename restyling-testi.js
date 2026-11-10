@@ -2,6 +2,10 @@
    Letti dallo script principale insieme ai dizionari EN e DE. */
 window.CELEA_I18N_PLUS = {
 en:{
+ "r-iso-ing":"Entrance · Front desk","r-iso-wa":"WhatsApp (from January 2027)","r-iso-mk":"Marketing","r-iso-co":"Accounting","r-iso-le":"Legal","r-iso-ve":"Sales",
+ "r-iso-ai":"Sofia · AI assistant","r-iso-app":"Thu 5 pm","r-iso-wa1":"Reminder","r-iso-wa3":"Thanks!","r-iso-mk2":"post to approve","r-iso-co2":"deadlines in order","r-iso-le2":"text checked","r-iso-ve2":"quote ready",
+ "r-iso-t0":"on the owner's phone","r-iso-t1":"Today's summary","r-iso-t2":"3 calls · 1 appointment booked · 1 post to approve",
+ "r-iso-nota":"Illustration: departments are chosen together, based on your work.",
  "n4":"Veterinary clinic","n5":"Plumbers and electricians",
  "d-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg><span>All five assistants: also available on WhatsApp (from January 2027).</span>",
  "r-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg>Also available on WhatsApp (from January 2027)",
@@ -58,6 +62,10 @@ en:{
  "r-fab":"Talk now<small>with an AI assistant, from your browser</small>"
 },
 de:{
+ "r-iso-ing":"Eingang · Sekretariat","r-iso-wa":"WhatsApp (ab Januar 2027)","r-iso-mk":"Marketing","r-iso-co":"Buchhaltung","r-iso-le":"Recht","r-iso-ve":"Vertrieb",
+ "r-iso-ai":"Sofia · KI-Assistentin","r-iso-app":"Do 17:00","r-iso-wa1":"Erinnerung","r-iso-wa3":"Danke!","r-iso-mk2":"Beitrag zur Freigabe","r-iso-co2":"Fristen geordnet","r-iso-le2":"Text geprüft","r-iso-ve2":"Angebot bereit",
+ "r-iso-t0":"auf dem Handy des Inhabers","r-iso-t1":"Zusammenfassung von heute","r-iso-t2":"3 Anrufe · 1 Termin vereinbart · 1 Beitrag zur Freigabe",
+ "r-iso-nota":"Darstellung: Die Abteilungen wählen wir gemeinsam, passend zu Ihrer Arbeit.",
  "n4":"Tierarztpraxis","n5":"Installateure",
  "d-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg><span>Alle fünf Assistenten: auch auf WhatsApp verfügbar (ab Januar 2027).</span>",
  "r-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg>Auch auf WhatsApp verfügbar (ab Januar 2027)",
