@@ -120,7 +120,7 @@ footer a{color:#E08A6A}
   <section id="parliamone" class="alt"><div class="wrap">
     <p class="eyebrow">Parliamone</p>
     <h2>Chieda la chiamata</h2>
-    <p class="lead" style="margin-top:8px">Compili il modulo: si apre la Sua app di posta con la richiesta già scritta per team.celea@gmail.com.</p>
+    <p class="lead" style="margin-top:8px">Compili il modulo: si apre la Sua app di posta con la richiesta già scritta per info@celea.it.</p>
     <form id="uf" novalidate>
       <label>Nome e cognome<input name="nome" autocomplete="name" required></label>
       <label>Azienda<input name="azienda" autocomplete="organization" required></label>
@@ -133,11 +133,11 @@ footer a{color:#E08A6A}
       <p class="note">I dati del modulo servono solo a risponderLe e a organizzare la chiamata; se non segue nulla li conserviamo 12 mesi. Il consenso sopra è facoltativo. Nessun cookie di tracciamento. Informativa completa: <a href="../privacy/">celea.it/privacy</a>.</p>
       <button class="btn" type="submit">Prepara l'email</button>
       <p class="note" id="err" role="alert" hidden>Scriva almeno nome, azienda e un'email valida.</p>
-      <div class="out" id="out" hidden><p>Se la Sua app di posta non si apre, copi questo testo e lo mandi a team.celea@gmail.com:</p><textarea id="txt" rows="8" readonly></textarea></div>
+      <div class="out" id="out" hidden><p>Se la Sua app di posta non si apre, copi questo testo e lo mandi a info@celea.it:</p><textarea id="txt" rows="8" readonly></textarea></div>
     </form>
   </div></section>
 </main>
-<footer><div class="wrap">Celea Uffici · un progetto di Celea · team.celea@gmail.com · <a href="../">www.celea.it</a> · <a href="../privacy/">Privacy</a></div></footer>
+<footer><div class="wrap">Celea · William Balletta · Librizzi (ME) · info@celea.it · <a href="../">www.celea.it</a> · <a href="../privacy/">Privacy</a></div></footer>
 <script>
 (function(){
   var f=document.getElementById("uf"),err=document.getElementById("err"),out=document.getElementById("out"),txt=document.getElementById("txt");
@@ -148,7 +148,7 @@ footer a{color:#E08A6A}
     err.hidden=true;
     var body="Richiesta Celea Uffici\n\nNome: "+d.get("nome")+"\nAzienda: "+d.get("azienda")+"\nEmail: "+email+"\nTelefono: "+(d.get("tel")||"-")+"\nLei è: "+d.get("chi")+"\nPersone: "+d.get("dim")+"\nCosa vorrebbe affidare: "+(d.get("cosa")||"-")+"\nConsenso informazioni commerciali: "+(d.get("consenso")?"sì":"no");
     txt.value=body;out.hidden=false;
-    location.href="mailto:team.celea@gmail.com?subject="+encodeURIComponent("Celea Uffici · "+d.get("azienda"))+"&body="+encodeURIComponent(body);
+    location.href="mailto:info@celea.it?subject="+encodeURIComponent("Celea Uffici · "+d.get("azienda"))+"&body="+encodeURIComponent(body);
   });
 })();
 </script>
