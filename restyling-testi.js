@@ -2,6 +2,8 @@
    Letti dallo script principale insieme ai dizionari EN e DE. */
 window.CELEA_I18N_PLUS = {
 en:{
+ "can-head":"<p class=\"eyebrow\">Channels</p><h2 id=\"canali-t\">Where the assistant answers</h2><p class=\"lead\">The same assistant, with the same rules, on the channels your customers use. Next to each channel you can see when it is available.</p>",
+ "can-cards":"<article><h4>Phone</h4><p class=\"cat-who\">Available · activations from January 2027</p><p>Answers calls, books appointments in the Calendar and hands over to a person when needed. On every plan: Studio, Pro and Pro + website.</p></article><article><h4>WhatsApp</h4><p class=\"cat-who\">From January 2027</p><p>Conversations with customers on Pro and Pro + website. With Studio: sending files and directions.</p></article><article><h4>Instagram</h4><p class=\"cat-who\">Coming in 2027 · requires Meta's approval</p><p>Replies to direct messages on Pro and Pro + website. On Studio as an extra channel, at €19/month.</p></article><article><h4>Messenger</h4><p class=\"cat-who\">Coming in 2027 · requires Meta's approval</p><p>Replies to Facebook page messages on Pro and Pro + website. On Studio as an extra channel, at €19/month.</p></article>",
  "r-iso-ing":"Entrance · Front desk","r-iso-wa":"WhatsApp (from January 2027)","r-iso-mk":"Marketing","r-iso-co":"Accounting","r-iso-le":"Legal","r-iso-ve":"Sales",
  "r-iso-ai":"Sofia · AI assistant","r-iso-app":"Thu 5 pm","r-iso-wa1":"Reminder","r-iso-wa3":"Thanks!","r-iso-mk2":"post to approve","r-iso-co2":"deadlines in order","r-iso-le2":"text checked","r-iso-ve2":"quote ready",
  "r-iso-t0":"on the owner's phone","r-iso-t1":"Today's summary","r-iso-t2":"3 calls · 1 appointment booked · 1 post to approve",
@@ -62,6 +64,8 @@ en:{
  "r-fab":"Talk now<small>with an AI assistant, from your browser</small>"
 },
 de:{
+ "can-head":"<p class=\"eyebrow\">Kanäle</p><h2 id=\"canali-t\">Wo der Assistent antwortet</h2><p class=\"lead\">Derselbe Assistent, mit denselben Regeln, auf den Kanälen, die Ihre Kunden nutzen. Neben jedem Kanal sehen Sie, ab wann er verfügbar ist.</p>",
+ "can-cards":"<article><h4>Telefon</h4><p class=\"cat-who\">Verfügbar · Aktivierungen ab Januar 2027</p><p>Nimmt Anrufe an, trägt Termine in den Kalender ein und gibt an eine Person weiter, wenn nötig. In allen Plänen: Studio, Pro und Pro + Website.</p></article><article><h4>WhatsApp</h4><p class=\"cat-who\">Ab Januar 2027</p><p>Gespräche mit Kunden bei Pro und Pro + Website. Mit Studio: Versand von Dateien und Wegbeschreibungen.</p></article><article><h4>Instagram</h4><p class=\"cat-who\">Kommt 2027 · Freigabe durch Meta nötig</p><p>Antworten auf Direktnachrichten bei Pro und Pro + Website. Bei Studio als zusätzlicher Kanal, für 19 €/Monat.</p></article><article><h4>Messenger</h4><p class=\"cat-who\">Kommt 2027 · Freigabe durch Meta nötig</p><p>Antworten auf Nachrichten der Facebook-Seite bei Pro und Pro + Website. Bei Studio als zusätzlicher Kanal, für 19 €/Monat.</p></article>",
  "r-iso-ing":"Eingang · Sekretariat","r-iso-wa":"WhatsApp (ab Januar 2027)","r-iso-mk":"Marketing","r-iso-co":"Buchhaltung","r-iso-le":"Recht","r-iso-ve":"Vertrieb",
  "r-iso-ai":"Sofia · KI-Assistentin","r-iso-app":"Do 17:00","r-iso-wa1":"Erinnerung","r-iso-wa3":"Danke!","r-iso-mk2":"Beitrag zur Freigabe","r-iso-co2":"Fristen geordnet","r-iso-le2":"Text geprüft","r-iso-ve2":"Angebot bereit",
  "r-iso-t0":"auf dem Handy des Inhabers","r-iso-t1":"Zusammenfassung von heute","r-iso-t2":"3 Anrufe · 1 Termin vereinbart · 1 Beitrag zur Freigabe",
