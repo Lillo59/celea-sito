@@ -438,6 +438,9 @@ footer .sign{font-family:var(--f-display);font-weight:700}
 .ag-out{font-family:var(--f-display);font-weight:700;font-size:1.08rem;padding:14px;border-radius:var(--r);background:var(--surface-2);overflow-wrap:anywhere}
 </style>
 
+<link rel="stylesheet" href="restyling.css">
+<script>/* restyling 2026-11: animazioni d'ingresso solo se il browser le regge; se lo script non arriva entro 3 s, si vede tutto */
+(function(d){if(!("IntersectionObserver" in window)||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;d.classList.add("js-r");setTimeout(function(){if(!window.CELEA_R_OK)d.classList.remove("js-r")},3000)})(document.documentElement);</script>
 </head>
 <body>
 <a class="skip" href="#demo" data-i18n="skip">Vai alla demo</a>
@@ -460,6 +463,14 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2.5-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-logo" viewBox="0 0 120 120"><rect width="120" height="120" rx="26" fill="#0F4C5C"/><g transform="translate(14 12) scale(0.8)"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="#F4EDE3" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="#E08A6A" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="#E08A6A"/></g></symbol>
+  <symbol id="i-megafono" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6L7 10H4zM17 9.5a3.5 3.5 0 0 1 0 5M7 14l1.5 5h2.5l-1-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-euro" viewBox="0 0 24 24"><path d="M18 6.5A7 7 0 1 0 18 17.5M4 10.5h10M4 13.5h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-bilancia" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-stretta" viewBox="0 0 24 24"><path d="M3 11l4-4 4 2 3-2 3 1 4 4M3 11l5 5 2-1 2 2 2-1 2 1 3-3 1-2M9 9l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-bussola" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lucchetto" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-casa" viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v9H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-grafico" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 
 <header class="top">
@@ -495,12 +506,81 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         </div>
         <p class="hero-note" data-i18n="h-note">Lo configuriamo noi, su misura per la Sua attività, con 30 giorni di prova gratuita (fino a 100 minuti di telefonate). Si presenta sempre come assistente virtuale. Prezzi chiari, <a href="#prezzi">tutti scritti qui</a>.</p>
       </div>
-      <div class="clock" aria-label="Esempi di messaggi che arrivano quando lo studio è chiuso" data-i18n="h-clock">
-        <div class="clock-item"><time>22:47</time><p>«Domani potete vedermi? Ho perso un'otturazione.»<small>Proposti due orari, appuntamento fissato.</small></p></div>
-        <div class="clock-item"><time>07:12</time><p>«La casa in via del porto ha il box auto?»<small>Risposta data, visita fissata per sabato.</small></p></div>
-        <div class="clock-item"><time>01:30</time><p>«We arrive late tonight, how do we get the keys?»<small>Risposta in inglese con le istruzioni per il check-in.</small></p></div>
-        <p class="clock-cap">Esempi illustrativi delle richieste che arrivano a orari scomodi.</p>
+      <div class="hero-visual">
+        <figure class="celeo-hero">
+          <div class="arch"><img src="img/celeo/celeo-figura-360.webp" srcset="img/celeo/celeo-figura-360.webp 360w, img/celeo/celeo-figura-640.webp 640w" sizes="(min-width:900px) 170px, 134px" width="360" height="636" alt="Celeo, il leone con gli occhiali, mascotte di Celea, che saluta" decoding="async" fetchpriority="low"></div>
+          <figcaption>
+            <span class="celeo-bubble" data-i18n="r-celeo">Piacere, sono Celeo. Le faccio vedere come lavora il nostro ufficio.</span>
+            <small data-i18n="r-celeo-s">Celeo è la mascotte di Celea. Gli assistenti che rispondono ai Suoi clienti sono intelligenze artificiali e lo dicono.</small>
+          </figcaption>
+        </figure>
+        <div class="clock" aria-label="Esempi di messaggi che arrivano quando lo studio è chiuso" data-i18n="h-clock">
+          <div class="clock-item"><time>22:47</time><p>«Domani potete vedermi? Ho perso un'otturazione.»<small>Proposti due orari, appuntamento fissato.</small></p></div>
+          <div class="clock-item"><time>07:12</time><p>«La casa in via del porto ha il box auto?»<small>Risposta data, visita fissata per sabato.</small></p></div>
+          <div class="clock-item"><time>01:30</time><p>«We arrive late tonight, how do we get the keys?»<small>Risposta in inglese con le istruzioni per il check-in.</small></p></div>
+          <p class="clock-cap">Esempi illustrativi delle richieste che arrivano a orari scomodi.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="sogno" aria-labelledby="sogno-t">
+    <div class="wrap">
+      <figure class="sogno-foto" data-reveal><img src="img/celeo/celeo-busto-480.webp" srcset="img/celeo/celeo-busto-480.webp 480w, img/celeo/celeo-busto-800.webp 800w" sizes="(min-width:900px) 260px, 58vw" width="480" height="642" alt="Celeo, la mascotte di Celea, pensieroso alla scrivania tra i libri" loading="lazy" decoding="async"></figure>
+      <div data-reveal>
+        <p class="eyebrow" data-i18n="r-s-eye">Perché esiste Celea</p>
+        <blockquote><p class="sogno-q" id="sogno-t" data-i18n="r-s-q">«Tutti devono avere la possibilità di <span>realizzare il proprio sogno</span>.»</p></blockquote>
+        <p class="sogno-txt" data-i18n="r-s-txt">Celea è un'azienda piccola, nata in Sicilia. Lavoriamo per chi un'attività l'ha costruita con le proprie mani: lo studio, l'agenzia, la casa vacanze, l'officina. Ci occupiamo noi di rispondere ai Suoi clienti con garbo e con le Sue regole, così Lei può dedicare il tempo al lavoro che ama.</p>
+        <p class="sogno-firma"><svg class="arcs" viewBox="0 0 120 120" aria-hidden="true"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" stroke-width="12"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" stroke-width="10"/></svg><span data-i18n="r-s-firma">Il simbolo di Celea è un abbraccio: l'arco grande che tiene quello piccolo.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="scena" id="telefonata" aria-labelledby="tel-t">
+    <div class="wrap">
+      <div class="sec-head" data-reveal data-i18n="r-t-head">
+        <p class="eyebrow">Una telefonata, dall'inizio alla fine</p>
+        <h2 id="tel-t">Una paziente chiama. Sofia fissa l'appuntamento e manda il promemoria.</h2>
+        <p class="lead">Esempio illustrativo con dati inventati: Sofia è l'assistente AI di uno studio dentistico. Si presenta come assistente AI, propone gli orari liberi, scrive l'appuntamento nel calendario e il giorno prima ricorda l'appuntamento alla paziente.</p>
+      </div>
+      <p class="vh" data-i18n="r-t-aria">Animazione: telefonata di esempio a Sofia, assistente AI; l'appuntamento compare nel calendario e il giorno prima arriva il promemoria.</p>
+      <div class="stage stage-call" data-scene="call" aria-hidden="true">
+        <div class="phone" aria-hidden="true">
+          <div class="ph-island"></div>
+          <div class="ph-screen">
+            <div class="ph-status"><span>9:41</span><span>●●●</span></div>
+            <div class="ph-notif" data-at="7">
+              <header><svg><use href="#i-logo"/></svg><span data-i18n="r-t-nh">Promemoria · Studio dentistico</span><time data-i18n="r-t-nt">mer 18:00</time></header>
+              <strong data-i18n="r-t-n1">Domani alle 17:00 La aspettiamo</strong>
+              <span data-i18n="r-t-n2">per la pulizia dei denti. Se deve spostare l'appuntamento, risponda a questo messaggio.</span>
+            </div>
+            <div class="ph-head">
+              <svg class="ph-av"><use href="#i-logo"/></svg>
+              <b>Sofia</b>
+              <small data-i18n="r-t-who">assistente AI · Studio dentistico (esempio)</small>
+              <span class="ph-timer" data-timer>01:12</span>
+            </div>
+            <ol class="ph-lines">
+              <li class="l-bot" data-at="1" data-i18n="r-t-l1"><b>Sofia · AI</b>Studio dentistico, sono Sofia, l'assistente AI. Come posso aiutarLa?</li>
+              <li class="l-me" data-at="2" data-i18n="r-t-l2">Vorrei prenotare una pulizia dei denti.</li>
+              <li class="l-bot" data-at="3" data-i18n="r-t-l3"><b>Sofia · AI</b>Ho martedì alle 10:30 o giovedì alle 17:00. Quale preferisce?</li>
+              <li class="l-me" data-at="4" data-i18n="r-t-l4">Giovedì alle 17, grazie.</li>
+              <li class="l-bot" data-at="5" data-i18n="r-t-l5"><b>Sofia · AI</b>Fissato. Il giorno prima Le mando un promemoria.</li>
+            </ol>
+            <span class="ph-lang" data-i18n="r-t-lang">Risponde nella lingua di chi chiama</span>
+            <div class="ph-keys"><i><svg><use href="#i-person"/></svg></i><i class="end"><svg><use href="#i-phone"/></svg></i></div>
+          </div>
+        </div>
+        <div class="agenda" aria-hidden="true">
+          <p class="ag-h"><svg><use href="#i-cal"/></svg><span class="t" data-i18n="r-t-cal">Calendario</span><span data-i18n="r-t-day">giovedì</span></p>
+          <div class="ag-row"><time>15:00</time><span class="ev" data-i18n="r-t-ev0">Controllo<small>fissato dallo studio</small></span></div>
+          <div class="ag-row"><time>16:00</time><i class="ph"></i></div>
+          <div class="ag-row"><time>17:00</time><span class="ev" data-at="6" data-i18n="r-t-ev">Pulizia · Giulia R.<small>fissato da Sofia al telefono</small></span></div>
+          <div class="ag-row"><time>18:00</time><i class="ph" style="width:40%"></i></div>
+        </div>
+      </div>
+      <p class="lingue" data-reveal data-i18n="r-lingue"><strong>Voce italiana, risponde nella lingua di chi chiama.</strong> Lingue provate nei nostri collaudi: <span class="l">italiano</span><span class="l">inglese</span><span class="l">tedesco</span></p>
+      <p class="stage-note" data-i18n="r-t-note">Esempio illustrativo: nomi, orari e messaggi sono inventati. I promemoria su WhatsApp sono disponibili da gennaio 2027.</p>
     </div>
   </section>
 
@@ -657,6 +737,81 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         </article>
       </div>
       <p class="lead" style="margin-top:22px" data-i18n="nv4"><strong>Novità per le aziende: Celea Uffici.</strong> Non un solo assistente, ma un ufficio intero di assistenti AI con direzione, reparti e memoria comune, dove decide sempre Lei. <a href="uffici/">Scopra Celea Uffici</a></p>
+    </div>
+  </section>
+
+  <section class="ufficio" id="ufficio" aria-labelledby="uff-t">
+    <div class="wrap">
+      <div class="sec-head" data-reveal data-i18n="r-u-head">
+        <p class="eyebrow">L'ufficio di Celea</p>
+        <h2 id="uff-t">Non un chatbot: un ufficio, con i suoi reparti.</h2>
+        <p class="lead">All'ingresso c'è la segreteria che risponde ai Suoi clienti. Dietro, ogni reparto ha un compito preciso e prepara il lavoro. Le decisioni, le spese e le firme restano Sue.</p>
+      </div>
+      <div class="palazzo" data-reveal>
+        <div class="ingresso">
+          <div class="muro" aria-hidden="true">
+            <svg viewBox="0 0 340 120"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="#F4EDE3" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="#E08A6A" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="#E08A6A"/><text x="122" y="78" font-family="Manrope, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="-1.5" fill="#F4EDE3">celea</text></svg>
+          </div>
+          <div data-i18n="r-u-ing">
+            <h3>Ingresso · Segreteria</h3>
+            <p>Sofia, Marco, Elena, Leandro e Cesare rispondono al telefono per studi dentistici, agenzie, strutture ricettive, veterinari e impiantisti. Fissano appuntamenti e passano la parola a una persona quando serve.</p>
+          </div>
+        </div>
+        <div class="piani">
+          <article class="reparto"><i class="luce" aria-hidden="true"></i><div class="targa"><svg aria-hidden="true"><use href="#i-phone"/></svg><h3 data-i18n="r-u-r1">Segreteria</h3></div><p data-i18n="r-u-r1p">Risponde alle telefonate e scrive gli appuntamenti nel calendario.</p><p class="stato" aria-hidden="true" data-i18n="r-u-r1s"><span class="on">Al telefono con una paziente</span><span>Appuntamento fissato: giovedì 17:00</span><span>Passa la chiamata al titolare</span></p></article>
+          <article class="reparto"><i class="luce attesa" aria-hidden="true"></i><div class="targa"><svg aria-hidden="true"><use href="#i-chat"/></svg><h3 data-i18n="r-u-r2">WhatsApp</h3></div><p data-i18n="r-u-r2p">Risponde ai messaggi dei clienti e manda i promemoria. Disponibile da gennaio 2027.</p><p class="stato" aria-hidden="true" data-i18n="r-u-r2s"><span class="on">Prepara i promemoria di domani</span><span>Risponde: «Sì, c'è il parcheggio»</span><span>Conferma l'arrivo degli ospiti</span></p></article>
+          <article class="reparto"><i class="luce" aria-hidden="true"></i><div class="targa"><svg aria-hidden="true"><use href="#i-megafono"/></svg><h3 data-i18n="r-u-r3">Marketing</h3></div><p data-i18n="r-u-r3p">Prepara post e messaggi. Escono solo con il Suo sì.</p><p class="stato" aria-hidden="true" data-i18n="r-u-r3s"><span class="on">Scrive il post della settimana</span><span>Prepara gli auguri per i clienti</span><span>In attesa del Suo sì</span></p></article>
+          <article class="reparto"><i class="luce" aria-hidden="true"></i><div class="targa"><svg aria-hidden="true"><use href="#i-stretta"/></svg><h3 data-i18n="r-u-r4">Vendite</h3></div><p data-i18n="r-u-r4p">Prepara i preventivi e Le ricorda chi aspetta una risposta.</p><p class="stato" aria-hidden="true" data-i18n="r-u-r4s"><span class="on">Preventivo pronto da rivedere</span><span>Tre persone da richiamare</span><span>Ordina le richieste arrivate</span></p></article>
+          <article class="reparto"><i class="luce" aria-hidden="true"></i><div class="targa"><svg aria-hidden="true"><use href="#i-euro"/></svg><h3 data-i18n="r-u-r5">Contabilità</h3></div><p data-i18n="r-u-r5p">Tiene in ordine scadenze e documenti da passare al Suo commercialista.</p><p class="stato" aria-hidden="true" data-i18n="r-u-r5s"><span class="on">Controlla le scadenze del mese</span><span>Raccoglie le fatture per il commercialista</span><span>Aggiorna il riepilogo delle spese</span></p></article>
+          <article class="reparto"><i class="luce" aria-hidden="true"></i><div class="targa"><svg aria-hidden="true"><use href="#i-bilancia"/></svg><h3 data-i18n="r-u-r6">Legale</h3></div><p data-i18n="r-u-r6p">Controlla che i testi rispettino le regole scritte e prepara bozze per il Suo consulente.</p><p class="stato" aria-hidden="true" data-i18n="r-u-r6s"><span class="on">Rilegge il testo del sito</span><span>Segnala una frase da correggere</span><span>Prepara la bozza per l'avvocato</span></p></article>
+        </div>
+      </div>
+      <div class="ufficio-note" data-reveal>
+        <p data-i18n="r-u-note">Illustrazione dell'ufficio: i reparti si scelgono insieme, in base al Suo lavoro. Gli assistenti sono intelligenze artificiali; nessuna spesa, nessun invio e nessuna firma senza il Suo sì.</p>
+        <a class="btn btn-ghost" href="uffici/" data-i18n="r-u-cta">Scopra Celea Uffici</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="scena" id="portale" aria-labelledby="por-t">
+    <div class="wrap">
+      <div class="sec-head" data-reveal data-i18n="r-p-head">
+        <p class="eyebrow">Il portale</p>
+        <h2 id="por-t">La Sua stanza: vede tutto quello che è successo.</h2>
+        <p class="lead">Ogni cliente ha la sua stanza riservata nel portale di Celea: le telefonate del giorno, gli appuntamenti fissati, le persone da richiamare e quanti minuti ha usato. Niente sorprese a fine mese.</p>
+      </div>
+      <p class="vh" data-i18n="r-p-aria">Animazione: il cruscotto del portale di un cliente d'esempio; arriva una nuova telefonata con un appuntamento fissato e i contatori si aggiornano.</p>
+      <div class="stage stage-portale" data-scene="portale" aria-hidden="true">
+        <div class="win" aria-hidden="true">
+          <div class="win-bar"><i></i><i></i><i></i><span class="win-url"><svg><use href="#i-lucchetto"/></svg>area.celea.it</span></div>
+          <div class="win-body">
+            <div class="win-side">
+              <svg class="logo" viewBox="0 0 340 120"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="var(--logo-big)" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="var(--logo-small)" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="var(--logo-small)"/><text x="122" y="78" font-family="Manrope, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="-1.5" fill="var(--logo-text)">celea</text></svg>
+              <span class="on"><svg><use href="#i-casa"/></svg><b data-i18n="r-p-n1">Cruscotto</b></span>
+              <span><svg><use href="#i-cal"/></svg><b data-i18n="r-p-n2">Calendario</b></span>
+              <span><svg><use href="#i-phone"/></svg><b data-i18n="r-p-n3">Da richiamare</b></span>
+              <span><svg><use href="#i-person"/></svg><b data-i18n="r-p-n4">Assistente</b></span>
+              <span><svg><use href="#i-grafico"/></svg><b data-i18n="r-p-n5">Report mensili</b></span>
+            </div>
+            <div class="win-main">
+              <p class="win-hi"><b data-i18n="r-p-hi">Buongiorno, Studio Rossi</b><small data-i18n="r-p-hi2">esempio · oggi</small></p>
+              <div class="kpis">
+                <div class="kpi" data-kpi><span data-i18n="r-p-k1">Telefonate oggi</span><b><span class="roll"><i>12</i><i>13</i></span></b></div>
+                <div class="kpi" data-kpi><span data-i18n="r-p-k2">Appuntamenti fissati</span><b><span class="roll"><i>5</i><i>6</i></span></b></div>
+                <div class="kpi" data-kpi><span data-i18n="r-p-k3">Minuti usati questo mese</span><b><span class="roll"><i>214 <small>/ 600</small></i><i>219 <small>/ 600</small></i></span></b><i class="meter"><i></i></i></div>
+              </div>
+              <ul class="feed">
+                <li class="feed-new" data-at="1"><div><span style="display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center"><svg><use href="#i-cal"/></svg><span data-i18n="r-p-f0"><b>Giulia R.</b> · appuntamento fissato, giovedì 17:00</span><small data-i18n="r-p-t0">adesso</small></span></div></li>
+                <li><svg><use href="#i-check"/></svg><span data-i18n="r-p-f1"><b>Marco T.</b> · informazioni sugli orari</span><small>10:12</small></li>
+                <li><svg><use href="#i-phone"/></svg><span data-i18n="r-p-f2"><b>Sig. Bianchi</b> · chiede del titolare, da richiamare</span><small>09:47</small></li>
+                <li><svg><use href="#i-check"/></svg><i class="bar"></i><small>09:20</small></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="win-chip" data-at="2" aria-hidden="true"><svg><use href="#i-phone"/></svg><span data-i18n="r-p-chip"><b>1 persona da richiamare</b>Il Sig. Bianchi vuole parlare con Lei.</span></div>
+      </div>
+      <p class="stage-note" data-i18n="r-p-note">Esempio illustrativo con dati inventati. Il portale è riservato ai clienti di Celea e si apre con le proprie credenziali.</p>
     </div>
   </section>
 
@@ -1114,6 +1269,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     </div>
   </section>
 </main>
+<a class="parla-fab" id="parla-fab" href="#talk"><span class="dot" aria-hidden="true"><svg><use href="#i-phone"/></svg></span><span data-i18n="r-fab">Parla ora<small>con un assistente AI, dal browser</small></span></a>
 
 <footer>
   <div class="wrap">
@@ -1124,6 +1280,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
 </footer>
 
 <script src="demo-scenari.js"></script>
+<script src="restyling-testi.js"></script>
 <script>
 (function(){
   "use strict";
@@ -1391,6 +1548,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "ft-sign":"Celea · antwortet, wenn Sie nicht können, mit Sorgfalt.",
     "ft-small":'KI-Rezeption auf WhatsApp und am Telefon für Zahnarztpraxen, Immobilienagenturen und Beherbergungsbetriebe, in Italien und im Ausland. Kontakt: team.celea@gmail.com · <a href="#privacy" style="color:#E08A6A">Datenschutz und Cookies</a> · <a href="uffici/" style="color:#E08A6A">Celea Uffici (Italienisch)</a>'
   };
+  if(window.CELEA_I18N_PLUS){ Object.assign(EN, window.CELEA_I18N_PLUS.en); Object.assign(DE, window.CELEA_I18N_PLUS.de); } // testi del restyling 2026-11
   var tplEn=document.getElementById("tpl-price-en"); if(tplEn) EN.price = tplEn.innerHTML;
   var tplDe=document.getElementById("tpl-price-de"); if(tplDe) DE.price = tplDe.innerHTML;
   var lang = "it", IT = {};
@@ -1690,5 +1848,6 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   var last=L(); new MutationObserver(function(){ if(L()!==last){ last=L(); reset(); drawCalc(); } }).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
 })();
 </script>
+<script src="restyling.js" defer></script>
 </body>
 </html>

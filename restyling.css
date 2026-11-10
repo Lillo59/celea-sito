@@ -1,0 +1,195 @@
+/* Restyling 2026-11 · Studio web · ramo restyling-2026-11.
+   Aggiunte al sito v1.12: Celeo in apertura, il motto, la telefonata a Sofia, l'ufficio con i reparti,
+   la stanza nel portale, «Parla ora» sempre a portata di mano. Colori e caratteri: guida del marchio v1.3
+   (palette attuale: la nuova la sceglie William). Nessuna risorsa esterna. */
+:root{--arch:999px 999px 22px 22px;--sh:0 1px 0 rgba(10,52,64,.05),0 18px 40px -24px rgba(10,52,64,.45);--sand:#F4EDE3;--sea:#0F4C5C;--night:#0A3440;--terra:#C8664A;--terra-l:#E08A6A;--terra-d:#A9502F;--mane:#B9772E}
+
+/* Animazioni d'ingresso: solo con JavaScript attivo e senza «riduci movimento». */
+.js-r [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js-r [data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js-r [data-reveal]{opacity:1;transform:none}}
+
+/* Il segno dell'abbraccio (i due archi del logo) usato come piccolo segno grafico */
+.arcs{display:inline-block;width:22px;height:22px;vertical-align:-5px;margin-right:8px}
+.arcs path{fill:none;stroke-linecap:round}
+
+/* ---------- Apertura: Celeo accoglie ---------- */
+.hero-visual{display:grid;gap:18px;min-width:0;align-content:center}
+.celeo-hero{margin:0;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:end}
+.celeo-hero .arch{position:relative;width:138px;aspect-ratio:5/7;border-radius:var(--arch);background:var(--surface-2);border:1px solid var(--line);overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.celeo-hero .arch::before{content:"";position:absolute;inset:auto -30% -42% -30%;height:70%;border-radius:50%;background:color-mix(in srgb,var(--accent) 16%,transparent)}
+.celeo-hero img{position:relative;width:96%;height:auto;margin-bottom:-38%;transform-origin:50% 100%}
+.js-r .celeo-hero img{animation:celeo-ciao 2.4s .6s ease-in-out 1 both}
+@keyframes celeo-ciao{0%{transform:translateY(14px) rotate(0)}30%{transform:translateY(0) rotate(-2.5deg)}55%{transform:rotate(2deg)}80%{transform:rotate(-1deg)}100%{transform:none}}
+.celeo-hero figcaption{display:grid;gap:8px;padding-bottom:8px}
+.celeo-bubble{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px 20px 20px 6px;padding:13px 16px;font-family:var(--f-display);font-weight:700;color:var(--brand);font-size:1.02rem;line-height:1.32;box-shadow:var(--sh)}
+.celeo-bubble::after{content:"";position:absolute;left:-7px;bottom:10px;width:14px;height:14px;background:var(--surface);border-left:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg);border-radius:0 0 0 4px}
+.celeo-hero small{color:var(--muted);font-size:.84rem;padding-left:4px}
+@media (min-width:900px){.celeo-hero .arch{width:176px}.celeo-bubble{font-size:1.08rem}}
+
+/* ---------- Il motto ---------- */
+.sogno{background:var(--night);color:var(--sand);position:relative;overflow:hidden}
+:root[data-theme="dark"] .sogno{background:#072833}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sogno{background:#072833}}
+.sogno::before{content:"";position:absolute;left:-180px;bottom:-260px;width:560px;height:560px;border-radius:50%;border:56px solid var(--terra-l);opacity:.08;pointer-events:none}
+.sogno .wrap{display:grid;gap:32px;align-items:center;position:relative}
+.sogno-foto{margin:0;justify-self:start;width:min(220px,58vw);aspect-ratio:3/4;border-radius:var(--arch);overflow:hidden;border:3px solid color-mix(in srgb,var(--sand) 30%,transparent);box-shadow:0 30px 60px -30px #000}
+.sogno-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.sogno .eyebrow{color:var(--terra-l)}
+.sogno blockquote{margin:14px 0 18px}
+.sogno-q{font-family:var(--f-display);font-weight:800;font-size:clamp(1.75rem,5.4vw,3.1rem);line-height:1.1;letter-spacing:-.025em;color:var(--sand);text-wrap:balance}
+.sogno-q span{color:var(--terra-l)}
+.sogno-txt{color:#D6DEDC;font-size:1.08rem;max-width:58ch}
+.sogno-firma{margin-top:16px;color:#B9C6C6;font-size:.95rem;display:flex;align-items:center}
+.sogno-firma .arcs path:first-child{stroke:var(--sand)}
+.sogno-firma .arcs path:nth-child(2){stroke:var(--terra-l)}
+@media (min-width:900px){.sogno .wrap{grid-template-columns:auto 1fr;gap:64px}.sogno-foto{width:260px}}
+
+/* ---------- Scene animate (telefonata, portale): finte schermate del prodotto ---------- */
+.scena{padding-block:72px}
+.scena .sec-head{margin-bottom:28px}
+.stage{position:relative;max-width:1000px;margin-inline:auto}
+.js-r .stage [data-at]{transition:opacity .45s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+.js-r .stage.playing [data-at]:not(.on){opacity:0;transform:translateY(10px)}
+.stage-note{margin-top:18px;font-size:.88rem;color:var(--muted);text-align:center}
+.lingue{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:center;margin-top:22px;font-size:1rem;color:var(--ink)}
+.lingue strong{font-family:var(--f-display);color:var(--brand)}
+.lingue span.l{display:inline-flex;align-items:center;min-height:32px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-family:var(--f-display);font-weight:700;font-size:.88rem;color:var(--brand)}
+
+/* Telefonata a Sofia: un telefono (la storia) + il calendario (satellite) */
+.stage-call{display:grid;justify-items:center;gap:0;padding:8px 0 24px}
+.phone{position:relative;width:300px;height:600px;border-radius:46px;background:#0B1418;padding:11px;box-shadow:0 40px 80px -40px rgba(10,52,64,.7),inset 0 0 0 2px #2A3A40}
+.ph-screen{position:relative;height:100%;border-radius:36px;overflow:hidden;background:linear-gradient(180deg,#123F4B 0%,#0A3440 62%,#082A33 100%);color:#F4EDE3;display:flex;flex-direction:column}
+.ph-island{position:absolute;top:21px;left:50%;transform:translateX(-50%);width:92px;height:26px;border-radius:20px;background:#000;z-index:3}
+.ph-status{display:flex;justify-content:space-between;padding:16px 28px 0;font:600 .78rem var(--f-display);color:#F4EDE3;opacity:.9}
+.ph-head{display:grid;justify-items:center;gap:6px;padding:34px 18px 10px;text-align:center}
+.ph-av{width:62px;height:62px;border-radius:50%;display:block}
+.ph-head b{font:800 1.25rem var(--f-display);letter-spacing:-.01em}
+.ph-head small{font-size:.8rem;color:#B9C6C6;line-height:1.3}
+.ph-timer{font:700 .9rem var(--f-display);font-variant-numeric:tabular-nums;color:var(--terra-l)}
+.ph-lines{list-style:none;margin:0;padding:6px 14px;display:flex;flex-direction:column;gap:8px;flex:1;justify-content:flex-end}
+.ph-lines li{max-width:86%;padding:8px 12px;border-radius:16px;font-size:.86rem;line-height:1.35}
+.ph-lines .l-bot{background:rgba(244,237,227,.12);border-bottom-left-radius:5px;align-self:flex-start}
+.ph-lines .l-me{background:#F4EDE3;color:#0A3440;border-bottom-right-radius:5px;align-self:flex-end}
+.ph-lines .l-bot b{display:block;font:700 .7rem var(--f-display);letter-spacing:.06em;text-transform:uppercase;color:var(--terra-l);margin-bottom:2px}
+.ph-lang{align-self:center;margin:10px 0 4px;padding:4px 10px;border-radius:999px;background:rgba(244,237,227,.1);font:600 .74rem var(--f-display);color:#D6DEDC}
+.ph-keys{display:flex;justify-content:center;gap:40px;padding:12px 0 26px}
+.ph-keys i{width:52px;height:52px;border-radius:50%;background:rgba(244,237,227,.14);display:grid;place-items:center}
+.ph-keys i.end{background:#C8443A}
+.ph-keys svg{width:24px;height:24px;color:#fff}
+.ph-keys i.end svg{transform:rotate(135deg)}
+.ph-notif{position:absolute;left:10px;right:10px;top:62px;padding-bottom:18px!important;z-index:4;background:rgba(250,247,242,.97);color:#1F2D33;border-radius:20px;padding:12px 14px;box-shadow:0 18px 40px -16px rgba(0,0,0,.55);font-size:.84rem;line-height:1.38}
+.ph-notif header{display:flex;align-items:center;gap:8px;font:700 .74rem var(--f-display);color:#5B6B70;margin-bottom:4px}
+.ph-notif header svg{width:20px;height:20px;border-radius:6px}
+.ph-notif header time{margin-left:auto;font-weight:600}
+.ph-notif strong{display:block;font-family:var(--f-display);color:#0F4C5C}
+.js-r .stage-call.playing .ph-notif:not(.on){transform:translateY(-130%);opacity:0}
+.agenda{position:relative;z-index:2;width:286px;margin-top:-34px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:14px 16px 10px}
+.agenda .ag-h{display:flex;align-items:center;gap:8px;font:800 .9rem var(--f-display);color:var(--brand);margin-bottom:8px}
+.agenda .ag-h svg{width:18px;height:18px;color:var(--accent-text)}
+.agenda .ag-h span{margin-left:auto;font-weight:600;font-size:.8rem;color:var(--muted)}
+.ag-row{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;min-height:40px;border-top:1px dashed var(--line)}
+.ag-row time{font:700 .8rem var(--f-display);color:var(--muted);font-variant-numeric:tabular-nums}
+.ag-row .ph{height:8px;border-radius:4px;background:var(--surface-2);width:62%}
+.ag-row .ev{display:block;margin:5px 0;padding:6px 10px;border-radius:10px;background:color-mix(in srgb,var(--accent) 14%,var(--surface));border-left:4px solid var(--accent);font:700 .86rem var(--f-display);color:var(--ink)}
+.ag-row .ev small{display:block;font:600 .74rem var(--f-body);color:var(--muted)}
+@media (min-width:860px){
+  .stage-call{grid-template-columns:auto auto;justify-content:center;align-items:end;column-gap:0}
+  .agenda{margin:0 0 40px 28px;width:300px}
+}
+
+/* Il portale: la stanza del cliente */
+.win{border-radius:16px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--sh);overflow:hidden;color:var(--ink)}
+.win-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.win-bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.win-url{margin-left:12px;flex:1;max-width:340px;padding:4px 12px;border-radius:8px;background:var(--surface);font:600 .8rem var(--f-display);color:var(--muted);display:flex;align-items:center;gap:6px}
+.win-url svg{width:12px;height:12px}
+.win-body{display:grid;grid-template-columns:1fr;min-height:360px}
+.win-side{display:none;border-right:1px solid var(--line);padding:16px 12px;gap:2px;align-content:start;background:color-mix(in srgb,var(--surface-2) 45%,var(--surface))}
+.win-side svg.logo{width:92px;margin:0 0 14px 6px}
+.win-side span{display:flex;align-items:center;gap:10px;min-height:36px;padding:0 10px;border-radius:9px;font:600 .88rem var(--f-display);color:var(--muted)}
+.win-side span.on{background:var(--surface);color:var(--brand);box-shadow:inset 0 0 0 1px var(--line)}
+.win-side span svg{width:16px;height:16px}
+.win-main{padding:18px 18px 20px;display:grid;gap:14px;align-content:start;min-width:0}
+.win-hi{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.win-hi b{font:800 1.2rem var(--f-display);color:var(--brand)}
+.win-hi small{font-size:.82rem;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;gap:2px;min-width:0}
+.kpi>span{font-size:.76rem;color:var(--muted);line-height:1.2}
+.kpi b{font:800 1.45rem var(--f-display);color:var(--brand);font-variant-numeric:tabular-nums;display:block;overflow:hidden;height:1.3em;line-height:1.3em}
+.kpi b .roll{display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.kpi b .roll i{display:block;font-style:normal;height:1.3em}
+.kpi.up b .roll,.stage-portale:not(.playing) .kpi b .roll{transform:translateY(-1.3em)}
+.kpi b small{font:600 .8rem var(--f-body);color:var(--muted)}
+.meter{height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden;margin-top:4px}
+.meter i{display:block;height:100%;width:35.6%;background:var(--accent);border-radius:3px;transition:width .9s ease}
+.kpi.up .meter i,.stage-portale:not(.playing) .meter i{width:36.5%}
+.feed{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.feed li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:10px 12px;border-top:1px solid var(--line);font-size:.88rem;min-height:48px}
+.feed li:first-child{border-top:0}
+.feed li svg{width:18px;height:18px;color:var(--accent-text)}
+.feed li b{font-family:var(--f-display);font-weight:700;color:var(--ink)}
+.feed li small{color:var(--muted);font-size:.8rem;white-space:nowrap}
+.feed li .bar{height:8px;border-radius:4px;background:var(--surface-2);width:70%}
+.feed-new{display:grid;grid-template-rows:1fr;transition:grid-template-rows .55s cubic-bezier(.2,.7,.2,1)}
+.feed-new>div{overflow:hidden;min-height:0}
+.feed li.feed-new{padding:0;min-height:0;display:grid}
+.feed-new>div>span{padding:10px 12px;min-height:48px}
+.js-r .stage-portale.playing .feed-new:not(.on){grid-template-rows:0fr}
+.feed-new li{background:color-mix(in srgb,var(--accent) 9%,var(--surface))}
+.win-chip{position:absolute;right:22px;top:2px;z-index:2;max-width:260px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh);padding:10px 14px;font-size:.84rem;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.win-chip svg{width:22px;height:22px;color:var(--accent-text)}
+.win-chip b{display:block;font-family:var(--f-display);color:var(--brand)}
+.stage-portale{padding-top:30px}
+@media (max-width:620px){
+  .kpis{grid-template-columns:1fr 1fr}.kpi:nth-child(3){grid-column:1/-1}
+  .win-chip{position:relative;right:auto;bottom:auto;margin:-14px 12px 0;max-width:none}
+  .feed li small{display:none}
+}
+@media (min-width:760px){.win-body{grid-template-columns:200px 1fr}.win-side{display:grid}.win-main{padding:22px 24px 26px}}
+
+/* ---------- L'ufficio di Celea: i reparti ---------- */
+.ufficio{background:var(--surface-2)}
+.palazzo{position:relative;max-width:1060px;margin-inline:auto;background:var(--bg);border:1px solid var(--line);border-radius:28px 28px 18px 18px;padding:16px;box-shadow:var(--sh)}
+.palazzo::before{content:"";position:absolute;left:24px;right:24px;bottom:-12px;height:12px;border-radius:0 0 12px 12px;background:var(--line)}
+.ingresso{display:grid;gap:14px;border-radius:var(--arch);border-radius:200px 200px 18px 18px;background:var(--night);color:var(--sand);padding:30px 18px 18px;text-align:center;justify-items:center;position:relative;overflow:hidden}
+.ingresso .muro{display:grid;justify-items:center;gap:10px}
+.ingresso .muro svg{width:min(240px,62vw);height:auto}
+.ingresso h3{color:var(--sand);font-size:1.15rem}
+.ingresso p{color:#D6DEDC;font-size:.95rem;max-width:52ch}
+.piani{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+@media (min-width:560px) and (max-width:759px){.piani{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.reparto{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 14px 12px;display:grid;gap:8px;align-content:start;min-width:0}
+.reparto .targa{display:flex;align-items:center;gap:8px;padding-right:20px}
+.reparto .targa svg{width:22px;height:22px;flex:none;color:var(--accent-text)}
+.reparto h3{font-size:1rem;line-height:1.2}
+.reparto p{font-size:.86rem;color:var(--muted);line-height:1.4}
+.reparto .luce{position:absolute;top:14px;right:14px;width:9px;height:9px;border-radius:50%;background:#E3A548;box-shadow:0 0 0 4px color-mix(in srgb,#E3A548 25%,transparent)}
+.reparto .luce.attesa{background:var(--line);box-shadow:none}
+.stato{position:relative;display:grid;min-height:2.7em;margin-top:2px;padding:7px 10px;border-radius:10px;background:var(--bg);font:600 .8rem var(--f-display);color:var(--brand);line-height:1.3}
+.stato span{grid-area:1/1;transition:opacity .45s ease,transform .45s ease}
+.js-r .stato span:not(.on){opacity:0;transform:translateY(6px)}
+.js-r .stato span.on{opacity:1}
+.stato span:not(:first-child){visibility:hidden}
+.js-r .stato span:not(:first-child){visibility:visible}
+.ufficio-note{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;justify-content:space-between}
+.ufficio-note p{font-size:.9rem;color:var(--muted);max-width:60ch}
+@media (min-width:760px){.palazzo{padding:22px}.piani{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.ingresso{grid-template-columns:auto 1fr;text-align:left;justify-items:start;align-items:center;gap:28px;padding:34px 34px 26px}.reparto{padding:16px 16px 14px}.reparto h3{font-size:1.06rem}}
+
+/* ---------- «Parla ora» sempre a portata di mano ---------- */
+.parla-fab{position:fixed;z-index:30;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:8px 20px 8px 8px;border-radius:999px;background:#A9502F;color:#fff;text-decoration:none;font:800 1rem var(--f-display);box-shadow:0 14px 30px -12px rgba(10,52,64,.65);transition:transform .3s ease,opacity .3s ease}
+.parla-fab .dot{position:relative;width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#A9502F}
+.parla-fab .dot svg{width:20px;height:20px}
+.parla-fab small{display:block;font:600 .72rem var(--f-body);opacity:.92}
+.parla-fab:hover{transform:translateY(-2px)}
+.parla-fab.via{transform:translateY(140%);opacity:0;pointer-events:none}
+@media (max-width:420px){.parla-fab{padding-right:16px;font-size:.95rem}.parla-fab small{display:none}}
+@media print{.parla-fab{display:none}}
+
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+
+@media (max-width:620px){.win-chip{position:relative;right:auto;top:auto;margin:-14px 12px 0;max-width:none}.stage-portale{padding-top:0}}
+@media (max-width:760px){body{padding-bottom:76px}}
+:root[data-theme="dark"] .ingresso{background:#072833;box-shadow:inset 0 0 0 1px #22606F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ingresso{background:#072833;box-shadow:inset 0 0 0 1px #22606F}}
