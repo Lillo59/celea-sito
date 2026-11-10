@@ -2,6 +2,10 @@
    Letti dallo script principale insieme ai dizionari EN e DE. */
 window.CELEA_I18N_PLUS = {
 en:{
+ "n4":"Veterinary clinic","n5":"Plumbers and electricians",
+ "d-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg><span>All five assistants: also available on WhatsApp (from January 2027).</span>",
+ "r-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg>Also available on WhatsApp (from January 2027)",
+ "r-try4":"Try the chat demo with Leandro","r-try5":"Try the chat demo with Cesare",
  "r-celeo":"Nice to meet you, I'm Celeo. Let me show you how our office works.",
  "r-celeo-s":"Celeo is Celea's mascot. The assistants who answer your customers are AI, and they say so.",
  "r-s-eye":"Why Celea exists",
@@ -54,6 +58,10 @@ en:{
  "r-fab":"Talk now<small>with an AI assistant, from your browser</small>"
 },
 de:{
+ "n4":"Tierarztpraxis","n5":"Installateure",
+ "d-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg><span>Alle fünf Assistenten: auch auf WhatsApp verfügbar (ab Januar 2027).</span>",
+ "r-wa":"<svg aria-hidden=\"true\"><use href=\"#i-chat\"/></svg>Auch auf WhatsApp verfügbar (ab Januar 2027)",
+ "r-try4":"Chat-Demo mit Leandro testen","r-try5":"Chat-Demo mit Cesare testen",
  "r-celeo":"Freut mich, ich bin Celeo. Ich zeige Ihnen, wie unser Büro arbeitet.",
  "r-celeo-s":"Celeo ist das Maskottchen von Celea. Die Assistenten, die Ihren Kunden antworten, sind KI und sagen das auch.",
  "r-s-eye":"Warum es Celea gibt",

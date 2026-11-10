@@ -653,6 +653,16 @@ footer .sign{font-family:var(--f-display);font-weight:700}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .palazzo,:root:not([data-theme="light"]) .win{box-shadow:0 0 0 1px #22606F,0 18px 40px -24px #000}}
 :root[data-theme="dark"] .ufficio{background:#0C3F4D}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ufficio{background:#0C3F4D}}
+
+/* demo: 5 settori (10/11) · niente parole spezzate col trattino; 3 in alto e 2 più larghi sotto */
+.niches{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+.niches .niche{grid-column:span 2}
+.niches .niche:nth-child(4),.niches .niche:nth-child(5){grid-column:span 3}
+.niche span{hyphens:manual!important;-webkit-hyphens:manual!important;overflow-wrap:normal!important;word-break:normal!important;line-height:1.2}
+@media (max-width:420px){.niche{font-size:.8rem!important;padding:10px 4px!important}.niche svg{width:22px;height:22px}}
+.niche-wa{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.88rem;opacity:.92}
+.niche-wa svg,.wa-line svg{width:18px;height:18px;flex:none;margin-top:1px}
+.wa-line{display:flex;gap:8px;align-items:flex-start;font-size:.9rem;font-weight:600;color:var(--brand)}
 </style>
 <script>/* restyling 2026-11: animazioni d'ingresso solo se il browser le regge; se lo script non arriva entro 3 s, si vede tutto */
 (function(d){if(!("IntersectionObserver" in window)||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;d.classList.add("js-r");setTimeout(function(){if(!window.CELEA_R_OK)d.classList.remove("js-r")},3000)})(document.documentElement);</script>
@@ -678,6 +688,8 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2.5-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-logo" viewBox="0 0 120 120"><rect width="120" height="120" rx="26" fill="#0F4C5C"/><g transform="translate(14 12) scale(0.8)"><path d="M85.71 90.64A40 40 0 1 1 85.71 29.36" fill="none" stroke="#F4EDE3" stroke-width="12" stroke-linecap="round"/><path d="M72.86 75.32A20 20 0 1 1 72.86 44.68" fill="none" stroke="#E08A6A" stroke-width="10" stroke-linecap="round"/><circle cx="96" cy="60" r="6" fill="#E08A6A"/></g></symbol>
+  <symbol id="i-zampa" viewBox="0 0 24 24"><ellipse cx="12" cy="16.5" rx="4.6" ry="3.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="10.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="10.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9.3" cy="6" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="14.7" cy="6" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-chiave" viewBox="0 0 24 24"><path d="M14.5 4.5a4.5 4.5 0 0 0-4.3 5.8L4 16.5 7.5 20l6.2-6.2a4.5 4.5 0 0 0 5.8-4.3l-2.6 2.6-2.8-.4-.4-2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-megafono" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6L7 10H4zM17 9.5a3.5 3.5 0 0 1 0 5M7 14l1.5 5h2.5l-1-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
   <symbol id="i-euro" viewBox="0 0 24 24"><path d="M18 6.5A7 7 0 1 0 18 17.5M4 10.5h10M4 13.5h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-bilancia" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
@@ -813,7 +825,10 @@ footer .sign{font-family:var(--f-display);font-weight:700}
             <button class="niche" type="button" data-niche="dentista" aria-pressed="true"><svg aria-hidden="true"><use href="#i-tooth"/></svg><span data-i18n="n1">Studio dentistico</span></button>
             <button class="niche" type="button" data-niche="immobiliare" aria-pressed="false"><svg aria-hidden="true"><use href="#i-house"/></svg><span data-i18n="n2">Agenzia immobiliare</span></button>
             <button class="niche" type="button" data-niche="ricettivo" aria-pressed="false"><svg aria-hidden="true"><use href="#i-bed"/></svg><span data-i18n="n3">B&amp;B e hotel</span></button>
+            <button class="niche" type="button" data-niche="veterinario" aria-pressed="false"><svg aria-hidden="true"><use href="#i-zampa"/></svg><span data-i18n="n4">Clinica veterinaria</span></button>
+            <button class="niche" type="button" data-niche="impiantista" aria-pressed="false"><svg aria-hidden="true"><use href="#i-chiave"/></svg><span data-i18n="n5">Impiantisti</span></button>
           </div>
+          <p class="niche-wa" data-i18n="d-wa"><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Tutti e cinque gli assistenti: disponibili anche su WhatsApp (da gennaio 2027).</span></p>
         </div>
         <div class="picker p-scen">
           <span class="picker-label" id="scen-l" data-i18n="d-sl">2. Altre situazioni da provare</span>
@@ -842,7 +857,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <p class="live-msg" id="live-msg" role="status" aria-live="polite"></p>
           <p class="live-note" data-i18n="d-lnote">Prova gratuita · al massimo 2 prove per connessione · solo numeri italiani · dalle 8 alle 21 · chiamata breve, poi si chiude da sola</p>
         </div>
-        <p class="demo-flag"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="d-flag">Dimostrazione con attività inventate e risposte preimpostate, con le stesse regole dell'assistente al telefono e su WhatsApp. Nulla di ciò che scrive qui viene inviato o salvato. I nomi Sofia, Marco ed Elena sono d'esempio: il vero assistente parla con i dati e il nome che sceglie Lei.</span></p>
+        <p class="demo-flag"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="d-flag">Dimostrazione con attività inventate e risposte preimpostate, con le stesse regole dell'assistente al telefono e su WhatsApp. Nulla di ciò che scrive qui viene inviato o salvato. I nomi Sofia, Marco, Elena, Leandro e Cesare sono d'esempio: il vero assistente parla con i dati e il nome che sceglie Lei.</span></p>
       </div>
 
       <div class="phone">
@@ -889,6 +904,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <svg class="ic" aria-hidden="true"><use href="#i-tooth"/></svg>
           <h3 data-i18n="p1h">Studi dentistici</h3>
           <ul data-i18n="p1l"><li>Prime visite, controlli e igiene</li><li>Spostamenti e disdette su WhatsApp</li><li>Urgenze passate subito allo studio</li><li>Nessun consiglio medico, mai</li></ul>
+          <p class="wa-line" data-i18n="r-wa"><svg aria-hidden="true"><use href="#i-chat"/></svg>Disponibile anche su WhatsApp (da gennaio 2027)</p>
           <p class="quote" data-i18n="p1q">La paziente scrive alle 22 per spostare la pulizia: l'assistente propone due orari liberi.</p>
           <button class="tryit" type="button" data-try="dentista" data-i18n="p1b">Provi la demo per studi dentistici</button>
           <span data-i18n="p1x"><a class="tryit" href="https://demo.celea.it/odontea/">Guardi un sito di esempio: Odontèa</a></span>
@@ -897,6 +913,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <svg class="ic" aria-hidden="true"><use href="#i-house"/></svg>
           <h3 data-i18n="p2h">Agenzie immobiliari</h3>
           <ul data-i18n="p2l"><li>Risposte alle richieste dagli annunci</li><li>Domande per capire budget, zona e tempi</li><li>Visite fissate in agenda</li><li>Valutazioni passate all'agente</li></ul>
+          <p class="wa-line" data-i18n="r-wa"><svg aria-hidden="true"><use href="#i-chat"/></svg>Disponibile anche su WhatsApp (da gennaio 2027)</p>
           <p class="quote" data-i18n="p2q">Una richiesta dall'annuncio arriva alle 23: la mattina dopo l'agente trova il contatto già qualificato.</p>
           <button class="tryit" type="button" data-try="immobiliare" data-i18n="p2b">Provi la demo per agenzie</button>
           <span data-i18n="p2x"><a class="tryit" href="https://demo.celea.it/domea/">Guardi un sito di esempio: Domèa Immobiliare</a></span>
@@ -905,6 +922,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
           <svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg>
           <h3 data-i18n="p3h">B&amp;B, case vacanza e hotel</h3>
           <ul data-i18n="p3l"><li>Disponibilità e link per prenotare</li><li>Check-in, parcheggio, animali</li><li>Risposte in italiano, inglese e tedesco</li><li>Problemi in camera segnalati al personale</li></ul>
+          <p class="wa-line" data-i18n="r-wa"><svg aria-hidden="true"><use href="#i-chat"/></svg>Disponibile anche su WhatsApp (da gennaio 2027)</p>
           <p class="quote" data-i18n="p3q">Gli ospiti arrivano all'una di notte: ricevono subito le istruzioni per le chiavi.</p>
           <button class="tryit" type="button" data-try="ricettivo" data-i18n="p3b">Provi la demo per strutture ricettive</button>
           <span data-i18n="p3x"><a class="tryit" href="https://demo.celea.it/casa-lumea/">Guardi un sito di esempio: Casa Lumèa</a></span>
@@ -922,25 +940,29 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       </div>
       <div class="cards">
         <article class="card">
-          <svg class="ic" aria-hidden="true"><use href="#i-person"/></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-zampa"/></svg>
           <h3 data-i18n="nv1h">Cliniche veterinarie · Leandro</h3>
           <ul data-i18n="nv1l"><li>Emergenze degli animali prima di tutto: indica subito la clinica o il pronto soccorso veterinario</li><li>Vaccini, richiami, microchip e richieste di visita</li><li>La segreteria conferma giorno e ora</li><li>Nessun consiglio su farmaci, dosi o cure</li></ul>
+          <p class="wa-line" data-i18n="r-wa"><svg aria-hidden="true"><use href="#i-chat"/></svg>Disponibile anche su WhatsApp (da gennaio 2027)</p>
           <p class="quote" data-i18n="nv1q">«Il mio cane ha mangiato del lumachicida»: la prima frase è «Venga subito in clinica con l'animale: avviso adesso il veterinario».</p>
           <div class="card-talk" data-talk="veterinario" data-talk-name="Leandro" hidden>
             <button type="button" class="btn btn-accent"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="nv1t">Parla ora con Leandro</span></button>
             <p class="talk-msg" role="status" aria-live="polite"></p>
           </div>
+          <button class="tryit" type="button" data-try="veterinario" data-i18n="r-try4">Provi la demo chat con Leandro</button>
           <a class="tryit" href="#contatti" data-i18n="nv1b">Chieda la prova per la Sua clinica</a>
         </article>
         <article class="card">
-          <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-chiave"/></svg>
           <h3 data-i18n="nv2h">Idraulici, elettricisti, caldaie · Cesare</h3>
           <ul data-i18n="nv2l"><li>Richieste di intervento con indirizzo, zona e fascia oraria</li><li>Pericoli (gas, acqua vicino all'impianto elettrico) gestiti per primi</li><li>Preventivi e sopralluoghi registrati per il titolare</li><li>Nessun consiglio tecnico su come intervenire da soli</li></ul>
+          <p class="wa-line" data-i18n="r-wa"><svg aria-hidden="true"><use href="#i-chat"/></svg>Disponibile anche su WhatsApp (da gennaio 2027)</p>
           <p class="quote" data-i18n="nv2q">Un cliente scrive di sera per una perdita: il titolare la mattina trova indirizzo, problema e numero già pronti.</p>
           <div class="card-talk" data-talk="impiantista" data-talk-name="Cesare" hidden>
             <button type="button" class="btn btn-accent"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="nv2t">Parla ora con Cesare</span></button>
             <p class="talk-msg" role="status" aria-live="polite"></p>
           </div>
+          <button class="tryit" type="button" data-try="impiantista" data-i18n="r-try5">Provi la demo chat con Cesare</button>
           <a class="tryit" href="#contatti" data-i18n="nv2b">Chieda la prova per la Sua ditta</a>
         </article>
         <article class="card">
@@ -1681,7 +1703,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "s2":"<strong>Appointment</strong><span>picks a time and confirms</span>",
     "s3":"<strong>After hours</strong><span>a message at night</span>",
     "s4":"<strong>Talk to a person</strong><span>when staff are needed</span>",
-    "d-flag":"Demo with made-up businesses and pre-set replies, following the same rules as the assistant on the phone and on WhatsApp. Nothing you type here is sent or saved. Sofia, Marco and Elena are example names: the real assistant uses your business details and the name you choose. In Italian, English and German as standard.",
+    "d-flag":"Demo with made-up businesses and pre-set replies, following the same rules as the assistant on the phone and on WhatsApp. Nothing you type here is sent or saved. Sofia, Marco, Elena, Leandro and Cesare are example names: the real assistant uses your business details and the name you choose. In Italian, English and German as standard.",
     "d-custom":"<strong>Every reply is set up the way you want.</strong> Opening hours, prices, tone, what to say and what not to say, who to hand the conversation to and how quickly to call back: you decide. We set it up and test it with you before it goes live.",
     "d-tl":"3. Talk to the assistant", "d-tnote":'Free, in your browser: you only need a microphone · short call, 3 minutes max · AI assistant with sample data · the conversation may be recorded to improve the service (see <a href="#privacy">privacy</a>)', "d-ll":"4. Try it live, on the phone", "d-ltel":"Your mobile number",
     "d-lok":"I agree to receive a single demo call on this number. The number is used only for the call and for the trial limit (see <a href=\"#privacy\">privacy</a>).",
@@ -1725,13 +1747,13 @@ footer .sign{font-family:var(--f-display);font-weight:700}
     "h-note":"Wir richten ihn für Sie ein, zugeschnitten auf Ihren Betrieb, mit 30 Tagen kostenloser Testphase (bis zu 100 Telefonminuten). Er stellt sich immer als virtueller Assistent vor. Klare Preise, <a href=\"#prezzi\">alle hier aufgeführt</a>.",
     "h-clock":'<div class="clock-item"><time>22:47</time><p>„Können Sie mich morgen drannehmen? Mir ist eine Füllung herausgefallen.“<small>Zwei Termine vorgeschlagen, Termin vereinbart.</small></p></div><div class="clock-item"><time>07:12</time><p>„Hat das Haus an der Hafenstraße eine Garage?“<small>Frage beantwortet, Besichtigung für Samstag vereinbart.</small></p></div><div class="clock-item"><time>01:30</time><p>„We\'re arriving late tonight, how do we get the keys?“<small>Antwort auf Englisch mit den Check-in-Hinweisen.</small></p></div><p class="clock-cap">Beispiele für Anfragen, die zu ungünstigen Zeiten eintreffen.</p>',
     "d-head":'<p class="eyebrow">Interaktive Demo</p><h2 id="demo-t">So antwortet er Ihren Kunden</h2><p class="lead">Wählen Sie Ihre Branche und eine Situation. Sie können auch selbst eine Frage in den Chat schreiben.</p>',
-    "d-nl":"1. Ihre Branche", "n1":"Zahnarztpraxis", "n2":"Immobilienagentur", "n3":"B&amp;B und Hotel",
+    "d-nl":"1. Ihre Branche", "n1":"Zahnarzt", "n2":"Makler", "n3":"B&amp;B und Hotel",
     "d-sl":"2. Weitere Situationen zum Ausprobieren",
     "s1":"<strong>Häufige Fragen</strong><span>Öffnungszeiten, Leistungen, Infos</span>",
     "s2":"<strong>Termin</strong><span>wählt eine Uhrzeit und bestätigt</span>",
     "s3":"<strong>Außerhalb der Zeiten</strong><span>eine Nachricht in der Nacht</span>",
     "s4":"<strong>Mit einem Menschen</strong><span>wenn das Team gefragt ist</span>",
-    "d-flag":"Demo mit erfundenen Betrieben und vorbereiteten Antworten, nach denselben Regeln wie die Assistenz am Telefon und auf WhatsApp. Nichts, was Sie hier schreiben, wird gesendet oder gespeichert. Sofia, Marco und Elena sind Beispielnamen: Die echte Assistenz arbeitet mit den Daten Ihres Betriebs und dem Namen Ihrer Wahl, standardmäßig auf Italienisch, Englisch und Deutsch.",
+    "d-flag":"Demo mit erfundenen Betrieben und vorbereiteten Antworten, nach denselben Regeln wie die Assistenz am Telefon und auf WhatsApp. Nichts, was Sie hier schreiben, wird gesendet oder gespeichert. Sofia, Marco, Elena, Leandro und Cesare sind Beispielnamen: Die echte Assistenz arbeitet mit den Daten Ihres Betriebs und dem Namen Ihrer Wahl, standardmäßig auf Italienisch, Englisch und Deutsch.",
     "d-custom":"<strong>Jede Antwort wird so eingerichtet, wie Sie es möchten.</strong> Öffnungszeiten, Preise, Tonfall, was gesagt wird und was nicht, an wen das Gespräch übergeben wird und wie schnell zurückgerufen wird: Sie entscheiden. Wir richten alles ein und testen es mit Ihnen, bevor es startet.",
     "d-tl":"3. Mit der Assistenz sprechen", "d-tnote":'Kostenlos, im Browser: Sie brauchen nur ein Mikrofon · kurzer Anruf, höchstens 3 Minuten · KI-Assistenz mit Beispieldaten · das Gespräch kann aufgezeichnet werden, um den Dienst zu verbessern (siehe <a href="#privacy">Datenschutz</a>)', "d-ll":"4. Live testen, am Telefon", "d-ltel":"Ihre Handynummer",
     "d-lok":"Ich bin einverstanden, einen einzigen Demo-Anruf unter dieser Nummer zu erhalten. Die Nummer dient nur dem Anruf und der Begrenzung der Tests (siehe <a href=\"#privacy\">Datenschutz</a>).",
@@ -1877,7 +1899,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
       lb.hidden=false;
     }
   }
-  var askedTalk=null; try{ var mt=location.search.match(/[?&]parla=(dentista|immobiliare|ricettivo|veterinario)\b/); if(mt) askedTalk=mt[1]; }catch(e){}
+  var askedTalk=null; try{ var mt=location.search.match(/[?&]parla=(dentista|immobiliare|ricettivo|veterinario|impiantista)\b/); if(mt) askedTalk=mt[1]; }catch(e){}
   var askedBox=null; if(askedTalk) cardTalks.forEach(function(b){ if(b.dataset.talk===askedTalk) askedBox=b; });
   if(askedTalk && !askedBox) niche=askedTalk;
   document.querySelectorAll(".niche").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.niche===niche?"true":"false"); });
