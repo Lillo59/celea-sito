@@ -898,7 +898,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
         <div class="talk" id="talk" hidden>
           <span class="picker-label" data-i18n="d-tl">3. Parli a voce con l'assistente</span>
           <p class="talk-lead" id="talk-lead"></p>
-          <!-- Demo personalizzata (listino v2.2): campo spento finché su Retell non c'è la variabile del nome (TALK.nome). Stesse classi del riquadro «dal vivo». -->
+          <!-- Demo personalizzata (listino v2.2): campo acceso con TALK.nome. Stesse classi del riquadro «dal vivo». -->
           <div class="live-row">
             <label for="talk-nome" class="skip" id="talk-nome-l">Nome della Sua attività (facoltativo)</label>
             <input id="talk-nome" name="nome" type="text" autocomplete="organization" maxlength="40" placeholder="Nome della Sua attività (facoltativo)" hidden>
@@ -1699,7 +1699,7 @@ footer .sign{font-family:var(--f-display);font-weight:700}
   var TALK = { key:"public_key_c73e28f264823fa5e478c", recaptcha:"6Lc2O_4tAAAAAMUHuzb58YLXZ14f1q23lMZsPcz4",
     agents:{ dentista:"agent_d707460b8b0bc2d50382aa3aa9", immobiliare:"agent_665333f44ade1c0d48ed000a7d", ricettivo:"agent_9f88879b0f2fd82c7a074dd2e6",
       veterinario:"agent_b805f1d0866c4dcaba873a7ee7", impiantista:"agent_63311503c57ef5b6108635c50d" },
-    nome:false }; // demo personalizzata: true solo dopo l'aggiornamento degli assistenti su Retell (variabile {{nome_attivita}})
+    nome:true }; // demo personalizzata: acceso il 10/11/2026 sera (sì di William; assistenti su Retell aggiornati con {{nome_attivita}}, conservazione 1 giorno)
 
   var chat = document.getElementById("chat"), chips = document.getElementById("chips");
   var nameEl = document.getElementById("chat-name"), form = document.getElementById("composer"), input = document.getElementById("chat-input");
