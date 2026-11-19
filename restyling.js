@@ -89,7 +89,7 @@ window.CELEA_R_OK=true;
     });
   }
 
-  // 3) Reparti al lavoro: ogni reparto mostra a turno cosa sta facendo (solo quando l'ufficio è visibile)
+  // 3) Ufficio al lavoro: ogni stanza mostra, una alla volta, cosa sta facendo (solo quando l'ufficio è visibile)
   var stati=[].slice.call(document.querySelectorAll(".stato")), rt=null;
   function giro(){
     stati.forEach(function(st, k){
