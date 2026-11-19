@@ -10,9 +10,9 @@ def edit(f, pairs):
         if a in s: s = s.replace(a, b); print(f, '·', a[:60].replace('\n', ' '))
         elif b not in s: sys.exit(f'{f}: non trovato: {a[:100]}')
     p.write_text(s, encoding='utf-8')
-ELENCO = {'it': " L'elenco completo dei fornitori è nell'informativa privacy.",
-          'en': " The full list of providers is in the privacy notice.",
-          'de': " Die vollständige Liste der Dienstleister finden Sie in der Datenschutzerklärung."}
+ELENCO = {'it': " I dettagli sono nell'informativa privacy.",
+          'en': " The details are in the privacy notice.",
+          'de': " Die Einzelheiten finden Sie in der Datenschutzerklärung."}
 
 # ---------- /uffici/ ----------
 U = R / 'uffici/index.html'; s = U.read_text(encoding='utf-8')
